@@ -458,33 +458,79 @@
     }
 
     /* ── MOBILE ── */
+    .nav-burger { display: none; }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      :root { --pad: 32px; }
+      .mosaic { grid-template-columns: repeat(4, 1fr); }
+      .location { gap: 40px; }
+      .insta-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
     @media (max-width: 768px) {
       :root { --pad: 20px; }
 
-      .site-nav { height: 52px; }
-
-      .nav-links { gap: 18px; }
-
-      .nav-links a { font-size: 9px; }
-
-      .ecrin { height: 180px; }
-
-      .hero { height: 56vw; min-height: 280px; }
-
-      .tagline { padding: 48px var(--pad) 44px; }
-
-      .location {
-        grid-template-columns: 1fr;
-        padding: 60px var(--pad);
-        gap: 24px;
+      /* ── MOBILE NAV ── */
+      .site-nav { grid-template-columns: 1fr auto; height: 56px; }
+      .site-nav > nav,
+      .site-nav > .lang-toggle { display: none; }
+      .nav-burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        width: 36px;
+        height: 36px;
+        padding: 4px;
+        cursor: pointer;
       }
+      .nav-burger span {
+        display: block;
+        width: 22px;
+        height: 1.5px;
+        background: currentColor;
+        transition: transform 0.25s cubic-bezier(0.22,1,0.36,1), opacity 0.25s;
+      }
+      .site-nav.nav-open {
+        position: fixed;
+        inset: 0;
+        height: 100vh;
+        height: 100dvh;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: 56px 1fr 72px;
+        align-items: start;
+        z-index: 300;
+      }
+      .site-nav.nav-open > nav {
+        display: flex;
+        grid-column: 1 / -1;
+        grid-row: 2;
+        align-items: center;
+        justify-content: center;
+      }
+      .site-nav.nav-open .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .site-nav.nav-open .nav-links a { font-size: 28px; font-weight: 700; letter-spacing: -0.01em; text-transform: uppercase; opacity: 1; }
+      .site-nav.nav-open > .lang-toggle { display: flex; grid-column: 1 / -1; grid-row: 3; justify-self: center; align-self: center; }
+      .site-nav.nav-open .nav-burger span:nth-child(1) { transform: translateY(3.5px) rotate(45deg); }
+      .site-nav.nav-open .nav-burger span:nth-child(2) { transform: translateY(-3.5px) rotate(-45deg); }
 
+      /* ── LAYOUT ── */
+      .ecrin { height: 180px; }
+      .hero { height: 56vw; min-height: 280px; }
+      .tagline { padding: 48px var(--pad) 44px; }
+      .location { grid-template-columns: 1fr; padding: 60px var(--pad); gap: 24px; }
       .location-right { max-width: 100%; }
-
       .insta-grid { grid-template-columns: 1fr; }
-
-      .footer-cols { grid-template-columns: 1fr 1fr; }
-
+      .footer-cols { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
     }
 
@@ -615,6 +661,10 @@
       <span class="lang-sep">/</span>
       <button class="lang-btn" data-lang="fr">FR</button>
     </div>
+    <button class="nav-burger" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+    </button>
   </header>
 
   <!-- ── ÉCRIN ── -->
@@ -831,6 +881,21 @@
 
     var saved = localStorage.getItem('ast-lang') || 'en';
     if (saved === 'fr') applyLang('fr');
+  </script>
+  <script>
+    (function(){
+      var burger = document.querySelector('.nav-burger');
+      var nav    = document.querySelector('.site-nav');
+      if (!burger) return;
+      burger.addEventListener('click', function(){
+        var open = nav.classList.toggle('nav-open');
+        burger.setAttribute('aria-expanded', String(open));
+        document.body.style.overflow = open ? 'hidden' : '';
+      });
+      document.querySelectorAll('.nav-links a').forEach(function(a){
+        a.addEventListener('click', function(){ nav.classList.remove('nav-open'); burger.setAttribute('aria-expanded','false'); document.body.style.overflow = ''; });
+      });
+    })();
   </script>
 </body>
 </html>
