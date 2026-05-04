@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Atelier Sans Titre</title>
+  <meta name="description" content="Get in touch with Atelier Sans Titre. We produce fashion shows, brand experiences, and special events from our studio in Beirut.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ateliersanstitre.com/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Atelier Sans Titre">
+  <meta property="og:title" content="Contact — Atelier Sans Titre">
+  <meta property="og:description" content="Get in touch with Atelier Sans Titre. We produce fashion shows, brand experiences, and special events from our studio in Beirut.">
+  <meta property="og:image" content="https://ateliersanstitre.com/brand_assets/og-image.jpg">
+  <meta property="og:url" content="https://ateliersanstitre.com/contact.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact — Atelier Sans Titre">
+  <meta name="twitter:description" content="Get in touch with Atelier Sans Titre. We produce fashion shows, brand experiences, and special events from our studio in Beirut.">
+  <meta name="twitter:image" content="https://ateliersanstitre.com/brand_assets/og-image.jpg">
+  <!-- Google Analytics — add your property ID when ready -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX',{anonymize_ip:true});</script> -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ContactPage","name":"Contact — Atelier Sans Titre","url":"https://ateliersanstitre.com/contact.html","isPartOf":{"@type":"WebSite","name":"Atelier Sans Titre","url":"https://ateliersanstitre.com"}}</script>
+  <style>
+    @font-face { font-family: 'Syne'; src: url('Fonts/Syne-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Syne'; src: url('Fonts/Syne-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Syne'; src: url('Fonts/Syne-SemiBold.ttf') format('truetype'); font-weight: 600; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Syne'; src: url('Fonts/Syne-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Syne'; src: url('Fonts/Syne-ExtraBold.ttf') format('truetype'); font-weight: 800; font-style: normal; font-display: swap; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:     #ffffff;
+      --text:   #000000;
+      --dark:   #1d1d1d;
+      --muted:  #a3a3a3;
+      --border: #e0e0e0;
+      --pad:    40px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Syne', Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ── NAV ── */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: var(--bg);
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 0 var(--pad);
+      height: 80px;
+    }
+
+    .nav-logo { font-family: 'Syne', sans-serif; font-size: 21px; font-weight: 700; letter-spacing: -0.01em; word-spacing: 0.55em; text-transform: uppercase; white-space: nowrap; }
+    .st-mark { display:inline-block; text-decoration:none; }
+    .brand-wm { font-family: 'Syne', sans-serif !important; font-size: 22px !important; font-weight: 700; letter-spacing: -0.01em; text-transform: uppercase; white-space: nowrap; }
+    .lang-toggle { justify-self: end; display: flex; align-items: center; border: 1px solid var(--border); border-radius: 100px; padding: 2px; gap: 0; }
+    .lang-btn { font-family: 'Syne', sans-serif; font-size: 9px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; background: none; border: none; cursor: pointer; padding: 4px 10px; border-radius: 100px; color: var(--text); opacity: 0.4; transition: background 0.2s, color 0.2s, opacity 0.2s; }
+    .lang-btn.active { background: var(--text); color: var(--bg); opacity: 1; } .lang-btn:hover:not(.active) { opacity: 0.7; } .lang-sep { display: none; }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a { font-size: 12px; font-weight: 500; letter-spacing: 0.13em; text-transform: uppercase; transition: opacity 0.2s; }
+    .nav-links a:hover { opacity: 0.4; }
+    .nav-links a.active { border-bottom: 1px solid #000; padding-bottom: 1px; }
+
+    /* ── LOCATION HERO ── */
+    .location-hero {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .location-hero-img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      display: block;
+      background: #0d0d0d;
+      filter: brightness(0.55);
+    }
+
+    .location-names {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding-left: var(--pad);
+    }
+
+    .location-names h1 {
+      font-size: clamp(20px, 4vw, 56px);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 0.92;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    .location-names h1 .dim { color: rgba(255,255,255,0.35); font-weight: 300; }
+
+    /* ── CONTACT INFO ── */
+    .contact-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 40px;
+      padding: 48px var(--pad) 56px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .ci-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .ci-body {
+      font-size: 14px;
+      line-height: 1.75;
+      color: #222;
+    }
+
+    .ci-body a {
+      transition: opacity 0.2s;
+    }
+
+    .ci-body a:hover { opacity: 0.5; }
+
+    /* ── MAP ── */
+    .map-wrap {
+      width: 100%;
+      height: 480px;
+      background: #e8e4e0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .map-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .map-expand {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 32px;
+      height: 32px;
+      background: #fff;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+
+    /* ── FOOTER ── */
+    footer { border-top: 1px solid var(--dark); padding: 40px var(--pad) 28px; }
+    
+    
+    
+    .footer-cols { display: grid; grid-template-columns: 1.8fr 1fr; gap: 32px; margin-bottom: 36px; }
+    .fc-list { list-style: none; }
+    .fc-list li { font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 11px; }
+    .fc-list li a { color: inherit; text-decoration: none; transition: opacity 0.2s; }
+    .fc-list li a:hover { opacity: 0.45; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 20px; border-top: 1px solid var(--border); }
+    .copyright { font-size: 11px; color: #8a8a8a; letter-spacing: 0.08em; text-transform: uppercase; }
+    .footer-ecosystem { font-size: 11px; color: #8a8a8a; letter-spacing: 0.04em; }
+
+    @media (max-width: 768px) {
+      :root { --pad: 20px; }
+      .nav-links { gap: 16px; }
+      .nav-links a { font-size: 9px; }
+      .location-hero-img { height: 380px; }
+      .contact-info { grid-template-columns: 1fr; gap: 32px; }
+      .map-wrap { height: 320px; }
+      .footer-cols { grid-template-columns: 1fr 1fr; }
+      .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+    }
+    /* ── ANIMATIONS ── */
+    @keyframes _navIn   { from { opacity:0; transform:translateY(-10px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes _titleIn { from { opacity:0; transform:translateY(44px);  } to { opacity:1; transform:translateY(0); } }
+    @keyframes _heroIn  { from { opacity:0; transform:scale(1.05);       } to { opacity:1; transform:scale(1);     } }
+    .site-nav            { animation: _navIn  0.55s cubic-bezier(0.22,1,0.36,1) both; }
+    .location-names h1   { animation: _titleIn 1.0s cubic-bezier(0.22,1,0.36,1) 0.2s both; }
+    .location-hero-img   { animation: _heroIn  1.5s cubic-bezier(0.22,1,0.36,1) 0.05s both; }
+    .rv      { opacity:0; transform:translateY(26px); transition:opacity 0.8s cubic-bezier(0.22,1,0.36,1),transform 0.8s cubic-bezier(0.22,1,0.36,1); transition-delay:var(--d,0ms); }
+    .rv.in   { opacity:1; transform:translateY(0); }
+    .rv-fade { opacity:0; transition:opacity 0.8s cubic-bezier(0.22,1,0.36,1); transition-delay:var(--d,0ms); }
+    .rv-fade.in { opacity:1; }
+    @media (prefers-reduced-motion:reduce) { .rv,.rv-fade,.site-nav,.location-names h1,.location-hero-img { animation:none!important; transition:none!important; opacity:1!important; transform:none!important; } }
+  </style>
+</head>
+<body>
+
+  <header class="site-nav">
+    <div class="nav-logo"><a href="index.html">Sans Titre</a></div>
+    <nav aria-label="Main">
+      <ul class="nav-links">
+        <li><a href="work.html" data-i18n="nav-work">Work</a></li>
+        <li><a href="about.html" data-i18n="nav-about">About</a></li>
+        <li><a href="disciplines.html" data-i18n="nav-disciplines">Disciplines</a></li>
+        <li><a href="contact.html" class="active" data-i18n="nav-contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <span class="lang-sep">/</span>
+      <button class="lang-btn" data-lang="fr">FR</button>
+    </div>
+  </header>
+
+  <!-- LOCATION HERO -->
+  <section class="location-hero">
+    <img
+      class="location-hero-img"
+      src="https://placehold.co/1920x520/1a1a1a/1a1a1a"
+      alt="Sans Titre — Beirut"
+    >
+    <div class="location-names">
+      <h1 data-i18n="location-h1">Beirut<br><span class="dim">Lebanon</span></h1>
+    </div>
+  </section>
+
+  <!-- CONTACT INFO -->
+  <div class="contact-info">
+    <div class="rv" style="--d:0ms">
+      <p class="ci-label" data-i18n="contact-city-label">Address</p>
+      <p class="ci-body" data-i18n="contact-beirut-body">
+        Atelier Sans Titre<br>
+        Beirut, Lebanon
+      </p>
+    </div>
+    <div class="rv" style="--d:90ms">
+      <p class="ci-label">Sans Titre</p>
+      <p class="ci-body" data-i18n="contact-services">
+        Fashion Shows<br>
+        Brand Experiences<br>
+        Special Events
+      </p>
+    </div>
+    <div class="rv" style="--d:180ms">
+      <p class="ci-label">Contact</p>
+      <p class="ci-body">
+        <a href="tel:+96178902628">+961 78 90 26 28</a><br>
+        <a href="mailto:contact@ateliersanstitre.com">contact@ateliersanstitre.com</a><br>
+        <a href="https://instagram.com/ateliersanstitre" target="_blank" rel="noopener">@ateliersanstitre</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- MAP -->
+  <div class="map-wrap rv-fade">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3316.7940399!2d35.5206735!3d33.8870653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f179014dab455%3A0xb82546a3f9fe5adf!2sAzzi+Studios!5e0!3m2!1sen!2slb!4v1714000000000!5m2!1sen!2slb"
+      width="100%" height="100%"
+      style="border:0; display:block;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Azzi Studios — Beirut, Lebanon"
+    ></iframe>
+  </div>
+
+  <footer class="rv-fade">
+    <div class="footer-cols">
+      <div>
+        <a href="index.html" class="st-mark">
+          <img src="favicon.png" alt="Atelier Sans Titre" width="40" height="40">
+        </a>
+      </div>
+      <ul class="fc-list">
+        <li><a href="work.html" data-i18n="nav-work">Work</a></li>
+        <li><a href="about.html" data-i18n="nav-about">About</a></li>
+        <li><a href="disciplines.html" data-i18n="nav-disciplines">Disciplines</a></li>
+        <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <span class="copyright" data-i18n="copyright">© 2026 Atelier Sans Titre. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var io=new IntersectionObserver(function(e){e.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.1});
+      document.querySelectorAll('.rv,.rv-fade').forEach(function(el){io.observe(el);});
+    })();
+  </script>
+  <script>
+    var T={en:{'nav-work':'Work','nav-about':'About','nav-disciplines':'Disciplines','nav-contact':'Contact','location-h1':'Beirut<br><span class="dim">Lebanon</span>','contact-city-label':'Address','contact-beirut-body':'Atelier Sans Titre<br>Beirut, Lebanon','contact-services':'Fashion Shows<br>Brand Experiences<br>Special Events','footer-location':'Beirut, Lebanon','copyright':'© 2026 Atelier Sans Titre. All rights reserved.'},fr:{'nav-work':'Travail','nav-about':'À Propos','nav-disciplines':'Disciplines','nav-contact':'Contact','location-h1':'Beyrouth<br><span class="dim">Liban</span>','contact-city-label':'Adresse','contact-beirut-body':'Atelier Sans Titre<br>Beyrouth, Liban','contact-services':'Défilés de Mode<br>Expériences de Marque<br>Événements Spéciaux','footer-location':'Beyrouth, Liban','copyright':'© 2026 Atelier Sans Titre. Tous droits réservés.'}};
+    function applyLang(l){document.documentElement.lang=l;document.querySelectorAll('[data-i18n]').forEach(function(el){var k=el.getAttribute('data-i18n');if(T[l]&&T[l][k]!==undefined)el.innerHTML=T[l][k];});document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('active',b.dataset.lang===l);});localStorage.setItem('ast-lang',l);}
+    document.querySelectorAll('.lang-btn').forEach(function(b){b.addEventListener('click',function(){applyLang(b.dataset.lang);});});
+    var s=localStorage.getItem('ast-lang')||'en';if(s==='fr')applyLang('fr');
+  </script>
+  <script>
+    (function(){
+      var contactInfo = document.querySelector('.contact-info');
+      var footerCols  = document.querySelector('.footer-cols');
+      function align(){
+        var link = Array.from(document.querySelectorAll('.nav-links a')).find(function(a){
+          return a.textContent.trim().toUpperCase() === 'WORK';
+        });
+        if(!link) return;
+        var linkLeft = link.getBoundingClientRect().left;
+        [
+          { el: contactInfo, cols: 'px 1fr 1fr' },
+          { el: footerCols,  cols: 'px 1fr'     }
+        ].forEach(function(item){
+          if(!item.el) return;
+          var style      = getComputedStyle(item.el);
+          var padLeft    = parseFloat(style.paddingLeft)  || 0;
+          var colGap     = parseFloat(style.columnGap)    || 0;
+          var elLeft     = item.el.getBoundingClientRect().left;
+          var contentX   = elLeft + padLeft;
+          var leftCol    = linkLeft - contentX - colGap;
+          item.el.style.gridTemplateColumns = leftCol + item.cols;
+        });
+      }
+      align();
+      window.addEventListener('resize', align);
+    })();
+  </script>
+</body>
+</html>

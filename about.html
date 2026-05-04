@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Atelier Sans Titre</title>
+  <meta name="description" content="A scenography and event production studio built on one conviction: that space is the most powerful medium in any event. Based in Beirut.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ateliersanstitre.com/about.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Atelier Sans Titre">
+  <meta property="og:title" content="About — Atelier Sans Titre">
+  <meta property="og:description" content="A scenography and event production studio built on one conviction: that space is the most powerful medium in any event.">
+  <meta property="og:image" content="https://ateliersanstitre.com/brand_assets/og-image.jpg">
+  <meta property="og:url" content="https://ateliersanstitre.com/about.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About — Atelier Sans Titre">
+  <meta name="twitter:description" content="A scenography and event production studio built on one conviction: that space is the most powerful medium in any event.">
+  <meta name="twitter:image" content="https://ateliersanstitre.com/brand_assets/og-image.jpg">
+  <!-- Google Analytics — add your property ID when ready -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX',{anonymize_ip:true});</script> -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"About — Atelier Sans Titre","url":"https://ateliersanstitre.com/about.html","isPartOf":{"@type":"WebSite","name":"Atelier Sans Titre","url":"https://ateliersanstitre.com"}}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
+  <style>
+    @font-face { font-family: 'Syne'; src: url('Fonts/Syne-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Syne'; src: url('Fonts/Syne-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Syne'; src: url('Fonts/Syne-SemiBold.ttf') format('truetype'); font-weight: 600; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Syne'; src: url('Fonts/Syne-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Syne'; src: url('Fonts/Syne-ExtraBold.ttf') format('truetype'); font-weight: 800; font-style: normal; font-display: swap; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:     #ffffff;
+      --text:   #000000;
+      --dark:   #1d1d1d;
+      --muted:  #a3a3a3;
+      --border: #e0e0e0;
+      --pad:    40px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Syne', Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ── NAV ── */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: var(--bg);
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 0 var(--pad);
+      height: 80px;
+    }
+
+    .nav-logo { font-family: 'Syne', sans-serif; font-size: 21px; font-weight: 700; letter-spacing: -0.01em; word-spacing: 0.55em; text-transform: uppercase; white-space: nowrap; }
+    .st-mark { display:inline-block; text-decoration:none; }
+    .brand-wm { font-family: 'Syne', sans-serif !important; font-size: 22px !important; font-weight: 700; letter-spacing: -0.01em; text-transform: uppercase; white-space: nowrap; }
+    .lang-toggle { justify-self: end; display: flex; align-items: center; border: 1px solid var(--border); border-radius: 100px; padding: 2px; gap: 0; }
+    .lang-btn { font-family: 'Syne', sans-serif; font-size: 9px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; background: none; border: none; cursor: pointer; padding: 4px 10px; border-radius: 100px; color: var(--text); opacity: 0.4; transition: background 0.2s, color 0.2s, opacity 0.2s; }
+    .lang-btn.active { background: var(--text); color: var(--bg); opacity: 1; } .lang-btn:hover:not(.active) { opacity: 0.7; } .lang-sep { display: none; }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a { font-size: 12px; font-weight: 500; letter-spacing: 0.13em; text-transform: uppercase; transition: opacity 0.2s; }
+    .nav-links a:hover { opacity: 0.4; }
+    .nav-links a.active { border-bottom: 1px solid #000; padding-bottom: 1px; }
+
+    /* ── PAGE HEADER ── */
+    .page-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      padding: 48px var(--pad) 40px;
+      align-items: baseline;
+    }
+
+    .page-title { font-size: 12px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; padding-right: 60px; }
+    .page-header-desc { font-size: 14px; color: #000; text-align: left; line-height: 1.55; }
+    .about-hero { width: calc(100% - 2 * var(--pad)); height: 520px; object-fit: cover; display: block; background: #d8d8d8; margin: 0 var(--pad); }
+
+    /* ── STUDIO INTRO ── */
+    .studio-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      padding: 64px var(--pad) 72px;
+      align-items: first baseline;
+    }
+
+    .intro-label { font-size: 12px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; color: #000; margin-bottom: 24px; padding-right: 60px; }
+
+    .intro-body { font-size: 14px; line-height: 1.7; color: #000; }
+    .intro-body p + p { margin-top: 20px; }
+
+    /* ── STUDIO IMAGE ── */
+    .studio-img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      display: block;
+      background: #0d0d0d;
+    }
+
+
+    /* ── SEC HEAD ── */
+    .sec-head {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      padding: 48px var(--pad) 48px;
+      align-items: baseline;
+    }
+
+    .sec-label { font-size: 12px; font-weight: 400; letter-spacing: 0.13em; text-transform: uppercase; padding-right: 60px; }
+    .sec-label strong { font-weight: 600; }
+    .sec-desc { font-size: 14px; color: #000; text-align: left; line-height: 1.55; }
+    .sec-head--inline { display: flex; justify-content: space-between; align-items: baseline; gap: 0; padding: 18px var(--pad); border-top: 1px solid var(--border); }
+    .sec-head--inline .sec-desc { text-align: right; }
+
+    /* ── IMAGE ROWS ── */
+    .img-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+
+    .img-item { overflow: hidden; }
+    .img-item img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; transition: opacity 0.3s; }
+    .img-item:hover img { opacity: 0.85; }
+    .img-caption { font-size: 11px; color: var(--muted); letter-spacing: 0.07em; text-transform: uppercase; padding: 8px var(--pad); }
+
+    /* ── GROUP SECTION ── */
+    .group-img {
+      position: relative;
+      height: 700px;
+      overflow: hidden;
+    }
+
+    .group-img img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.55); display: block; }
+
+    .group-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 var(--pad);
+    }
+
+    .group-overlay .line {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(28px, 3.8vw, 56px);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: inline-block;
+      transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.4s;
+    }
+    .group-overlay .line:hover { transform: translateX(12px); opacity: 0.75; }
+
+    .group-overlay .line-azzi {
+      font-family: 'Squada One', sans-serif;
+      font-size: clamp(28px, 3.8vw, 56px);
+      font-weight: 400;
+      color: #fff;
+      line-height: 1.3;
+      letter-spacing: 0em;
+      text-transform: lowercase;
+      text-decoration: none;
+      display: inline-block;
+      transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.4s;
+    }
+    .group-overlay .line-azzi:hover { transform: translateX(12px); opacity: 0.75; }
+    .g-line.bold { font-weight: 700; }
+
+    /* ── FOOTER ── */
+    footer { border-top: 1px solid var(--dark); padding: 40px var(--pad) 28px; }
+    
+    
+    
+    .footer-cols { display: grid; grid-template-columns: 1.8fr 1fr 1.8fr; gap: 32px; margin-bottom: 36px; }
+    .fc-list { list-style: none; }
+    .fc-list li { font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 11px; }
+    .fc-list li a { color: inherit; text-decoration: none; transition: opacity 0.2s; }
+    .fc-list li a:hover { opacity: 0.45; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 20px; border-top: 1px solid var(--border); }
+    .copyright { font-size: 11px; color: #8a8a8a; letter-spacing: 0.08em; text-transform: uppercase; }
+    .footer-ecosystem { font-size: 11px; color: #8a8a8a; letter-spacing: 0.04em; }
+
+    @media (max-width: 768px) {
+      :root { --pad: 20px; }
+      .nav-links { gap: 16px; }
+      .nav-links a { font-size: 9px; }
+      .studio-intro, .page-header, .sec-head { grid-template-columns: 1fr; gap: 16px; }
+      .page-header-desc, .sec-desc { text-align: left; }
+      .img-row { grid-template-columns: 1fr; }
+      .footer-cols { grid-template-columns: 1fr 1fr; }
+      .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+    }
+    /* ── ANIMATIONS ── */
+    @keyframes _navIn   { from { opacity:0; transform:translateY(-10px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes _titleIn { from { opacity:0; transform:translateY(44px);  } to { opacity:1; transform:translateY(0); } }
+    @keyframes _heroIn  { from { opacity:0; transform:scale(1.05);       } to { opacity:1; transform:scale(1);     } }
+    .site-nav  { animation: _navIn  0.55s cubic-bezier(0.22,1,0.36,1) both; }
+    .hero-img  { animation: _heroIn 1.5s  cubic-bezier(0.22,1,0.36,1) 0.05s both; }
+    .rv      { opacity:0; transform:translateY(26px); transition:opacity 0.8s cubic-bezier(0.22,1,0.36,1),transform 0.8s cubic-bezier(0.22,1,0.36,1); transition-delay:var(--d,0ms); }
+    .rv.in   { opacity:1; transform:translateY(0); }
+    .rv-fade { opacity:0; transition:opacity 0.8s cubic-bezier(0.22,1,0.36,1); transition-delay:var(--d,0ms); }
+    .rv-fade.in { opacity:1; }
+    @media (prefers-reduced-motion:reduce) { .rv,.rv-fade,.site-nav,.hero-img { animation:none!important; transition:none!important; opacity:1!important; transform:none!important; } }
+  </style>
+</head>
+<body>
+
+  <header class="site-nav">
+    <div class="nav-logo"><a href="index.html">Sans Titre</a></div>
+    <nav aria-label="Main">
+      <ul class="nav-links">
+        <li><a href="work.html" data-i18n="nav-work">Work</a></li>
+        <li><a href="about.html" class="active" data-i18n="nav-about">About</a></li>
+        <li><a href="disciplines.html" data-i18n="nav-disciplines">Disciplines</a></li>
+        <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <span class="lang-sep">/</span>
+      <button class="lang-btn" data-lang="fr">FR</button>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header rv-fade">
+    <span class="page-title" data-i18n="page-title">About</span>
+    <span class="page-header-desc" data-i18n="page-desc">A scenography and event production studio built on<br>one conviction: that space is the most powerful medium in any event.</span>
+  </div>
+  <img class="about-hero hero-img" src="https://placehold.co/1920x520/d8d8d8/d8d8d8" alt="Sans Titre">
+
+  <!-- STUDIO INTRO -->
+  <div class="studio-intro">
+    <p class="intro-label rv" data-i18n="studio-label">The Studio</p>
+    <div class="rv" style="--d:100ms">
+      <div class="intro-body">
+        <p data-i18n="studio-p1">
+          Sans Titre is a Beirut-based scenography and creative production studio, founded in 2026. We design and produce fashion shows, brand experiences, and special events for luxury clients across the region and beyond.
+        </p>
+        <p data-i18n="studio-p2">
+          The studio brings together scenographers, producers, and technical specialists who share a single conviction: that the spaces we build carry meaning, and that every event deserves to be a singular experience.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <img class="studio-img rv-fade" src="https://placehold.co/1920x640/d8d8d8/d8d8d8" alt="Sans Titre">
+
+  <!-- FASHION SHOWS -->
+  <div class="sec-head rv-fade">
+    <span class="sec-label" data-i18n="fashion-sec-label"><strong>Fashion Shows</strong></span>
+    <span class="sec-desc" data-i18n="fashion-sec-desc">Sans Titre gives a designer's vision physical form, from spatial concept to the final bow.</span>
+  </div>
+  <div class="img-row" >
+    <div class="img-item rv" style="--d:0ms">
+      <img src="https://placehold.co/640x854/d4a890/d4a890" alt="Fashion Show">
+    </div>
+    <div class="img-item rv" style="--d:80ms">
+      <img src="https://placehold.co/640x854/706050/706050" alt="Fashion Show">
+    </div>
+    <div class="img-item rv" style="--d:160ms">
+      <img src="https://placehold.co/640x854/c8b8a8/c8b8a8" alt="Fashion Show">
+    </div>
+  </div>
+
+  <!-- BRAND EXPERIENCES + SPECIAL EVENTS -->
+  <div class="sec-head rv-fade">
+    <span class="sec-label" data-i18n="brand-sec-label"><strong>Brand Experiences</strong> and <strong>Special Events</strong></span>
+    <span class="sec-desc" data-i18n="brand-sec-desc">We craft memorable events and experiences that leave a lasting visual and emotional imprint.</span>
+  </div>
+  <div class="img-row" >
+    <div class="img-item rv" style="--d:0ms">
+      <img src="https://placehold.co/640x854/3a3830/3a3830" alt="Brand Experience">
+    </div>
+    <div class="img-item rv" style="--d:80ms">
+      <img src="https://placehold.co/640x854/a02828/a02828" alt="Special Event">
+    </div>
+    <div class="img-item rv" style="--d:160ms">
+      <img src="https://placehold.co/640x854/4a6858/4a6858" alt="Brand Activation">
+    </div>
+  </div>
+
+  <!-- PART OF AZZI STUDIOS -->
+  <div class="sec-head sec-head--inline rv-fade">
+    <span class="sec-label">Azzi Studios</span>
+    <span class="sec-desc">Atelier Sans Titre is part of the <strong style="font-weight:700;">Azzi Studios</strong> creative ecosystem.</span>
+  </div>
+
+  <section class="group-img rv-fade">
+    <img loading="lazy" src="brand_assets/event-dinner.jpg" alt="">
+    <div class="group-overlay">
+      <a class="line" href="index.html">Sans Titre</a>
+      <a class="line-azzi" href="https://azzistudios.com" target="_blank" rel="noopener">azzi studios</a>
+    </div>
+  </section>
+
+  <footer class="rv-fade">
+    <div class="footer-cols">
+      <div>
+        <a href="index.html" class="st-mark">
+          <img src="favicon.png" alt="Atelier Sans Titre" width="40" height="40">
+        </a>
+      </div>
+      <ul class="fc-list">
+        <li><a href="work.html" data-i18n="nav-work">Work</a></li>
+        <li><a href="about.html" data-i18n="nav-about">About</a></li>
+        <li><a href="disciplines.html" data-i18n="nav-disciplines">Disciplines</a></li>
+        <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
+      </ul>
+      <ul class="fc-list">
+        <li><a href="mailto:contact@ateliersanstitre.com">contact@ateliersanstitre.com</a></li>
+        <li><a href="https://instagram.com/ateliersanstitre" target="_blank" rel="noopener">@ateliersanstitre</a></li>
+        <li><a href="tel:+96178902628">+961 78 90 26 28</a></li>
+        <li data-i18n="footer-location">Beirut, Lebanon</li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <span class="copyright" data-i18n="copyright">© 2026 Atelier Sans Titre. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var io=new IntersectionObserver(function(e){e.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.1});
+      document.querySelectorAll('.rv,.rv-fade').forEach(function(el){io.observe(el);});
+    })();
+  </script>
+  <script>
+    var T={en:{'nav-work':'Work','nav-about':'About','nav-disciplines':'Disciplines','nav-contact':'Contact','page-title':'About','page-desc':'A scenography and event production studio built on<br>one conviction: that space is the most powerful medium in any event.','studio-label':'The Studio','studio-p1':'Sans Titre is a Beirut-based scenography and creative production studio, founded in 2026. We design and produce fashion shows, brand experiences, and special events for luxury clients across the region and beyond.','studio-p2':'The studio brings together scenographers, producers, and technical specialists united by one belief: that a well-built space changes how people feel, and that no two events should ever feel the same.','fashion-sec-label':'<strong>Fashion Shows</strong>','fashion-sec-desc':'Sans Titre translates a designer\'s vision into space, every decision from the floor to the lighting rig serves the collection.','brand-sec-label':'<strong>Brand Experiences</strong> and <strong>Special Events</strong>','brand-sec-desc':'We build brand experiences with a strong point of view, activations, launches, and installations that stay with people long after they leave.','cap-fashion-city':'Fashion Show, Beirut, 2026','cap-event-city':'Special Event, Beirut, 2026','footer-location':'Beirut, Lebanon','copyright':'© 2026 Atelier Sans Titre. All rights reserved.'},fr:{'nav-work':'Travail','nav-about':'À Propos','nav-disciplines':'Disciplines','nav-contact':'Contact','page-title':'À Propos','page-desc':'Un studio de scénographie et de production événementielle fondé sur une conviction : l\'espace est le medium le plus puissant dans tout événement.','studio-label':'Le Studio','studio-p1':'Sans Titre est un studio de scénographie et de production créative basé à Beyrouth, fondé en 2026. Nous concevons et produisons des défilés de mode, des expériences de marque et des événements spéciaux pour des clients de luxe à travers la région et au-delà.','studio-p2':'Le studio réunit des scénographes, des producteurs et des spécialistes techniques animés par une même conviction : un espace bien construit transforme ce que les gens ressentent, et aucun événement ne devrait jamais ressembler à un autre.','fashion-sec-label':'<strong>Défilés de Mode</strong>','fashion-sec-desc':'Sans Titre traduit la vision d\'un créateur en espace, chaque décision du sol au système d\'éclairage est au service de la collection.','brand-sec-label':'<strong>Expériences de Marque</strong> et <strong>Événements Spéciaux</strong>','brand-sec-desc':'Nous construisons des expériences de marque avec un point de vue affirmé, activations, lancements et installations qui restent en mémoire bien après le départ des invités.','cap-fashion-city':'Défilé de Mode, Beyrouth, 2026','cap-event-city':'Événement Spécial, Beyrouth, 2026','footer-location':'Beyrouth, Liban','copyright':'© 2026 Atelier Sans Titre. Tous droits réservés.'}};
+    function applyLang(l){document.documentElement.lang=l;document.querySelectorAll('[data-i18n]').forEach(function(el){var k=el.getAttribute('data-i18n');if(T[l]&&T[l][k]!==undefined)el.innerHTML=T[l][k];});document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('active',b.dataset.lang===l);});localStorage.setItem('ast-lang',l);}
+    document.querySelectorAll('.lang-btn').forEach(function(b){b.addEventListener('click',function(){applyLang(b.dataset.lang);});});
+    var s=localStorage.getItem('ast-lang')||'en';if(s==='fr')applyLang('fr');
+  </script>
+  <script>
+    (function(){
+      var sections = document.querySelectorAll('.page-header, .studio-intro, .sec-head:not(.sec-head--inline)');
+      function align(){
+        if (!sections.length) return;
+        var link = Array.from(document.querySelectorAll('.nav-links a')).find(function(a){
+          return a.textContent.trim().toUpperCase() === 'DISCIPLINES';
+        });
+        if(!link) return;
+        var firstSection = sections[0];
+        var leftCol = link.getBoundingClientRect().left - firstSection.getBoundingClientRect().left;
+        sections.forEach(function(el){
+          el.style.gridTemplateColumns = leftCol + 'px 1fr';
+        });
+      }
+      align();
+      window.addEventListener('resize', align);
+    })();
+  </script>
+</body>
+</html>

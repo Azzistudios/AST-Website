@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp \"/Users/azzistudios/Downloads/AST_Post.pptx/1.png\" \"/Users/azzistudios/Desktop/AST Website/brand_assets/insta-1.jpg\")",
+      "Bash(cp \"/Users/azzistudios/Downloads/AST_Post.pptx/2.png\" \"/Users/azzistudios/Desktop/AST Website/brand_assets/insta-2.jpg\")",
+      "Bash(cp \"/Users/azzistudios/Downloads/AST_Post.pptx/3.png\" \"/Users/azzistudios/Desktop/AST Website/brand_assets/insta-3.jpg\")"
+    ]
+  }
+}
