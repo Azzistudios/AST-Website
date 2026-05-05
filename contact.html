@@ -51,6 +51,7 @@
     }
 
     a { text-decoration: none; color: inherit; }
+    button { border: none; cursor: pointer; background: transparent; font-family: inherit; color: inherit; }
 
     /* ── NAV ── */
     .site-nav {
@@ -212,9 +213,10 @@
       .site-nav.nav-open .nav-burger span:nth-child(2) { transform: translateY(-3.5px) rotate(-45deg); }
 
       /* ── LAYOUT ── */
-      .location-hero-img { height: 56vw; min-height: 240px; }
-      .contact-info { grid-template-columns: 1fr; gap: 32px; }
-      .map-wrap { height: 260px; }
+      .location-hero-img { height: 56vw; min-height: 220px; }
+      .location-names h1 { font-size: clamp(28px, 8vw, 48px); }
+      .contact-info { grid-template-columns: 1fr; gap: 36px; padding: 40px var(--pad) 48px; }
+      .map-wrap { height: 240px; }
       .footer-cols { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
     }

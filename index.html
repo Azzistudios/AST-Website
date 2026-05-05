@@ -60,7 +60,7 @@
     }
 
     a { text-decoration: none; color: inherit; }
-    button { border: none; cursor: pointer; background: transparent; font-family: inherit; }
+    button { border: none; cursor: pointer; background: transparent; font-family: inherit; color: inherit; }
 
     /* ── NAV ── */
     .site-nav {
@@ -524,12 +524,13 @@
       .site-nav.nav-open .nav-burger span:nth-child(2) { transform: translateY(-3.5px) rotate(-45deg); }
 
       /* ── LAYOUT ── */
-      .ecrin { height: 180px; }
-      .hero { height: 56vw; min-height: 280px; }
-      .tagline { padding: 48px var(--pad) 44px; }
-      .location { grid-template-columns: 1fr; padding: 60px var(--pad); gap: 24px; }
+      .ecrin { height: 160px; }
+      .hero { height: 56vw; min-height: 260px; }
+      .tagline { padding: 40px var(--pad) 36px; }
+      .mosaic { grid-template-columns: repeat(3, 1fr); }
+      .location { grid-template-columns: 1fr; padding: 56px var(--pad) 48px; gap: 24px; }
       .location-right { max-width: 100%; }
-      .insta-grid { grid-template-columns: 1fr; }
+      .insta-grid { grid-template-columns: 1fr 1fr; }
       .footer-cols { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
     }

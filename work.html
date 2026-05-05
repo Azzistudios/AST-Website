@@ -50,7 +50,7 @@
     }
 
     a { text-decoration: none; color: inherit; }
-    button { border: none; cursor: pointer; background: transparent; font-family: inherit; }
+    button { border: none; cursor: pointer; background: transparent; font-family: inherit; color: inherit; }
 
     /* ── NAV (dark) ── */
     .site-nav {
@@ -252,9 +252,14 @@
       .site-nav.nav-open .nav-burger span:nth-child(2) { transform: translateY(-3.5px) rotate(-45deg); }
 
       /* ── LAYOUT ── */
-      .discipline-intro { grid-template-columns: 1fr; }
-      .see-link { text-align: left; }
-      .discipline-imgs { grid-template-columns: 1fr; }
+      .page-hero { padding: 40px var(--pad) 36px; }
+      .hero-text { font-size: clamp(24px, 7vw, 36px); margin-bottom: 28px; }
+      .hero-text strong { color: var(--text); }
+      .tag { color: var(--text); border-color: var(--text); }
+      .tag:hover { background: var(--text); color: var(--bg); }
+      .discipline-intro { grid-template-columns: 1fr; padding: 36px var(--pad) 28px; }
+      .discipline-imgs { grid-template-columns: 1fr 1fr; }
+      .d-img img { aspect-ratio: 4/3; }
       .tags { flex-wrap: wrap; gap: 8px; }
       .footer-cols { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
