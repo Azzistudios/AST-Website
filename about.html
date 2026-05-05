@@ -249,6 +249,9 @@
       :root { --pad: 32px; }
     }
 
+    @media (min-width: 769px) {
+      .m-br { display: none; }
+    }
 
     @media (max-width: 768px) {
       :root { --pad: 20px; }
@@ -270,6 +273,7 @@
       .site-nav.nav-open .nav-burger span:nth-child(2) { transform: translateY(-3.5px) rotate(-45deg); }
 
       /* ── LAYOUT ── */
+      .m-br { display: inline; }
       .img-row { display: flex; overflow-x: scroll; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; gap: 0; }
       .img-row::-webkit-scrollbar { display: none; }
       .img-item { flex: 0 0 100%; scroll-snap-align: start; }
@@ -397,7 +401,7 @@
 
   <!-- PART OF AZZI STUDIOS -->
   <div class="sec-head--inline rv-fade">
-    <span class="sec-desc" style="text-align:left;">Atelier Sans Titre is part of<br>the <strong style="font-weight:700;">Azzi Studios</strong> creative ecosystem.</span>
+    <span class="sec-desc" style="text-align:left;">Atelier Sans Titre is part of<span class="m-br"><br></span>the <strong style="font-weight:700;">Azzi Studios</strong> creative ecosystem.</span>
   </div>
 
   <section class="group-img rv-fade">
