@@ -63,6 +63,8 @@
     button { border: none; cursor: pointer; background: transparent; font-family: inherit; color: inherit; }
 
     /* ── NAV ── */
+    .nav-logo { visibility: hidden; }
+
     .site-nav {
       position: sticky;
       top: 0;
@@ -522,17 +524,20 @@
         height: 100vh;
         height: 100dvh;
         display: grid;
-        grid-template-columns: 1fr auto;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 56px 1fr 72px;
         align-items: start;
         z-index: 300;
       }
+      .site-nav.nav-open > :first-child { grid-column: 2; grid-row: 1; justify-self: center; align-self: center; visibility: visible; }
+      .site-nav.nav-open .nav-burger { grid-column: 3; grid-row: 1; justify-self: end; align-self: center; }
       .site-nav.nav-open > nav {
         display: flex;
         grid-column: 1 / -1;
         grid-row: 2;
         align-items: center;
         justify-content: center;
+        padding-top: 80px;
       }
       .site-nav.nav-open .nav-links {
         display: flex;
@@ -676,7 +681,7 @@
 
   <!-- ── NAV ── -->
   <header class="site-nav">
-    <div></div>
+    <div class="nav-logo"><a href="index.html">Sans Titre</a></div>
     <nav aria-label="Main">
       <ul class="nav-links">
         <li><a href="work.html" data-i18n="nav-work">Work</a></li>

@@ -204,8 +204,10 @@
       .site-nav > .lang-toggle { display: none; }
       .nav-burger { display: flex; flex-direction: column; justify-content: center; gap: 5px; width: 36px; height: 36px; padding: 4px; cursor: pointer; }
       .nav-burger span { display: block; width: 22px; height: 1.5px; background: currentColor; transition: transform 0.25s cubic-bezier(0.22,1,0.36,1), opacity 0.25s; }
-      .site-nav.nav-open { position: fixed; inset: 0; height: 100vh; height: 100dvh; display: grid; grid-template-columns: 1fr auto; grid-template-rows: 56px 1fr 72px; align-items: start; z-index: 300; }
-      .site-nav.nav-open > nav { display: flex; grid-column: 1 / -1; grid-row: 2; align-items: center; justify-content: center; }
+      .site-nav.nav-open { position: fixed; inset: 0; height: 100vh; height: 100dvh; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 56px 1fr 72px; align-items: start; z-index: 300; }
+      .site-nav.nav-open > :first-child { grid-column: 2; grid-row: 1; justify-self: center; align-self: center; }
+      .site-nav.nav-open .nav-burger { grid-column: 3; grid-row: 1; justify-self: end; align-self: center; }
+      .site-nav.nav-open > nav { display: flex; grid-column: 1 / -1; grid-row: 2; align-items: center; justify-content: center; padding-top: 80px; }
       .site-nav.nav-open .nav-links { display: flex; flex-direction: column; align-items: center; gap: 32px; list-style: none; padding: 0; margin: 0; }
       .site-nav.nav-open .nav-links a { font-size: 28px; font-weight: 700; letter-spacing: -0.01em; text-transform: uppercase; opacity: 1; }
       .site-nav.nav-open > .lang-toggle { display: flex; grid-column: 1 / -1; grid-row: 3; justify-self: center; align-self: center; }
