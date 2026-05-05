@@ -385,7 +385,7 @@
     .insta-track {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 0;
+      gap: 3px;
     }
 
     .insta-item {
@@ -509,7 +509,8 @@
     }
 
     @media (min-width: 769px) {
-      .group-img { max-height: 420px; }
+      .group-img { max-height: 340px; }
+      .m-br { display: none; }
     }
 
     @media (max-width: 768px) {
@@ -572,6 +573,7 @@
       .site-nav.nav-open .nav-burger span:nth-child(2) { transform: translateY(-3.5px) rotate(-45deg); }
 
       /* ── LAYOUT ── */
+      .m-br { display: inline; }
       .ecrin { height: 160px; }
       .hero { height: 56vw; min-height: 260px; }
       .insta-track { display: flex; overflow-x: scroll; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; gap: 0; }
@@ -739,7 +741,7 @@
   <!-- ── TAGLINE ── -->
   <section class="tagline">
     <p class="tagline-text rv" data-i18n="tagline">
-      Scenography<br>
+      Scenography<span class="m-br"><br></span>
       and production<br>
       for <strong>fashion shows</strong>,<br>
       <strong>brand experiences</strong>,<br>
@@ -917,7 +919,7 @@
     var T = {
       en: {
         'nav-work': 'Work', 'nav-about': 'About', 'nav-disciplines': 'Disciplines', 'nav-contact': 'Contact',
-        'tagline': 'Scenography<br>and production<br>for <strong>fashion shows</strong>,<br><strong>brand experiences</strong>,<br>and <strong>special events</strong>.',
+        'tagline': 'Scenography<span class="m-br"><br></span>and production<br>for <strong>fashion shows</strong>,<br><strong>brand experiences</strong>,<br>and <strong>special events</strong>.',
         'tag-fashion': 'Fashion Shows', 'tag-brand': 'Brand Experiences', 'tag-events': 'Special Events',
         'work-label': 'Our Work', 'work-desc': 'Atelier Sans Titre transforms space into experience.',
         'location-sub': 'Our base. Our perspective.',
@@ -930,7 +932,7 @@
       },
       fr: {
         'nav-work': 'Travail', 'nav-about': 'À Propos', 'nav-disciplines': 'Disciplines', 'nav-contact': 'Contact',
-        'tagline': 'Scénographie et production<br>pour <strong>des défilés de mode</strong>,<br><strong>des expériences de marque</strong>,<br>et des <strong>événements spéciaux</strong>.',
+        'tagline': 'Scénographie<span class="m-br"><br></span> et production<br>pour <strong>des défilés de mode</strong>,<br><strong>des expériences de marque</strong>,<br>et des <strong>événements spéciaux</strong>.',
         'tag-fashion': 'Défilés de Mode', 'tag-brand': 'Expériences de Marque', 'tag-events': 'Événements Spéciaux',
         'work-label': 'Notre Travail', 'work-desc': 'Atelier Sans Titre transforme l\'espace en expérience.',
         'location-sub': 'Notre base. Notre perspective.',
