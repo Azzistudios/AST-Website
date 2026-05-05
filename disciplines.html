@@ -176,10 +176,6 @@
       .filters { gap: 6px; }
       .filter-pill { font-size: 10px; padding: 4px 12px; }
       .mosaic { grid-template-columns: repeat(3, 1fr); }
-      .m.c3 { grid-column: span 3; }
-      .m.c2 { grid-column: span 2; }
-      .discipline-intro { grid-template-columns: 1fr; gap: 16px; }
-      .discipline-imgs { grid-template-columns: 1fr 1fr; }
       .footer-cols { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
     }
@@ -196,6 +192,7 @@
     .rv-m.in { opacity:1; transform:scale(1); }
     .m { transition: opacity 0.3s cubic-bezier(0.22,1,0.36,1); }
     .m.hidden { display: none; }
+    :focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
     @media (prefers-reduced-motion:reduce) { .rv,.rv-fade,.rv-m,.site-nav,.page-heading h1 { animation:none!important; transition:none!important; opacity:1!important; transform:none!important; } }
   </style>
 </head>
@@ -226,10 +223,10 @@
   <div class="page-heading">
     <h1 data-i18n="disc-page-title">Disciplines</h1>
     <div class="filters">
-      <button class="filter-pill active rv" style="--d:0ms" data-filter="all" data-i18n="filter-all">All</button>
-      <button class="filter-pill rv" style="--d:60ms" data-filter="fashion" data-i18n="filter-fashion">Fashion Shows</button>
-      <button class="filter-pill rv" style="--d:120ms" data-filter="brand" data-i18n="filter-brand">Brand Experiences</button>
-      <button class="filter-pill rv" style="--d:180ms" data-filter="events" data-i18n="filter-events">Special Events</button>
+      <button class="filter-pill active rv" style="--d:0ms" data-filter="all" data-i18n="filter-all" aria-pressed="true">All</button>
+      <button class="filter-pill rv" style="--d:60ms" data-filter="fashion" data-i18n="filter-fashion" aria-pressed="false">Fashion Shows</button>
+      <button class="filter-pill rv" style="--d:120ms" data-filter="brand" data-i18n="filter-brand" aria-pressed="false">Brand Experiences</button>
+      <button class="filter-pill rv" style="--d:180ms" data-filter="events" data-i18n="filter-events" aria-pressed="false">Special Events</button>
     </div>
   </div>
 
@@ -301,8 +298,9 @@
       var items = document.querySelectorAll('.mosaic .m');
       pills.forEach(function(pill){
         pill.addEventListener('click', function(){
-          pills.forEach(function(p){ p.classList.remove('active'); });
+          pills.forEach(function(p){ p.classList.remove('active'); p.setAttribute('aria-pressed','false'); });
           pill.classList.add('active');
+          pill.setAttribute('aria-pressed','true');
           var filter = pill.getAttribute('data-filter');
           items.forEach(function(item){
             if(filter === 'all' || item.getAttribute('data-category') === filter){

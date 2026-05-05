@@ -214,6 +214,7 @@
       padding: 16px 0;
     }
     .d-dot {
+      position: relative;
       width: 6px;
       height: 6px;
       border-radius: 50%;
@@ -222,7 +223,9 @@
       cursor: pointer;
       transition: background 0.2s;
       padding: 0;
+      -webkit-tap-highlight-color: transparent;
     }
+    .d-dot::before { content: ''; position: absolute; inset: -11px; }
     .d-dot.active { background: var(--text); }
 
     .d-caption {
@@ -296,6 +299,7 @@
     .rv.in   { opacity:1; transform:translateY(0); }
     .rv-fade { opacity:0; transition:opacity 0.8s cubic-bezier(0.22,1,0.36,1); transition-delay:var(--d,0ms); }
     .rv-fade.in { opacity:1; }
+    :focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
     @media (prefers-reduced-motion:reduce) { .rv,.rv-fade,.site-nav,.hero-text { animation:none!important; transition:none!important; opacity:1!important; transform:none!important; } }
   </style>
 </head>

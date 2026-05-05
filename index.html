@@ -395,6 +395,7 @@
       margin-top: 18px;
     }
     .insta-dot {
+      position: relative;
       width: 6px;
       height: 6px;
       border-radius: 50%;
@@ -403,7 +404,9 @@
       cursor: pointer;
       transition: background 0.2s;
       padding: 0;
+      -webkit-tap-highlight-color: transparent;
     }
+    .insta-dot::before { content: ''; position: absolute; inset: -11px; }
     .insta-dot.active { background: var(--text); }
 
     .insta-handle {
@@ -611,6 +614,8 @@
     }
     @keyframes _ldrUp { from { opacity: 0; transform: translateY(32px); } to { opacity: 1; transform: translateY(0); } }
 
+    :focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+
     @media (prefers-reduced-motion: reduce) {
       .rv, .rv-fade, .rv-m, .ecrin-title, .site-nav, .hero > img,
       .ldr-l1 {
@@ -654,14 +659,16 @@
   <script>
     (function () {
       var l = document.getElementById('ast-loader');
-      if (sessionStorage.getItem('ldrDone')) { l.style.display = 'none'; return; }
+      var ldrDone = false;
+      try { ldrDone = !!sessionStorage.getItem('ldrDone'); } catch(e) {}
+      if (ldrDone) { l.style.display = 'none'; return; }
       document.body.style.overflow = 'hidden';
       setTimeout(function () {
         l.classList.add('ldr-out');
         setTimeout(function () {
           l.style.display = 'none';
           document.body.style.overflow = '';
-          sessionStorage.setItem('ldrDone', '1');
+          try { sessionStorage.setItem('ldrDone', '1'); } catch(e) {}
         }, 700);
       }, 1900);
     })();

@@ -231,6 +231,7 @@
     .rv.in   { opacity:1; transform:translateY(0); }
     .rv-fade { opacity:0; transition:opacity 0.8s cubic-bezier(0.22,1,0.36,1); transition-delay:var(--d,0ms); }
     .rv-fade.in { opacity:1; }
+    :focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
     @media (prefers-reduced-motion:reduce) { .rv,.rv-fade,.site-nav,.location-names h1,.location-hero-img { animation:none!important; transition:none!important; opacity:1!important; transform:none!important; } }
   </style>
 </head>
@@ -345,6 +346,11 @@
       var contactInfo = document.querySelector('.contact-info');
       var footerCols  = document.querySelector('.footer-cols');
       function align(){
+        if (window.innerWidth <= 768) {
+          if (contactInfo) contactInfo.style.gridTemplateColumns = '';
+          if (footerCols)  footerCols.style.gridTemplateColumns  = '';
+          return;
+        }
         var link = Array.from(document.querySelectorAll('.nav-links a')).find(function(a){
           return a.textContent.trim().toUpperCase() === 'WORK';
         });
