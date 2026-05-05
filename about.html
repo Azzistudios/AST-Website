@@ -132,17 +132,42 @@
     .sec-head--inline { display: flex; justify-content: space-between; align-items: baseline; gap: 0; padding: 18px var(--pad); border-top: 1px solid var(--border); }
     .sec-head--inline .sec-desc { text-align: right; }
 
-    /* ── IMAGE ROWS ── */
+    /* ── IMAGE ROWS (carousel) ── */
     .img-row {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0;
+      display: flex;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
     }
+    .img-row::-webkit-scrollbar { display: none; }
 
-    .img-item { overflow: hidden; }
+    .img-item {
+      flex: 0 0 100%;
+      scroll-snap-align: start;
+      overflow: hidden;
+    }
     .img-item img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; transition: opacity 0.3s; }
     .img-item:hover img { opacity: 0.85; }
     .img-caption { font-size: 11px; color: var(--muted); letter-spacing: 0.07em; text-transform: uppercase; padding: 8px var(--pad); }
+
+    .img-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding: 16px 0;
+    }
+    .img-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--border);
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+      padding: 0;
+    }
+    .img-dot.active { background: var(--text); }
 
     /* ── GROUP SECTION ── */
     .group-img {
@@ -209,7 +234,6 @@
 
     @media (min-width: 769px) and (max-width: 1024px) {
       :root { --pad: 32px; }
-      .img-row { grid-template-columns: 1fr 1fr; }
     }
 
     @media (max-width: 768px) {
@@ -235,8 +259,6 @@
       .sec-head--inline { flex-direction: column; gap: 10px; align-items: flex-start; }
       .sec-head--inline .sec-desc { text-align: left; }
       .page-header-desc, .sec-desc { text-align: left; }
-      .img-row { grid-template-columns: 1fr 1fr; gap: 2px; }
-      .img-item img { aspect-ratio: 3/4; }
       .about-hero { width: 100%; height: 56vw; min-height: 220px; margin: 0; }
       .studio-img { height: 56vw; min-height: 220px; }
       .studio-intro { padding: 40px var(--pad) 48px; }
@@ -310,16 +332,21 @@
     <span class="sec-label" data-i18n="fashion-sec-label"><strong>Fashion Shows</strong></span>
     <span class="sec-desc" data-i18n="fashion-sec-desc">Sans Titre gives a designer's vision physical form, from spatial concept to the final bow.</span>
   </div>
-  <div class="img-row" >
-    <div class="img-item rv" style="--d:0ms">
-      <img src="https://placehold.co/640x854/d4a890/d4a890" alt="Fashion Show">
+  <div class="img-row">
+    <div class="img-item">
+      <img src="https://placehold.co/800x800/d4a890/d4a890" alt="Fashion Show">
     </div>
-    <div class="img-item rv" style="--d:80ms">
-      <img src="https://placehold.co/640x854/706050/706050" alt="Fashion Show">
+    <div class="img-item">
+      <img src="https://placehold.co/800x800/706050/706050" alt="Fashion Show">
     </div>
-    <div class="img-item rv" style="--d:160ms">
-      <img src="https://placehold.co/640x854/c8b8a8/c8b8a8" alt="Fashion Show">
+    <div class="img-item">
+      <img src="https://placehold.co/800x800/c8b8a8/c8b8a8" alt="Fashion Show">
     </div>
+  </div>
+  <div class="img-dots">
+    <button class="img-dot active" aria-label="Image 1"></button>
+    <button class="img-dot" aria-label="Image 2"></button>
+    <button class="img-dot" aria-label="Image 3"></button>
   </div>
 
   <!-- BRAND EXPERIENCES + SPECIAL EVENTS -->
@@ -327,16 +354,21 @@
     <span class="sec-label" data-i18n="brand-sec-label"><strong>Brand Experiences</strong> and <strong>Special Events</strong></span>
     <span class="sec-desc" data-i18n="brand-sec-desc">We craft memorable events and experiences that leave a lasting visual and emotional imprint.</span>
   </div>
-  <div class="img-row" >
-    <div class="img-item rv" style="--d:0ms">
-      <img src="https://placehold.co/640x854/3a3830/3a3830" alt="Brand Experience">
+  <div class="img-row">
+    <div class="img-item">
+      <img src="https://placehold.co/800x800/3a3830/3a3830" alt="Brand Experience">
     </div>
-    <div class="img-item rv" style="--d:80ms">
-      <img src="https://placehold.co/640x854/a02828/a02828" alt="Special Event">
+    <div class="img-item">
+      <img src="https://placehold.co/800x800/a02828/a02828" alt="Special Event">
     </div>
-    <div class="img-item rv" style="--d:160ms">
-      <img src="https://placehold.co/640x854/4a6858/4a6858" alt="Brand Activation">
+    <div class="img-item">
+      <img src="https://placehold.co/800x800/4a6858/4a6858" alt="Brand Activation">
     </div>
+  </div>
+  <div class="img-dots">
+    <button class="img-dot active" aria-label="Image 1"></button>
+    <button class="img-dot" aria-label="Image 2"></button>
+    <button class="img-dot" aria-label="Image 3"></button>
   </div>
 
   <!-- PART OF AZZI STUDIOS -->
@@ -391,22 +423,23 @@
     var s=localStorage.getItem('ast-lang')||'en';if(s==='fr')applyLang('fr');
   </script>
   <script>
-    (function(){
-      var sections = document.querySelectorAll('.page-header, .studio-intro, .sec-head:not(.sec-head--inline)');
-      function align(){
-        if (!sections.length) return;
-        var link = Array.from(document.querySelectorAll('.nav-links a')).find(function(a){
-          return a.textContent.trim().toUpperCase() === 'DISCIPLINES';
+    /* ── image carousels ── */
+    (function () {
+      document.querySelectorAll('.img-row').forEach(function (track) {
+        var dotsEl = track.nextElementSibling;
+        if (!dotsEl || !dotsEl.classList.contains('img-dots')) return;
+        var dots = dotsEl.querySelectorAll('.img-dot');
+        function updateDots() {
+          var idx = Math.round(track.scrollLeft / track.clientWidth);
+          dots.forEach(function (d, i) { d.classList.toggle('active', i === idx); });
+        }
+        track.addEventListener('scroll', updateDots, { passive: true });
+        dots.forEach(function (dot, i) {
+          dot.addEventListener('click', function () {
+            track.scrollTo({ left: i * track.clientWidth, behavior: 'smooth' });
+          });
         });
-        if(!link) return;
-        var firstSection = sections[0];
-        var leftCol = link.getBoundingClientRect().left - firstSection.getBoundingClientRect().left;
-        sections.forEach(function(el){
-          el.style.gridTemplateColumns = leftCol + 'px 1fr';
-        });
-      }
-      align();
-      window.addEventListener('resize', align);
+      });
     })();
   </script>
   <script>
