@@ -130,17 +130,12 @@
 
     /* ── IMAGE ROWS (carousel) ── */
     .img-row {
-      display: flex;
-      overflow-x: scroll;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3px;
     }
-    .img-row::-webkit-scrollbar { display: none; }
 
     .img-item {
-      flex: 0 0 100%;
-      scroll-snap-align: start;
       overflow: hidden;
     }
     .img-item img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; transition: opacity 0.3s; }
@@ -167,7 +162,7 @@
     .img-caption { font-size: 11px; color: var(--muted); letter-spacing: 0.07em; text-transform: uppercase; padding: 8px var(--pad); }
 
     .img-dots {
-      display: flex;
+      display: none;
       justify-content: center;
       gap: 8px;
       padding: 16px 0;
@@ -274,6 +269,10 @@
       .site-nav.nav-open .nav-burger span:nth-child(2) { transform: translateY(-3.5px) rotate(-45deg); }
 
       /* ── LAYOUT ── */
+      .img-row { display: flex; overflow-x: scroll; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; gap: 0; }
+      .img-row::-webkit-scrollbar { display: none; }
+      .img-item { flex: 0 0 100%; scroll-snap-align: start; }
+      .img-dots { display: flex; }
       .page-header { padding: 36px var(--pad) 28px; }
       .studio-intro, .page-header, .sec-head { grid-template-columns: 1fr; gap: 16px; }
       .sec-head--inline { flex-direction: column; gap: 10px; align-items: flex-start; }

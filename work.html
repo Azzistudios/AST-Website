@@ -183,17 +183,12 @@
     .see-link:hover { opacity: 0.55; }
 
     .discipline-imgs {
-      display: flex;
-      overflow-x: scroll;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3px;
     }
-    .discipline-imgs::-webkit-scrollbar { display: none; }
 
     .d-img {
-      flex: 0 0 100%;
-      scroll-snap-align: start;
       overflow: hidden;
     }
 
@@ -227,7 +222,7 @@
     }
 
     .d-dots {
-      display: flex;
+      display: none;
       justify-content: center;
       gap: 8px;
       padding: 16px 0;
@@ -300,6 +295,10 @@
       .site-nav.nav-open .nav-burger span:nth-child(2) { transform: translateY(-3.5px) rotate(-45deg); }
 
       /* ── LAYOUT ── */
+      .discipline-imgs { display: flex; overflow-x: scroll; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; gap: 0; }
+      .discipline-imgs::-webkit-scrollbar { display: none; }
+      .d-img { flex: 0 0 100%; scroll-snap-align: start; }
+      .d-dots { display: flex; }
       .page-hero { padding: 40px var(--pad) 36px; }
       .hero-text { font-size: clamp(24px, 7vw, 36px); margin-bottom: 28px; }
       .hero-text strong { color: var(--text); }

@@ -383,17 +383,12 @@
     }
 
     .insta-track {
-      display: flex;
-      overflow-x: scroll;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3px;
     }
-    .insta-track::-webkit-scrollbar { display: none; }
 
     .insta-item {
-      flex: 0 0 100%;
-      scroll-snap-align: start;
       display: block;
       overflow: hidden;
       aspect-ratio: 3 / 4;
@@ -410,7 +405,7 @@
     .insta-item:hover img { opacity: 0.8; }
 
     .insta-dots {
-      display: flex;
+      display: none;
       justify-content: center;
       gap: 8px;
       margin-top: 18px;
@@ -575,6 +570,10 @@
       /* ── LAYOUT ── */
       .ecrin { height: 160px; }
       .hero { height: 56vw; min-height: 260px; }
+      .insta-track { display: flex; overflow-x: scroll; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; gap: 0; }
+      .insta-track::-webkit-scrollbar { display: none; }
+      .insta-item { flex: 0 0 100%; scroll-snap-align: start; }
+      .insta-dots { display: flex; }
       .tagline { padding: 40px var(--pad) 36px; }
       .mosaic { grid-template-columns: repeat(3, 1fr); }
       .location { grid-template-columns: 1fr; padding: 56px var(--pad) 48px; gap: 24px; }
