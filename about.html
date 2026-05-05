@@ -91,7 +91,8 @@
 
     .page-title { font-size: 12px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; padding-right: 60px; }
     .page-header-desc { font-size: 14px; color: #000; text-align: left; line-height: 1.55; }
-    .about-hero { width: calc(100% - 2 * var(--pad)); height: 520px; object-fit: cover; display: block; background: #d8d8d8; margin: 0 var(--pad); }
+    .about-hero-wrap { width: calc(100% - 2 * var(--pad)); height: 520px; background: #d8d8d8; margin: 0 var(--pad); overflow: hidden; }
+    .about-hero { width: 100%; height: 100%; object-fit: cover; display: block; }
 
     /* ── STUDIO INTRO ── */
     .studio-intro {
@@ -108,13 +109,8 @@
     .intro-body p + p { margin-top: 20px; }
 
     /* ── STUDIO IMAGE ── */
-    .studio-img {
-      width: 100%;
-      height: 520px;
-      object-fit: cover;
-      display: block;
-      background: #0d0d0d;
-    }
+    .studio-img-wrap { width: 100%; height: 520px; background: #0d0d0d; overflow: hidden; }
+    .studio-img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 
     /* ── SEC HEAD ── */
@@ -149,6 +145,25 @@
     }
     .img-item img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; transition: opacity 0.3s; }
     .img-item:hover img { opacity: 0.85; }
+
+    /* ── PLACEHOLDER OVERLAY ── */
+    .ph { position: relative; }
+    .ph::after {
+      content: 'EN SCÈNE';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Syne', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.32);
+      pointer-events: none;
+      white-space: nowrap;
+      z-index: 2;
+    }
     .img-caption { font-size: 11px; color: var(--muted); letter-spacing: 0.07em; text-transform: uppercase; padding: 8px var(--pad); }
 
     .img-dots {
@@ -264,8 +279,8 @@
       .sec-head--inline { flex-direction: column; gap: 10px; align-items: flex-start; }
       .sec-head--inline .sec-desc { text-align: left; }
       .page-header-desc, .sec-desc { text-align: left; }
-      .about-hero { width: 100%; height: 56vw; min-height: 220px; margin: 0; }
-      .studio-img { height: 56vw; min-height: 220px; }
+      .about-hero-wrap { width: 100%; height: 56vw; min-height: 220px; margin: 0; }
+      .studio-img-wrap { height: 56vw; min-height: 220px; }
       .studio-intro { padding: 36px var(--pad) 28px; }
       .group-img { aspect-ratio: 3 / 4; }
       .footer-cols { grid-template-columns: 1fr; }
@@ -313,7 +328,9 @@
     <span class="page-title" data-i18n="page-title">About</span>
     <span class="page-header-desc" data-i18n="page-desc">A scenography and event production studio built on<br>one conviction: that space is the most powerful medium in any event.</span>
   </div>
-  <img class="about-hero hero-img" src="https://placehold.co/1920x520/d8d8d8/d8d8d8" alt="Sans Titre">
+  <div class="about-hero-wrap ph hero-img">
+    <img class="about-hero" src="https://placehold.co/1920x520/d8d8d8/d8d8d8" alt="Sans Titre">
+  </div>
 
   <!-- STUDIO INTRO -->
   <div class="studio-intro">
@@ -330,7 +347,9 @@
     </div>
   </div>
 
-  <img class="studio-img rv-fade" src="https://placehold.co/1920x640/d8d8d8/d8d8d8" alt="" aria-hidden="true">
+  <div class="studio-img-wrap ph rv-fade">
+    <img class="studio-img" src="https://placehold.co/1920x640/d8d8d8/d8d8d8" alt="" aria-hidden="true">
+  </div>
 
   <!-- FASHION SHOWS -->
   <div class="sec-head rv-fade">
@@ -338,13 +357,13 @@
     <span class="sec-desc" data-i18n="fashion-sec-desc">Sans Titre gives a designer's vision physical form, from spatial concept to the final bow.</span>
   </div>
   <div class="img-row">
-    <div class="img-item">
+    <div class="img-item ph">
       <img src="https://placehold.co/800x800/d4a890/d4a890" alt="Fashion Show">
     </div>
-    <div class="img-item">
+    <div class="img-item ph">
       <img src="https://placehold.co/800x800/706050/706050" alt="Fashion Show">
     </div>
-    <div class="img-item">
+    <div class="img-item ph">
       <img src="https://placehold.co/800x800/c8b8a8/c8b8a8" alt="Fashion Show">
     </div>
   </div>
@@ -360,13 +379,13 @@
     <span class="sec-desc" data-i18n="brand-sec-desc">We craft memorable events and experiences that leave a lasting visual and emotional imprint.</span>
   </div>
   <div class="img-row">
-    <div class="img-item">
+    <div class="img-item ph">
       <img src="https://placehold.co/800x800/3a3830/3a3830" alt="Brand Experience">
     </div>
-    <div class="img-item">
+    <div class="img-item ph">
       <img src="https://placehold.co/800x800/a02828/a02828" alt="Special Event">
     </div>
-    <div class="img-item">
+    <div class="img-item ph">
       <img src="https://placehold.co/800x800/4a6858/4a6858" alt="Brand Activation">
     </div>
   </div>

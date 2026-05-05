@@ -257,6 +257,25 @@
 
     .m:hover img { opacity: 0.82; }
 
+    /* ── PLACEHOLDER OVERLAY ── */
+    .ph { position: relative; }
+    .ph::after {
+      content: 'EN SCÈNE';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Syne', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.32);
+      pointer-events: none;
+      white-space: nowrap;
+      z-index: 2;
+    }
+
     /* ── LOCATION ── */
     .location {
       padding: 96px var(--pad) 88px;
@@ -707,7 +726,7 @@
   </div>
 
   <!-- ── HERO ── -->
-  <section class="hero" aria-label="Featured work">
+  <section class="hero ph" aria-label="Featured work">
     <img
       src="https://placehold.co/1920x500/111111/111111"
       alt="Sans Titre — Featured project"
@@ -737,24 +756,24 @@
   </div>
 
   <div class="mosaic">
-    <div class="m"><img loading="lazy" src="https://placehold.co/300x300/111111/111111" alt="Project"></div>
-    <div class="m"><img loading="lazy" src="https://placehold.co/300x300/c8b4a0/c8b4a0" alt="Project"></div>
-    <div class="m"><img loading="lazy" src="https://placehold.co/300x300/e8e0d8/e8e0d8" alt="Project"></div>
-    <div class="m"><img loading="lazy" src="https://placehold.co/300x300/3a2a20/3a2a20" alt="Project"></div>
-    <div class="m"><img loading="lazy" src="https://placehold.co/300x300/9ab0a0/9ab0a0" alt="Project"></div>
-    <div class="m"><img loading="lazy" src="https://placehold.co/300x300/485868/485868" alt="Project"></div>
-    <div class="m"><img loading="lazy" src="https://placehold.co/300x300/f0ece4/f0ece4" alt="Project"></div>
-    <div class="m"><img loading="lazy" src="https://placehold.co/300x300/786858/786858" alt="Project"></div>
-    <div class="m"><img loading="lazy" src="https://placehold.co/300x300/1e1e1e/1e1e1e" alt="Project"></div>
-    <div class="m"><img loading="lazy" src="https://placehold.co/300x300/d4c8bc/d4c8bc" alt="Project"></div>
-    <div class="m"><img loading="lazy" src="https://placehold.co/300x300/706050/706050" alt="Project"></div>
-    <div class="m"><img loading="lazy" src="https://placehold.co/300x300/b0988a/b0988a" alt="Project"></div>
-    <div class="m"><img loading="lazy" src="https://placehold.co/300x300/f4f0ea/f4f0ea" alt="Project"></div>
-    <div class="m"><img loading="lazy" src="https://placehold.co/300x300/404858/404858" alt="Project"></div>
-    <div class="m"><img loading="lazy" src="https://placehold.co/300x300/c0b8b0/c0b8b0" alt="Project"></div>
-    <div class="m"><img loading="lazy" src="https://placehold.co/300x300/3c3428/3c3428" alt="Project"></div>
-    <div class="m"><img loading="lazy" src="https://placehold.co/300x300/1a1a1a/1a1a1a" alt="Project"></div>
-    <div class="m"><img loading="lazy" src="https://placehold.co/300x300/a8b0c0/a8b0c0" alt="Project"></div>
+    <div class="m ph"><img loading="lazy" src="https://placehold.co/300x300/111111/111111" alt="Project"></div>
+    <div class="m ph"><img loading="lazy" src="https://placehold.co/300x300/c8b4a0/c8b4a0" alt="Project"></div>
+    <div class="m ph"><img loading="lazy" src="https://placehold.co/300x300/e8e0d8/e8e0d8" alt="Project"></div>
+    <div class="m ph"><img loading="lazy" src="https://placehold.co/300x300/3a2a20/3a2a20" alt="Project"></div>
+    <div class="m ph"><img loading="lazy" src="https://placehold.co/300x300/9ab0a0/9ab0a0" alt="Project"></div>
+    <div class="m ph"><img loading="lazy" src="https://placehold.co/300x300/485868/485868" alt="Project"></div>
+    <div class="m ph"><img loading="lazy" src="https://placehold.co/300x300/f0ece4/f0ece4" alt="Project"></div>
+    <div class="m ph"><img loading="lazy" src="https://placehold.co/300x300/786858/786858" alt="Project"></div>
+    <div class="m ph"><img loading="lazy" src="https://placehold.co/300x300/1e1e1e/1e1e1e" alt="Project"></div>
+    <div class="m ph"><img loading="lazy" src="https://placehold.co/300x300/d4c8bc/d4c8bc" alt="Project"></div>
+    <div class="m ph"><img loading="lazy" src="https://placehold.co/300x300/706050/706050" alt="Project"></div>
+    <div class="m ph"><img loading="lazy" src="https://placehold.co/300x300/b0988a/b0988a" alt="Project"></div>
+    <div class="m ph"><img loading="lazy" src="https://placehold.co/300x300/f4f0ea/f4f0ea" alt="Project"></div>
+    <div class="m ph"><img loading="lazy" src="https://placehold.co/300x300/404858/404858" alt="Project"></div>
+    <div class="m ph"><img loading="lazy" src="https://placehold.co/300x300/c0b8b0/c0b8b0" alt="Project"></div>
+    <div class="m ph"><img loading="lazy" src="https://placehold.co/300x300/3c3428/3c3428" alt="Project"></div>
+    <div class="m ph"><img loading="lazy" src="https://placehold.co/300x300/1a1a1a/1a1a1a" alt="Project"></div>
+    <div class="m ph"><img loading="lazy" src="https://placehold.co/300x300/a8b0c0/a8b0c0" alt="Project"></div>
   </div>
 
   <!-- ── LOCATION ── -->
