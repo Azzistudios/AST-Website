@@ -183,12 +183,19 @@
     .see-link:hover { opacity: 0.55; }
 
     .discipline-imgs {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0;
+      display: flex;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
     }
+    .discipline-imgs::-webkit-scrollbar { display: none; }
 
-    .d-img { overflow: hidden; }
+    .d-img {
+      flex: 0 0 100%;
+      scroll-snap-align: start;
+      overflow: hidden;
+    }
 
     .d-img img {
       width: 100%;
@@ -199,6 +206,24 @@
     }
 
     .d-img:hover img { opacity: 0.8; }
+
+    .d-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding: 16px 0;
+    }
+    .d-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--border);
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+      padding: 0;
+    }
+    .d-dot.active { background: var(--text); }
 
     .d-caption {
       font-size: 11px;
@@ -230,7 +255,6 @@
 
     @media (min-width: 769px) and (max-width: 1024px) {
       :root { --pad: 32px; }
-      .discipline-imgs { grid-template-columns: 1fr 1fr; }
       .tags { flex-wrap: wrap; }
     }
 
@@ -258,8 +282,6 @@
       .tag { color: var(--text); border-color: var(--text); }
       .tag:hover { background: var(--text); color: var(--bg); }
       .discipline-intro { grid-template-columns: 1fr; padding: 36px var(--pad) 28px; }
-      .discipline-imgs { grid-template-columns: 1fr 1fr; }
-      .d-img img { aspect-ratio: 4/3; }
       .tags { flex-wrap: wrap; gap: 8px; }
       .footer-cols { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
@@ -327,15 +349,20 @@
       </div>
     </div>
     <div class="discipline-imgs">
-      <div class="d-img rv-fade" style="--d:0ms">
-        <img src="https://placehold.co/800x600/111111/111111" alt="Fashion Show">
+      <div class="d-img">
+        <img src="https://placehold.co/800x800/111111/111111" alt="Fashion Show">
       </div>
-      <div class="d-img rv-fade" style="--d:80ms">
-        <img src="https://placehold.co/800x600/252010/252010" alt="Fashion Show">
+      <div class="d-img">
+        <img src="https://placehold.co/800x800/252010/252010" alt="Fashion Show">
       </div>
-      <div class="d-img rv-fade" style="--d:160ms">
-        <img src="https://placehold.co/800x600/302820/302820" alt="Fashion Show">
+      <div class="d-img">
+        <img src="https://placehold.co/800x800/302820/302820" alt="Fashion Show">
       </div>
+    </div>
+    <div class="d-dots">
+      <button class="d-dot active" aria-label="Image 1"></button>
+      <button class="d-dot" aria-label="Image 2"></button>
+      <button class="d-dot" aria-label="Image 3"></button>
     </div>
   </section>
 
@@ -350,15 +377,20 @@
       </div>
     </div>
     <div class="discipline-imgs">
-      <div class="d-img rv-fade" style="--d:0ms">
-        <img src="https://placehold.co/800x600/182030/182030" alt="Brand Experience">
+      <div class="d-img">
+        <img src="https://placehold.co/800x800/182030/182030" alt="Brand Experience">
       </div>
-      <div class="d-img rv-fade" style="--d:80ms">
-        <img src="https://placehold.co/800x600/201818/201818" alt="Brand Experience">
+      <div class="d-img">
+        <img src="https://placehold.co/800x800/201818/201818" alt="Brand Experience">
       </div>
-      <div class="d-img rv-fade" style="--d:160ms">
-        <img src="https://placehold.co/800x600/181820/181820" alt="Brand Experience">
+      <div class="d-img">
+        <img src="https://placehold.co/800x800/181820/181820" alt="Brand Experience">
       </div>
+    </div>
+    <div class="d-dots">
+      <button class="d-dot active" aria-label="Image 1"></button>
+      <button class="d-dot" aria-label="Image 2"></button>
+      <button class="d-dot" aria-label="Image 3"></button>
     </div>
   </section>
 
@@ -373,15 +405,20 @@
       </div>
     </div>
     <div class="discipline-imgs">
-      <div class="d-img rv-fade" style="--d:0ms">
-        <img src="https://placehold.co/800x600/201c10/201c10" alt="Special Event">
+      <div class="d-img">
+        <img src="https://placehold.co/800x800/201c10/201c10" alt="Special Event">
       </div>
-      <div class="d-img rv-fade" style="--d:80ms">
-        <img src="https://placehold.co/800x600/102020/102020" alt="Special Event">
+      <div class="d-img">
+        <img src="https://placehold.co/800x800/102020/102020" alt="Special Event">
       </div>
-      <div class="d-img rv-fade" style="--d:160ms">
-        <img src="https://placehold.co/800x600/1c1010/1c1010" alt="Special Event">
+      <div class="d-img">
+        <img src="https://placehold.co/800x800/1c1010/1c1010" alt="Special Event">
       </div>
+    </div>
+    <div class="d-dots">
+      <button class="d-dot active" aria-label="Image 1"></button>
+      <button class="d-dot" aria-label="Image 2"></button>
+      <button class="d-dot" aria-label="Image 3"></button>
     </div>
   </section>
 
@@ -450,6 +487,26 @@
 
       window.addEventListener('scroll', update, {passive:true});
       update();
+    })();
+  </script>
+  <script>
+    /* ── discipline carousels ── */
+    (function () {
+      document.querySelectorAll('.discipline-imgs').forEach(function (track) {
+        var dotsEl = track.nextElementSibling;
+        if (!dotsEl || !dotsEl.classList.contains('d-dots')) return;
+        var dots = dotsEl.querySelectorAll('.d-dot');
+        function updateDots() {
+          var idx = Math.round(track.scrollLeft / track.clientWidth);
+          dots.forEach(function (d, i) { d.classList.toggle('active', i === idx); });
+        }
+        track.addEventListener('scroll', updateDots, { passive: true });
+        dots.forEach(function (dot, i) {
+          dot.addEventListener('click', function () {
+            track.scrollTo({ left: i * track.clientWidth, behavior: 'smooth' });
+          });
+        });
+      });
     })();
   </script>
   <script>
