@@ -6,7 +6,7 @@
   <link rel="apple-touch-icon" href="../favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Atelier Sans Titre — Scénographie &amp; production événementielle, Beyrouth</title>
-  <meta name="description" content="Atelier Sans Titre est un studio de scénographie et de production événementielle à Beyrouth — défilés de mode, expériences de marque et événements spéciaux pour des clients de luxe.">
+  <meta name="description" content="Atelier Sans Titre est un studio de scénographie et de production événementielle à Beyrouth — événements spéciaux, expériences de marque et défilés de mode pour des clients de luxe.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://ateliersanstitre.com/fr/">
   <link rel="alternate" hreflang="en" href="https://ateliersanstitre.com/">
@@ -15,25 +15,25 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Atelier Sans Titre">
   <meta property="og:title" content="Atelier Sans Titre — Scénographie &amp; production événementielle, Beyrouth">
-  <meta property="og:description" content="Atelier Sans Titre est un studio de scénographie et de production événementielle à Beyrouth — défilés de mode, expériences de marque et événements spéciaux pour des clients de luxe.">
+  <meta property="og:description" content="Atelier Sans Titre est un studio de scénographie et de production événementielle à Beyrouth — événements spéciaux, expériences de marque et défilés de mode pour des clients de luxe.">
   <meta property="og:image" content="https://ateliersanstitre.com/brand_assets/og-image.jpg">
   <meta property="og:url" content="https://ateliersanstitre.com/fr/">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Atelier Sans Titre — Scénographie &amp; production événementielle, Beyrouth">
-  <meta name="twitter:description" content="Atelier Sans Titre est un studio de scénographie et de production événementielle à Beyrouth — défilés de mode, expériences de marque et événements spéciaux pour des clients de luxe.">
+  <meta name="twitter:description" content="Atelier Sans Titre est un studio de scénographie et de production événementielle à Beyrouth — événements spéciaux, expériences de marque et défilés de mode pour des clients de luxe.">
   <meta name="twitter:image" content="https://ateliersanstitre.com/brand_assets/og-image.jpg">
   <!-- Google Analytics — add your property ID when ready -->
   <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX',{anonymize_ip:true});</script> -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
+  <link rel="preload" href="../Fonts/Syne-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../Fonts/Syne-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <noscript><style>#ast-loader{display:none!important}.rv,.rv-fade,.rv-m{opacity:1!important;transform:none!important}</style></noscript>
   <style>
-    @font-face { font-family: 'Syne'; src: url('../Fonts/Syne-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
-    @font-face { font-family: 'Syne'; src: url('../Fonts/Syne-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
-    @font-face { font-family: 'Syne'; src: url('../Fonts/Syne-SemiBold.ttf') format('truetype'); font-weight: 600; font-style: normal; font-display: swap; }
-    @font-face { font-family: 'Syne'; src: url('../Fonts/Syne-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
-    @font-face { font-family: 'Syne'; src: url('../Fonts/Syne-ExtraBold.ttf') format('truetype'); font-weight: 800; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Syne'; src: url('../Fonts/Syne-Regular.woff2') format('woff2'), url('../Fonts/Syne-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Syne'; src: url('../Fonts/Syne-Medium.woff2') format('woff2'), url('../Fonts/Syne-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Syne'; src: url('../Fonts/Syne-SemiBold.woff2') format('woff2'), url('../Fonts/Syne-SemiBold.ttf') format('truetype'); font-weight: 600; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Syne'; src: url('../Fonts/Syne-Bold.woff2') format('woff2'), url('../Fonts/Syne-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Syne'; src: url('../Fonts/Syne-ExtraBold.woff2') format('woff2'), url('../Fonts/Syne-ExtraBold.ttf') format('truetype'); font-weight: 800; font-style: normal; font-display: swap; }
     /* ── RESET & ROOT ── */
     *, *::before, *::after {
       box-sizing: border-box;
@@ -113,7 +113,7 @@
       border-radius: 100px;
       color: var(--text);
       opacity: 0.4;
-      transition: background 0.2s, color 0.2s, opacity 0.2s;
+      transition: opacity 0.2s;
     }
 
     .lang-btn.active { background: var(--text); color: var(--bg); opacity: 1; }
@@ -210,13 +210,13 @@
       text-transform: uppercase;
       color: #0d0d0d;
       position: relative;
-      transition: color 0.2s;
+      transition: opacity 0.2s;
     }
     .tag::before {
       content: '/ ';
       opacity: 0.6;
     }
-    .tag:hover { color: #999; background: none; }
+    .tag:hover { opacity: 0.45; background: none; }
 
     /* ── SECTION HEADER ── */
     .sec-head {
@@ -358,7 +358,7 @@
       text-transform: uppercase;
       text-decoration: none;
       display: inline-block;
-      transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.4s;
+      transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), opacity 0.4s cubic-bezier(0.22,1,0.36,1);
     }
 
     .group-overlay .line:hover {
@@ -367,7 +367,7 @@
     }
 
     .group-overlay .line-azzi {
-      font-family: 'Squada One', sans-serif;
+      font-family: ui-monospace, 'SF Mono', Menlo, Monaco, 'Cascadia Mono', 'Roboto Mono', monospace;
       font-size: clamp(28px, 3.8vw, 56px);
       font-weight: 400;
       color: #fff;
@@ -376,7 +376,7 @@
       text-transform: lowercase;
       text-decoration: none;
       display: inline-block;
-      transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.4s;
+      transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), opacity 0.4s cubic-bezier(0.22,1,0.36,1);
     }
 
     .group-overlay .line-azzi:hover {
@@ -415,7 +415,7 @@
     .insta-dots {
       display: none;
       justify-content: center;
-      gap: 8px;
+      gap: 14px;
       margin-top: 18px;
     }
     .insta-dot {
@@ -426,11 +426,10 @@
       background: var(--border);
       border: none;
       cursor: pointer;
-      transition: background 0.2s;
       padding: 0;
       -webkit-tap-highlight-color: transparent;
     }
-    .insta-dot::before { content: ''; position: absolute; inset: -11px; }
+    .insta-dot::before { content: ''; position: absolute; inset: -15px; }
     .insta-dot.active { background: var(--text); }
 
     .insta-handle {
@@ -555,6 +554,7 @@
         grid-template-rows: 56px 1fr 72px;
         align-items: start;
         z-index: 300;
+        overscroll-behavior: contain;
       }
       .site-nav.nav-open > :first-child { grid-column: 2; grid-row: 1; justify-self: center; align-self: center; visibility: visible; }
       .site-nav.nav-open .nav-burger { grid-column: 3; grid-row: 1; justify-self: end; align-self: center; }
@@ -565,6 +565,9 @@
         align-items: center;
         justify-content: center;
         padding-top: 80px;
+        overflow-y: auto;
+        min-height: 0;
+        max-height: 100%;
       }
       .site-nav.nav-open .nav-links {
         display: flex;
@@ -651,8 +654,15 @@
     }
     @keyframes _ldrUp { from { opacity: 0; transform: translateY(32px); } to { opacity: 1; transform: translateY(0); } }
 
+    @media (max-width: 360px) {
+      .ldr-l1 { font-size: 7.5vw; }
+    }
+
     :focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
 
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
     @media (prefers-reduced-motion: reduce) {
       .rv, .rv-fade, .rv-m, .ecrin-title, .site-nav, .hero > img,
       .ldr-l1 {
@@ -679,11 +689,12 @@
         "address": { "@type": "PostalAddress", "addressLocality": "Beirut", "addressCountry": "LB" },
         "geo": { "@type": "GeoCoordinates", "latitude": 33.8870653, "longitude": 35.5206735 },
         "areaServed": ["LB", "Lebanon", "Middle East", "Gulf"],
+        "founder": { "@type": "Person", "name": "Marc Azzi", "jobTitle": "Architect & Scenographer" },
         "sameAs": ["https://www.instagram.com/ateliersanstitre"]
       },
       {
         "@type": "Service",
-        "serviceType": "Fashion show production & scenography",
+        "serviceType": "Special events production",
         "provider": { "@id": "https://ateliersanstitre.com/#org" },
         "areaServed": "Middle East"
       },
@@ -695,7 +706,7 @@
       },
       {
         "@type": "Service",
-        "serviceType": "Special events production",
+        "serviceType": "Fashion show production & scenography",
         "provider": { "@id": "https://ateliersanstitre.com/#org" },
         "areaServed": "Middle East"
       },
@@ -722,25 +733,51 @@
       var l = document.getElementById('ast-loader');
       var ldrDone = false;
       try { ldrDone = !!sessionStorage.getItem('ldrDone'); } catch(e) {}
-      var et = document.querySelector('.ecrin-title');
-      if (ldrDone) { l.style.display = 'none'; if (et) et.classList.add('ldr-reveal'); return; }
+      /* .ecrin-title is parsed after this script — resolve it lazily */
+      function revealTitle() {
+        var et = document.querySelector('.ecrin-title');
+        if (et) { et.classList.add('ldr-reveal'); }
+        else { document.addEventListener('DOMContentLoaded', function () {
+          var t = document.querySelector('.ecrin-title');
+          if (t) t.classList.add('ldr-reveal');
+        }); }
+      }
+      function loaderHidden() {
+        l.style.display = 'none';
+        /* don't release the scroll lock if the mobile menu opened during the fade */
+        if (!document.querySelector('.site-nav.nav-open')) document.body.style.overflow = '';
+        document.documentElement.dispatchEvent(new Event('ast:loaded'));
+      }
+      if (ldrDone) { l.style.display = 'none'; revealTitle(); document.documentElement.dispatchEvent(new Event('ast:loaded')); return; }
+      /* mark done as soon as the loader is committed, so navigating mid-fade never replays it */
+      try { sessionStorage.setItem('ldrDone', '1'); } catch(e) {}
       document.body.style.overflow = 'hidden';
-      setTimeout(function () {
-        l.classList.add('ldr-out');
+      /* exit when the hero is ready — min 1200ms brand beat, 1900ms hard cap */
+      var t0 = Date.now(), fired = false;
+      function exitLoader() {
+        if (fired) return;
+        fired = true;
+        var wait = Math.max(0, 1200 - (Date.now() - t0));
         setTimeout(function () {
-          l.style.display = 'none';
-          document.body.style.overflow = '';
-          if (et) et.classList.add('ldr-reveal');
-          try { sessionStorage.setItem('ldrDone', '1'); } catch(e) {}
-        }, 700);
-      }, 1900);
+          l.classList.add('ldr-out');
+          revealTitle();
+          setTimeout(loaderHidden, 700);
+        }, wait);
+      }
+      document.addEventListener('DOMContentLoaded', function () {
+        var hero = document.querySelector('.hero img');
+        if (!hero || hero.complete) { exitLoader(); return; }
+        hero.addEventListener('load', exitLoader);
+        hero.addEventListener('error', exitLoader);
+      });
+      setTimeout(exitLoader, 1900); /* hard cap — never hold longer than before */
     })();
   </script>
 
   <!-- ── NAV ── -->
   <header class="site-nav">
     <div class="nav-logo"><a href="index.html">Sans Titre</a></div>
-    <nav aria-label="Main">
+    <nav aria-label="Principale">
       <ul class="nav-links">
         <li><a href="work.html" data-i18n="nav-work">Travail</a></li>
         <li><a href="about.html" data-i18n="nav-about">À Propos</a></li>
@@ -753,7 +790,7 @@
       <span class="lang-sep">/</span>
       <span class="lang-btn active" aria-current="page">FR</span>
     </div>
-    <button class="nav-burger" aria-label="Open menu" aria-expanded="false">
+    <button class="nav-burger" aria-label="Ouvrir le menu" aria-expanded="false">
       <span></span>
       <span></span>
     </button>
@@ -765,7 +802,7 @@
   </div>
 
   <!-- ── HERO ── -->
-  <section class="hero" aria-label="Featured work">
+  <section class="hero" aria-label="Projet à la une">
     <img
       src="../brand_assets/hero.jpg"
       alt="Scénographie et production événementielle par Atelier Sans Titre, Beyrouth"
@@ -775,7 +812,7 @@
 
   <!-- ── TAGLINE ── -->
   <section class="tagline">
-    <p class="tagline-text rv" data-i18n="tagline">Scénographie<span class="m-br"><br></span> et production<br>pour <strong>des défilés de mode</strong>,<br><strong>des expériences de marque</strong>,<br>et des <strong>événements spéciaux</strong>.</p>
+    <p class="tagline-text rv" data-i18n="tagline">Scénographie<span class="m-br"><br></span> et production<br>pour <strong>des événements spéciaux</strong>,<br><strong>des expériences de marque</strong>,<br>et des <strong>défilés de mode</strong>.</p>
     <div class="tags">
       <span class="tag rv" style="--d:60ms" data-i18n="tag-fashion">Mode</span>
       <span class="tag rv" style="--d:110ms" data-i18n="tag-luxury">Luxe</span>
@@ -792,15 +829,15 @@
   </div>
 
   <div class="mosaic">
-    <div class="m"><img loading="lazy" src="../brand_assets/fashion/fashion-1.jpg" alt="Scénographie de défilé de mode par Atelier Sans Titre, Beyrouth"></div>
-    <div class="m"><img loading="lazy" src="../brand_assets/fashion/fashion-2.jpg" alt="Décor de podium pour un défilé de mode, Beyrouth"></div>
-    <div class="m"><img loading="lazy" src="../brand_assets/fashion/fashion-3.jpg" alt="Mise en scène et éclairage de défilé par Atelier Sans Titre, Beyrouth"></div>
-    <div class="m"><img loading="lazy" src="../brand_assets/brand/brand-1.jpg" alt="Installation d'expérience de marque — lancement de produit, Beyrouth"></div>
-    <div class="m"><img loading="lazy" src="../brand_assets/brand/brand-2.jpg" alt="Activation de marque immersive par Atelier Sans Titre, Beyrouth"></div>
-    <div class="m"><img loading="lazy" src="../brand_assets/brand/brand-3.jpg" alt="Scénographie d'expérience de marque par Atelier Sans Titre, Beyrouth"></div>
     <div class="m"><img loading="lazy" src="../brand_assets/events/events-1.jpg" alt="Production d'événement spécial par Atelier Sans Titre, Beyrouth"></div>
     <div class="m"><img loading="lazy" src="../brand_assets/events/events-2.jpg" alt="Scénographie de dîner de gala à Beyrouth"></div>
     <div class="m"><img loading="lazy" src="../brand_assets/events/events-3.jpg" alt="Mise en scène d'événement culturel par Atelier Sans Titre, Beyrouth"></div>
+    <div class="m"><img loading="lazy" src="../brand_assets/brand/brand-1.jpg" alt="Installation d'expérience de marque — lancement de produit, Beyrouth"></div>
+    <div class="m"><img loading="lazy" src="../brand_assets/brand/brand-2.jpg" alt="Activation de marque immersive par Atelier Sans Titre, Beyrouth"></div>
+    <div class="m"><img loading="lazy" src="../brand_assets/brand/brand-3.jpg" alt="Scénographie d'expérience de marque par Atelier Sans Titre, Beyrouth"></div>
+    <div class="m"><img loading="lazy" src="../brand_assets/fashion/fashion-1.jpg" alt="Scénographie de défilé de mode par Atelier Sans Titre, Beyrouth"></div>
+    <div class="m"><img loading="lazy" src="../brand_assets/fashion/fashion-2.jpg" alt="Décor de podium pour un défilé de mode, Beyrouth"></div>
+    <div class="m"><img loading="lazy" src="../brand_assets/fashion/fashion-3.jpg" alt="Mise en scène et éclairage de défilé par Atelier Sans Titre, Beyrouth"></div>
   </div>
 
   <!-- ── LOCATION ── -->
@@ -809,7 +846,7 @@
       <h2 data-i18n="location-heading">Beyrouth<br><span class="arrow">→ Liban</span></h2>
       <p class="location-sub" data-i18n="location-sub">Notre base. Notre perspective.</p>
     </div>
-    <div class="location-right rv" style="--d:120ms" data-i18n="location-body">Basée à Beyrouth, Sans Titre crée des défilés de mode, des expériences de marque et des événements spéciaux pour des clients de luxe à travers la région et au-delà.</div>
+    <div class="location-right rv" style="--d:120ms" data-i18n="location-body">Basée à Beyrouth, Sans Titre crée des événements spéciaux, des expériences de marque et des défilés de mode pour des clients de luxe à travers la région et au-delà.</div>
   </section>
 
   <!-- ── PART OF AZZI STUDIOS ── -->
@@ -878,16 +915,26 @@
 
   <script>
     (function () {
-      var EASE = 'cubic-bezier(0.22,1,0.36,1)';
+      /* after a reveal completes, drop the rv classes so the element's own
+         hover transitions (0.2s) take over from the 0.8s reveal transition */
+      function tidy(el) {
+        var done = false;
+        function strip(ev) {
+          if (done || (ev && ev.target !== el)) return;
+          done = true;
+          el.classList.remove('rv', 'rv-fade', 'rv-m');
+          el.removeEventListener('transitionend', strip);
+        }
+        el.addEventListener('transitionend', strip);
+        setTimeout(strip, 1700); /* fallback: 0.8s + max delay + margin */
+      }
 
       /* ── scroll-reveal observer ── */
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) {
-          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+          if (e.isIntersecting) { e.target.classList.add('in'); tidy(e.target); io.unobserve(e.target); }
         });
       }, { threshold: 0.1 });
-
-      document.querySelectorAll('.rv, .rv-fade').forEach(function (el) { io.observe(el); });
 
       /* ── mosaic stagger ── */
       var mosaicObs = new IntersectionObserver(function (entries) {
@@ -902,15 +949,40 @@
         });
       }, { threshold: 0.05 });
 
-      var mosaic = document.querySelector('.mosaic');
-      if (mosaic) {
-        mosaic.querySelectorAll('.m').forEach(function (m) { m.classList.add('rv-m'); });
-        mosaicObs.observe(mosaic);
+      function start() {
+        document.querySelectorAll('.rv, .rv-fade').forEach(function (el) { io.observe(el); });
+        var mosaic = document.querySelector('.mosaic');
+        if (mosaic) {
+          mosaic.querySelectorAll('.m').forEach(function (m) { m.classList.add('rv-m'); });
+          mosaicObs.observe(mosaic);
+        }
       }
 
-      /* ── nav link hover underline ── */
-      document.querySelectorAll('.nav-links a').forEach(function (a) {
-        a.style.cssText += 'position:relative;';
+      /* wait for the loader on first visit, so entrances aren't spent behind it */
+      var l = document.getElementById('ast-loader');
+      if (l && l.style.display !== 'none') {
+        document.documentElement.addEventListener('ast:loaded', start, { once: true });
+      } else {
+        start();
+      }
+    })();
+  </script>
+
+  <script>
+    /* ── Instagram carousel dots (mobile) ── */
+    (function () {
+      var track = document.querySelector('.insta-track');
+      var dots  = document.querySelectorAll('.insta-dot');
+      if (!track || !dots.length) return;
+      function updateDots() {
+        var idx = Math.round(track.scrollLeft / track.clientWidth);
+        dots.forEach(function (d, i) { d.classList.toggle('active', i === idx); });
+      }
+      track.addEventListener('scroll', updateDots, { passive: true });
+      dots.forEach(function (dot, i) {
+        dot.addEventListener('click', function () {
+          track.scrollTo({ left: i * track.clientWidth, behavior: 'smooth' });
+        });
       });
     })();
   </script>
@@ -920,14 +992,23 @@
       var burger = document.querySelector('.nav-burger');
       var nav    = document.querySelector('.site-nav');
       if (!burger) return;
+      function closeMenu(){
+        nav.classList.remove('nav-open');
+        burger.setAttribute('aria-expanded','false');
+        document.body.style.overflow = '';
+      }
       burger.addEventListener('click', function(){
         var open = nav.classList.toggle('nav-open');
         burger.setAttribute('aria-expanded', String(open));
         document.body.style.overflow = open ? 'hidden' : '';
       });
       document.querySelectorAll('.nav-links a').forEach(function(a){
-        a.addEventListener('click', function(){ nav.classList.remove('nav-open'); burger.setAttribute('aria-expanded','false'); document.body.style.overflow = ''; });
+        a.addEventListener('click', closeMenu);
       });
+      /* release the menu + scroll lock if the viewport crosses to desktop */
+      var mq = window.matchMedia('(min-width: 769px)');
+      function onMq(e){ if (e.matches) closeMenu(); }
+      if (mq.addEventListener) mq.addEventListener('change', onMq); else mq.addListener(onMq);
     })();
   </script>
 </body>
