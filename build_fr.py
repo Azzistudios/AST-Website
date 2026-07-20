@@ -90,7 +90,7 @@ ALT = {
 }
 
 NAV = {'nav-work':'Travail','nav-about':'À Propos','nav-disciplines':'Disciplines','nav-contact':'Contact'}
-TAGS = {'tag-fashion':'Mode','tag-luxury':'Luxe','tag-beauty':'Beauté','tag-spirits':'Spiritueux','tag-culture':'Culture & Arts'}
+TAGS = {'tag-fashion':'Mode','tag-jewellery':'Joaillerie','tag-beauty':'Beauté','tag-spirits':'Spiritueux','tag-automotive':'Automobile','tag-culture':'Culture & Arts'}
 FOOT = {'footer-location':'Beyrouth, Liban','copyright':'© 2026 Atelier Sans Titre. Tous droits réservés.'}
 
 # ── CATALOG: per-page French text + URLs ──
