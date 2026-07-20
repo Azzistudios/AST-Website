@@ -109,4 +109,58 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://ateliersanstitre.com/special-events.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ateliersanstitre.com/special-events.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ateliersanstitre.com/fr/special-events.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ateliersanstitre.com/special-events.html"/>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ateliersanstitre.com/fr/special-events.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ateliersanstitre.com/special-events.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ateliersanstitre.com/fr/special-events.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ateliersanstitre.com/special-events.html"/>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ateliersanstitre.com/brand-experiences.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ateliersanstitre.com/brand-experiences.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ateliersanstitre.com/fr/brand-experiences.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ateliersanstitre.com/brand-experiences.html"/>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ateliersanstitre.com/fr/brand-experiences.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ateliersanstitre.com/brand-experiences.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ateliersanstitre.com/fr/brand-experiences.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ateliersanstitre.com/brand-experiences.html"/>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ateliersanstitre.com/fashion-shows.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ateliersanstitre.com/fashion-shows.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ateliersanstitre.com/fr/fashion-shows.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ateliersanstitre.com/fashion-shows.html"/>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ateliersanstitre.com/fr/fashion-shows.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ateliersanstitre.com/fashion-shows.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ateliersanstitre.com/fr/fashion-shows.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ateliersanstitre.com/fashion-shows.html"/>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

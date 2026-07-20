@@ -156,7 +156,7 @@ PAGES = {
         'page-title':'À propos',
         'page-desc':"Un studio de scénographie et de production événementielle fondé sur une conviction : l'espace est le medium le plus puissant dans tout événement.",
         'studio-label':'Le Studio',
-        'studio-p1':'Sans Titre est un studio de scénographie et de production créative basé à Beyrouth, fondé en 2026 par Marc Azzi, architecte et scénographe. Nous concevons et produisons des <a href="disciplines.html">événements spéciaux</a>, des <a href="disciplines.html">expériences de marque</a> et des <a href="disciplines.html">défilés de mode</a> pour des clients de luxe à travers la région et au-delà.',
+        'studio-p1':'Sans Titre est un studio de scénographie et de production créative basé à Beyrouth, fondé en 2026 par Marc Azzi, architecte et scénographe. Nous concevons et produisons des <a href="special-events.html">événements spéciaux</a>, des <a href="brand-experiences.html">expériences de marque</a> et des <a href="fashion-shows.html">défilés de mode</a> pour des clients de luxe à travers la région et au-delà.',
         'studio-p2':'Le studio reste délibérément indépendant : chaque projet est mené directement, du premier concept à la réalisation finale, en réunissant les producteurs et les spécialistes techniques que la commande demande. Une même conviction traverse l\'ensemble : les espaces que nous construisons portent du sens, et chaque événement mérite d\'être une expérience singulière.',
         'fashion-sec-label':'<strong>Défilés de mode</strong>',
         'fashion-sec-desc':"Sans Titre traduit la vision d'un créateur en espace. Chaque décision, du sol au système d'éclairage, est au service de la collection.",
