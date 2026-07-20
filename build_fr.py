@@ -89,7 +89,7 @@ ALT = {
  "Scenography and event production by Atelier Sans Titre in Beirut, Lebanon":"Scénographie et production événementielle par Atelier Sans Titre à Beyrouth, Liban",
 }
 
-NAV = {'nav-work':'Travail','nav-about':'À propos','nav-disciplines':'Disciplines','nav-contact':'Contact'}
+NAV = {'nav-work':'Projets','nav-about':'À propos','nav-disciplines':'Savoir-faire','nav-faq':'FAQ','nav-contact':'Contact'}
 TAGS = {'tag-fashion':'Mode','tag-jewellery':'Joaillerie','tag-beauty':'Beauté','tag-spirits':'Spiritueux','tag-automotive':'Automobile','tag-culture':'Culture & Arts'}
 FOOT = {'footer-location':'Beyrouth, Liban','copyright':'© 2026 Atelier Sans Titre. Tous droits réservés.'}
 

@@ -91,4 +91,22 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://ateliersanstitre.com/faq.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ateliersanstitre.com/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ateliersanstitre.com/fr/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ateliersanstitre.com/faq.html"/>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ateliersanstitre.com/fr/faq.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ateliersanstitre.com/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ateliersanstitre.com/fr/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ateliersanstitre.com/faq.html"/>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
