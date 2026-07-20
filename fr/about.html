@@ -309,6 +309,17 @@
     .rv.in   { opacity:1; transform:translateY(0); }
     .rv-fade { opacity:0; transition:opacity 1.0s cubic-bezier(0.22,1,0.36,1); transition-delay:var(--d,0ms); }
     .rv-fade.in { opacity:1; }
+    /* ── IN-BODY LINKS / HOW WE WORK / CTA / CREDITS ── */
+    .intro-body a { border-bottom: 1px solid currentColor; padding-bottom: 1px; transition: opacity 0.2s; }
+    .intro-body a:hover { opacity: 0.5; }
+    .studio-sectors { color: #000; margin-top: 20px; }
+    .about-link { display: inline-block; margin-top: 20px; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; border-bottom: 1px solid currentColor; padding-bottom: 3px; transition: opacity 0.2s; }
+    .about-link:hover { opacity: 0.5; }
+    .cta { padding: 72px var(--pad) 80px; border-top: 1px solid var(--border); }
+    .cta-title { font-size: clamp(28px, 4.2vw, 52px); font-weight: 700; letter-spacing: -0.03em; text-transform: uppercase; line-height: 1.04; margin-bottom: 18px; }
+    .cta-body { font-size: 15px; line-height: 1.7; color: #333; max-width: 420px; }
+    .credits { font-size: 10px; color: #a3a3a3; letter-spacing: 0.04em; line-height: 1.6; text-align: right; max-width: 380px; }
+    @media (max-width: 768px) { .cta { padding: 48px var(--pad) 56px; } .credits { text-align: center; max-width: 100%; } }
     :focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
     @media (prefers-reduced-motion:reduce) { html { scroll-behavior: auto; } .rv,.rv-fade,.site-nav,.hero-img { animation:none!important; transition:none!important; opacity:1!important; transform:none!important; } }
   </style>
@@ -351,14 +362,27 @@
     <p class="intro-label rv" data-i18n="studio-label">Le Studio</p>
     <div class="rv" style="--d:100ms">
       <div class="intro-body">
-        <p data-i18n="studio-p1">Sans Titre est un studio de scénographie et de production créative basé à Beyrouth, fondé en 2026 par Marc Azzi, architecte et scénographe. Nous concevons et produisons des événements spéciaux, des expériences de marque et des défilés de mode pour des clients de luxe à travers la région et au-delà.</p>
+        <p data-i18n="studio-p1">Sans Titre est un studio de scénographie et de production créative basé à Beyrouth, fondé en 2026 par Marc Azzi, architecte et scénographe. Nous concevons et produisons des <a href="disciplines.html">événements spéciaux</a>, des <a href="disciplines.html">expériences de marque</a> et des <a href="disciplines.html">défilés de mode</a> pour des clients de luxe à travers la région et au-delà.</p>
+        <p data-i18n="studio-credential">Architecte de formation, Marc Azzi dirige lui-même chaque projet, du premier dessin à la dernière soirée.</p>
         <p data-i18n="studio-p2">Le studio reste délibérément indépendant : chaque projet est mené directement, du premier concept à la réalisation finale, en réunissant les producteurs et les spécialistes techniques que la commande demande. Une même conviction traverse l'ensemble : les espaces que nous construisons portent du sens, et chaque événement mérite d'être une expérience singulière.</p>
+        <p class="studio-sectors" data-i18n="studio-sectors">Le travail s'inscrit dans la mode, la joaillerie, la beauté, les spiritueux, l'automobile et la culture.</p>
       </div>
     </div>
   </div>
 
   <div class="studio-img-wrap rv-fade">
     <img class="studio-img" src="../brand_assets/studio.jpg" alt="Studio Atelier Sans Titre, installation de mur LED, Beyrouth" loading="lazy">
+  </div>
+
+  <!-- HOW WE WORK -->
+  <div class="studio-intro">
+    <h2 class="intro-label rv" data-i18n="howwework-label">Notre méthode</h2>
+    <div class="rv" style="--d:100ms">
+      <div class="intro-body">
+        <p data-i18n="howwework-body"><strong>Concept.</strong> Nous lisons le brief, le lieu et l'intention, et répondons par une idée spatiale.<br><strong>Conception.</strong> L'idée est dessinée, maquettée et chiffrée jusqu'à ce qu'elle tienne.<br><strong>Réalisation.</strong> Nous la produisons sur place : fabrication, lumière, technique, et la conduite finale.</p>
+        <a class="about-link" href="work.html" data-i18n="howwework-cta">Voir les projets</a>
+      </div>
+    </div>
   </div>
 
   <!-- SPECIAL EVENTS + BRAND EXPERIENCES -->
@@ -405,6 +429,13 @@
     <button class="img-dot" aria-label="Image 3"></button>
   </div>
 
+  <!-- CTA -->
+  <section class="cta rv-fade">
+    <p class="cta-title" data-i18n="cta-title">Dites-nous l'occasion.</p>
+    <p class="cta-body" data-i18n="cta-body">Une date, un lieu, une intention. Nous répondrons par un espace.</p>
+    <a class="about-link" href="contact.html" data-i18n="cta-link">Démarrer un projet</a>
+  </section>
+
   <!-- PART OF AZZI STUDIOS -->
   <div class="sec-head--inline rv-fade">
     <span class="sec-desc" style="text-align:left;">Atelier Sans Titre fait partie de l'écosystème créatif <strong style="font-weight:700;">Azzi Studios</strong>.</span>
@@ -440,6 +471,7 @@
     </div>
     <div class="footer-bottom">
       <span class="copyright" data-i18n="copyright">© 2026 Atelier Sans Titre. Tous droits réservés.</span>
+      <span class="credits" data-i18n="credits">Photographies © leurs auteurs respectifs. Images de projets publiées avec l'accord des clients.</span>
     </div>
   </footer>
 
