@@ -93,11 +93,11 @@
 
     .page-heading h1 {
       font-size: clamp(23px, 3.9vw, 52px);
-      font-weight: 800;
-      letter-spacing: -0.04em;
+      font-weight: 500;
+      letter-spacing: -0.03em;
       text-transform: uppercase;
-      line-height: 1;
-      margin-bottom: 32px;
+      line-height: 1.02;
+      margin-bottom: 16px;
     }
 
     /* ── FILTER PILLS ── */
@@ -220,6 +220,15 @@
     .m.hidden { display: none; }
     ::selection { background: #000; color: #fff; }
     ::-moz-selection { background: #000; color: #fff; }
+    .page-kicker { font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 18px; }
+    .disc-intro { font-size: 15px; line-height: 1.6; color: #333; max-width: 520px; margin-bottom: 28px; }
+    .disc-routes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--border); }
+    .disc-route { display: block; padding: 40px var(--pad) 44px; border-right: 1px solid var(--border); transition: opacity 0.2s; }
+    .disc-route:last-child { border-right: none; }
+    .disc-route:hover { opacity: 0.55; }
+    .disc-route-title { display: block; font-size: 18px; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 10px; }
+    .disc-route-desc { display: block; font-size: 14px; line-height: 1.6; color: #555; }
+    @media (max-width: 768px) { .disc-routes { grid-template-columns: 1fr; } .disc-route { border-right: none; border-bottom: 1px solid var(--border); padding: 28px var(--pad); } }
     :focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
     .filter-pill:focus-visible { outline-color: #000; }
     @media (prefers-reduced-motion:reduce) { html { scroll-behavior: auto; } .rv,.rv-fade,.rv-m,.site-nav,.page-heading h1 { animation:none!important; transition:none!important; opacity:1!important; transform:none!important; } }
@@ -250,7 +259,9 @@
 
   <!-- PAGE HEADING -->
   <div class="page-heading">
-    <h1 data-i18n="disc-page-title">Disciplines</h1>
+    <p class="page-kicker" data-i18n="disc-kicker">Disciplines</p>
+    <h1 data-i18n="disc-h1">Scenography for events, brands and fashion</h1>
+    <p class="disc-intro" data-i18n="disc-intro">Three disciplines, one method: the space carries the meaning.</p>
     <div class="filters">
       <button class="filter-pill active rv" style="--d:0ms" data-filter="all" data-i18n="filter-all" aria-pressed="true">All</button>
       <button class="filter-pill rv" style="--d:60ms" data-filter="events" data-i18n="filter-events" aria-pressed="false">Special Events</button>
@@ -270,7 +281,11 @@
     <div class="m" data-category="fashion"><img loading="lazy" src="brand_assets/fashion/fashion-1.jpg" alt="Fashion show scenography by Atelier Sans Titre, Beirut"></div>
     <div class="m" data-category="fashion"><img loading="lazy" src="brand_assets/fashion/fashion-2.jpg" alt="Runway set design for a fashion show, Beirut"></div>
     <div class="m" data-category="fashion"><img loading="lazy" src="brand_assets/fashion/fashion-3.jpg" alt="Fashion show staging and lighting by Atelier Sans Titre, Beirut"></div>
-  </div>
+  <section class="disc-routes">
+    <a class="disc-route rv" href="special-events.html"><span class="disc-route-title" data-i18n="route-e-t">Special events</span><span class="disc-route-desc" data-i18n="route-e-d">Singular moments, designed to be remembered.</span></a>
+    <a class="disc-route rv" href="brand-experiences.html"><span class="disc-route-title" data-i18n="route-b-t">Brand experiences</span><span class="disc-route-desc" data-i18n="route-b-d">Spaces an audience steps inside.</span></a>
+    <a class="disc-route rv" href="fashion-shows.html"><span class="disc-route-title" data-i18n="route-f-t">Fashion shows</span><span class="disc-route-desc" data-i18n="route-f-d">Giving a collection the room it deserves.</span></a>
+  </section>
 
   <footer class="rv-fade">
     <div class="footer-cols">
