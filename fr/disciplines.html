@@ -218,6 +218,8 @@
     .rv-m    { opacity:0; transform:scale(0.985); transition:opacity 0.75s cubic-bezier(0.22,1,0.36,1),transform 0.75s cubic-bezier(0.22,1,0.36,1); transition-delay:var(--d,0ms); }
     .rv-m.in { opacity:1; transform:scale(1); }
     .m.hidden { display: none; }
+    ::selection { background: #000; color: #fff; }
+    ::-moz-selection { background: #000; color: #fff; }
     :focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
     .filter-pill:focus-visible { outline-color: #000; }
     @media (prefers-reduced-motion:reduce) { html { scroll-behavior: auto; } .rv,.rv-fade,.rv-m,.site-nav,.page-heading h1 { animation:none!important; transition:none!important; opacity:1!important; transform:none!important; } }

@@ -232,6 +232,8 @@
     .cta-link { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; border-bottom: 1px solid currentColor; padding-bottom: 3px; transition: opacity 0.2s; }
     .cta-link:hover { opacity: 0.5; }
     @media (max-width: 768px) { .cta { padding: 48px var(--pad) 56px; } }
+    ::selection { background: #000; color: #fff; }
+    ::-moz-selection { background: #000; color: #fff; }
     :focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
     .filter-pill:focus-visible { outline-color: #000; }
     @media (prefers-reduced-motion:reduce) { html { scroll-behavior: auto; } .rv,.rv-fade,.rv-m,.site-nav,.page-heading h1 { animation:none!important; transition:none!important; opacity:1!important; transform:none!important; } }
@@ -262,7 +264,6 @@
 
   <!-- FAQ -->
   <div class="page-heading">
-    <p class="page-kicker">FAQ</p>
     <h1>Questions fréquentes</h1>
   </div>
 
