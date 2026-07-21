@@ -679,8 +679,8 @@
       .ldr-l1 { font-size: 7.5vw; }
     }
 
-    ::selection { background: #000; color: #fff; }
-    ::-moz-selection { background: #000; color: #fff; }
+    ::selection { background: var(--text, #000); color: var(--bg, #fff); }
+    ::-moz-selection { background: var(--text, #000); color: var(--bg, #fff); }
     .tagline-geo { font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #999; margin-top: 34px; }
     .positioning { padding: 0 var(--pad) 68px; }
     .positioning p { font-size: clamp(13px, 1.05vw, 15px); line-height: 1.65; letter-spacing: 0.01em; max-width: 560px; color: #333; }
