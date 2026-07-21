@@ -91,7 +91,7 @@ ALT = {
 
 NAV = {'nav-work':'Projets','nav-about':'À propos','nav-disciplines':'Savoir-faire','nav-faq':'FAQ','nav-contact':'Contact'}
 TAGS = {'tag-fashion':'Mode','tag-jewellery':'Joaillerie','tag-beauty':'Beauté','tag-spirits':'Spiritueux','tag-automotive':'Automobile','tag-culture':'Culture & Arts'}
-FOOT = {'footer-location':'Beyrouth, Liban','copyright':'© 2026 Atelier Sans Titre. Tous droits réservés.'}
+FOOT = {'footer-location':'Beyrouth, Liban','copyright':'© 2026 Atelier Sans Titre. Tous droits réservés.','ecosystem':"Atelier Sans Titre fait partie de l'écosystème créatif Azzi Studios."}
 
 # ── CATALOG: per-page French text + URLs ──
 PAGES = {
@@ -99,7 +99,7 @@ PAGES = {
     en_url=f"{BASE}/", fr_url=f"{BASE}/fr/", en_canon=f"{BASE}/", fr_canon=f"{BASE}/fr/",
     en_title="Atelier Sans Titre · Scenography &amp; Event Production, Beirut",
     fr_title="Atelier Sans Titre · Scénographie &amp; production événementielle, Beyrouth",
-    en_desc="Atelier Sans Titre is a Beirut scenography and event production studio. Special events, brand experiences, and fashion shows for luxury clients.",
+    en_desc="Atelier Sans Titre is a Beirut scenography and event production studio producing special events, brand experiences and fashion shows for luxury clients.",
     fr_desc="Atelier Sans Titre est un studio de scénographie et de production événementielle à Beyrouth. Événements spéciaux, expériences de marque et défilés de mode pour des clients de luxe.",
     en_toggle_href="fr/index.html", fr_toggle_href="../index.html", json_en=None, json_fr=None,
     fr_map={**NAV, **TAGS, **FOOT,
@@ -122,7 +122,7 @@ PAGES = {
     en_url=f"{BASE}/work.html", fr_url=f"{BASE}/fr/work.html", en_canon=f"{BASE}/work.html", fr_canon=f"{BASE}/fr/work.html",
     en_title="Special Events, Brand Experiences &amp; Fashion Shows · Work · Atelier Sans Titre",
     fr_title="Événements spéciaux, expériences de marque &amp; défilés de mode · Travail · Atelier Sans Titre",
-    en_desc="Discover the special events, brand experiences, and fashion shows produced by Atelier Sans Titre, Beirut.",
+    en_desc="Selected special events, brand experiences and fashion shows designed and produced by Atelier Sans Titre, Beirut.",
     fr_desc="Découvrez les événements spéciaux, expériences de marque et défilés de mode produits par Atelier Sans Titre, Beyrouth.",
     en_toggle_href="fr/work.html", fr_toggle_href="../work.html",
     fr_map={**NAV, **TAGS, **FOOT,
@@ -179,8 +179,8 @@ PAGES = {
     en_url=f"{BASE}/disciplines.html", fr_url=f"{BASE}/fr/disciplines.html", en_canon=f"{BASE}/disciplines.html", fr_canon=f"{BASE}/fr/disciplines.html",
     en_title="Event &amp; Fashion Show Scenography in Beirut · Atelier Sans Titre",
     fr_title="Scénographie d'événements &amp; de défilés à Beyrouth · Atelier Sans Titre",
-    en_desc="Atelier Sans Titre specialises in three disciplines: special events, brand experiences, and fashion shows. Explore our approach.",
-    en_desc2="Atelier Sans Titre specialises in three disciplines: special events, brand experiences, and fashion shows.",
+    en_desc="Three disciplines: special events, brand experiences and fashion shows. Scenography and creative production from Beirut.",
+    en_desc2="Three disciplines: special events, brand experiences and fashion shows. Scenography and creative production from Beirut.",
     fr_desc2="Atelier Sans Titre se spécialise dans trois disciplines : événements spéciaux, expériences de marque et défilés de mode.",
     fr_desc="Atelier Sans Titre se spécialise dans trois disciplines : événements spéciaux, expériences de marque et défilés de mode. Découvrez notre approche.",
     en_toggle_href="fr/disciplines.html", fr_toggle_href="../disciplines.html",
@@ -199,7 +199,7 @@ PAGES = {
     en_url=f"{BASE}/contact.html", fr_url=f"{BASE}/fr/contact.html", en_canon=f"{BASE}/contact.html", fr_canon=f"{BASE}/fr/contact.html",
     en_title="Contact · Scenography &amp; Event Production, Beirut · Atelier Sans Titre",
     fr_title="Contact · Scénographie &amp; production événementielle, Beyrouth · Atelier Sans Titre",
-    en_desc="Get in touch with Atelier Sans Titre. We produce special events, brand experiences, and fashion shows from our studio in Beirut.",
+    en_desc="Get in touch with Atelier Sans Titre. We produce special events, brand experiences and fashion shows from our studio in Beirut.",
     fr_desc="Contactez Atelier Sans Titre. Nous produisons des événements spéciaux, des expériences de marque et des défilés de mode depuis notre studio à Beyrouth.",
     en_toggle_href="fr/contact.html", fr_toggle_href="../contact.html",
     fr_map={**NAV, **FOOT,
