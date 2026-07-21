@@ -421,5 +421,21 @@
     document.addEventListener('contextmenu', function (e) { if (e.target && e.target.tagName === 'IMG') e.preventDefault(); });
     document.addEventListener('dragstart', function (e) { if (e.target && e.target.tagName === 'IMG') e.preventDefault(); });
   </script>
+  <script>
+    (function () {
+      var w = document.querySelector('.nav-links a[href="work.html"]');
+      var l = document.querySelector('.footer-cols .fc-list');
+      if (!w || !l) return;
+      function alignFoot() {
+        l.style.marginLeft = '';
+        if (window.innerWidth <= 768) return;
+        var shift = w.getBoundingClientRect().left - l.getBoundingClientRect().left;
+        l.style.marginLeft = shift + 'px';
+      }
+      alignFoot();
+      window.addEventListener('resize', alignFoot);
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(alignFoot);
+    })();
+  </script>
 </body>
 </html>
