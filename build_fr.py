@@ -197,7 +197,7 @@ PAGES = {
     en_toggle_href="fr/disciplines.html", fr_toggle_href="../disciplines.html",
     fr_map={**NAV, **FOOT, **PROJ, 'disc-page-title':'Disciplines',
         'disc-kicker':'Savoir-faire',
-        'disc-h1':'Scénographie pour les événements, les marques et la mode',
+        'disc-h1':'Scénographie pour les événements, les marques &amp; la mode',
         'disc-intro':"Trois savoir-faire, une méthode : c'est l'espace qui porte le sens.",
         'route-e-t':'Événements','route-e-d':'Des moments singuliers, conçus pour rester.',
         'route-b-t':'Expériences de marque','route-b-d':'Des espaces dans lesquels le public entre.',
