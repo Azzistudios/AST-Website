@@ -251,6 +251,9 @@
       .nav-links a { position: relative; }
       .nav-links a::before { content: ''; position: absolute; inset: -14px -10px; }
     }
+
+    /* ── DISABLE IMAGE SAVING ── */
+    img { -webkit-touch-callout: none; -webkit-user-drag: none; user-select: none; -webkit-user-select: none; }
   </style>
 </head>
 <body>
@@ -375,6 +378,10 @@
       function onMq(e){ if (e.matches) closeMenu(); }
       if (mq.addEventListener) mq.addEventListener('change', onMq); else mq.addListener(onMq);
     })();
+  </script>
+  <script>
+    document.addEventListener('contextmenu', function (e) { if (e.target && e.target.tagName === 'IMG') e.preventDefault(); });
+    document.addEventListener('dragstart', function (e) { if (e.target && e.target.tagName === 'IMG') e.preventDefault(); });
   </script>
 </body>
 </html>

@@ -364,6 +364,21 @@
       .nav-links a::before { content: ''; position: absolute; inset: -14px -10px; }
       .discipline-intro { grid-template-columns: 1fr; }
     }
+
+    /* ── PROJECT TILE HOVER (name + slow reveal) ── */
+    .d-img { position: relative; }
+    .d-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0.1) 48%, transparent 72%); opacity: 0; transition: opacity 0.8s cubic-bezier(0.22,1,0.36,1); pointer-events: none; }
+    .d-img:hover::after, .d-img:focus-visible::after { opacity: 1; }
+    .d-img img { transition: transform 1.15s cubic-bezier(0.22,1,0.36,1); }
+    .d-img:hover img, .d-img:focus-visible img { transform: scale(1.05); }
+    .m-cap { position: absolute; left: 16px; right: 16px; bottom: 14px; z-index: 2; display: flex; flex-direction: column; gap: 5px; opacity: 0; transform: translateY(12px); transition: opacity 0.6s cubic-bezier(0.22,1,0.36,1) 0.08s, transform 0.6s cubic-bezier(0.22,1,0.36,1) 0.08s; pointer-events: none; }
+    .d-img:hover .m-cap, .d-img:focus-visible .m-cap { opacity: 1; transform: translateY(0); }
+    .m-cap-t { font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; }
+    .m-cap-d { font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.72); }
+    @media (max-width: 768px) { .d-img::after { content: none; } .m-cap { display: none; } }
+
+    /* ── DISABLE IMAGE SAVING ── */
+    img { -webkit-touch-callout: none; -webkit-user-drag: none; user-select: none; -webkit-user-select: none; }
   </style>
 </head>
 <body>
@@ -418,13 +433,13 @@
     </div>
     <div class="discipline-imgs">
       <a class="d-img" href="project.html">
-        <img loading="lazy" decoding="async" src="brand_assets/events/events-1.jpg" alt="Special event production by Atelier Sans Titre, Beirut">
+        <img loading="lazy" decoding="async" src="brand_assets/events/events-1.jpg" alt="Special event production by Atelier Sans Titre, Beirut"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-e1-t">The Long Table</span><span class="m-cap-d" data-i18n="proj-e1-d">Special events · Beirut</span></span>
       </a>
       <a class="d-img" href="project.html">
-        <img loading="lazy" decoding="async" src="brand_assets/events/events-2.jpg" alt="Gala dinner scenography in Beirut">
+        <img loading="lazy" decoding="async" src="brand_assets/events/events-2.jpg" alt="Gala dinner scenography in Beirut"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-e2-t">One Hundred Candles</span><span class="m-cap-d" data-i18n="proj-e2-d">Special events · Beirut</span></span>
       </a>
       <a class="d-img" href="project.html">
-        <img loading="lazy" decoding="async" src="brand_assets/events/events-3.jpg" alt="Cultural event staging by Atelier Sans Titre, Beirut">
+        <img loading="lazy" decoding="async" src="brand_assets/events/events-3.jpg" alt="Cultural event staging by Atelier Sans Titre, Beirut"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-e3-t">The Marble Courtyard</span><span class="m-cap-d" data-i18n="proj-e3-d">Special events · Doha</span></span>
       </a>
     </div>
     <div class="d-dots">
@@ -440,19 +455,19 @@
       <div class="rv">
         <h2 class="discipline-label" data-i18n="disc-brand-label">Brand Experiences</h2>
         <p class="discipline-desc" data-i18n="disc-brand-desc">
-          We build brand experiences the audience steps inside: product launches, activations, and immersive installations that put people at the centre of the story.
+          We build brand experiences the audience steps inside: product launches, activations,<br>and immersive installations that put people at the centre of the story.
         </p>
       </div>
     </div>
     <div class="discipline-imgs">
       <a class="d-img" href="project.html">
-        <img loading="lazy" decoding="async" src="brand_assets/brand/brand-1.jpg" alt="Brand experience installation for a product launch, Beirut">
+        <img loading="lazy" decoding="async" src="brand_assets/brand/brand-1.jpg" alt="Brand experience installation for a product launch, Beirut"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-b1-t">House of Light</span><span class="m-cap-d" data-i18n="proj-b1-d">Brand experiences · Beirut</span></span>
       </a>
       <a class="d-img" href="project.html">
-        <img loading="lazy" decoding="async" src="brand_assets/brand/brand-2.jpg" alt="Immersive brand activation by Atelier Sans Titre, Beirut">
+        <img loading="lazy" decoding="async" src="brand_assets/brand/brand-2.jpg" alt="Immersive brand activation by Atelier Sans Titre, Beirut"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-b2-t">The Mirror Room</span><span class="m-cap-d" data-i18n="proj-b2-d">Brand experiences · Dubai</span></span>
       </a>
       <a class="d-img" href="project.html">
-        <img loading="lazy" decoding="async" src="brand_assets/brand/brand-3.jpg" alt="Brand experience scenography by Atelier Sans Titre, Beirut">
+        <img loading="lazy" decoding="async" src="brand_assets/brand/brand-3.jpg" alt="Brand experience scenography by Atelier Sans Titre, Beirut"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-b3-t">The Scent Pavilion</span><span class="m-cap-d" data-i18n="proj-b3-d">Brand experiences · Beirut</span></span>
       </a>
     </div>
     <div class="d-dots">
@@ -474,13 +489,13 @@
     </div>
     <div class="discipline-imgs">
       <a class="d-img" href="project.html">
-        <img loading="lazy" decoding="async" src="brand_assets/fashion/fashion-1.jpg" alt="Fashion show scenography by Atelier Sans Titre, Beirut">
+        <img loading="lazy" decoding="async" src="brand_assets/fashion/fashion-1.jpg" alt="Fashion show scenography by Atelier Sans Titre, Beirut"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-f1-t">A Room with No Distractions</span><span class="m-cap-d" data-i18n="proj-f1-d">Fashion shows · Beirut</span></span>
       </a>
       <a class="d-img" href="project.html">
-        <img loading="lazy" decoding="async" src="brand_assets/fashion/fashion-2.jpg" alt="Runway set design for a fashion show, Beirut">
+        <img loading="lazy" decoding="async" src="brand_assets/fashion/fashion-2.jpg" alt="Runway set design for a fashion show, Beirut"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-f2-t">The White Runway</span><span class="m-cap-d" data-i18n="proj-f2-d">Fashion shows · Riyadh</span></span>
       </a>
       <a class="d-img" href="project.html">
-        <img loading="lazy" decoding="async" src="brand_assets/fashion/fashion-3.jpg" alt="Fashion show staging and lighting by Atelier Sans Titre, Beirut">
+        <img loading="lazy" decoding="async" src="brand_assets/fashion/fashion-3.jpg" alt="Fashion show staging and lighting by Atelier Sans Titre, Beirut"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-f3-t">After Dark</span><span class="m-cap-d" data-i18n="proj-f3-d">Fashion shows · Beirut</span></span>
       </a>
     </div>
     <div class="d-dots">
@@ -618,6 +633,10 @@
       function onMq(e){ if (e.matches) closeMenu(); }
       if (mq.addEventListener) mq.addEventListener('change', onMq); else mq.addListener(onMq);
     })();
+  </script>
+  <script>
+    document.addEventListener('contextmenu', function (e) { if (e.target && e.target.tagName === 'IMG') e.preventDefault(); });
+    document.addEventListener('dragstart', function (e) { if (e.target && e.target.tagName === 'IMG') e.preventDefault(); });
   </script>
 </body>
 </html>

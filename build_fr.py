@@ -93,6 +93,18 @@ NAV = {'nav-work':'Projets','nav-about':'À propos','nav-disciplines':'Savoir-fa
 TAGS = {'tag-fashion':'Mode','tag-jewellery':'Joaillerie','tag-beauty':'Beauté','tag-spirits':'Spiritueux','tag-automotive':'Automobile','tag-culture':'Culture & Arts'}
 FOOT = {'footer-location':'Beyrouth, Liban','copyright':'© 2026 Atelier Sans Titre. Tous droits réservés.','ecosystem':"Fait partie de l'écosystème créatif Azzi Studios."}
 
+PROJ = {
+ 'proj-e1-t':'La Longue Table','proj-e1-d':'Événements spéciaux · Beyrouth',
+ 'proj-e2-t':'Cent Bougies','proj-e2-d':'Événements spéciaux · Beyrouth',
+ 'proj-e3-t':'La Cour de Marbre','proj-e3-d':'Événements spéciaux · Doha',
+ 'proj-b1-t':'Maison de Lumière','proj-b1-d':'Expériences de marque · Beyrouth',
+ 'proj-b2-t':'La Salle des Miroirs','proj-b2-d':'Expériences de marque · Dubaï',
+ 'proj-b3-t':'Le Pavillon des Parfums','proj-b3-d':'Expériences de marque · Beyrouth',
+ 'proj-f1-t':'Une Salle sans Distraction','proj-f1-d':'Défilés de mode · Beyrouth',
+ 'proj-f2-t':'Le Podium Blanc','proj-f2-d':'Défilés de mode · Riyad',
+ 'proj-f3-t':'Après la Nuit','proj-f3-d':'Défilés de mode · Beyrouth',
+}
+
 # ── CATALOG: per-page French text + URLs ──
 PAGES = {
 'index.html': dict(
@@ -102,7 +114,7 @@ PAGES = {
     en_desc="Atelier Sans Titre is a Beirut scenography and event production studio producing special events, brand experiences and fashion shows for luxury clients.",
     fr_desc="Atelier Sans Titre est un studio de scénographie et de production événementielle à Beyrouth. Événements spéciaux, expériences de marque et défilés de mode pour des clients de luxe.",
     en_toggle_href="fr/index.html", fr_toggle_href="../index.html", json_en=None, json_fr=None,
-    fr_map={**NAV, **TAGS, **FOOT,
+    fr_map={**NAV, **TAGS, **FOOT, **PROJ,
         'tagline':'Scénographie<span class="m-br"><br></span> et production<br>pour <strong>des événements spéciaux</strong>,<br><strong>des expériences de marque</strong><br>et des <strong>défilés de mode</strong>.',
         'work-label':'Notre Travail', 'work-desc':"Atelier Sans Titre transforme l'espace en expérience.",
         'location-sub':'Notre base. Notre perspective.',
@@ -124,7 +136,7 @@ PAGES = {
     en_desc="Selected special events, brand experiences and fashion shows designed and produced by Atelier Sans Titre, Beirut.",
     fr_desc="Découvrez les événements spéciaux, expériences de marque et défilés de mode produits par Atelier Sans Titre, Beyrouth.",
     en_toggle_href="fr/work.html", fr_toggle_href="../work.html",
-    fr_map={**NAV, **TAGS, **FOOT,
+    fr_map={**NAV, **TAGS, **FOOT, **PROJ,
         'work-h1':'<strong>Événements spéciaux</strong>, <strong>expériences de marque</strong> et <strong>défilés de mode</strong>',
         "work-kicker":"Projets choisis",
         "work-standfirst":"L'espace, rendu précis. Défilés, lancements et événements conçus et produits par Atelier Sans Titre à Beyrouth et dans la région.",
@@ -132,7 +144,7 @@ PAGES = {
         'disc-fashion-label':'Défilés de mode',
         'disc-fashion-desc':"Sans Titre conçoit et produit des défilés de mode qui inscrivent la vision d'un créateur dans l'espace, du premier concept au salut final. Nous travaillons avec des maisons exigeantes pour mettre en scène des moments qui définissent une saison.",
         'disc-brand-label':'Expériences de marque',
-        'disc-brand-desc':'Nous construisons des expériences de marque dans lesquelles le public entre : lancements de produits, activations et installations immersives qui placent les gens au cœur du récit.',
+        'disc-brand-desc':'Nous construisons des expériences de marque dans lesquelles le public entre : lancements de produits, activations<br>et installations immersives qui placent les gens au cœur du récit.',
         'disc-events-label':'Événements spéciaux',
         'disc-events-desc':"Des dîners de gala aux rassemblements culturels, nous produisons des événements spéciaux qui transforment n'importe quel lieu en un monde scénographique. Chaque événement est conçu comme un moment singulier, fait pour rester en mémoire."},
     literals=[], group_desc=None,
@@ -183,7 +195,7 @@ PAGES = {
     fr_desc2="Atelier Sans Titre se spécialise dans trois disciplines : événements spéciaux, expériences de marque et défilés de mode.",
     fr_desc="Atelier Sans Titre se spécialise dans trois disciplines : événements spéciaux, expériences de marque et défilés de mode. Découvrez notre approche.",
     en_toggle_href="fr/disciplines.html", fr_toggle_href="../disciplines.html",
-    fr_map={**NAV, **FOOT, 'disc-page-title':'Disciplines',
+    fr_map={**NAV, **FOOT, **PROJ, 'disc-page-title':'Disciplines',
         'disc-kicker':'Savoir-faire',
         'disc-h1':'Scénographie pour les événements, les marques et la mode',
         'disc-intro':"Trois savoir-faire, une méthode : c'est l'espace qui porte le sens.",

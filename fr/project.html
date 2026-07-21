@@ -274,6 +274,9 @@
       .nav-links a { position: relative; }
       .nav-links a::before { content: ''; position: absolute; inset: -14px -10px; }
     }
+
+    /* ── DISABLE IMAGE SAVING ── */
+    img { -webkit-touch-callout: none; -webkit-user-drag: none; user-select: none; -webkit-user-select: none; }
   </style>
 </head>
 <body>
@@ -321,9 +324,11 @@
   </div>
 
   <section class="project-meta">
+    <div><span class="pm-label">Client</span><span class="pm-val">Une maison de mode de luxe</span></div>
     <div><span class="pm-label">Discipline</span><span class="pm-val">Scénographie de défilé</span></div>
     <div><span class="pm-label">Lieu</span><span class="pm-val">Beyrouth, Liban</span></div>
     <div><span class="pm-label">Année</span><span class="pm-val">2026</span></div>
+    <div><span class="pm-label">Prestations</span><span class="pm-val">Scénographie, fabrication du décor, lumière, conduite du show</span></div>
     <div><span class="pm-label">Photographie</span><span class="pm-val">© leurs auteurs respectifs</span></div>
   </section>
 
@@ -422,6 +427,10 @@
       function onMq(e){ if (e.matches) closeMenu(); }
       if (mq.addEventListener) mq.addEventListener('change', onMq); else mq.addListener(onMq);
     })();
+  </script>
+  <script>
+    document.addEventListener('contextmenu', function (e) { if (e.target && e.target.tagName === 'IMG') e.preventDefault(); });
+    document.addEventListener('dragstart', function (e) { if (e.target && e.target.tagName === 'IMG') e.preventDefault(); });
   </script>
 </body>
 </html>
