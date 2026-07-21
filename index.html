@@ -66,7 +66,8 @@
     button { border: none; cursor: pointer; background: transparent; font-family: inherit; color: inherit; }
 
     /* ── NAV ── */
-    .nav-logo { visibility: hidden; }
+    .nav-logo { visibility: hidden; opacity: 0; transform: translateY(8px); transition: opacity 0.45s cubic-bezier(0.22,1,0.36,1), transform 0.45s cubic-bezier(0.22,1,0.36,1), visibility 0s 0.45s; }
+    .site-nav.logo-on .nav-logo, .site-nav.nav-open .nav-logo { visibility: visible; opacity: 1; transform: none; transition: opacity 0.45s cubic-bezier(0.22,1,0.36,1), transform 0.45s cubic-bezier(0.22,1,0.36,1); }
 
     .site-nav {
       position: sticky;
@@ -1080,6 +1081,15 @@
       var mq = window.matchMedia('(min-width: 769px)');
       function onMq(e){ if (e.matches) closeMenu(); }
       if (mq.addEventListener) mq.addEventListener('change', onMq); else mq.addListener(onMq);
+    })();
+    (function () {
+      var nav = document.querySelector('.site-nav');
+      var ecrin = document.querySelector('.ecrin');
+      if (!nav || !ecrin || !('IntersectionObserver' in window)) return;
+      var logoObs = new IntersectionObserver(function (entries) {
+        nav.classList.toggle('logo-on', !entries[0].isIntersecting);
+      }, { rootMargin: '-80px 0px 0px 0px' });
+      logoObs.observe(ecrin);
     })();
   </script>
 </body>
