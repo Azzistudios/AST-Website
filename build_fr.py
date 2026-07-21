@@ -149,7 +149,7 @@ PAGES = {
     fr_desc2="Un studio de scénographie et de production événementielle fondé sur une conviction : l'espace est le médium le plus puissant de tout événement.",
     en_toggle_href="fr/about.html", fr_toggle_href="../about.html",
     fr_map={**NAV, **FOOT,
-        'about-h1':'Un studio de scénographie<br>et de production créative à Beyrouth',
+        'about-h1':'Un studio de scénographie et de production créative à Beyrouth',
         "studio-credential":"Architecte de formation, Marc Azzi dirige lui-même chaque projet, du premier dessin à la dernière soirée.",
         "studio-sectors":"Le travail s'inscrit dans la mode, la joaillerie, la beauté, les spiritueux, l'automobile, l'art et la culture.",
         "howwework-label":"Notre méthode",
