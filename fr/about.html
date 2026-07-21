@@ -92,8 +92,9 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 0;
-      padding: 48px var(--pad) 40px;
+      padding: 48px var(--pad) 32px;
       align-items: baseline;
+      border-bottom: 1px solid var(--border);
     }
 
     .page-title { font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; padding-right: 60px; }
@@ -323,9 +324,10 @@
     @media (max-width: 768px) { .cta { padding: 48px var(--pad) 56px; } .credits { text-align: center; max-width: 100%; } }
     ::selection { background: #000; color: #fff; }
     ::-moz-selection { background: #000; color: #fff; }
-    .about-h1 { font-size: clamp(22px, 2.55vw, 37px); font-weight: 500; letter-spacing: -0.02em; line-height: 1.08; text-transform: uppercase; grid-column: 1 / -1; }
+    .about-h1 { font-size: min(52px, calc((100vw - 100px) / 32)); font-weight: 500; letter-spacing: -0.03em; line-height: 1.02; text-transform: uppercase; grid-column: 1 / -1; }
     @media (min-width: 769px) { .about-h1 { white-space: nowrap; } }
-    :lang(fr) .about-h1 { font-size: clamp(18px, 2.3vw, 33px); }
+    :lang(fr) .about-h1 { font-size: min(52px, calc((100vw - 100px) / 40)); }
+    @media (max-width: 768px) { .about-h1 { font-size: clamp(22px, 7vw, 36px); } }
     :focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
     @media (prefers-reduced-motion:reduce) { html { scroll-behavior: auto; } .rv,.rv-fade,.site-nav,.hero-img { animation:none!important; transition:none!important; opacity:1!important; transform:none!important; } }
 
@@ -352,6 +354,10 @@
     /* ── SELECTION ON DARK SECTIONS: INVERT ── */
     .group-overlay ::selection, #ast-loader ::selection, .location-names ::selection { background: #fff; color: #000; }
     .group-overlay ::-moz-selection, #ast-loader ::-moz-selection, .location-names ::-moz-selection { background: #fff; color: #000; }
+
+    /* ── DARK-TILE SELECTION: INVERT ── */
+    .m ::selection, .m::selection, .d-img ::selection, .d-img::selection, .m-cap ::selection, .project-hero ::selection, .project-hero img::selection, .project-gallery ::selection, .project-gallery img::selection, img::selection { background: #fff; color: #000; }
+    .m ::-moz-selection, .m::-moz-selection, .d-img ::-moz-selection, .d-img::-moz-selection, .m-cap ::-moz-selection, img::-moz-selection { background: #fff; color: #000; }
   </style>
 </head>
 <body>
@@ -583,6 +589,37 @@
       alignFoot();
       window.addEventListener('resize', alignFoot);
       if (document.fonts && document.fonts.ready) document.fonts.ready.then(alignFoot);
+    })();
+  </script>
+  <script>
+    (function () {
+      var h = document.querySelector('.about-h1');
+      if (h) {
+        function fitH1() {
+          h.style.fontSize = '';
+          if (window.innerWidth <= 768) return;
+          var max = 52;
+          h.style.fontSize = max + 'px';
+          if (h.scrollWidth > h.clientWidth) {
+            h.style.fontSize = (Math.floor(max * h.clientWidth / h.scrollWidth * 100) / 100) + 'px';
+          }
+        }
+        fitH1();
+        window.addEventListener('resize', fitH1);
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitH1);
+      }
+      var d = document.querySelector('.nav-links a[href="disciplines.html"]');
+      var b = document.querySelector('.studio-intro > div');
+      if (!d || !b) return;
+      function alignStudio() {
+        b.style.marginLeft = '';
+        if (window.innerWidth <= 768) return;
+        var shift = d.getBoundingClientRect().left - b.getBoundingClientRect().left;
+        b.style.marginLeft = shift + 'px';
+      }
+      alignStudio();
+      window.addEventListener('resize', alignStudio);
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(alignStudio);
     })();
   </script>
 </body>
