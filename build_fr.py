@@ -104,7 +104,7 @@ PAGES = {
     en_toggle_href="fr/index.html", fr_toggle_href="../index.html", json_en=None, json_fr=None,
     fr_map={**NAV, **TAGS, **FOOT,
         'tagline':'Scénographie<span class="m-br"><br></span> et production créative<br>pour <strong>des événements spéciaux</strong>,<br><strong>des expériences de marque</strong><br>et des <strong>défilés de mode</strong>.',
-        'work-label':'Notre Travail', 'work-desc':"Atelier Sans Titre transforme l'espace en expérience. Événements spéciaux, expériences de marque et défilés, produits à Beyrouth et dans le&nbsp;Golfe.",
+        'work-label':'Notre Travail', 'work-desc':"Atelier Sans Titre transforme l'espace en expérience.",
         'location-sub':'Notre base. Notre perspective.',
         'location-heading':'Beyrouth<br><span class="arrow">→ Liban</span>',
         'location-body':"Depuis Beyrouth, nous concevons et produisons des événements spéciaux, des expériences de marque et des défilés pour des maisons de luxe au Liban, dans le&nbsp;Golfe et au-delà.",
