@@ -269,6 +269,9 @@
     /* ── DARK-TILE SELECTION: INVERT ── */
     .m ::selection, .m::selection, .d-img ::selection, .d-img::selection, .m-cap ::selection, .project-hero ::selection, .project-hero img::selection, .project-gallery ::selection, .project-gallery img::selection, img::selection { background: #fff; color: #000; }
     .m ::-moz-selection, .m::-moz-selection, .d-img ::-moz-selection, .d-img::-moz-selection, .m-cap ::-moz-selection, img::-moz-selection { background: #fff; color: #000; }
+
+    /* ── PHOTO TILES: EXCLUDE FROM TEXT SELECTION ── */
+    .m, .m *, .d-img, .d-img *, .m-cap, .m-cap *, .project-hero, .project-hero *, .project-gallery, .project-gallery *, .group-img, .group-img *, .insta-item, .insta-item *, .about-hero-wrap, .about-hero-wrap *, .img-track, .img-track *, .location-names, .location-names *, .hero, .hero * { -webkit-user-select: none; user-select: none; }
   </style>
 </head>
 <body>
