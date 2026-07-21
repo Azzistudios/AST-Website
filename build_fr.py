@@ -115,8 +115,7 @@ PAGES = {
         "cta-body":"Une date, un lieu, une intention. Nous répondrons par un espace.",
         "cta-link":"Démarrer un projet"},
     literals=[],
-    group_desc=('<span class="sec-desc" style="text-align:left;" data-i18n="group-desc">Atelier Sans Titre is part of<span class="m-br"><br></span> <strong style="font-weight:700;">Azzi Studios</strong> creative ecosystem.</span>',
-                '<span class="sec-desc" style="text-align:left;" data-i18n="group-desc">Atelier Sans Titre fait partie de l\'écosystème créatif <strong style="font-weight:700;">Azzi Studios</strong>.</span>'),
+    group_desc=None,
 ),
 'work.html': dict(
     en_url=f"{BASE}/work.html", fr_url=f"{BASE}/fr/work.html", en_canon=f"{BASE}/work.html", fr_canon=f"{BASE}/fr/work.html",
