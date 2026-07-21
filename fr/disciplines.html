@@ -93,12 +93,15 @@
 
     .page-heading h1 {
       font-size: clamp(23px, 3.9vw, 52px);
-      font-weight: 500;
+      font-weight: 400;
+      color: #c9c9c9;
       letter-spacing: -0.03em;
       text-transform: uppercase;
       line-height: 1.02;
       margin-bottom: 16px;
     }
+
+    .page-heading h1 strong { color: #000; font-weight: 700; }
 
     /* ── FILTER PILLS ── */
     .filters {
@@ -299,7 +302,7 @@
 
   <!-- PAGE HEADING -->
   <div class="page-heading">
-    <h1 data-i18n="disc-h1">Scénographie pour les événements, les marques &amp; la mode</h1>
+    <h1 data-i18n="disc-h1"><strong>Scénographie</strong> pour les <strong>événements</strong>, les <strong>marques</strong> &amp; la <strong>mode</strong></h1>
     <p class="disc-intro" data-i18n="disc-intro">Trois savoir-faire, une méthode : c'est l'espace qui porte le sens.</p>
     <div class="filters">
       <button class="filter-pill active rv" style="--d:0ms" data-filter="all" data-i18n="filter-all" aria-pressed="true">Tous</button>
