@@ -137,7 +137,7 @@ PAGES = {
     fr_desc="Découvrez les événements spéciaux, expériences de marque et défilés de mode produits par Atelier Sans Titre, Beyrouth.",
     en_toggle_href="fr/work.html", fr_toggle_href="../work.html",
     fr_map={**NAV, **TAGS, **FOOT, **PROJ,
-        'work-h1':'<strong>Événements spéciaux</strong>, <strong>expériences de marque</strong> et <strong>défilés de mode</strong>',
+        'work-h1':'<strong>Événements spéciaux</strong>,<br><strong>expériences de marque</strong><br>et <strong>défilés de mode</strong>.',
         "work-kicker":"Projets choisis",
         "work-standfirst":"L'espace, rendu précis. Défilés, lancements et événements conçus et produits par Atelier Sans Titre à Beyrouth et dans la région.",
         'work-hero':'Scénographie<span class="m-br"><br></span> et production<br>pour <strong>des événements spéciaux</strong>,<br><strong>des expériences de marque</strong>,<br>et des <strong>défilés de mode</strong>.',
