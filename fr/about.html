@@ -322,6 +322,7 @@
     @media (max-width: 768px) { .cta { padding: 48px var(--pad) 56px; } .credits { text-align: center; max-width: 100%; } }
     ::selection { background: #000; color: #fff; }
     ::-moz-selection { background: #000; color: #fff; }
+    .about-h1 { font-size: clamp(22px, 2.7vw, 38px); font-weight: 500; letter-spacing: -0.02em; line-height: 1.08; text-transform: uppercase; padding-right: 40px; }
     :focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
     @media (prefers-reduced-motion:reduce) { html { scroll-behavior: auto; } .rv,.rv-fade,.site-nav,.hero-img { animation:none!important; transition:none!important; opacity:1!important; transform:none!important; } }
   </style>
@@ -350,9 +351,8 @@
   </header>
 
   <!-- PAGE HEADER -->
-  <h1 class="sr-only" data-i18n="about-h1">Un studio de scénographie et de production événementielle à Beyrouth</h1>
   <div class="page-header rv-fade">
-    <span class="page-title" data-i18n="page-title">À propos</span>
+    <h1 class="about-h1" data-i18n="about-h1">Un studio de scénographie et de production événementielle à Beyrouth</h1>
     <span class="page-header-desc" data-i18n="page-desc">Un studio de scénographie et de production événementielle fondé sur une conviction : l'espace est le medium le plus puissant dans tout événement.</span>
   </div>
   <div class="about-hero-wrap hero-img">

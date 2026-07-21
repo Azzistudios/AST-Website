@@ -678,6 +678,15 @@
 
     ::selection { background: #000; color: #fff; }
     ::-moz-selection { background: #000; color: #fff; }
+    .tagline-geo { font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #999; margin-top: 34px; }
+    .positioning { padding: 0 var(--pad) 68px; }
+    .positioning p { font-size: clamp(16px, 1.7vw, 21px); line-height: 1.5; letter-spacing: -0.015em; max-width: 720px; color: #000; }
+    .cta { padding: 76px var(--pad) 84px; border-top: 1px solid var(--border); }
+    .cta-title { font-size: clamp(28px, 4.2vw, 52px); font-weight: 700; letter-spacing: -0.03em; text-transform: uppercase; line-height: 1.04; margin-bottom: 18px; }
+    .cta-body { font-size: 15px; line-height: 1.7; color: #333; max-width: 420px; margin-bottom: 24px; }
+    .cta-link { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; border-bottom: 1px solid currentColor; padding-bottom: 3px; transition: opacity 0.2s; }
+    .cta-link:hover { opacity: 0.5; }
+    @media (max-width: 768px) { .positioning { padding: 0 var(--pad) 44px; } .cta { padding: 48px var(--pad) 56px; } }
     :focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
 
     @media (prefers-reduced-motion: reduce) {
@@ -818,7 +827,7 @@
 
   <!-- ── ÉCRIN ── -->
   <div class="ecrin">
-    <h1 class="ecrin-title">Atelier Sans Titre</h1>
+    <p class="ecrin-title">Atelier Sans Titre</p>
   </div>
 
   <!-- ── HERO ── -->
@@ -832,7 +841,7 @@
 
   <!-- ── TAGLINE ── -->
   <section class="tagline">
-    <p class="tagline-text rv" data-i18n="tagline">Scénographie<span class="m-br"><br></span> et production<br>pour <strong>des événements spéciaux</strong>,<br><strong>des expériences de marque</strong>,<br>et des <strong>défilés de mode</strong>.</p>
+    <h1 class="tagline-text rv" data-i18n="tagline">Scénographie<span class="m-br"><br></span> et production créative<br>pour <strong>des événements spéciaux</strong>,<br><strong>des expériences de marque</strong><br>et des <strong>défilés de mode</strong>.</h1>
     <div class="tags">
       <span class="tag rv" style="--d:60ms" data-i18n="tag-fashion">Mode</span>
       <span class="tag rv" style="--d:100ms" data-i18n="tag-jewellery">Joaillerie</span>
@@ -841,12 +850,18 @@
       <span class="tag rv" style="--d:220ms" data-i18n="tag-automotive">Automobile</span>
       <span class="tag rv" style="--d:260ms" data-i18n="tag-culture">Culture & Arts</span>
     </div>
+    <p class="tagline-geo rv" style="--d:300ms" data-i18n="tagline-geo">Depuis Beyrouth, dans la région et au-delà.</p>
+  </section>
+
+  <!-- ── POSITIONING ── -->
+  <section class="positioning rv">
+    <p data-i18n="positioning">Nous concevons l'espace dans lequel l'événement a lieu. Le décor, la lumière, l'ordre de la salle. Puis nous le construisons. Un studio de scénographie, pas une agence événementielle.</p>
   </section>
 
   <!-- ── OUR WORK ── -->
   <div class="sec-head rv-fade" id="work">
     <span class="sec-label" data-i18n="work-label">Notre Travail</span>
-    <span class="sec-desc" data-i18n="work-desc">Atelier Sans Titre transforme l'espace en expérience.</span>
+    <span class="sec-desc" data-i18n="work-desc">Atelier Sans Titre transforme l'espace en expérience. Événements spéciaux, expériences de marque et défilés, produits à Beyrouth et dans le Golfe.</span>
   </div>
 
   <div class="mosaic">
@@ -867,7 +882,7 @@
       <h2 data-i18n="location-heading">Beyrouth<br><span class="arrow">→ Liban</span></h2>
       <p class="location-sub" data-i18n="location-sub">Notre base. Notre perspective.</p>
     </div>
-    <div class="location-right rv" style="--d:120ms" data-i18n="location-body">Basée à Beyrouth, Sans Titre crée des événements spéciaux, des expériences de marque et des défilés de mode pour des clients de luxe à travers la région et au-delà.</div>
+    <div class="location-right rv" style="--d:120ms" data-i18n="location-body">Depuis Beyrouth, nous concevons et produisons des événements spéciaux, des expériences de marque et des défilés pour des maisons de luxe au Liban, dans le Golfe et au-delà.</div>
   </section>
 
   <!-- ── PART OF AZZI STUDIOS ── -->
@@ -908,6 +923,13 @@
   </section>
 
   <!-- ── FOOTER ── -->
+  <!-- ── CTA ── -->
+  <section class="cta rv-fade">
+    <p class="cta-title" data-i18n="cta-title">Dites-nous l'occasion.</p>
+    <p class="cta-body" data-i18n="cta-body">Une date, un lieu, une intention. Nous répondrons par un espace.</p>
+    <a class="cta-link" href="contact.html" data-i18n="cta-link">Démarrer un projet</a>
+  </section>
+
   <footer id="contact" class="rv-fade">
     <div class="footer-cols">
       <div>

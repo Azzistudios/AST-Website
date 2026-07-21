@@ -124,7 +124,7 @@
       padding-left: var(--pad);
     }
 
-    .location-names h1 {
+    .location-names .loc-title {
       font-size: clamp(20px, 4vw, 56px);
       font-weight: 700;
       letter-spacing: -0.04em;
@@ -133,7 +133,7 @@
       color: #fff;
     }
 
-    .location-names h1 .dim { color: #fff; font-weight: 300; }
+    .location-names .loc-title .dim { color: #fff; font-weight: 300; }
 
     /* ── CONTACT INFO ── */
     .contact-info {
@@ -238,7 +238,7 @@
 
       /* ── LAYOUT ── */
       .location-hero { height: 56vw; min-height: 220px; }
-      .location-names h1 { font-size: clamp(28px, 8vw, 48px); }
+      .location-names .loc-title { font-size: clamp(28px, 8vw, 48px); }
       .contact-info { grid-template-columns: 1fr; gap: 36px; padding: 40px var(--pad) 48px; }
       .map-wrap { height: 240px; }
       .footer-cols { grid-template-columns: 1fr; }
@@ -249,15 +249,20 @@
     @keyframes _titleIn { from { opacity:0; transform:translateY(44px);  } to { opacity:1; transform:translateY(0); } }
     @keyframes _heroIn  { from { opacity:0; transform:scale(1.05);       } to { opacity:1; transform:scale(1);     } }
     .site-nav            { animation: _navIn  0.55s cubic-bezier(0.22,1,0.36,1) both; }
-    .location-names h1   { animation: _titleIn 1.0s cubic-bezier(0.22,1,0.36,1) 0.2s both; }
+    .location-names .loc-title   { animation: _titleIn 1.0s cubic-bezier(0.22,1,0.36,1) 0.2s both; }
     .rv      { opacity:0; transform:translateY(16px); transition:opacity 1.0s cubic-bezier(0.22,1,0.36,1),transform 1.0s cubic-bezier(0.22,1,0.36,1); transition-delay:var(--d,0ms); }
     .rv.in   { opacity:1; transform:translateY(0); }
     .rv-fade { opacity:0; transition:opacity 1.0s cubic-bezier(0.22,1,0.36,1); transition-delay:var(--d,0ms); }
     .rv-fade.in { opacity:1; }
     ::selection { background: #000; color: #fff; }
     ::-moz-selection { background: #000; color: #fff; }
+    .page-kicker { font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 18px; }
+    .contact-head { padding: 48px var(--pad) 8px; }
+    .contact-head h1 { font-size: clamp(23px, 3.4vw, 46px); font-weight: 500; letter-spacing: -0.03em; text-transform: uppercase; line-height: 1.05; margin-bottom: 20px; }
+    .contact-lead { font-size: 15px; line-height: 1.6; color: #333; max-width: 480px; }
+    @media (max-width: 768px) { .contact-head { padding: 36px var(--pad) 4px; } }
     :focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
-    @media (prefers-reduced-motion:reduce) { html { scroll-behavior: auto; } .rv,.rv-fade,.site-nav,.location-names h1,.location-hero-slide { animation:none!important; transition:none!important; opacity:1!important; transform:none!important; } }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior: auto; } .rv,.rv-fade,.site-nav,.location-names .loc-title,.location-hero-slide { animation:none!important; transition:none!important; opacity:1!important; transform:none!important; } }
   </style>
 </head>
 <body>
@@ -289,9 +294,16 @@
     <img class="location-hero-slide" src="brand_assets/contact/bey-2.jpg" alt="Atelier Sans Titre studio location, Beirut, Lebanon">
     <img class="location-hero-slide" src="brand_assets/contact/bey-3.jpg" alt="Scenography and event production by Atelier Sans Titre in Beirut, Lebanon">
     <div class="location-names">
-      <h1 data-i18n="location-h1">Beirut<br><span class="dim">Lebanon</span></h1>
+      <p class="loc-title" data-i18n="location-h1">Beirut<br><span class="dim">Lebanon</span></p>
     </div>
   </section>
+
+  <!-- CONTACT HEADING -->
+  <div class="contact-head rv">
+    <p class="page-kicker" data-i18n="contact-kicker">Contact</p>
+    <h1 data-i18n="contact-h1">Scenography and event production, Beirut</h1>
+    <p class="contact-lead" data-i18n="contact-lead">Tell us the occasion. A date, a place, an intention. We will answer with a space.</p>
+  </div>
 
   <!-- CONTACT INFO -->
   <div class="contact-info">

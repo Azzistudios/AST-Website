@@ -678,6 +678,15 @@
 
     ::selection { background: #000; color: #fff; }
     ::-moz-selection { background: #000; color: #fff; }
+    .tagline-geo { font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #999; margin-top: 34px; }
+    .positioning { padding: 0 var(--pad) 68px; }
+    .positioning p { font-size: clamp(16px, 1.7vw, 21px); line-height: 1.5; letter-spacing: -0.015em; max-width: 720px; color: #000; }
+    .cta { padding: 76px var(--pad) 84px; border-top: 1px solid var(--border); }
+    .cta-title { font-size: clamp(28px, 4.2vw, 52px); font-weight: 700; letter-spacing: -0.03em; text-transform: uppercase; line-height: 1.04; margin-bottom: 18px; }
+    .cta-body { font-size: 15px; line-height: 1.7; color: #333; max-width: 420px; margin-bottom: 24px; }
+    .cta-link { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; border-bottom: 1px solid currentColor; padding-bottom: 3px; transition: opacity 0.2s; }
+    .cta-link:hover { opacity: 0.5; }
+    @media (max-width: 768px) { .positioning { padding: 0 var(--pad) 44px; } .cta { padding: 48px var(--pad) 56px; } }
     :focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
 
     @media (prefers-reduced-motion: reduce) {
@@ -818,7 +827,7 @@
 
   <!-- ── ÉCRIN ── -->
   <div class="ecrin">
-    <h1 class="ecrin-title">Atelier Sans Titre</h1>
+    <p class="ecrin-title">Atelier Sans Titre</p>
   </div>
 
   <!-- ── HERO ── -->
@@ -832,13 +841,13 @@
 
   <!-- ── TAGLINE ── -->
   <section class="tagline">
-    <p class="tagline-text rv" data-i18n="tagline">
+    <h1 class="tagline-text rv" data-i18n="tagline">
       Scenography<span class="m-br"><br></span>
-      and production<br>
+      and creative production<br>
       for <strong>special events</strong>,<br>
-      <strong>brand experiences</strong>,<br>
+      <strong>brand experiences</strong><br>
       and <strong>fashion shows</strong>.
-    </p>
+    </h1>
     <div class="tags">
       <span class="tag rv" style="--d:60ms" data-i18n="tag-fashion">Fashion</span>
       <span class="tag rv" style="--d:100ms" data-i18n="tag-jewellery">Jewellery</span>
@@ -847,12 +856,18 @@
       <span class="tag rv" style="--d:220ms" data-i18n="tag-automotive">Automotive</span>
       <span class="tag rv" style="--d:260ms" data-i18n="tag-culture">Culture & Arts</span>
     </div>
+    <p class="tagline-geo rv" style="--d:300ms" data-i18n="tagline-geo">From Beirut, across the region and beyond.</p>
+  </section>
+
+  <!-- ── POSITIONING ── -->
+  <section class="positioning rv">
+    <p data-i18n="positioning">We design the space an event happens in. The set, the light, the order of the room. Then we build it. A scenography studio, not an event agency.</p>
   </section>
 
   <!-- ── OUR WORK ── -->
   <div class="sec-head rv-fade" id="work">
     <span class="sec-label" data-i18n="work-label">Our Work</span>
-    <span class="sec-desc" data-i18n="work-desc">Atelier Sans Titre transforms space into experience.</span>
+    <span class="sec-desc" data-i18n="work-desc">Atelier Sans Titre transforms space into experience. Special events, brand experiences and fashion shows, produced in Beirut and across the Gulf.</span>
   </div>
 
   <div class="mosaic">
@@ -874,7 +889,7 @@
       <p class="location-sub" data-i18n="location-sub">Our base. Our perspective.</p>
     </div>
     <div class="location-right rv" style="--d:120ms" data-i18n="location-body">
-      Based in Beirut, Sans Titre creates special events, brand experiences, and fashion shows for luxury clients across the region and beyond.
+      Based in Beirut, we design and produce special events, brand experiences and fashion shows for luxury houses in Lebanon, the Gulf and beyond.
     </div>
   </section>
 
@@ -916,6 +931,13 @@
   </section>
 
   <!-- ── FOOTER ── -->
+  <!-- ── CTA ── -->
+  <section class="cta rv-fade">
+    <p class="cta-title" data-i18n="cta-title">Tell us the occasion.</p>
+    <p class="cta-body" data-i18n="cta-body">A date, a place, an intention. We will answer with a space.</p>
+    <a class="cta-link" href="contact.html" data-i18n="cta-link">Start a project</a>
+  </section>
+
   <footer id="contact" class="rv-fade">
     <div class="footer-cols">
       <div>
