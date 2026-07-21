@@ -324,9 +324,10 @@
     @media (max-width: 768px) { .cta { padding: 48px var(--pad) 56px; } .credits { text-align: center; max-width: 100%; } }
     ::selection { background: var(--text, #000); color: var(--bg, #fff); }
     ::-moz-selection { background: var(--text, #000); color: var(--bg, #fff); }
-    .about-h1 { font-size: min(52px, calc((100vw - 100px) / 32)); font-weight: 500; letter-spacing: -0.03em; line-height: 1.02; text-transform: uppercase; grid-column: 1 / -1; }
+    .about-h1 { font-size: min(52px, calc((100vw - 100px) / 33)); font-weight: 500; letter-spacing: -0.03em; line-height: 1.06; text-transform: uppercase; grid-column: 1 / -1; }
     @media (min-width: 769px) { .about-h1 { white-space: nowrap; } }
-    :lang(fr) .about-h1 { font-size: min(52px, calc((100vw - 100px) / 40)); }
+    :lang(fr) .about-h1 { white-space: normal; }
+    :lang(fr) .about-h1 .m-br { display: inline; }
     @media (max-width: 768px) { .about-h1 { font-size: clamp(22px, 7vw, 36px); } }
     :focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
     @media (prefers-reduced-motion:reduce) { html { scroll-behavior: auto; } .rv,.rv-fade,.site-nav,.hero-img { animation:none!important; transition:none!important; opacity:1!important; transform:none!important; } }
@@ -596,21 +597,6 @@
   </script>
   <script>
     (function () {
-      var h = document.querySelector('.about-h1');
-      if (h) {
-        function fitH1() {
-          h.style.fontSize = '';
-          if (window.innerWidth <= 768) return;
-          var max = 52;
-          h.style.fontSize = max + 'px';
-          if (h.scrollWidth > h.clientWidth) {
-            h.style.fontSize = (Math.floor(max * h.clientWidth / h.scrollWidth * 100) / 100) + 'px';
-          }
-        }
-        fitH1();
-        window.addEventListener('resize', fitH1);
-        if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitH1);
-      }
       var d = document.querySelector('.nav-links a[href="disciplines.html"]');
       var bs = document.querySelectorAll('.studio-intro > div');
       if (!d || !bs.length) return;
