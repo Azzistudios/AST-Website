@@ -242,6 +242,25 @@
     :focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
     .filter-pill:focus-visible { outline-color: #000; }
     @media (prefers-reduced-motion:reduce) { html { scroll-behavior: auto; } .rv,.rv-fade,.rv-m,.site-nav,.page-heading h1 { animation:none!important; transition:none!important; opacity:1!important; transform:none!important; } }
+
+    /* ── TOUCH ERGONOMICS (mobile/tablet) ── */
+    @media (max-width: 768px) {
+      .nav-burger { width: 44px; height: 44px; }
+      .site-nav.nav-open .lang-toggle { gap: 14px; }
+      .site-nav.nav-open .lang-btn { font-size: 13px; min-height: 44px; display: inline-flex; align-items: center; padding: 0 14px; }
+      .site-nav.nav-open .lang-btn:not(.active) { opacity: 0.6; }
+      .site-nav.nav-open .nav-links a { display: inline-block; padding: 6px 0; }
+      .fc-list li { margin-bottom: 2px; }
+      .fc-list li a { display: inline-block; padding: 9px 0; }
+      .filter-pill { min-height: 44px; display: inline-flex; align-items: center; padding: 10px 16px; }
+      .page-heading h1 { line-height: 1.08; }
+      .cta-link, .svc-link { position: relative; }
+      .cta-link::after, .svc-link::after { content: ''; position: absolute; left: -8px; right: -8px; top: -12px; bottom: -12px; border: none; }
+    }
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .nav-links a { position: relative; }
+      .nav-links a::before { content: ''; position: absolute; inset: -14px -10px; }
+    }
   </style>
 </head>
 <body>
@@ -326,7 +345,7 @@
     </div>
     <div class="footer-bottom">
       <span class="copyright" data-i18n="copyright">© 2026 Atelier Sans Titre. All rights reserved.</span>
-      <p class="footer-ecosystem" data-i18n="ecosystem">Atelier Sans Titre is part of the Azzi Studios creative ecosystem.</p>
+      <p class="footer-ecosystem" data-i18n="ecosystem">Part of the Azzi Studios creative ecosystem.</p>
     </div>
   </footer>
 

@@ -703,6 +703,27 @@
         transform: none !important;
       }
     }
+
+    /* ── TOUCH ERGONOMICS (mobile/tablet) ── */
+    @media (max-width: 768px) {
+      .nav-burger { width: 44px; height: 44px; }
+      .site-nav.nav-open .lang-toggle { gap: 14px; }
+      .site-nav.nav-open .lang-btn { font-size: 13px; min-height: 44px; display: inline-flex; align-items: center; padding: 0 14px; }
+      .site-nav.nav-open .lang-btn:not(.active) { opacity: 0.6; }
+      .site-nav.nav-open .nav-links a { display: inline-block; padding: 6px 0; }
+      .fc-list li { margin-bottom: 2px; }
+      .fc-list li a { display: inline-block; padding: 9px 0; }
+      .insta-dots { gap: 26px; }
+      .insta-dot::before { inset: -19px; }
+      .sec-head { flex-direction: column; align-items: flex-start; gap: 8px; }
+      .sec-desc { text-align: left; max-width: 100%; }
+      .cta-link { position: relative; }
+      .cta-link::after { content: ''; position: absolute; left: -8px; right: -8px; top: -12px; bottom: -12px; border: none; }
+    }
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .nav-links a { position: relative; }
+      .nav-links a::before { content: ''; position: absolute; inset: -14px -10px; }
+    }
   </style>
   <script type="application/ld+json">
   {
@@ -951,7 +972,7 @@
 
     <div class="footer-bottom">
       <span class="copyright" data-i18n="copyright">© 2026 Atelier Sans Titre. Tous droits réservés.</span>
-      <p class="footer-ecosystem" data-i18n="ecosystem">Atelier Sans Titre fait partie de l'écosystème créatif Azzi Studios.</p>
+      <p class="footer-ecosystem" data-i18n="ecosystem">Fait partie de l'écosystème créatif Azzi Studios.</p>
     </div>
   </footer>
 
