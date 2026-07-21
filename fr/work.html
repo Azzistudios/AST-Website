@@ -386,6 +386,10 @@
 
     /* ── PHOTO TILES: EXCLUDE FROM TEXT SELECTION ── */
     .m, .m *, .d-img, .d-img *, .m-cap, .m-cap *, .project-hero, .project-hero *, .project-gallery, .project-gallery *, .group-img, .group-img *, .insta-item, .insta-item *, .about-hero-wrap, .about-hero-wrap *, .img-track, .img-track *, .location-names, .location-names *, .hero, .hero * { -webkit-user-select: none; user-select: none; }
+
+    /* ── SECTOR TAGS: HOLD TWO LINES ON MOBILE ── */
+    @media (max-width: 768px) { .tags { gap: 12px 14px; } .tag { font-size: 10px; letter-spacing: 0.14em; } }
+    @media (max-width: 360px) { .tags { gap: 10px 12px; } .tag { font-size: 9px; letter-spacing: 0.12em; } }
   </style>
 </head>
 <body>

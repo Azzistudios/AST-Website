@@ -115,7 +115,7 @@ PAGES = {
     fr_desc="Atelier Sans Titre est un studio de scénographie et de production événementielle à Beyrouth. Événements spéciaux, expériences de marque et défilés de mode pour des clients de luxe.",
     en_toggle_href="fr/index.html", fr_toggle_href="../index.html", json_en=None, json_fr=None,
     fr_map={**NAV, **TAGS, **FOOT, **PROJ,
-        'tagline':'Scénographie et production<br>pour <strong>des événements spéciaux</strong>,<br><strong>des expériences de marque</strong><br>et des <strong>défilés de mode</strong>.',
+        'tagline':'Scénographie<span class="m-br"><br></span> et production<br>pour <strong>des événements spéciaux</strong>,<br><strong>des expériences de marque</strong><br>et des <strong>défilés de mode</strong>.',
         'work-label':'Notre Travail', 'work-desc':"Atelier Sans Titre transforme l'espace en expérience.",
         'location-sub':'Notre base. Notre perspective.',
         'location-heading':'Beyrouth<br><span class="arrow">→ Liban</span>',
