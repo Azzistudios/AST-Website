@@ -95,14 +95,14 @@ FOOT = {'footer-location':'Beyrouth, Liban','copyright':'© 2026 Atelier Sans Ti
 
 PROJ = {
  'proj-e1-t':'La Longue Table','proj-e1-d':'Événements spéciaux · Beyrouth',
- 'proj-e2-t':'Cent Bougies','proj-e2-d':'Événements spéciaux · Beyrouth',
- 'proj-e3-t':'La Cour de Marbre','proj-e3-d':'Événements spéciaux · Doha',
- 'proj-b1-t':'Maison de Lumière','proj-b1-d':'Expériences de marque · Beyrouth',
- 'proj-b2-t':'La Salle des Miroirs','proj-b2-d':'Expériences de marque · Dubaï',
- 'proj-b3-t':'Le Pavillon des Parfums','proj-b3-d':'Expériences de marque · Beyrouth',
+ 'proj-e2-t':'La Longue Table','proj-e2-d':'Événements spéciaux · Beyrouth',
+ 'proj-e3-t':'La Longue Table','proj-e3-d':'Événements spéciaux · Beyrouth',
+ 'proj-b1-t':'Maison de Lumière','proj-b1-d':'Expériences de marque · Dubaï',
+ 'proj-b2-t':'Maison de Lumière','proj-b2-d':'Expériences de marque · Dubaï',
+ 'proj-b3-t':'Maison de Lumière','proj-b3-d':'Expériences de marque · Dubaï',
  'proj-f1-t':'Une Salle sans Distraction','proj-f1-d':'Défilés de mode · Beyrouth',
- 'proj-f2-t':'Le Podium Blanc','proj-f2-d':'Défilés de mode · Riyad',
- 'proj-f3-t':'Après la Nuit','proj-f3-d':'Défilés de mode · Beyrouth',
+ 'proj-f2-t':'Une Salle sans Distraction','proj-f2-d':'Défilés de mode · Beyrouth',
+ 'proj-f3-t':'Une Salle sans Distraction','proj-f3-d':'Défilés de mode · Beyrouth',
 }
 
 # ── CATALOG: per-page French text + URLs ──
