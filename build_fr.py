@@ -94,15 +94,15 @@ TAGS = {'tag-fashion':'Mode','tag-jewellery':'Joaillerie','tag-beauty':'Beauté'
 FOOT = {'footer-location':'Beyrouth, Liban','copyright':'© 2026 Atelier Sans Titre. Tous droits réservés.','ecosystem':"Fait partie de l'écosystème créatif Azzi Studios."}
 
 PROJ = {
- 'proj-e1-t':'La Longue Table','proj-e1-d':'Événements spéciaux · Beyrouth',
- 'proj-e2-t':'Cent Bougies','proj-e2-d':'Événements spéciaux · Beyrouth',
- 'proj-e3-t':'La Cour de Marbre','proj-e3-d':'Événements spéciaux · Doha',
- 'proj-b1-t':'Maison de Lumière','proj-b1-d':'Expériences de marque · Dubaï',
- 'proj-b2-t':'La Salle des Miroirs','proj-b2-d':'Expériences de marque · Beyrouth',
- 'proj-b3-t':'Le Pavillon des Parfums','proj-b3-d':'Expériences de marque · Beyrouth',
- 'proj-f1-t':'Une Salle sans Distraction','proj-f1-d':'Défilés de mode · Beyrouth',
- 'proj-f2-t':'Une Salle sans Distraction','proj-f2-d':'Défilés de mode · Beyrouth',
- 'proj-f3-t':'Une Salle sans Distraction','proj-f3-d':'Défilés de mode · Beyrouth',
+ 'proj-e1-t':'Le Vernissage','proj-e1-d':'Événements spéciaux · Beyrouth',
+ 'proj-e2-t':'La Longue Table','proj-e2-d':'Événements spéciaux · Beyrouth',
+ 'proj-e3-t':'Après la Nuit','proj-e3-d':'Événements spéciaux · Beyrouth',
+ 'proj-b1-t':'Le Salon Couture','proj-b1-d':'Expériences de marque · Beyrouth',
+ 'proj-b2-t':'La Salle des Images','proj-b2-d':'Expériences de marque · Dubaï',
+ 'proj-b3-t':'Silhouettes','proj-b3-d':'Expériences de marque · Doha',
+ 'proj-f1-t':'Trois Salles','proj-f1-d':'Défilés de mode · Beyrouth',
+ 'proj-f2-t':'Trois Salles','proj-f2-d':'Défilés de mode · Beyrouth',
+ 'proj-f3-t':'Trois Salles','proj-f3-d':'Défilés de mode · Beyrouth',
 }
 
 # ── CATALOG: per-page French text + URLs ──
