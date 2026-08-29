@@ -432,9 +432,16 @@
         gtag('js', new Date());
         gtag('config', GA_ID, { anonymize_ip: true });
       }
+      function loadPixel() {
+        if (window.fbq) return;
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1005031319234914');
+        fbq('track', 'PageView');
+      }
+      function loadAll() { loadGA(); loadPixel(); }
       var stored = null;
       try { stored = localStorage.getItem(KEY); } catch (e) {}
-      if (stored === 'granted') { loadGA(); return; }
+      if (stored === 'granted') { loadAll(); return; }
       if (stored === 'denied') return;
       var fr = (document.documentElement.lang || 'en').indexOf('fr') === 0;
       var box = document.createElement('div');
@@ -443,8 +450,8 @@
       box.setAttribute('aria-label', fr ? 'Cookies' : 'Cookies');
       box.innerHTML =
         '<p class="consent-txt">' +
-        (fr ? 'Nous utilisons un cookie de mesure d\u2019audience pour comprendre les visites. Aucune donn\u00e9e publicitaire.'
-            : 'We use one analytics cookie to understand visits. No advertising data.') +
+        (fr ? 'Nous utilisons des cookies de mesure d\u2019audience et de publicit\u00e9 pour comprendre les visites et mesurer nos campagnes.'
+            : 'We use analytics and advertising cookies to understand visits and measure our campaigns.') +
         '</p><div class="consent-row">' +
         '<button type="button" class="consent-accept">' + (fr ? 'Accepter' : 'Accept') + '</button>' +
         '<button type="button" class="consent-decline">' + (fr ? 'Refuser' : 'Decline') + '</button>' +
@@ -455,7 +462,7 @@
         try { localStorage.setItem(KEY, choice); } catch (e) {}
         box.classList.remove('on');
         setTimeout(function () { box.remove(); }, 500);
-        if (choice === 'granted') loadGA();
+        if (choice === 'granted') loadAll();
       }
       box.querySelector('.consent-accept').addEventListener('click', function () { close('granted'); });
       box.querySelector('.consent-decline').addEventListener('click', function () { close('denied'); });
