@@ -91,7 +91,7 @@ ALT = {
 
 NAV = {'nav-work':'Projets','nav-about':'À propos','nav-disciplines':'Savoir-faire','nav-faq':'FAQ','nav-contact':'Contact'}
 TAGS = {'tag-fashion':'Mode','tag-jewellery':'Joaillerie','tag-beauty':'Beauté','tag-spirits':'Spiritueux','tag-automotive':'Automobile','tag-culture':'Culture & Arts'}
-FOOT = {'footer-location':'Beyrouth, Liban','copyright':'© 2026 Atelier Sans Titre. Tous droits réservés.','ecosystem':"Fait partie de l'écosystème créatif Azzi Studios."}
+FOOT = {'footer-location':'Beyrouth, Liban','copyright':'© 2026 Atelier Sans Titre. Tous droits réservés.','ecosystem':"Fait partie de l'écosystème créatif Azzi Studios.",'legal-privacy':'Confidentialité','legal-notice':'Mentions légales'}
 
 PROJ = {
  'proj-e1-t':'Le Vernissage','proj-e1-d':'Événements spéciaux · Beyrouth',

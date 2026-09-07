@@ -294,6 +294,11 @@
     .consent-decline:hover { opacity: 0.5; }
     .consent-accept:focus-visible, .consent-decline:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
     @media (max-width: 768px) { #ast-consent { left: 12px; right: 12px; bottom: 12px; } }
+
+    /* ── FOOTER LEGAL LINKS ── */
+    .footer-legal { font-size: 11px; color: #8a8a8a; letter-spacing: 0.08em; text-transform: uppercase; }
+    .footer-legal a { color: inherit; transition: opacity 0.2s; }
+    .footer-legal a:hover { opacity: 0.5; }
   </style>
 </head>
 <body>
@@ -375,6 +380,7 @@
     </div>
     <div class="footer-bottom">
       <span class="copyright" data-i18n="copyright">© 2026 Atelier Sans Titre. Tous droits réservés.</span>
+      <p class="footer-legal"><a href="privacy.html" data-i18n="legal-privacy">Confidentialité</a> · <a href="terms.html" data-i18n="legal-notice">Mentions légales</a></p>
       <p class="footer-ecosystem">Fait partie de l'écosystème créatif Azzi Studios.</p>
     </div>
   </footer>

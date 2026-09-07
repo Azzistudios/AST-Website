@@ -1,4 +1,17 @@
 User-agent: *
 Allow: /
 
+# AI answer engines are welcome to index this site
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 Sitemap: https://ateliersanstitre.com/sitemap.xml

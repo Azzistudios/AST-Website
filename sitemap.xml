@@ -163,4 +163,40 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://ateliersanstitre.com/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ateliersanstitre.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ateliersanstitre.com/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ateliersanstitre.com/privacy.html"/>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://ateliersanstitre.com/fr/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ateliersanstitre.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ateliersanstitre.com/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ateliersanstitre.com/privacy.html"/>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://ateliersanstitre.com/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ateliersanstitre.com/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ateliersanstitre.com/fr/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ateliersanstitre.com/terms.html"/>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://ateliersanstitre.com/fr/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ateliersanstitre.com/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ateliersanstitre.com/fr/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ateliersanstitre.com/terms.html"/>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 </urlset>
