@@ -5,7 +5,7 @@
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Couture Salon · Brand Experience, Beirut · Atelier Sans Titre</title>
+  <title>The Couture Salon · Beirut · Atelier Sans Titre</title>
   <meta name="description" content="A house's gowns staged as a nocturnal salon. Brand experience design and production by Atelier Sans Titre, Beirut.">
   <meta name="robots" content="noindex, follow">
   <meta property="og:type" content="website">
@@ -70,8 +70,8 @@
     .st-mark { display:inline-block; text-decoration:none; }
     .brand-wm { font-family: 'Syne', sans-serif !important; font-size: 22px !important; font-weight: 700; letter-spacing: -0.01em; text-transform: uppercase; white-space: nowrap; }
     .lang-toggle { justify-self: end; display: flex; align-items: center; gap: 10px; }
-    .lang-btn { font-family: 'Syne', sans-serif; font-size: 9px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; background: none; border: none; cursor: pointer; padding: 4px 2px; color: var(--text); opacity: 0.4; transition: opacity 0.2s; }
-    .lang-btn.active { color: var(--text); opacity: 1; box-shadow: inset 0 -1px 0 currentColor; } .lang-btn:hover:not(.active) { opacity: 0.7; } .lang-sep { display: inline; opacity: 0.4; }
+    .lang-btn { font-family: 'Syne', sans-serif; font-size: 9px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; background: none; border: none; cursor: pointer; padding: 4px 2px; color: var(--text); opacity: 0.55; transition: opacity 0.2s; }
+    .lang-btn.active { color: var(--text); opacity: 1; box-shadow: inset 0 -1px 0 currentColor; } .lang-btn:hover:not(.active) { opacity: 0.7; } .lang-sep { display: inline; opacity: 0.55; }
     .nav-links { display: flex; gap: 36px; list-style: none; }
     .nav-links a { font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; position: relative; }
     .nav-links a::after { content: ''; position: absolute; left: 0; right: 0; bottom: -4px; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform 0.4s cubic-bezier(0.22,1,0.36,1); }
@@ -160,8 +160,8 @@
     .fc-list li a { color: inherit; text-decoration: none; transition: opacity 0.2s; }
     .fc-list li a:hover { opacity: 0.45; }
     .footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 20px; border-top: 1px solid var(--border); }
-    .copyright { font-size: 11px; color: #8a8a8a; letter-spacing: 0.08em; text-transform: uppercase; }
-    .footer-ecosystem { font-size: 11px; color: #8a8a8a; letter-spacing: 0.08em; text-transform: uppercase; }
+    .copyright { font-size: 11px; color: #767676; letter-spacing: 0.08em; text-transform: uppercase; }
+    .footer-ecosystem { font-size: 11px; color: #767676; letter-spacing: 0.08em; text-transform: uppercase; }
 
     .nav-burger { display: none; }
 
@@ -232,7 +232,7 @@
     .cta-link { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; border-bottom: 1px solid currentColor; padding-bottom: 3px; transition: opacity 0.2s; }
     .cta-link:hover { opacity: 0.5; }
     @media (max-width: 768px) { .svc-imgs { grid-template-columns: 1fr; } .svc-sec { grid-template-columns: 1fr; gap: 12px; padding: 32px var(--pad); } .cta { padding: 48px var(--pad) 56px; } }
-    .page-kicker { font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 18px; color: #999; }
+    .page-kicker { font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 18px; color: #767676; }
     .page-heading h1 { font-weight: 500; }
     .project-hero { width: 100%; height: 62vh; min-height: 360px; overflow: hidden; background: #0d0d0d; }
     .project-hero img { width: 100%; height: 100%; object-fit: cover; filter: contrast(1.02); }
@@ -244,7 +244,7 @@
     .pg-img img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; display: block; filter: contrast(1.02); transition: transform 0.6s cubic-bezier(0.22,1,0.36,1); }
     .pg-img:hover img { transform: scale(1.03); }
     .project-meta { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding: 56px var(--pad); border-top: 1px solid var(--border); }
-    .pm-label { display: block; font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #999; margin-bottom: 8px; }
+    .pm-label { display: block; font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #767676; margin-bottom: 8px; }
     .pm-val { font-size: 14px; color: #000; }
     .project-next { padding: 48px var(--pad) 72px; border-top: 1px solid var(--border); }
     .project-next a { display: inline-block; font-size: clamp(20px, 3vw, 36px); font-weight: 500; letter-spacing: -0.02em; text-transform: uppercase; border-bottom: 1px solid currentColor; padding-bottom: 4px; transition: opacity 0.2s; }
@@ -296,12 +296,18 @@
     @media (max-width: 768px) { #ast-consent { left: 12px; right: 12px; bottom: 12px; } }
 
     /* ── FOOTER LEGAL LINKS ── */
-    .footer-legal { font-size: 11px; color: #8a8a8a; letter-spacing: 0.08em; text-transform: uppercase; }
+    .footer-legal { font-size: 11px; color: #767676; letter-spacing: 0.08em; text-transform: uppercase; }
     .footer-legal a { color: inherit; transition: opacity 0.2s; }
     .footer-legal a:hover { opacity: 0.5; }
+
+    /* ── SKIP LINK + MAIN LANDMARK ── */
+    .skip-link { position: fixed; left: 16px; top: 12px; z-index: 10000; background: #000; color: #fff; padding: 10px 16px; font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; transform: translateY(-180%); transition: transform 0.25s cubic-bezier(0.22,1,0.36,1); }
+    .skip-link:focus { transform: translateY(0); outline: 2px solid #fff; outline-offset: 2px; }
+    main:focus { outline: none; }
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
 
   <header class="site-nav">
     <div class="nav-logo"><a href="index.html">Sans Titre</a></div>
@@ -324,6 +330,8 @@
     </button>
   </header>
 
+  <main id="main" tabindex="-1">
+
   <!-- PROJECT (template — replace with real project data) -->
   <div class="page-heading">
     <p class="page-kicker">Brand experience · Beirut · 2026</p>
@@ -331,7 +339,7 @@
   </div>
 
   <div class="project-hero rv-fade">
-    <img src="brand_assets/brand/brand-1.jpg" alt="Brand experience installation for a product launch, Beirut">
+    <img fetchpriority="high" src="brand_assets/brand/brand-1.jpg" alt="Brand experience installation for a product launch, Beirut">
   </div>
 
   <section class="project-body rv">
@@ -351,6 +359,8 @@
   <section class="project-next">
     <a href="hall-of-images.html">Next project &#8594;</a>
   </section>
+
+  </main>
 
   <footer class="rv-fade">
     <div class="footer-cols">
