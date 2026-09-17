@@ -199,7 +199,7 @@ PAGES = {
         'disc-kicker':'Savoir-faire',
         'disc-h1':'<strong>Scénographie</strong> pour les <strong>événements</strong>, les <strong>marques</strong> &amp; la <strong>mode</strong>',
         'disc-intro':"Trois savoir-faire, une méthode : c'est l'espace qui porte le sens.",
-        'route-e-t':'Événements','route-e-d':'Des moments singuliers, conçus pour rester. Dîners de gala, dîners privés, célébrations privées, vernissages et événements culturels.',
+        'route-e-t':'Événements','route-e-d':'Des moments singuliers, conçus pour rester. Dîners de gala, dîners privés, célébrations privées et mariages, vernissages et événements culturels.',
         'route-b-t':'Expériences de marque','route-b-d':'Des espaces dans lesquels le public entre. Lancements, activations, pop-ups, journées presse et installations immersives.',
         'route-f-t':'Défilés','route-f-d':"Offrir à une collection la salle qu'elle mérite. Défilés, couture, présentations et showrooms.",'filter-all':'Tous','filter-fashion':'Défilés de mode','filter-brand':'Expériences de marque','filter-events':'Événements spéciaux'},
     literals=[], group_desc=None,
