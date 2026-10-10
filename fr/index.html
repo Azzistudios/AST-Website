@@ -6,7 +6,7 @@
   <link rel="apple-touch-icon" href="../favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Atelier Sans Titre · Scénographie événementielle, Beyrouth</title>
-  <meta name="description" content="Studio de scénographie événementielle à Beyrouth. Mariages, événements privés, événements de marque, défilés. Nous concevons l'espace, puis le construisons.">
+  <meta name="description" content="Studio de scénographie événementielle à Beyrouth. Mariages, événements privés, événements de marque, défilés. Nous concevons les lieux où l'on se retrouve.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://ateliersanstitre.com/fr/">
   <link rel="alternate" hreflang="en" href="https://ateliersanstitre.com/">
@@ -15,12 +15,12 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Atelier Sans Titre">
   <meta property="og:title" content="Atelier Sans Titre · Scénographie événementielle, Beyrouth">
-  <meta property="og:description" content="Studio de scénographie événementielle à Beyrouth. Mariages, événements privés, événements de marque, défilés. Nous concevons l'espace, puis le construisons.">
+  <meta property="og:description" content="Studio de scénographie événementielle à Beyrouth. Mariages, événements privés, événements de marque, défilés. Nous concevons les lieux où l'on se retrouve.">
   <meta property="og:image" content="https://ateliersanstitre.com/brand_assets/og-image.jpg">
   <meta property="og:url" content="https://ateliersanstitre.com/fr/">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Atelier Sans Titre · Scénographie événementielle, Beyrouth">
-  <meta name="twitter:description" content="Studio de scénographie événementielle à Beyrouth. Mariages, événements privés, événements de marque, défilés. Nous concevons l'espace, puis le construisons.">
+  <meta name="twitter:description" content="Studio de scénographie événementielle à Beyrouth. Mariages, événements privés, événements de marque, défilés. Nous concevons les lieux où l'on se retrouve.">
   <meta name="twitter:image" content="https://ateliersanstitre.com/brand_assets/og-image.jpg">
   <!-- GA4 (G-L6SDE8HBFK) loads consent-gated via the banner script at the end of body -->
   <link rel="preload" href="../Fonts/Syne-Regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -536,6 +536,7 @@
 
     @media (min-width: 769px) {
       .m-br { display: none; }
+      .d-br { display: inline; }
       .group-img { aspect-ratio: 2.35 / 1; }
     }
 
@@ -604,6 +605,7 @@
 
       /* ── LAYOUT ── */
       .m-br { display: inline; }
+      .d-br { display: none; }
       .ecrin { height: 160px; }
       .hero { height: 56vw; min-height: 260px; }
       .insta-track { display: flex; overflow-x: scroll; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; gap: 0; }
@@ -857,7 +859,6 @@
       <ul class="nav-links">
         <li><a href="private.html" data-i18n="nav-private">Privé</a></li>
         <li><a href="brands.html" data-i18n="nav-brands">Marques</a></li>
-        <li><a href="work.html" data-i18n="nav-concepts">Concepts</a></li>
         <li><a href="about.html" data-i18n="nav-about">À propos</a></li>
         <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
       </ul>
@@ -890,7 +891,7 @@
 
   <!-- ── TAGLINE ── -->
   <section class="tagline">
-    <h1 class="tagline-text rv" data-i18n="tagline"><strong>Nous concevons les lieux où l'on se retrouve.</strong></h1>
+    <h1 class="tagline-text rv" data-i18n="tagline"><strong>Nous concevons les lieux<span class="d-br"><br></span> où l'on se retrouve.</strong></h1>
     <p class="tagline-sub rv" style="--d:120ms" data-i18n="tagline-sub">Scénographie événementielle pour mariages, célébrations privées, marques et défilés. Depuis Beyrouth.</p>
   </section>
 
@@ -916,7 +917,7 @@
   <!-- ── CONCEPTS ── -->
   <div class="sec-head rv-fade" id="work">
     <span class="sec-label" data-i18n="work-label">Concepts</span>
-    <span class="sec-desc" data-i18n="work-desc">Études des espaces que nous concevons. Les projets réalisés suivent cette saison.</span>
+    <span class="sec-desc" data-i18n="work-desc">Études des lieux que nous concevons. Les projets réalisés suivent cette saison.</span>
   </div>
 
   <div class="mosaic">
@@ -1120,7 +1121,7 @@
   </script>
   <script>
     (function () {
-      var d = document.querySelector('.nav-links a[href="work.html"]');
+      var d = document.querySelector('.nav-links a[href="about.html"]');
       var r = document.querySelector('.location-right');
       if (!d || !r) return;
       function align() {
