@@ -1,49 +1,52 @@
-# CLAUDE.md — Frontend Website Rules
+# CLAUDE.md · Atelier Sans Titre website
 
-## Always Do First
-- **Invoke the `frontend-design` skill** before writing any frontend code, every session, no exceptions.
+Static bilingual site in `~/Desktop/AST Website`. English at the root, French generated into `/fr/`.
+Current brief: `~/My Drive/ATELIER SANS TITRE/08_Website & SEO/AST_Website_Relaunch_Brief_v01_20261010.md` (Edition 03). It replaces Edition 02 and the sub-services doc.
 
-## Reference Images
-- If a reference image is provided: match layout, spacing, typography, and color exactly. Swap in placeholder content (images via `https://placehold.co/`, generic copy). Do not improve or add to the design.
-- If no reference image: design from scratch with high craft (see guardrails below).
-- Screenshot your output, compare against reference, fix mismatches, re-screenshot. Do at least 2 comparison rounds. Stop only when no visible differences remain or user says so.
+## Rules for every session
 
-## Local Server
-- **Always serve on localhost** — never open a `file:///` URL.
-- Start the dev server: `python3 serve.py` (serves the project root at `http://localhost:3000`)
-- `serve.py` lives in the project root. Start it in the background before previewing.
-- If the server is already running, do not start a second instance.
+1. **Ask Marc before every step.** Say in one line what you are about to do, then wait for his yes.
+2. **Show each step before committing.** Commit in logical steps (structure, copy, images, SEO) with clear messages.
+3. **Never push without Marc's explicit yes.** The push is what makes it live. After a push, open https://ateliersanstitre.com and check the live pages match.
+4. **Copy and light design only. No rebuild.** Keep the existing layout system, CSS, scripts, consent banner, GA4 and Meta Pixel. New blocks reuse existing classes wherever possible.
+5. **Never caption, alt-text or label an image as AST work unless it is AST work.** No client, year, location or build time is claimed for anything that was not built. Concept renders read "Concept render, what it shows".
+6. **French is generated, never hand-written.** Every English text change needs its French string in `build_fr.py` (`CATALOG` or the `ALT` map), then run `python3 build_fr.py`. Never edit `/fr/*.html` by hand.
 
-## Screenshot Workflow
-- Screenshots are not currently available on this machine (Node.js / Puppeteer not installed).
-- To preview: open `http://localhost:3000` in a browser manually after starting `serve.py`.
-- When Node.js is available, `screenshot.mjs` can be created to automate this. Until then, ask the user to check the browser and report what they see.
+## Identity
 
-## Output Defaults
-- Single `index.html` file, all styles inline, unless user says otherwise
-- Tailwind CSS via CDN: `<script src="https://cdn.tailwindcss.com"></script>`
-- Placeholder images: `https://placehold.co/WIDTHxHEIGHT`
-- Mobile-first responsive
+- Type: Syne only (400/500/600/700).
+- Ink #000 · Near-black #111 · Graphite #555 · Grey #8A8A8A · Muted #BDBDBD · Mist #E0E0E0 · Paper #FFF.
+- Muted palette as fills only (blocks, pills), never type on its own: Oxblood #6E1F26, Ochre #C28B2C, Olive #676A3B, Slate #4B5B73, Blush #E4BEB3.
+- Wordmark black on white or white on black only.
+- The studio is "Atelier Sans Titre", never "AST Studios".
 
-## Brand Assets
-- Always check the `brand_assets/` folder before designing. It may contain logos, color guides, style guides, or images.
-- If assets exist there, use them. Do not use placeholders where real assets are available.
-- If a logo is present, use it. If a color palette is defined, use those exact values — do not invent brand colors.
+## Voice
 
-## Anti-Generic Guardrails
-- **Colors:** Never use default Tailwind palette (indigo-500, blue-600, etc.). Pick a custom brand color and derive from it.
-- **Shadows:** Never use flat `shadow-md`. Use layered, color-tinted shadows with low opacity.
-- **Typography:** Never use the same font for headings and body. Pair a display/serif with a clean sans. Apply tight tracking (`-0.03em`) on large headings, generous line-height (`1.7`) on body.
-- **Gradients:** Layer multiple radial gradients. Add grain/texture via SVG noise filter for depth.
-- **Animations:** Only animate `transform` and `opacity`. Never `transition-all`. Use spring-style easing.
-- **Interactive states:** Every clickable element needs hover, focus-visible, and active states. No exceptions.
-- **Images:** Add a gradient overlay (`bg-gradient-to-t from-black/60`) and a color treatment layer with `mix-blend-multiply`.
-- **Spacing:** Use intentional, consistent spacing tokens — not random Tailwind steps.
-- **Depth:** Surfaces should have a layering system (base → elevated → floating), not all sit at the same z-plane.
+Short declaratives. Nouns over adjectives. Design first in every sentence.
+Never in visible copy: luxury or luxurious (meta tags only), dream, magical, stunning, unforgettable, elegant, timeless, bespoke, curated, elevate, immersive (except the service name "immersive installations"), seamless, stress-free, journey, story, special day, event decor, turnkey, we do it all, "wedding planner" as the identity, "designed to be remembered", "singular moment", "intention", emoji, exclamation marks, dashes in body copy (use a full stop or a colon).
 
-## Hard Rules
-- Do not add sections, features, or content not in the reference
-- Do not "improve" a reference design — match it
-- Do not stop after one screenshot pass
-- Do not use `transition-all`
-- Do not use default Tailwind blue/indigo as primary color
+## Site map
+
+```
+index.html            Home: hero, statement, the two doors, Concepts, Lebanon, Instagram, CTA
+private.html          Private hub: weddings and private events
+  weddings.html       Weddings
+brands.html           Brands hub: fashion shows, brand and corporate events, galas
+  fashion-shows.html       Fashion shows
+  brand-experiences.html   Brand and corporate events (URL kept for search)
+work.html             Concepts
+  the-long-table · the-vernissage · after-dark · the-couture-salon
+  hall-of-images · silhouettes · three-rooms              (Concept pages)
+about.html · faq.html · contact.html · privacy.html · terms.html · 404.html
+special-events.html → private.html
+disciplines.html    → index.html#sides
+project.html        → work.html                           (redirect stubs, noindex)
+```
+
+Nav: Private · Brands · Concepts · About · Contact. FR: Privé · Marques · Concepts · À propos · Contact. FAQ sits in the footer.
+
+## Working locally
+
+- Serve with `python3 serve.py` at http://localhost:3000. Never open a `file://` URL.
+- Before asking for the push: every page EN and FR, desktop and 375 px, no console errors, no broken links.
+- Node is available. Use `node --check` to validate inline scripts.
