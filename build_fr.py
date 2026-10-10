@@ -89,7 +89,7 @@ ALT = {
  "Scenography and event production by Atelier Sans Titre in Beirut, Lebanon":"Scénographie et production événementielle par Atelier Sans Titre à Beyrouth, Liban",
 }
 
-NAV = {'skip':'Aller au contenu','nav-work':'Projets','nav-about':'À propos','nav-disciplines':'Savoir-faire','nav-faq':'FAQ','nav-contact':'Contact'}
+NAV = {'skip':'Aller au contenu','nav-private':'Privé','nav-brands':'Marques','nav-concepts':'Concepts','nav-about':'À propos','nav-faq':'FAQ','nav-contact':'Contact'}
 TAGS = {'tag-fashion':'Mode','tag-jewellery':'Joaillerie','tag-beauty':'Beauté','tag-spirits':'Spiritueux','tag-automotive':'Automobile','tag-culture':'Culture & Arts'}
 FOOT = {'footer-location':'Beyrouth, Liban','copyright':'© 2026 Atelier Sans Titre. Tous droits réservés.','ecosystem':"Fait partie de l'écosystème créatif Azzi Studios.",'legal-privacy':'Confidentialité','legal-notice':'Mentions légales'}
 
@@ -174,7 +174,7 @@ PAGES = {
         'page-title':'À propos',
         'page-desc':"Un studio de scénographie et de production événementielle fondé sur une conviction : l'espace est le médium le plus puissant dans tout événement.",
         'studio-label':'Le Studio',
-        'studio-p1':'Sans Titre est un studio de scénographie et de production créative basé à Beyrouth, fondé en 2026 par Marc Azzi, architecte et scénographe. Nous concevons et produisons des <a href="special-events.html">événements spéciaux</a>, des <a href="brand-experiences.html">expériences de marque</a> et des <a href="fashion-shows.html">défilés de mode</a> pour des clients de luxe à travers la région et au-delà.',
+        'studio-p1':'Sans Titre est un studio de scénographie et de production créative basé à Beyrouth, fondé en 2026 par Marc Azzi, architecte et scénographe. Nous concevons et produisons des <a href="private.html">événements spéciaux</a>, des <a href="brand-experiences.html">expériences de marque</a> et des <a href="fashion-shows.html">défilés de mode</a> pour des clients de luxe à travers la région et au-delà.',
         'studio-p2':'Le studio reste délibérément indépendant : chaque projet est mené directement, du premier concept à la réalisation finale. Une même conviction traverse l\'ensemble : les espaces que nous construisons portent du sens, et chaque événement mérite d\'être une expérience singulière.',
         'fashion-sec-label':'<strong>Défilés de mode</strong>',
         'fashion-sec-desc':"Sans Titre traduit la vision d'un créateur en espace. Chaque décision, du sol au système d'éclairage, est au service de la collection.",
@@ -185,26 +185,6 @@ PAGES = {
     group_desc=None,
     json_en='{"@context":"https://schema.org","@graph":[{"@type":"AboutPage","name":"Scenography Studio in Beirut · About · Atelier Sans Titre","url":"https://ateliersanstitre.com/about.html","isPartOf":{"@type":"WebSite","name":"Atelier Sans Titre","url":"https://ateliersanstitre.com"},"about":{"@id":"https://ateliersanstitre.com/#org"},"mainEntity":{"@id":"https://ateliersanstitre.com/#marc"}},{"@type":"Person","@id":"https://ateliersanstitre.com/#marc","name":"Marc Azzi","jobTitle":"Founder, Architect & Scenographer","worksFor":{"@id":"https://ateliersanstitre.com/#org"},"sameAs":["https://www.instagram.com/ateliersanstitre"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ateliersanstitre.com/"},{"@type":"ListItem","position":2,"name":"About","item":"https://ateliersanstitre.com/about.html"}]}]}',
     json_fr='{"@context":"https://schema.org","@graph":[{"@type":"AboutPage","name":"Studio de scénographie à Beyrouth · À propos · Atelier Sans Titre","url":"https://ateliersanstitre.com/fr/about.html","inLanguage":"fr","isPartOf":{"@type":"WebSite","name":"Atelier Sans Titre","url":"https://ateliersanstitre.com"},"about":{"@id":"https://ateliersanstitre.com/#org"},"mainEntity":{"@id":"https://ateliersanstitre.com/#marc"}},{"@type":"Person","@id":"https://ateliersanstitre.com/#marc","name":"Marc Azzi","jobTitle":"Fondateur, architecte et scénographe","worksFor":{"@id":"https://ateliersanstitre.com/#org"},"sameAs":["https://www.instagram.com/ateliersanstitre"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://ateliersanstitre.com/fr/"},{"@type":"ListItem","position":2,"name":"À propos","item":"https://ateliersanstitre.com/fr/about.html"}]}]}',
-),
-'disciplines.html': dict(
-    en_url=f"{BASE}/disciplines.html", fr_url=f"{BASE}/fr/disciplines.html", en_canon=f"{BASE}/disciplines.html", fr_canon=f"{BASE}/fr/disciplines.html",
-    en_title="Event, Brand &amp; Fashion Scenography · Atelier Sans Titre",
-    fr_title="Scénographie d'événements &amp; de défilés · Atelier Sans Titre",
-    en_desc="Three disciplines: special events, brand experiences and fashion shows. Scenography and creative production from Beirut to the Gulf.",
-    en_desc2="Three disciplines: special events, brand experiences and fashion shows. Scenography and creative production from Beirut to the Gulf.",
-    fr_desc2="Atelier Sans Titre se spécialise dans trois disciplines : événements spéciaux, expériences de marque et défilés de mode.",
-    fr_desc="Atelier Sans Titre se spécialise dans trois disciplines : événements spéciaux, expériences de marque et défilés de mode, de Beyrouth au Golfe.",
-    en_toggle_href="fr/disciplines.html", fr_toggle_href="../disciplines.html",
-    fr_map={**NAV, **FOOT, **PROJ, 'disc-page-title':'Disciplines',
-        'disc-kicker':'Savoir-faire',
-        'disc-h1':'<strong>Scénographie</strong> pour les <strong>événements</strong>, les <strong>marques</strong> &amp; la <strong>mode</strong>',
-        'disc-intro':"Trois savoir-faire, une méthode : c'est l'espace qui porte le sens.",
-        'route-e-t':'Événements','route-e-d':'Des moments singuliers, conçus pour rester. Dîners de gala, dîners privés, célébrations privées et mariages, vernissages et événements culturels.',
-        'route-b-t':'Expériences de marque','route-b-d':'Des espaces dans lesquels le public entre. Lancements, activations, pop-ups, journées presse et installations immersives.',
-        'route-f-t':'Défilés','route-f-d':"Offrir à une collection la salle qu'elle mérite. Défilés, couture, présentations et showrooms.",'filter-all':'Tous','filter-fashion':'Défilés de mode','filter-brand':'Expériences de marque','filter-events':'Événements spéciaux'},
-    literals=[], group_desc=None,
-    json_en='{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","name":"Event & Fashion Show Scenography in Beirut · Atelier Sans Titre","url":"https://ateliersanstitre.com/disciplines.html","isPartOf":{"@type":"WebSite","name":"Atelier Sans Titre","url":"https://ateliersanstitre.com"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ateliersanstitre.com/"},{"@type":"ListItem","position":2,"name":"Disciplines","item":"https://ateliersanstitre.com/disciplines.html"}]}]}',
-    json_fr='{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","name":"Scénographie de défilés & d\'événements à Beyrouth · Atelier Sans Titre","url":"https://ateliersanstitre.com/fr/disciplines.html","inLanguage":"fr","isPartOf":{"@type":"WebSite","name":"Atelier Sans Titre","url":"https://ateliersanstitre.com"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://ateliersanstitre.com/fr/"},{"@type":"ListItem","position":2,"name":"Savoir-faire","item":"https://ateliersanstitre.com/fr/disciplines.html"}]}]}',
 ),
 'contact.html': dict(
     en_url=f"{BASE}/contact.html", fr_url=f"{BASE}/fr/contact.html", en_canon=f"{BASE}/contact.html", fr_canon=f"{BASE}/fr/contact.html",

@@ -394,9 +394,10 @@
     <div class="nav-logo"><a href="index.html">Sans Titre</a></div>
     <nav aria-label="Principale">
       <ul class="nav-links">
-        <li><a href="work.html" data-i18n="nav-work">Projets</a></li>
+        <li><a href="private.html" data-i18n="nav-private">Privé</a></li>
+        <li><a href="brands.html" data-i18n="nav-brands">Marques</a></li>
+        <li><a href="work.html" data-i18n="nav-concepts">Concepts</a></li>
         <li><a href="about.html" class="active" data-i18n="nav-about">À propos</a></li>
-        <li><a href="disciplines.html" data-i18n="nav-disciplines">Savoir-faire</a></li>
         <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
       </ul>
     </nav>
@@ -426,7 +427,7 @@
     <p class="intro-label rv" data-i18n="studio-label">Le Studio</p>
     <div class="rv" style="--d:100ms">
       <div class="intro-body">
-        <p data-i18n="studio-p1">Sans Titre est un studio de scénographie et de production créative basé à Beyrouth, fondé en 2026 par Marc Azzi, architecte et scénographe. Nous concevons et produisons des <a href="special-events.html">événements spéciaux</a>, des <a href="brand-experiences.html">expériences de marque</a> et des <a href="fashion-shows.html">défilés de mode</a> pour des clients de luxe à travers la région et au-delà.</p>
+        <p data-i18n="studio-p1">Sans Titre est un studio de scénographie et de production créative basé à Beyrouth, fondé en 2026 par Marc Azzi, architecte et scénographe. Nous concevons et produisons des <a href="private.html">événements spéciaux</a>, des <a href="brand-experiences.html">expériences de marque</a> et des <a href="fashion-shows.html">défilés de mode</a> pour des clients de luxe à travers la région et au-delà.</p>
         <p data-i18n="studio-credential">Architecte de formation, Marc Azzi dirige lui-même chaque projet, du premier dessin à la dernière soirée.</p>
         <p data-i18n="studio-p2">Le studio reste délibérément indépendant : chaque projet est mené directement, du premier concept à la réalisation finale. Une même conviction traverse l'ensemble : les espaces que nous construisons portent du sens, et chaque événement mérite d'être une expérience singulière.</p>
         <p class="studio-sectors" data-i18n="studio-sectors">Le travail s'inscrit dans la mode, la joaillerie, la beauté, les spiritueux, l'automobile, l'art et la culture.</p>
@@ -523,16 +524,17 @@
         </a>
       </div>
       <ul class="fc-list">
-        <li><a href="work.html" data-i18n="nav-work">Projets</a></li>
+        <li><a href="private.html" data-i18n="nav-private">Privé</a></li>
+        <li><a href="brands.html" data-i18n="nav-brands">Marques</a></li>
+        <li><a href="work.html" data-i18n="nav-concepts">Concepts</a></li>
         <li><a href="about.html" data-i18n="nav-about">À propos</a></li>
-        <li><a href="disciplines.html" data-i18n="nav-disciplines">Savoir-faire</a></li>
         <li><a href="faq.html" data-i18n="nav-faq">FAQ</a></li>
         <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
       </ul>
       <ul class="fc-list">
         <li><a href="mailto:hello@ateliersanstitre.com">hello@ateliersanstitre.com</a></li>
+        <li><a href="https://wa.me/96178902628" target="_blank" rel="noopener">WhatsApp +961 78 90 26 28</a></li>
         <li><a href="https://instagram.com/ateliersanstitre" target="_blank" rel="noopener">@ateliersanstitre</a></li>
-        <li><a href="tel:+96178902628">+961 78 90 26 28</a></li>
         <li data-i18n="footer-location">Beyrouth, Liban</li>
       </ul>
     </div>
@@ -610,7 +612,7 @@
   </script>
   <script>
     (function () {
-      var w = document.querySelector('.nav-links a[href="work.html"]');
+      var w = document.querySelector('.nav-links a[href="private.html"]');
       var l = document.querySelector('.footer-cols .fc-list');
       if (!w || !l) return;
       function alignFoot() {
@@ -626,7 +628,7 @@
   </script>
   <script>
     (function () {
-      var d = document.querySelector('.nav-links a[href="disciplines.html"]');
+      var d = document.querySelector('.nav-links a[href="work.html"]');
       var bs = document.querySelectorAll('.studio-intro > div, .sec-head > .sec-desc');
       if (!d || !bs.length) return;
       function alignStudio() {
