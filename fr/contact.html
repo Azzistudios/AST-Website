@@ -199,7 +199,7 @@
     
     
     
-    .footer-cols { display: grid; grid-template-columns: 1.8fr 1fr; gap: 32px; margin-bottom: 36px; }
+    .footer-cols { display: grid; grid-template-columns: 1.8fr 1fr 1.8fr; gap: 32px; margin-bottom: 36px; }
     .fc-list { list-style: none; }
     .fc-list li { font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 11px; }
     .fc-list li a { color: inherit; text-decoration: none; transition: opacity 0.2s; }
@@ -345,9 +345,9 @@
 
   <!-- LOCATION HERO -->
   <section class="location-hero">
-    <img class="location-hero-slide active" fetchpriority="high" src="../brand_assets/concepts/contact-01.jpg" alt="Concept render, lit translucent steps">
-    <img class="location-hero-slide" src="../brand_assets/concepts/contact-02.jpg" alt="Concept render, a curved metal wall in concrete">
-    <img class="location-hero-slide" src="../brand_assets/concepts/contact-03.jpg" alt="Concept render, a metal volume against concrete">
+    <img class="location-hero-slide active" fetchpriority="high" src="../brand_assets/contact/bey-1.jpg" alt="Le centre-ville de Beyrouth, une rue entre des façades de pierre">
+    <img class="location-hero-slide" src="../brand_assets/contact/bey-2.jpg" alt="La place de l'Étoile à Beyrouth, la tour de l'horloge à midi">
+    <img class="location-hero-slide" src="../brand_assets/contact/bey-3.jpg" alt="Beyrouth la nuit vue d'en haut, la marina et la corniche">
     <div class="location-names">
       <h1 data-i18n="location-h1">Écrivez-nous.</h1>
     </div>
@@ -457,20 +457,17 @@
   <script>
     (function(){
       var contactInfo = document.querySelector('.contact-info');
-      var footerCols  = document.querySelector('.footer-cols');
       function align(){
         if (window.innerWidth <= 1024) {
           /* mobile + tablet: let the authored CSS grids apply */
           if (contactInfo) contactInfo.style.gridTemplateColumns = '';
-          if (footerCols)  footerCols.style.gridTemplateColumns  = '';
           return;
         }
         var link = document.querySelector('.nav-links a[data-i18n="nav-private"]');
         if(!link) return;
         var linkLeft = link.getBoundingClientRect().left;
         [
-          { el: contactInfo, cols: 'px 1fr 1fr' },
-          { el: footerCols,  cols: 'px 1fr'     }
+          { el: contactInfo, cols: 'px 1fr 1fr' }
         ].forEach(function(item){
           if(!item.el) return;
           var style      = getComputedStyle(item.el);

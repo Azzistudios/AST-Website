@@ -87,6 +87,9 @@ ALT = {
  "Home of Atelier Sans Titre in Beirut, Lebanon":"Siège d'Atelier Sans Titre à Beyrouth, Liban",
  "Atelier Sans Titre studio location, Beirut, Lebanon":"Emplacement du studio Atelier Sans Titre, Beyrouth, Liban",
  "Scenography and event production by Atelier Sans Titre in Beirut, Lebanon":"Scénographie et production événementielle par Atelier Sans Titre à Beyrouth, Liban",
+ "Downtown Beirut, a street between stone facades":"Le centre-ville de Beyrouth, une rue entre des façades de pierre",
+ "Nejmeh Square, Beirut, the clock tower at midday":"La place de l'Étoile à Beyrouth, la tour de l'horloge à midi",
+ "Beirut at night from above, the marina and the coast road":"Beyrouth la nuit vue d'en haut, la marina et la corniche",
 }
 
 NAV = {'skip':'Aller au contenu','nav-private':'Privé','nav-brands':'Marques','nav-concepts':'Concepts','nav-about':'À propos','nav-faq':'FAQ','nav-contact':'Contact'}
@@ -117,7 +120,7 @@ PAGES = {
     fr_map={**NAV, **TAGS, **FOOT, **PROJ,
         'tagline':'<strong>Nous concevons les lieux où l\'on se retrouve.</strong>',
         'tagline-sub':'Scénographie événementielle pour mariages, célébrations privées, marques et défilés. Depuis Beyrouth.',
-        'positioning':"Nous concevons d'abord le lieu : l'entrée, la place de chacun, la lumière à mesure que la nuit avance. Puis nous le construisons et dirigeons la soirée. Un studio de scénographie, chez lui à Beyrouth.",
+        'positioning':"Nous concevons d'abord le lieu : l'entrée, la place de chacun, la lumière à mesure que la nuit avance. Puis nous le construisons et dirigeons l'événement. Un studio de scénographie, chez lui à Beyrouth.",
         'side-private-label':'Privé','side-private-line':'Pour ceux que vous aimez. Mariages, fiançailles et dîners privés.','side-private-link':'Privé →',
         'side-brands-label':'Marques','side-brands-line':"Pour ceux que vous voulez impressionner. Défilés, lancements et événements d'entreprise.",'side-brands-link':'Marques →',
         'work-label':'Concepts',
@@ -171,7 +174,7 @@ PAGES = {
         'page-title':'À propos',
         'page-desc':"Un studio de scénographie et de production événementielle fondé sur une conviction : l'espace est le médium le plus puissant dans tout événement.",
         'studio-label':'Le Studio',
-        'studio-p1':"Atelier Sans Titre est un studio de scénographie événementielle à Beyrouth, fondé en 2026 par Marc Azzi, architecte et scénographe. Nous concevons des mariages et des événements privés, des événements de marque et d'entreprise, et des défilés : la pièce, la lumière, la façon dont on y entre. Puis nous les organisons, les construisons et dirigeons la soirée.",
+        'studio-p1':"Atelier Sans Titre est un studio de scénographie événementielle à Beyrouth, fondé en 2026 par Marc Azzi, architecte et scénographe. Nous concevons des mariages et des événements privés, des événements de marque et d'entreprise, et des défilés : la pièce, la lumière, la façon dont on y entre. Puis nous les organisons, les construisons et dirigeons l'événement.",
         'studio-p2':'Le studio reste indépendant, à dessein. Vous travaillez avec la personne qui a dessiné la pièce, de la première visite du lieu au dernier invité.',
         'fashion-sec-label':'Marques',
         'fashion-sec-desc':"Mode, événements de marque et d'entreprise.",
