@@ -6,7 +6,7 @@
   <link rel="apple-touch-icon" href="../favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Atelier Sans Titre · Scénographie événementielle, Beyrouth</title>
-  <meta name="description" content="Studio de scénographie événementielle à Beyrouth. Mariages, événements privés, événements de marque, défilés. Nous concevons les lieux où l'on se retrouve.">
+  <meta name="description" content="Studio de scénographie événementielle à Beyrouth. Mariages, événements privés, événements de marque, défilés. Nous concevons les lieux qui rassemblent.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://ateliersanstitre.com/fr/">
   <link rel="alternate" hreflang="en" href="https://ateliersanstitre.com/">
@@ -15,12 +15,12 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Atelier Sans Titre">
   <meta property="og:title" content="Atelier Sans Titre · Scénographie événementielle, Beyrouth">
-  <meta property="og:description" content="Studio de scénographie événementielle à Beyrouth. Mariages, événements privés, événements de marque, défilés. Nous concevons les lieux où l'on se retrouve.">
+  <meta property="og:description" content="Studio de scénographie événementielle à Beyrouth. Mariages, événements privés, événements de marque, défilés. Nous concevons les lieux qui rassemblent.">
   <meta property="og:image" content="https://ateliersanstitre.com/brand_assets/og-image.jpg">
   <meta property="og:url" content="https://ateliersanstitre.com/fr/">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Atelier Sans Titre · Scénographie événementielle, Beyrouth">
-  <meta name="twitter:description" content="Studio de scénographie événementielle à Beyrouth. Mariages, événements privés, événements de marque, défilés. Nous concevons les lieux où l'on se retrouve.">
+  <meta name="twitter:description" content="Studio de scénographie événementielle à Beyrouth. Mariages, événements privés, événements de marque, défilés. Nous concevons les lieux qui rassemblent.">
   <meta name="twitter:image" content="https://ateliersanstitre.com/brand_assets/og-image.jpg">
   <!-- GA4 (G-L6SDE8HBFK) loads consent-gated via the banner script at the end of body -->
   <link rel="preload" href="../Fonts/Syne-Regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -250,7 +250,7 @@
     /* ── MOSAIC GRID ── */
     .mosaic {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(6, 1fr);
       gap: 0;
     }
 
@@ -258,7 +258,12 @@
       overflow: hidden;
       background: #d8d8d8;
       aspect-ratio: 1;
+      grid-column: span 2;
     }
+
+    /* last row: two tiles share the full width, so the grid never leaves a gap */
+    .m-wide { grid-column: span 3; aspect-ratio: 3 / 2; }
+    .m-still:hover img { transform: none; }
 
     .m img {
       width: 100%;
@@ -530,7 +535,7 @@
 
     @media (min-width: 769px) and (max-width: 1024px) {
       :root { --pad: 32px; }
-      .mosaic { grid-template-columns: repeat(3, 1fr); }
+      .mosaic { grid-template-columns: repeat(6, 1fr); }
       .location { gap: 40px; }
     }
 
@@ -613,7 +618,7 @@
       .insta-item { flex: 0 0 100%; scroll-snap-align: start; }
       .insta-dots { display: flex; }
       .tagline { padding: 40px var(--pad) 36px; }
-      .mosaic { grid-template-columns: repeat(3, 1fr); }
+      .mosaic { grid-template-columns: repeat(6, 1fr); }
       .location { grid-template-columns: 1fr; padding: 56px var(--pad) 48px; gap: 24px; }
       .location-right { max-width: 100%; }
       .footer-cols { grid-template-columns: 1fr; }
@@ -884,14 +889,14 @@
   <!-- ── HERO ── -->
   <section class="hero" aria-label="Projet à la une">
     <img fetchpriority="high" src="../brand_assets/concepts/home-hero.jpg"
-      alt="Concept render, long tables under light shafts in a stone hall"
+      alt="Rendu de concept, de longues tables sous des rais de lumière dans une salle de pierre"
       style="object-position: center center;"
     >
   </section>
 
   <!-- ── TAGLINE ── -->
   <section class="tagline">
-    <h1 class="tagline-text rv" data-i18n="tagline"><strong>Nous concevons les lieux<span class="d-br"><br></span> où l'on se retrouve.</strong></h1>
+    <h1 class="tagline-text rv" data-i18n="tagline"><strong>Nous concevons les lieux<span class="d-br"><br></span> qui rassemblent.</strong></h1>
     <p class="tagline-sub rv" style="--d:120ms" data-i18n="tagline-sub">Scénographie événementielle pour mariages, célébrations privées, marques et défilés. Depuis Beyrouth.</p>
   </section>
 
@@ -921,13 +926,11 @@
   </div>
 
   <div class="mosaic">
-    <a class="m" href="the-vernissage.html"><img loading="lazy" src="../brand_assets/concepts/the-vernissage-01.jpg" alt="Concept render, an exhibition opening hung with framed pictures"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-e1-t">Le Vernissage</span><span class="m-cap-d" data-i18n="proj-e1-d">Concept · Marques</span></span></a>
-    <a class="m" href="the-long-table.html"><img loading="lazy" src="../brand_assets/concepts/the-long-table-01.jpg" alt="Concept render, a long dinner table under a draped canopy at dusk"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-e2-t">La Longue Table</span><span class="m-cap-d" data-i18n="proj-e2-d">Concept · Privé</span></span></a>
-    <a class="m" href="after-dark.html"><img loading="lazy" src="../brand_assets/concepts/after-dark-01.jpg" alt="Concept render, a wall of red light with guests in silhouette"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-e3-t">Après la Nuit</span><span class="m-cap-d" data-i18n="proj-e3-d">Concept · Marques</span></span></a>
-    <a class="m" href="the-couture-salon.html"><img loading="lazy" src="../brand_assets/concepts/the-couture-salon-01.jpg" alt="Concept render, a dark salon with a vertical slit of warm light"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-b1-t">Le Salon Couture</span><span class="m-cap-d" data-i18n="proj-b1-d">Concept · Marques</span></span></a>
-    <a class="m" href="hall-of-images.html"><img loading="lazy" src="../brand_assets/concepts/hall-of-images-01.jpg" alt="Concept render, a gallery of framed images with a long table"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-b2-t">La Salle des Images</span><span class="m-cap-d" data-i18n="proj-b2-d">Concept · Marques</span></span></a>
-    <a class="m" href="silhouettes.html"><img loading="lazy" src="../brand_assets/concepts/silhouettes-01.jpg" alt="Concept render, a wall of red fluted glass catching the light"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-b3-t">Silhouettes</span><span class="m-cap-d" data-i18n="proj-b3-d">Concept · Marques</span></span></a>
-    <a class="m" href="three-rooms.html"><img loading="lazy" src="../brand_assets/concepts/three-rooms-01.jpg" alt="Concept render, an empty runway lit by a line of light"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-f1-t">Trois Salles</span><span class="m-cap-d" data-i18n="proj-f1-d">Concept · Marques</span></span></a>
+    <a class="m" href="the-long-table.html"><img loading="lazy" src="../brand_assets/concepts/the-long-table-01.jpg" alt="Rendu de concept, une longue table de dîner sous un voile tendu, au crépuscule"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-e2-t">La Longue Table</span><span class="m-cap-d" data-i18n="proj-e2-d">Concept · Privé</span></span></a>
+    <a class="m" href="hall-of-images.html"><img loading="lazy" src="../brand_assets/concepts/hall-of-images-01.jpg" alt="Rendu de concept, une galerie de tableaux encadrés et une longue table"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-b2-t">La Salle des Images</span><span class="m-cap-d" data-i18n="proj-b2-d">Concept · Marques</span></span></a>
+    <a class="m" href="after-dark.html"><img loading="lazy" src="../brand_assets/concepts/after-dark-01.jpg" alt="Rendu de concept, un mur de lumière rouge et des invités en silhouette"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-e3-t">Après la Nuit</span><span class="m-cap-d" data-i18n="proj-e3-d">Concept · Marques</span></span></a>
+    <div class="m m-wide m-still"><img loading="lazy" src="../brand_assets/concepts/study-linen-01.jpg" alt="Rendu de concept, une voûte de lin éclairée que des invités traversent"></div>
+    <div class="m m-wide m-still"><img loading="lazy" src="../brand_assets/concepts/study-stone-01.jpg" alt="Rendu de concept, un socle en acier contre un enduit gris, en lumière du jour"></div>
   </div>
 
   <!-- ── LOCATION ── -->
@@ -941,7 +944,7 @@
 
   <!-- ── PART OF AZZI STUDIOS ── -->
   <section class="group-img rv-fade">
-    <img loading="lazy" src="../brand_assets/concepts/group-gala.jpg" alt="Concept render, a long candlelit table in a dark hall">
+    <img loading="lazy" src="../brand_assets/concepts/group-gala.jpg" alt="Rendu de concept, une longue table aux chandelles dans une salle sombre">
     <div class="group-overlay">
       <a class="line" href="index.html">Sans Titre</a>
       <a class="line-azzi" href="https://azzistudios.com" target="_blank" rel="noopener">azzi studios</a>

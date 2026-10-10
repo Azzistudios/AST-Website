@@ -250,7 +250,7 @@
     /* ── MOSAIC GRID ── */
     .mosaic {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(6, 1fr);
       gap: 0;
     }
 
@@ -258,7 +258,12 @@
       overflow: hidden;
       background: #d8d8d8;
       aspect-ratio: 1;
+      grid-column: span 2;
     }
+
+    /* last row: two tiles share the full width, so the grid never leaves a gap */
+    .m-wide { grid-column: span 3; aspect-ratio: 3 / 2; }
+    .m-still:hover img { transform: none; }
 
     .m img {
       width: 100%;
@@ -530,7 +535,7 @@
 
     @media (min-width: 769px) and (max-width: 1024px) {
       :root { --pad: 32px; }
-      .mosaic { grid-template-columns: repeat(3, 1fr); }
+      .mosaic { grid-template-columns: repeat(6, 1fr); }
       .location { gap: 40px; }
     }
 
@@ -613,7 +618,7 @@
       .insta-item { flex: 0 0 100%; scroll-snap-align: start; }
       .insta-dots { display: flex; }
       .tagline { padding: 40px var(--pad) 36px; }
-      .mosaic { grid-template-columns: repeat(3, 1fr); }
+      .mosaic { grid-template-columns: repeat(6, 1fr); }
       .location { grid-template-columns: 1fr; padding: 56px var(--pad) 48px; gap: 24px; }
       .location-right { max-width: 100%; }
       .footer-cols { grid-template-columns: 1fr; }
@@ -921,13 +926,11 @@
   </div>
 
   <div class="mosaic">
-    <a class="m" href="the-vernissage.html"><img loading="lazy" src="brand_assets/concepts/the-vernissage-01.jpg" alt="Concept render, an exhibition opening hung with framed pictures"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-e1-t">The Vernissage</span><span class="m-cap-d" data-i18n="proj-e1-d">Concept · Brands</span></span></a>
     <a class="m" href="the-long-table.html"><img loading="lazy" src="brand_assets/concepts/the-long-table-01.jpg" alt="Concept render, a long dinner table under a draped canopy at dusk"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-e2-t">The Long Table</span><span class="m-cap-d" data-i18n="proj-e2-d">Concept · Private</span></span></a>
-    <a class="m" href="after-dark.html"><img loading="lazy" src="brand_assets/concepts/after-dark-01.jpg" alt="Concept render, a wall of red light with guests in silhouette"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-e3-t">After Dark</span><span class="m-cap-d" data-i18n="proj-e3-d">Concept · Brands</span></span></a>
-    <a class="m" href="the-couture-salon.html"><img loading="lazy" src="brand_assets/concepts/the-couture-salon-01.jpg" alt="Concept render, a dark salon with a vertical slit of warm light"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-b1-t">The Couture Salon</span><span class="m-cap-d" data-i18n="proj-b1-d">Concept · Brands</span></span></a>
     <a class="m" href="hall-of-images.html"><img loading="lazy" src="brand_assets/concepts/hall-of-images-01.jpg" alt="Concept render, a gallery of framed images with a long table"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-b2-t">Hall of Images</span><span class="m-cap-d" data-i18n="proj-b2-d">Concept · Brands</span></span></a>
-    <a class="m" href="silhouettes.html"><img loading="lazy" src="brand_assets/concepts/silhouettes-01.jpg" alt="Concept render, a wall of red fluted glass catching the light"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-b3-t">Silhouettes</span><span class="m-cap-d" data-i18n="proj-b3-d">Concept · Brands</span></span></a>
-    <a class="m" href="three-rooms.html"><img loading="lazy" src="brand_assets/concepts/three-rooms-01.jpg" alt="Concept render, an empty runway lit by a line of light"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-f1-t">Three Rooms</span><span class="m-cap-d" data-i18n="proj-f1-d">Concept · Brands</span></span></a>
+    <a class="m" href="after-dark.html"><img loading="lazy" src="brand_assets/concepts/after-dark-01.jpg" alt="Concept render, a wall of red light with guests in silhouette"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-e3-t">After Dark</span><span class="m-cap-d" data-i18n="proj-e3-d">Concept · Brands</span></span></a>
+    <div class="m m-wide m-still"><img loading="lazy" src="brand_assets/concepts/study-linen-01.jpg" alt="Concept render, a lit linen vault with guests walking through"></div>
+    <div class="m m-wide m-still"><img loading="lazy" src="brand_assets/concepts/study-stone-01.jpg" alt="Concept render, a steel plinth against grey plaster in daylight"></div>
   </div>
 
   <!-- ── LOCATION ── -->
