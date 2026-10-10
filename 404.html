@@ -456,9 +456,9 @@
         fbq('init', '1046451098143754');
         fbq('track', 'PageView');
         document.addEventListener('click', function (ev) {
-          var a = ev.target && ev.target.closest ? ev.target.closest('a[href^="mailto:"], a[href^="tel:"]') : null;
+          var a = ev.target && ev.target.closest ? ev.target.closest('a[href^="mailto:"], a[href^="tel:"], a[href*="wa.me"]') : null;
           if (!a || !window.fbq) return;
-          fbq('track', 'Contact', { content_name: a.getAttribute('href').indexOf('mailto:') === 0 ? 'email' : 'phone' });
+          fbq('track', 'Contact', { content_name: a.getAttribute('href').indexOf('mailto:') === 0 ? 'email' : (a.getAttribute('href').indexOf('wa.me') > -1 ? 'whatsapp' : 'phone') });
         }, true);
       }
       function loadAll() { loadGA(); loadPixel(); }

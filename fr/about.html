@@ -436,7 +436,7 @@
   </div>
 
   <div class="studio-img-wrap rv-fade">
-    <img class="studio-img" src="../brand_assets/concepts/studio-drawing.jpg" alt="Rendu de concept, une main dessinant un plan de scène" loading="lazy">
+    <img class="studio-img" src="../brand_assets/concepts/studio-drawing.jpg" alt="Concept render, a hand drawing a stage plan" loading="lazy">
   </div>
 
   <!-- HOW WE WORK -->
@@ -457,13 +457,13 @@
   </div>
   <div class="img-row">
     <div class="img-item">
-      <img loading="lazy" decoding="async" src="../brand_assets/concepts/the-vernissage-01.jpg" alt="Rendu de concept, un vernissage aux murs couverts de cadres">
+      <img loading="lazy" decoding="async" src="../brand_assets/concepts/the-vernissage-01.jpg" alt="Concept render, an exhibition opening hung with framed pictures">
     </div>
     <div class="img-item">
-      <img loading="lazy" decoding="async" src="../brand_assets/concepts/the-long-table-01.jpg" alt="Rendu de concept, une longue table de dîner sous un ciel de tissu au crépuscule">
+      <img loading="lazy" decoding="async" src="../brand_assets/concepts/the-long-table-01.jpg" alt="Concept render, a long dinner table under a draped canopy at dusk">
     </div>
     <div class="img-item">
-      <img loading="lazy" decoding="async" src="../brand_assets/concepts/after-dark-01.jpg" alt="Rendu de concept, un mur de lumière rouge et des invités en silhouette">
+      <img loading="lazy" decoding="async" src="../brand_assets/concepts/after-dark-01.jpg" alt="Concept render, a wall of red light with guests in silhouette">
     </div>
   </div>
   <div class="img-dots">
@@ -479,13 +479,13 @@
   </div>
   <div class="img-row">
     <div class="img-item">
-      <img loading="lazy" decoding="async" src="../brand_assets/concepts/three-rooms-01.jpg" alt="Rendu de concept, un podium vide éclairé par une ligne de lumière">
+      <img loading="lazy" decoding="async" src="../brand_assets/concepts/three-rooms-01.jpg" alt="Concept render, an empty runway lit by a line of light">
     </div>
     <div class="img-item">
-      <img loading="lazy" decoding="async" src="../brand_assets/concepts/three-rooms-02.jpg" alt="Rendu de concept, un couloir baigné de lumière rouge">
+      <img loading="lazy" decoding="async" src="../brand_assets/concepts/three-rooms-02.jpg" alt="Concept render, a corridor washed in red light">
     </div>
     <div class="img-item">
-      <img loading="lazy" decoding="async" src="../brand_assets/concepts/three-rooms-03.jpg" alt="Rendu de concept, un mur de métal courbe sur un sol bleu">
+      <img loading="lazy" decoding="async" src="../brand_assets/concepts/three-rooms-03.jpg" alt="Concept render, a curved metal wall on a blue floor">
     </div>
   </div>
   <div class="img-dots">
@@ -507,7 +507,7 @@
   </div>
 
   <section class="group-img rv-fade">
-    <img loading="lazy" src="../brand_assets/concepts/group-gala.jpg" alt="Rendu de concept, une longue table aux chandelles dans une salle sombre">
+    <img loading="lazy" src="../brand_assets/concepts/group-gala.jpg" alt="Concept render, a long candlelit table in a dark hall">
     <div class="group-overlay">
       <a class="line" href="index.html">Sans Titre</a>
       <a class="line-azzi" href="https://azzistudios.com" target="_blank" rel="noopener">azzi studios</a>
@@ -666,9 +666,9 @@
         fbq('init', '1046451098143754');
         fbq('track', 'PageView');
         document.addEventListener('click', function (ev) {
-          var a = ev.target && ev.target.closest ? ev.target.closest('a[href^="mailto:"], a[href^="tel:"]') : null;
+          var a = ev.target && ev.target.closest ? ev.target.closest('a[href^="mailto:"], a[href^="tel:"], a[href*="wa.me"]') : null;
           if (!a || !window.fbq) return;
-          fbq('track', 'Contact', { content_name: a.getAttribute('href').indexOf('mailto:') === 0 ? 'email' : 'phone' });
+          fbq('track', 'Contact', { content_name: a.getAttribute('href').indexOf('mailto:') === 0 ? 'email' : (a.getAttribute('href').indexOf('wa.me') > -1 ? 'whatsapp' : 'phone') });
         }, true);
       }
       function loadAll() { loadGA(); loadPixel(); }

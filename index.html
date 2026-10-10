@@ -793,52 +793,7 @@
     .side:focus-visible { outline: 2px solid currentColor; outline-offset: -6px; }
     @media (max-width: 768px) { .sides { grid-template-columns: 1fr; padding: 0 var(--pad) 48px; } .side { min-height: 0; padding: 28px 24px 26px; } }
   </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": ["Organization", "LocalBusiness"],
-        "@id": "https://ateliersanstitre.com/#org",
-        "name": "Atelier Sans Titre",
-        "url": "https://ateliersanstitre.com",
-        "logo": "https://ateliersanstitre.com/brand_assets/logo.png",
-        "image": "https://ateliersanstitre.com/brand_assets/og-image.jpg",
-        "email": "hello@ateliersanstitre.com",
-        "telephone": "+961 78 90 26 28",
-        "address": { "@type": "PostalAddress", "addressLocality": "Beirut", "addressCountry": "LB" },
-        "geo": { "@type": "GeoCoordinates", "latitude": 33.8870653, "longitude": 35.5206735 },
-        "areaServed": ["Beirut", "Lebanon", "Dubai", "Abu Dhabi", "United Arab Emirates", "Riyadh", "Jeddah", "Saudi Arabia", "Doha", "Qatar", "Kuwait", "Bahrain", "Oman", "Amman", "Jordan", "Cairo", "Egypt", "Gulf", "Middle East"],
-        "founder": { "@type": "Person", "name": "Marc Azzi", "jobTitle": "Architect & Scenographer" },
-        "sameAs": ["https://www.instagram.com/ateliersanstitre"]
-      },
-      {
-        "@type": "Service",
-        "serviceType": "Special events production",
-        "provider": { "@id": "https://ateliersanstitre.com/#org" },
-        "areaServed": "Middle East"
-      },
-      {
-        "@type": "Service",
-        "serviceType": "Brand experiences & activations",
-        "provider": { "@id": "https://ateliersanstitre.com/#org" },
-        "areaServed": "Middle East"
-      },
-      {
-        "@type": "Service",
-        "serviceType": "Fashion show production & scenography",
-        "provider": { "@id": "https://ateliersanstitre.com/#org" },
-        "areaServed": "Middle East"
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://ateliersanstitre.com/#website",
-        "name": "Atelier Sans Titre",
-        "url": "https://ateliersanstitre.com"
-      }
-    ]
-  }
-  </script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": ["Organization", "LocalBusiness"], "@id": "https://ateliersanstitre.com/#org", "name": "Atelier Sans Titre", "url": "https://ateliersanstitre.com", "logo": "https://ateliersanstitre.com/brand_assets/logo.png", "image": "https://ateliersanstitre.com/brand_assets/og-image.jpg", "email": "hello@ateliersanstitre.com", "telephone": "+961 78 90 26 28", "address": {"@type": "PostalAddress", "addressLocality": "Beirut", "addressCountry": "LB"}, "geo": {"@type": "GeoCoordinates", "latitude": 33.8870653, "longitude": 35.5206735}, "areaServed": ["Beirut", "Mount Lebanon", "Lebanon", "United Arab Emirates", "Saudi Arabia", "Qatar", "Kuwait", "Jordan"], "founder": {"@type": "Person", "name": "Marc Azzi", "jobTitle": "Architect & Scenographer"}, "sameAs": ["https://www.instagram.com/ateliersanstitre"], "description": "Event scenography studio in Beirut. Weddings and private events, brand and corporate events, fashion shows."}, {"@type": "Service", "serviceType": "Wedding and private event scenography", "provider": {"@id": "https://ateliersanstitre.com/#org"}, "areaServed": ["Beirut", "Mount Lebanon", "Lebanon", "United Arab Emirates", "Saudi Arabia", "Qatar", "Kuwait", "Jordan"], "name": "Weddings and private events"}, {"@type": "Service", "serviceType": "Brand and corporate event scenography", "provider": {"@id": "https://ateliersanstitre.com/#org"}, "areaServed": ["Beirut", "Mount Lebanon", "Lebanon", "United Arab Emirates", "Saudi Arabia", "Qatar", "Kuwait", "Jordan"], "name": "Brand and corporate events"}, {"@type": "Service", "serviceType": "Fashion show scenography", "provider": {"@id": "https://ateliersanstitre.com/#org"}, "areaServed": ["Beirut", "Mount Lebanon", "Lebanon", "United Arab Emirates", "Saudi Arabia", "Qatar", "Kuwait", "Jordan"], "name": "Fashion shows"}, {"@type": "WebSite", "@id": "https://ateliersanstitre.com/#website", "name": "Atelier Sans Titre", "url": "https://ateliersanstitre.com"}]}</script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
@@ -1224,9 +1179,9 @@
         fbq('init', '1046451098143754');
         fbq('track', 'PageView');
         document.addEventListener('click', function (ev) {
-          var a = ev.target && ev.target.closest ? ev.target.closest('a[href^="mailto:"], a[href^="tel:"]') : null;
+          var a = ev.target && ev.target.closest ? ev.target.closest('a[href^="mailto:"], a[href^="tel:"], a[href*="wa.me"]') : null;
           if (!a || !window.fbq) return;
-          fbq('track', 'Contact', { content_name: a.getAttribute('href').indexOf('mailto:') === 0 ? 'email' : 'phone' });
+          fbq('track', 'Contact', { content_name: a.getAttribute('href').indexOf('mailto:') === 0 ? 'email' : (a.getAttribute('href').indexOf('wa.me') > -1 ? 'whatsapp' : 'phone') });
         }, true);
       }
       function loadAll() { loadGA(); loadPixel(); }

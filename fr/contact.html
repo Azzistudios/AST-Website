@@ -345,9 +345,9 @@
 
   <!-- LOCATION HERO -->
   <section class="location-hero">
-    <img class="location-hero-slide active" fetchpriority="high" src="../brand_assets/concepts/contact-01.jpg" alt="Rendu de concept, des marches translucides éclairées">
-    <img class="location-hero-slide" src="../brand_assets/concepts/contact-02.jpg" alt="Rendu de concept, un mur de métal courbe dans le béton">
-    <img class="location-hero-slide" src="../brand_assets/concepts/contact-03.jpg" alt="Rendu de concept, un volume de métal contre le béton">
+    <img class="location-hero-slide active" fetchpriority="high" src="../brand_assets/concepts/contact-01.jpg" alt="Concept render, lit translucent steps">
+    <img class="location-hero-slide" src="../brand_assets/concepts/contact-02.jpg" alt="Concept render, a curved metal wall in concrete">
+    <img class="location-hero-slide" src="../brand_assets/concepts/contact-03.jpg" alt="Concept render, a metal volume against concrete">
     <div class="location-names">
       <h1 data-i18n="location-h1">Écrivez-nous.</h1>
     </div>
@@ -554,9 +554,9 @@
         fbq('init', '1046451098143754');
         fbq('track', 'PageView');
         document.addEventListener('click', function (ev) {
-          var a = ev.target && ev.target.closest ? ev.target.closest('a[href^="mailto:"], a[href^="tel:"]') : null;
+          var a = ev.target && ev.target.closest ? ev.target.closest('a[href^="mailto:"], a[href^="tel:"], a[href*="wa.me"]') : null;
           if (!a || !window.fbq) return;
-          fbq('track', 'Contact', { content_name: a.getAttribute('href').indexOf('mailto:') === 0 ? 'email' : 'phone' });
+          fbq('track', 'Contact', { content_name: a.getAttribute('href').indexOf('mailto:') === 0 ? 'email' : (a.getAttribute('href').indexOf('wa.me') > -1 ? 'whatsapp' : 'phone') });
         }, true);
       }
       function loadAll() { loadGA(); loadPixel(); }
