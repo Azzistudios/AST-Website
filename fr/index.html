@@ -5,8 +5,8 @@
   <link rel="icon" type="image/png" href="../favicon.png">
   <link rel="apple-touch-icon" href="../favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Atelier Sans Titre · Scénographie &amp; production, Beyrouth</title>
-  <meta name="description" content="Studio de scénographie et de production événementielle à Beyrouth. Événements, expériences de marque et défilés pour une clientèle de luxe, du Liban au Golfe.">
+  <title>Atelier Sans Titre · Scénographie événementielle, Beyrouth</title>
+  <meta name="description" content="Studio de scénographie événementielle à Beyrouth. Mariages, événements privés, événements de marque, défilés. Nous concevons l'espace, puis le construisons.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://ateliersanstitre.com/fr/">
   <link rel="alternate" hreflang="en" href="https://ateliersanstitre.com/">
@@ -14,13 +14,13 @@
   <link rel="alternate" hreflang="x-default" href="https://ateliersanstitre.com/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Atelier Sans Titre">
-  <meta property="og:title" content="Atelier Sans Titre · Scénographie &amp; production, Beyrouth">
-  <meta property="og:description" content="Studio de scénographie et de production événementielle à Beyrouth. Événements, expériences de marque et défilés pour une clientèle de luxe, du Liban au Golfe.">
+  <meta property="og:title" content="Atelier Sans Titre · Scénographie événementielle, Beyrouth">
+  <meta property="og:description" content="Studio de scénographie événementielle à Beyrouth. Mariages, événements privés, événements de marque, défilés. Nous concevons l'espace, puis le construisons.">
   <meta property="og:image" content="https://ateliersanstitre.com/brand_assets/og-image.jpg">
   <meta property="og:url" content="https://ateliersanstitre.com/fr/">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Atelier Sans Titre · Scénographie &amp; production, Beyrouth">
-  <meta name="twitter:description" content="Studio de scénographie et de production événementielle à Beyrouth. Événements, expériences de marque et défilés pour une clientèle de luxe, du Liban au Golfe.">
+  <meta name="twitter:title" content="Atelier Sans Titre · Scénographie événementielle, Beyrouth">
+  <meta name="twitter:description" content="Studio de scénographie événementielle à Beyrouth. Mariages, événements privés, événements de marque, défilés. Nous concevons l'espace, puis le construisons.">
   <meta name="twitter:image" content="https://ateliersanstitre.com/brand_assets/og-image.jpg">
   <!-- GA4 (G-L6SDE8HBFK) loads consent-gated via the banner script at the end of body -->
   <link rel="preload" href="../Fonts/Syne-Regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -687,7 +687,7 @@
     .cta-body { font-size: 15px; line-height: 1.7; color: #333; max-width: 420px; margin-bottom: 24px; }
     .cta-link { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; border-bottom: 1px solid currentColor; padding-bottom: 3px; transition: opacity 0.2s; }
     .cta-link:hover { opacity: 0.5; }
-    @media (max-width: 768px) { .positioning { display: none; } .cta { padding: 48px var(--pad) 56px; } }
+    @media (max-width: 768px) { .positioning { padding: 0 var(--pad) 44px; } .cta { padding: 48px var(--pad) 56px; } }
     :focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
 
     @media (prefers-reduced-motion: reduce) {
@@ -776,6 +776,22 @@
     .skip-link { position: fixed; left: 16px; top: 12px; z-index: 10000; background: #000; color: #fff; padding: 10px 16px; font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; transform: translateY(-180%); transition: transform 0.25s cubic-bezier(0.22,1,0.36,1); }
     .skip-link:focus { transform: translateY(0); outline: 2px solid #fff; outline-offset: 2px; }
     main:focus { outline: none; }
+
+    /* ── HERO SUBLINE ── */
+    .tagline-sub { font-size: 15px; line-height: 1.65; color: #555; max-width: 560px; margin-top: 22px; }
+
+    /* ── THE TWO DOORS ── */
+    .sides { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); padding: 0 var(--pad) 72px; }
+    .side { display: flex; flex-direction: column; padding: 36px 32px 30px; min-height: 300px; text-decoration: none; }
+    .side-private { background: #E4BEB3; color: #111; }
+    .side-brands { background: #4B5B73; color: #fff; }
+    .side-label { font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 20px; }
+    .side-line { font-size: clamp(20px, 2.1vw, 29px); font-weight: 500; letter-spacing: -0.02em; line-height: 1.14; margin-bottom: 18px; }
+    .side-list { font-size: 13px; line-height: 1.75; margin-bottom: 26px; }
+    .side-link { margin-top: auto; align-self: flex-start; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; border-bottom: 1px solid currentColor; padding-bottom: 3px; transition: opacity 0.25s cubic-bezier(0.22,1,0.36,1); }
+    .side:hover .side-link { opacity: 0.6; }
+    .side:focus-visible { outline: 2px solid currentColor; outline-offset: -6px; }
+    @media (max-width: 768px) { .sides { grid-template-columns: 1fr; padding: 0 var(--pad) 48px; } .side { min-height: 0; padding: 28px 24px 26px; } }
   </style>
   <script type="application/ld+json">
   {
@@ -919,38 +935,45 @@
 
   <!-- ── TAGLINE ── -->
   <section class="tagline">
-    <h1 class="tagline-text rv" data-i18n="tagline">Scénographie<span class="m-br"><br></span> et production<br>pour <strong>événements<span class="m-br"><br></span> spéciaux</strong>,<br><strong>expériences de marque</strong><br>et <strong>défilés de mode</strong>.</h1>
-    <div class="tags">
-      <span class="tag rv" style="--d:60ms" data-i18n="tag-fashion">Mode</span>
-      <span class="tag rv" style="--d:100ms" data-i18n="tag-jewellery">Joaillerie</span>
-      <span class="tag rv" style="--d:140ms" data-i18n="tag-beauty">Beauté</span>
-      <span class="tag rv" style="--d:180ms" data-i18n="tag-spirits">Spiritueux</span>
-      <span class="tag rv" style="--d:220ms" data-i18n="tag-automotive">Automobile</span>
-      <span class="tag rv" style="--d:260ms" data-i18n="tag-culture">Culture & Arts</span>
-    </div>
+    <h1 class="tagline-text rv" data-i18n="tagline"><strong>Nous concevons l'art de recevoir.</strong></h1>
+    <p class="tagline-sub rv" style="--d:120ms" data-i18n="tagline-sub">Scénographie événementielle pour mariages, célébrations privées, marques et défilés. Depuis Beyrouth.</p>
   </section>
 
   <!-- ── POSITIONING ── -->
   <section class="positioning rv">
-    <p data-i18n="positioning">Nous concevons l'espace dans lequel l'événement a lieu. Le décor, la lumière, l'ordre de l'espace. Puis nous le construisons. Un studio de scénographie, pas une agence événementielle.</p>
+    <p data-i18n="positioning">Nous concevons la pièce où l'on se retrouve. L'entrée, la table, la lumière à mesure que la nuit avance. Puis nous la construisons, et nous restons jusqu'au départ du dernier invité. Un studio de scénographie, chez lui à Beyrouth.</p>
   </section>
 
-  <!-- ── OUR WORK ── -->
+  <!-- ── THE TWO DOORS ── -->
+  <section class="sides" id="sides">
+    <a class="side side-private rv-fade" href="private.html">
+      <span class="side-label" data-i18n="side-private-label">Privé</span>
+      <span class="side-line" data-i18n="side-private-line">Mariages et événements privés.</span>
+      <span class="side-list" data-i18n="side-private-list">Mariages · Fiançailles · Dîners privés · Célébrations</span>
+      <span class="side-link" data-i18n="side-private-link">Privé →</span>
+    </a>
+    <a class="side side-brands rv-fade" style="--d:90ms" href="brands.html">
+      <span class="side-label" data-i18n="side-brands-label">Marques</span>
+      <span class="side-line" data-i18n="side-brands-line">Marques, mode et événements d'entreprise.</span>
+      <span class="side-list" data-i18n="side-brands-list">Défilés · Événements de marque et d'entreprise · Galas et soirées culturelles</span>
+      <span class="side-link" data-i18n="side-brands-link">Marques →</span>
+    </a>
+  </section>
+
+  <!-- ── CONCEPTS ── -->
   <div class="sec-head rv-fade" id="work">
-    <span class="sec-label" data-i18n="work-label">Notre Travail</span>
-    <span class="sec-desc" data-i18n="work-desc">Atelier Sans Titre transforme l'espace en expérience.</span>
+    <span class="sec-label" data-i18n="work-label">Concepts</span>
+    <span class="sec-desc" data-i18n="work-desc">Études des espaces que nous concevons. Les projets réalisés suivent cette saison.</span>
   </div>
 
   <div class="mosaic">
-    <a class="m" href="the-vernissage.html"><img loading="lazy" src="../brand_assets/events/events-1.jpg" alt="Production d'événement spécial par Atelier Sans Titre, Beyrouth"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-e1-t">Le Vernissage</span><span class="m-cap-d" data-i18n="proj-e1-d">Événements spéciaux · Beyrouth</span></span></a>
-    <a class="m" href="the-long-table.html"><img loading="lazy" src="../brand_assets/events/events-2.jpg" alt="Scénographie de dîner de gala à Beyrouth"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-e2-t">La Longue Table</span><span class="m-cap-d" data-i18n="proj-e2-d">Événements spéciaux · Beyrouth</span></span></a>
-    <a class="m" href="after-dark.html"><img loading="lazy" src="../brand_assets/events/events-3.jpg" alt="Mise en scène d'événement culturel par Atelier Sans Titre, Beyrouth"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-e3-t">Après la Nuit</span><span class="m-cap-d" data-i18n="proj-e3-d">Événements spéciaux · Beyrouth</span></span></a>
-    <a class="m" href="the-couture-salon.html"><img loading="lazy" src="../brand_assets/brand/brand-1.jpg" alt="Installation d'expérience de marque pour un lancement de produit, Beyrouth"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-b1-t">Le Salon Couture</span><span class="m-cap-d" data-i18n="proj-b1-d">Expériences de marque · Beyrouth</span></span></a>
-    <a class="m" href="hall-of-images.html"><img loading="lazy" src="../brand_assets/brand/brand-2.jpg" alt="Activation de marque immersive par Atelier Sans Titre, Beyrouth"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-b2-t">La Salle des Images</span><span class="m-cap-d" data-i18n="proj-b2-d">Expériences de marque · Dubaï</span></span></a>
-    <a class="m" href="silhouettes.html"><img loading="lazy" src="../brand_assets/brand/brand-3.jpg" alt="Scénographie d'expérience de marque par Atelier Sans Titre, Beyrouth"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-b3-t">Silhouettes</span><span class="m-cap-d" data-i18n="proj-b3-d">Expériences de marque · Doha</span></span></a>
-    <a class="m" href="three-rooms.html"><img loading="lazy" src="../brand_assets/fashion/fashion-1.jpg" alt="Scénographie de défilé de mode par Atelier Sans Titre, Beyrouth"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-f1-t">Trois Salles</span><span class="m-cap-d" data-i18n="proj-f1-d">Défilés de mode · Beyrouth</span></span></a>
-    <a class="m" href="three-rooms.html"><img loading="lazy" src="../brand_assets/fashion/fashion-2.jpg" alt="Décor de podium pour un défilé de mode, Beyrouth"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-f2-t">Trois Salles</span><span class="m-cap-d" data-i18n="proj-f2-d">Défilés de mode · Beyrouth</span></span></a>
-    <a class="m" href="three-rooms.html"><img loading="lazy" src="../brand_assets/fashion/fashion-3.jpg" alt="Mise en scène et éclairage de défilé par Atelier Sans Titre, Beyrouth"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-f3-t">Trois Salles</span><span class="m-cap-d" data-i18n="proj-f3-d">Défilés de mode · Beyrouth</span></span></a>
+    <a class="m" href="the-vernissage.html"><img loading="lazy" src="../brand_assets/events/events-1.jpg" alt="Production d'événement spécial par Atelier Sans Titre, Beyrouth"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-e1-t">Le Vernissage</span><span class="m-cap-d" data-i18n="proj-e1-d">Concept · Marques</span></span></a>
+    <a class="m" href="the-long-table.html"><img loading="lazy" src="../brand_assets/events/events-2.jpg" alt="Scénographie de dîner de gala à Beyrouth"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-e2-t">La Longue Table</span><span class="m-cap-d" data-i18n="proj-e2-d">Concept · Privé</span></span></a>
+    <a class="m" href="after-dark.html"><img loading="lazy" src="../brand_assets/events/events-3.jpg" alt="Mise en scène d'événement culturel par Atelier Sans Titre, Beyrouth"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-e3-t">Après la Nuit</span><span class="m-cap-d" data-i18n="proj-e3-d">Concept · Marques</span></span></a>
+    <a class="m" href="the-couture-salon.html"><img loading="lazy" src="../brand_assets/brand/brand-1.jpg" alt="Installation d'expérience de marque pour un lancement de produit, Beyrouth"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-b1-t">Le Salon Couture</span><span class="m-cap-d" data-i18n="proj-b1-d">Concept · Marques</span></span></a>
+    <a class="m" href="hall-of-images.html"><img loading="lazy" src="../brand_assets/brand/brand-2.jpg" alt="Activation de marque immersive par Atelier Sans Titre, Beyrouth"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-b2-t">La Salle des Images</span><span class="m-cap-d" data-i18n="proj-b2-d">Concept · Marques</span></span></a>
+    <a class="m" href="silhouettes.html"><img loading="lazy" src="../brand_assets/brand/brand-3.jpg" alt="Scénographie d'expérience de marque par Atelier Sans Titre, Beyrouth"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-b3-t">Silhouettes</span><span class="m-cap-d" data-i18n="proj-b3-d">Concept · Marques</span></span></a>
+    <a class="m" href="three-rooms.html"><img loading="lazy" src="../brand_assets/fashion/fashion-1.jpg" alt="Scénographie de défilé de mode par Atelier Sans Titre, Beyrouth"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-f1-t">Trois Salles</span><span class="m-cap-d" data-i18n="proj-f1-d">Concept · Marques</span></span></a>
   </div>
 
   <!-- ── LOCATION ── -->
@@ -959,7 +982,7 @@
       <h2 data-i18n="location-heading">Beyrouth<br><span class="arrow">→ Liban</span></h2>
       <p class="location-sub" data-i18n="location-sub">Notre base. Notre perspective.</p>
     </div>
-    <div class="location-right rv" style="--d:120ms" data-i18n="location-body">Depuis Beyrouth, nous concevons et produisons des événements spéciaux, des expériences de marque et des défilés pour des maisons de luxe au Liban, dans le&nbsp;Golfe et au-delà.</div>
+    <div class="location-right rv" style="--d:120ms" data-i18n="location-body">Basés à Beyrouth, nous concevons des mariages, des événements privés, des événements de marque et d'entreprise et des défilés partout au Liban, et dans la région quand un projet le demande.</div>
   </section>
 
   <!-- ── PART OF AZZI STUDIOS ── -->
@@ -998,9 +1021,9 @@
   <!-- ── FOOTER ── -->
   <!-- ── CTA ── -->
   <section class="cta rv-fade">
-    <p class="cta-title" data-i18n="cta-title">Dites-nous le brief.</p>
-    <p class="cta-body" data-i18n="cta-body">Une date, un lieu, une intention. Nous répondrons par un espace.</p>
-    <a class="cta-link" href="contact.html" data-i18n="cta-link">Démarrer un projet</a>
+    <p class="cta-title" data-i18n="cta-title">Dites-nous qui vient.</p>
+    <p class="cta-body" data-i18n="cta-body">Une date, un lieu, à peu près combien. Nous répondrons par un espace.</p>
+    <a class="cta-link" href="contact.html" data-i18n="cta-link">Écrivez-nous</a>
   </section>
 
   </main>

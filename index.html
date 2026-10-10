@@ -5,8 +5,8 @@
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Atelier Sans Titre · Scenography &amp; Event Production, Beirut</title>
-  <meta name="description" content="A Beirut scenography and event production studio. Special events, brand experiences and fashion shows for luxury clients across the Gulf.">
+  <title>Atelier Sans Titre · Event Scenography, Beirut</title>
+  <meta name="description" content="Event scenography studio in Beirut. Weddings and private events, brand and corporate events, fashion shows. We design the room, then we build it.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://ateliersanstitre.com/">
   <link rel="alternate" hreflang="en" href="https://ateliersanstitre.com/">
@@ -14,13 +14,13 @@
   <link rel="alternate" hreflang="x-default" href="https://ateliersanstitre.com/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Atelier Sans Titre">
-  <meta property="og:title" content="Atelier Sans Titre · Scenography &amp; Event Production, Beirut">
-  <meta property="og:description" content="A Beirut scenography and event production studio. Special events, brand experiences and fashion shows for luxury clients across the Gulf.">
+  <meta property="og:title" content="Atelier Sans Titre · Event Scenography, Beirut">
+  <meta property="og:description" content="Event scenography studio in Beirut. Weddings and private events, brand and corporate events, fashion shows. We design the room, then we build it.">
   <meta property="og:image" content="https://ateliersanstitre.com/brand_assets/og-image.jpg">
   <meta property="og:url" content="https://ateliersanstitre.com/">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Atelier Sans Titre · Scenography &amp; Event Production, Beirut">
-  <meta name="twitter:description" content="A Beirut scenography and event production studio. Special events, brand experiences and fashion shows for luxury clients across the Gulf.">
+  <meta name="twitter:title" content="Atelier Sans Titre · Event Scenography, Beirut">
+  <meta name="twitter:description" content="Event scenography studio in Beirut. Weddings and private events, brand and corporate events, fashion shows. We design the room, then we build it.">
   <meta name="twitter:image" content="https://ateliersanstitre.com/brand_assets/og-image.jpg">
   <!-- GA4 (G-L6SDE8HBFK) loads consent-gated via the banner script at the end of body -->
   <link rel="preload" href="Fonts/Syne-Regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -687,7 +687,7 @@
     .cta-body { font-size: 15px; line-height: 1.7; color: #333; max-width: 420px; margin-bottom: 24px; }
     .cta-link { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; border-bottom: 1px solid currentColor; padding-bottom: 3px; transition: opacity 0.2s; }
     .cta-link:hover { opacity: 0.5; }
-    @media (max-width: 768px) { .positioning { display: none; } .cta { padding: 48px var(--pad) 56px; } }
+    @media (max-width: 768px) { .positioning { padding: 0 var(--pad) 44px; } .cta { padding: 48px var(--pad) 56px; } }
     :focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
 
     @media (prefers-reduced-motion: reduce) {
@@ -776,6 +776,22 @@
     .skip-link { position: fixed; left: 16px; top: 12px; z-index: 10000; background: #000; color: #fff; padding: 10px 16px; font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; transform: translateY(-180%); transition: transform 0.25s cubic-bezier(0.22,1,0.36,1); }
     .skip-link:focus { transform: translateY(0); outline: 2px solid #fff; outline-offset: 2px; }
     main:focus { outline: none; }
+
+    /* ── HERO SUBLINE ── */
+    .tagline-sub { font-size: 15px; line-height: 1.65; color: #555; max-width: 560px; margin-top: 22px; }
+
+    /* ── THE TWO DOORS ── */
+    .sides { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); padding: 0 var(--pad) 72px; }
+    .side { display: flex; flex-direction: column; padding: 36px 32px 30px; min-height: 300px; text-decoration: none; }
+    .side-private { background: #E4BEB3; color: #111; }
+    .side-brands { background: #4B5B73; color: #fff; }
+    .side-label { font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 20px; }
+    .side-line { font-size: clamp(20px, 2.1vw, 29px); font-weight: 500; letter-spacing: -0.02em; line-height: 1.14; margin-bottom: 18px; }
+    .side-list { font-size: 13px; line-height: 1.75; margin-bottom: 26px; }
+    .side-link { margin-top: auto; align-self: flex-start; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; border-bottom: 1px solid currentColor; padding-bottom: 3px; transition: opacity 0.25s cubic-bezier(0.22,1,0.36,1); }
+    .side:hover .side-link { opacity: 0.6; }
+    .side:focus-visible { outline: 2px solid currentColor; outline-offset: -6px; }
+    @media (max-width: 768px) { .sides { grid-template-columns: 1fr; padding: 0 var(--pad) 48px; } .side { min-height: 0; padding: 28px 24px 26px; } }
   </style>
   <script type="application/ld+json">
   {
@@ -919,44 +935,45 @@
 
   <!-- ── TAGLINE ── -->
   <section class="tagline">
-    <h1 class="tagline-text rv" data-i18n="tagline">
-      Scenography<span class="m-br"><br></span>
-      and production<br>
-      for <strong>special events</strong>,<br>
-      <strong>brand experiences</strong><br>
-      and <strong>fashion shows</strong>.
-    </h1>
-    <div class="tags">
-      <span class="tag rv" style="--d:60ms" data-i18n="tag-fashion">Fashion</span>
-      <span class="tag rv" style="--d:100ms" data-i18n="tag-jewellery">Jewellery</span>
-      <span class="tag rv" style="--d:140ms" data-i18n="tag-beauty">Beauty</span>
-      <span class="tag rv" style="--d:180ms" data-i18n="tag-spirits">Spirits</span>
-      <span class="tag rv" style="--d:220ms" data-i18n="tag-automotive">Automotive</span>
-      <span class="tag rv" style="--d:260ms" data-i18n="tag-culture">Culture & Arts</span>
-    </div>
+    <h1 class="tagline-text rv" data-i18n="tagline"><strong>We design how you receive.</strong></h1>
+    <p class="tagline-sub rv" style="--d:120ms" data-i18n="tagline-sub">Event scenography for weddings, private celebrations, brands and fashion shows. From Beirut.</p>
   </section>
 
   <!-- ── POSITIONING ── -->
   <section class="positioning rv">
-    <p data-i18n="positioning">We design the space an event happens in. The set, the light, the order of the space. Then we build it. A scenography studio, not an event agency.</p>
+    <p data-i18n="positioning">We design the room people gather in. The way in, the table, the light as the night turns. Then we build it, and we stay until the last guest leaves. A scenography studio, at home in Beirut.</p>
   </section>
 
-  <!-- ── OUR WORK ── -->
+  <!-- ── THE TWO DOORS ── -->
+  <section class="sides" id="sides">
+    <a class="side side-private rv-fade" href="private.html">
+      <span class="side-label" data-i18n="side-private-label">Private</span>
+      <span class="side-line" data-i18n="side-private-line">Weddings and private events.</span>
+      <span class="side-list" data-i18n="side-private-list">Weddings · Engagements · Private dinners · Celebrations</span>
+      <span class="side-link" data-i18n="side-private-link">Private →</span>
+    </a>
+    <a class="side side-brands rv-fade" style="--d:90ms" href="brands.html">
+      <span class="side-label" data-i18n="side-brands-label">Brands</span>
+      <span class="side-line" data-i18n="side-brands-line">Brands, fashion and corporate events.</span>
+      <span class="side-list" data-i18n="side-brands-list">Fashion shows · Brand and corporate events · Galas and cultural evenings</span>
+      <span class="side-link" data-i18n="side-brands-link">Brands →</span>
+    </a>
+  </section>
+
+  <!-- ── CONCEPTS ── -->
   <div class="sec-head rv-fade" id="work">
-    <span class="sec-label" data-i18n="work-label">Our Work</span>
-    <span class="sec-desc" data-i18n="work-desc">Atelier Sans Titre transforms space into experience.</span>
+    <span class="sec-label" data-i18n="work-label">Concepts</span>
+    <span class="sec-desc" data-i18n="work-desc">Studies for the rooms we design. Built projects follow this season.</span>
   </div>
 
   <div class="mosaic">
-    <a class="m" href="the-vernissage.html"><img loading="lazy" src="brand_assets/events/events-1.jpg" alt="Special event production by Atelier Sans Titre, Beirut"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-e1-t">The Vernissage</span><span class="m-cap-d" data-i18n="proj-e1-d">Special events · Beirut</span></span></a>
-    <a class="m" href="the-long-table.html"><img loading="lazy" src="brand_assets/events/events-2.jpg" alt="Gala dinner scenography in Beirut"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-e2-t">The Long Table</span><span class="m-cap-d" data-i18n="proj-e2-d">Special events · Beirut</span></span></a>
-    <a class="m" href="after-dark.html"><img loading="lazy" src="brand_assets/events/events-3.jpg" alt="Cultural event staging by Atelier Sans Titre, Beirut"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-e3-t">After Dark</span><span class="m-cap-d" data-i18n="proj-e3-d">Special events · Beirut</span></span></a>
-    <a class="m" href="the-couture-salon.html"><img loading="lazy" src="brand_assets/brand/brand-1.jpg" alt="Brand experience installation for a product launch, Beirut"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-b1-t">The Couture Salon</span><span class="m-cap-d" data-i18n="proj-b1-d">Brand experiences · Beirut</span></span></a>
-    <a class="m" href="hall-of-images.html"><img loading="lazy" src="brand_assets/brand/brand-2.jpg" alt="Immersive brand activation by Atelier Sans Titre, Beirut"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-b2-t">Hall of Images</span><span class="m-cap-d" data-i18n="proj-b2-d">Brand experiences · Dubai</span></span></a>
-    <a class="m" href="silhouettes.html"><img loading="lazy" src="brand_assets/brand/brand-3.jpg" alt="Brand experience scenography by Atelier Sans Titre, Beirut"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-b3-t">Silhouettes</span><span class="m-cap-d" data-i18n="proj-b3-d">Brand experiences · Doha</span></span></a>
-    <a class="m" href="three-rooms.html"><img loading="lazy" src="brand_assets/fashion/fashion-1.jpg" alt="Fashion show scenography by Atelier Sans Titre, Beirut"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-f1-t">Three Rooms</span><span class="m-cap-d" data-i18n="proj-f1-d">Fashion shows · Beirut</span></span></a>
-    <a class="m" href="three-rooms.html"><img loading="lazy" src="brand_assets/fashion/fashion-2.jpg" alt="Runway set design for a fashion show, Beirut"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-f2-t">Three Rooms</span><span class="m-cap-d" data-i18n="proj-f2-d">Fashion shows · Beirut</span></span></a>
-    <a class="m" href="three-rooms.html"><img loading="lazy" src="brand_assets/fashion/fashion-3.jpg" alt="Fashion show staging and lighting by Atelier Sans Titre, Beirut"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-f3-t">Three Rooms</span><span class="m-cap-d" data-i18n="proj-f3-d">Fashion shows · Beirut</span></span></a>
+    <a class="m" href="the-vernissage.html"><img loading="lazy" src="brand_assets/events/events-1.jpg" alt="Special event production by Atelier Sans Titre, Beirut"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-e1-t">The Vernissage</span><span class="m-cap-d" data-i18n="proj-e1-d">Concept · Brands</span></span></a>
+    <a class="m" href="the-long-table.html"><img loading="lazy" src="brand_assets/events/events-2.jpg" alt="Gala dinner scenography in Beirut"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-e2-t">The Long Table</span><span class="m-cap-d" data-i18n="proj-e2-d">Concept · Private</span></span></a>
+    <a class="m" href="after-dark.html"><img loading="lazy" src="brand_assets/events/events-3.jpg" alt="Cultural event staging by Atelier Sans Titre, Beirut"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-e3-t">After Dark</span><span class="m-cap-d" data-i18n="proj-e3-d">Concept · Brands</span></span></a>
+    <a class="m" href="the-couture-salon.html"><img loading="lazy" src="brand_assets/brand/brand-1.jpg" alt="Brand experience installation for a product launch, Beirut"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-b1-t">The Couture Salon</span><span class="m-cap-d" data-i18n="proj-b1-d">Concept · Brands</span></span></a>
+    <a class="m" href="hall-of-images.html"><img loading="lazy" src="brand_assets/brand/brand-2.jpg" alt="Immersive brand activation by Atelier Sans Titre, Beirut"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-b2-t">Hall of Images</span><span class="m-cap-d" data-i18n="proj-b2-d">Concept · Brands</span></span></a>
+    <a class="m" href="silhouettes.html"><img loading="lazy" src="brand_assets/brand/brand-3.jpg" alt="Brand experience scenography by Atelier Sans Titre, Beirut"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-b3-t">Silhouettes</span><span class="m-cap-d" data-i18n="proj-b3-d">Concept · Brands</span></span></a>
+    <a class="m" href="three-rooms.html"><img loading="lazy" src="brand_assets/fashion/fashion-1.jpg" alt="Fashion show scenography by Atelier Sans Titre, Beirut"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-f1-t">Three Rooms</span><span class="m-cap-d" data-i18n="proj-f1-d">Concept · Brands</span></span></a>
   </div>
 
   <!-- ── LOCATION ── -->
@@ -966,8 +983,7 @@
       <p class="location-sub" data-i18n="location-sub">Our base. Our perspective.</p>
     </div>
     <div class="location-right rv" style="--d:120ms" data-i18n="location-body">
-      Based in Beirut, we design and produce special events, brand experiences and fashion shows for luxury houses in Lebanon, the&nbsp;Gulf and beyond.
-    </div>
+      Based in Beirut, we design weddings, private events, brand and corporate events and fashion shows across Lebanon, and in the region when a project calls for it.</div>
   </section>
 
   <!-- ── PART OF AZZI STUDIOS ── -->
@@ -1006,9 +1022,9 @@
   <!-- ── FOOTER ── -->
   <!-- ── CTA ── -->
   <section class="cta rv-fade">
-    <p class="cta-title" data-i18n="cta-title">Tell us the brief.</p>
-    <p class="cta-body" data-i18n="cta-body">A date, a place, an intention. We will answer with a space.</p>
-    <a class="cta-link" href="contact.html" data-i18n="cta-link">Start a project</a>
+    <p class="cta-title" data-i18n="cta-title">Tell us who is coming.</p>
+    <p class="cta-body" data-i18n="cta-body">A date, a place, roughly how many. We will answer with a space.</p>
+    <a class="cta-link" href="contact.html" data-i18n="cta-link">Write to us</a>
   </section>
 
   </main>
