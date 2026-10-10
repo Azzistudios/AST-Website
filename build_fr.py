@@ -111,15 +111,15 @@ TAGS = {'tag-fashion':'Mode','tag-jewellery':'Joaillerie','tag-beauty':'Beauté'
 FOOT = {'footer-location':'Beyrouth, Liban','copyright':'© 2026 Atelier Sans Titre. Tous droits réservés.','ecosystem':"Fait partie de l'écosystème créatif Azzi Studios.",'legal-privacy':'Confidentialité','legal-notice':'Mentions légales'}
 
 PROJ = {
- 'proj-e1-t':'Le Vernissage','proj-e1-d':'Concept · Marques',
- 'proj-e2-t':'La Longue Table','proj-e2-d':'Concept · Privé',
- 'proj-e3-t':'Après la Nuit','proj-e3-d':'Concept · Marques',
- 'proj-b1-t':'Le Salon Couture','proj-b1-d':'Concept · Marques',
- 'proj-b2-t':'La Salle des Images','proj-b2-d':'Concept · Marques',
+ 'proj-e1-t':'The Vernissage','proj-e1-d':'Concept · Marques',
+ 'proj-e2-t':'The Long Table','proj-e2-d':'Concept · Privé',
+ 'proj-e3-t':'After Dark','proj-e3-d':'Concept · Marques',
+ 'proj-b1-t':'The Couture Salon','proj-b1-d':'Concept · Marques',
+ 'proj-b2-t':'Hall of Images','proj-b2-d':'Concept · Marques',
  'proj-b3-t':'Silhouettes','proj-b3-d':'Concept · Marques',
- 'proj-f1-t':'Trois Salles','proj-f1-d':'Concept · Marques',
- 'proj-f2-t':'Trois Salles','proj-f2-d':'Concept · Marques',
- 'proj-f3-t':'Trois Salles','proj-f3-d':'Concept · Marques',
+ 'proj-f1-t':'Three Rooms','proj-f1-d':'Concept · Marques',
+ 'proj-f2-t':'Three Rooms','proj-f2-d':'Concept · Marques',
+ 'proj-f3-t':'Three Rooms','proj-f3-d':'Concept · Marques',
 }
 
 # ── CATALOG: per-page French text + URLs ──
