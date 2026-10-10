@@ -189,7 +189,7 @@
       font-weight: 400;
       line-height: 1.07;
       letter-spacing: -0.03em;
-      color: #c9c9c9;
+      color: #8A8A8A;
       margin-bottom: 40px;
       text-transform: uppercase;
     }
@@ -310,7 +310,7 @@
     }
 
     .location-left h2 .arrow {
-      color: #b0b0b0;
+      color: #555;
       font-weight: 400;
       display: block;
       font-size: 0.7em;
@@ -714,6 +714,8 @@
       .fc-list li a { display: inline-block; padding: 9px 0; }
       .insta-dots { gap: 26px; }
       .insta-dot::before { inset: -19px; }
+      .insta-dot { width: 44px; height: 44px; padding: 19px; background-clip: content-box; }
+      .insta-handle { display: inline-block; padding: 10px 0; }
       .sec-head { flex-direction: column; align-items: flex-start; gap: 8px; }
       .sec-desc { text-align: left; max-width: 100%; }
       .cta-link { position: relative; }
@@ -780,18 +782,16 @@
     /* ── HERO SUBLINE ── */
     .tagline-sub { font-size: 15px; line-height: 1.65; color: #555; max-width: 560px; margin-top: 22px; }
 
-    /* ── THE TWO DOORS ── */
-    .sides { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); padding: 0 var(--pad) 72px; }
-    .side { display: flex; flex-direction: column; padding: 36px 32px 30px; min-height: 300px; text-decoration: none; }
-    .side-private { background: #E4BEB3; color: #111; }
-    .side-brands { background: #4B5B73; color: #fff; }
-    .side-label { font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 20px; }
-    .side-line { font-size: clamp(20px, 2.1vw, 29px); font-weight: 500; letter-spacing: -0.02em; line-height: 1.14; margin-bottom: 18px; }
-    .side-list { font-size: 13px; line-height: 1.75; margin-bottom: 26px; }
+    /* ── THE TWO DOORS (monochrome, same component as the discipline block) ── */
+    .sides { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .side { display: flex; flex-direction: column; padding: 48px var(--pad) 44px; color: #111; text-decoration: none; }
+    .side + .side { border-left: 1px solid var(--border); }
+    .side-label { font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; padding-bottom: 16px; margin-bottom: 18px; border-bottom: 1px solid var(--border); }
+    .side-line { font-size: 14px; line-height: 1.65; max-width: 440px; margin-bottom: 28px; }
     .side-link { margin-top: auto; align-self: flex-start; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; border-bottom: 1px solid currentColor; padding-bottom: 3px; transition: opacity 0.25s cubic-bezier(0.22,1,0.36,1); }
-    .side:hover .side-link { opacity: 0.6; }
+    .side:hover .side-link { opacity: 0.55; }
     .side:focus-visible { outline: 2px solid currentColor; outline-offset: -6px; }
-    @media (max-width: 768px) { .sides { grid-template-columns: 1fr; padding: 0 var(--pad) 48px; } .side { min-height: 0; padding: 28px 24px 26px; } }
+    @media (max-width: 768px) { .sides { grid-template-columns: 1fr; } .side { padding: 36px var(--pad) 32px; } .side + .side { border-left: 0; border-top: 1px solid var(--border); } }
   </style>
   <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": ["Organization", "LocalBusiness"], "@id": "https://ateliersanstitre.com/#org", "name": "Atelier Sans Titre", "url": "https://ateliersanstitre.com", "logo": "https://ateliersanstitre.com/brand_assets/logo.png", "image": "https://ateliersanstitre.com/brand_assets/og-image.jpg", "email": "hello@ateliersanstitre.com", "telephone": "+961 78 90 26 28", "address": {"@type": "PostalAddress", "addressLocality": "Beirut", "addressCountry": "LB"}, "geo": {"@type": "GeoCoordinates", "latitude": 33.8870653, "longitude": 35.5206735}, "areaServed": ["Beirut", "Mount Lebanon", "Lebanon", "United Arab Emirates", "Saudi Arabia", "Qatar", "Kuwait", "Jordan"], "founder": {"@type": "Person", "name": "Marc Azzi", "jobTitle": "Architect & Scenographer"}, "sameAs": ["https://www.instagram.com/ateliersanstitre"], "description": "Event scenography studio in Beirut. Weddings and private events, brand and corporate events, fashion shows."}, {"@type": "Service", "serviceType": "Wedding and private event scenography", "provider": {"@id": "https://ateliersanstitre.com/#org"}, "areaServed": ["Beirut", "Mount Lebanon", "Lebanon", "United Arab Emirates", "Saudi Arabia", "Qatar", "Kuwait", "Jordan"], "name": "Weddings and private events"}, {"@type": "Service", "serviceType": "Brand and corporate event scenography", "provider": {"@id": "https://ateliersanstitre.com/#org"}, "areaServed": ["Beirut", "Mount Lebanon", "Lebanon", "United Arab Emirates", "Saudi Arabia", "Qatar", "Kuwait", "Jordan"], "name": "Brand and corporate events"}, {"@type": "Service", "serviceType": "Fashion show scenography", "provider": {"@id": "https://ateliersanstitre.com/#org"}, "areaServed": ["Beirut", "Mount Lebanon", "Lebanon", "United Arab Emirates", "Saudi Arabia", "Qatar", "Kuwait", "Jordan"], "name": "Fashion shows"}, {"@type": "WebSite", "@id": "https://ateliersanstitre.com/#website", "name": "Atelier Sans Titre", "url": "https://ateliersanstitre.com"}]}</script>
 </head>
@@ -903,14 +903,12 @@
   <section class="sides" id="sides">
     <a class="side side-private rv-fade" href="private.html">
       <span class="side-label" data-i18n="side-private-label">Privé</span>
-      <span class="side-line" data-i18n="side-private-line">Pour ceux que vous aimez.</span>
-      <span class="side-list" data-i18n="side-private-list">Mariages · Fiançailles · Dîners privés · Célébrations</span>
+      <span class="side-line" data-i18n="side-private-line">Pour ceux que vous aimez. Mariages, fiançailles et dîners privés.</span>
       <span class="side-link" data-i18n="side-private-link">Privé →</span>
     </a>
     <a class="side side-brands rv-fade" style="--d:90ms" href="brands.html">
       <span class="side-label" data-i18n="side-brands-label">Marques</span>
-      <span class="side-line" data-i18n="side-brands-line">Pour ceux que vous voulez impressionner.</span>
-      <span class="side-list" data-i18n="side-brands-list">Défilés · Événements de marque et d'entreprise · Galas et soirées culturelles</span>
+      <span class="side-line" data-i18n="side-brands-line">Pour ceux que vous voulez impressionner. Défilés, lancements et événements d'entreprise.</span>
       <span class="side-link" data-i18n="side-brands-link">Marques →</span>
     </a>
   </section>
