@@ -245,7 +245,10 @@
     .blk-kicker { display: block; font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #555; margin-bottom: 8px; }
     .blk-t { display: block; font-size: 15px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px; }
     .blk-body { display: block; font-size: 14px; line-height: 1.65; color: #333; max-width: 520px; }
-    .blk-l { display: inline-block; margin-top: 14px; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; border-bottom: 1px solid currentColor; padding-bottom: 3px; transition: opacity 0.2s; }
+    .blk-lw { display: block; margin-top: 14px; }
+    .blocks + .svc-sec { border-top: 0; }
+    .svc-hero + .svc-intro { padding-top: 32px; }
+    .blk-l { display: inline; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; transition: opacity 0.2s; }
     a.blk:hover .blk-l { opacity: 0.5; }
     @media (max-width: 768px) {
       .svc-hero img, .blk-main .blk-img img { aspect-ratio: 4 / 3; }
@@ -360,15 +363,15 @@
   <div class="blocks">
     <a class="blk  rv" href="fashion-shows.html">
       <div class="blk-img"><img loading="lazy" decoding="async" src="../brand_assets/concepts/fashion-shows-02.jpg" alt="Rendu de concept, une scène sous un seul faisceau"></div>
-      <div class="blk-txt"><span class="blk-t">Défilés</span><span class="blk-body">Défilés, haute couture, présentations et showrooms.</span><span class="blk-l">Voir les défilés →</span></div>
+      <div class="blk-txt"><h2 class="blk-t">Défilés</h2><span class="blk-body">Défilés, haute couture, présentations et showrooms.</span><span class="blk-lw"><span class="blk-l">Voir les défilés →</span></span></div>
     </a>
     <a class="blk  rv" href="brand-experiences.html" style="--d:90ms">
       <div class="blk-img"><img loading="lazy" decoding="async" src="../brand_assets/concepts/brand-experiences-01.jpg" alt="Rendu de concept, une structure tunnel éclairée dans un entrepôt"></div>
-      <div class="blk-txt"><span class="blk-t">Événements de marque et d'entreprise</span><span class="blk-body">Lancements, activations, pop-ups, journées presse, vitrines.</span><span class="blk-l">Voir les événements de marque et d'entreprise →</span></div>
+      <div class="blk-txt"><h2 class="blk-t">Événements de marque et d'entreprise</h2><span class="blk-body">Lancements, activations, pop-ups, journées presse, vitrines.</span><span class="blk-lw"><span class="blk-l">Voir les événements de marque et d'entreprise →</span></span></div>
     </a>
     <a class="blk  rv" href="brand-experiences.html#galas" style="--d:180ms">
       <div class="blk-img"><img loading="lazy" decoding="async" src="../brand_assets/concepts/group-gala.jpg" alt="Rendu de concept, une longue table aux chandelles dans une salle sombre"></div>
-      <div class="blk-txt"><span class="blk-t">Galas et soirées culturelles</span><span class="blk-body">Dîners d'entreprise, galas, vernissages et inaugurations.</span><span class="blk-l">Voir les galas →</span></div>
+      <div class="blk-txt"><h2 class="blk-t">Galas et soirées culturelles</h2><span class="blk-body">Dîners d'entreprise, galas, vernissages et inaugurations.</span><span class="blk-lw"><span class="blk-l">Voir les galas →</span></span></div>
     </a>
   </div>
 

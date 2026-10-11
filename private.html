@@ -245,7 +245,10 @@
     .blk-kicker { display: block; font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #555; margin-bottom: 8px; }
     .blk-t { display: block; font-size: 15px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px; }
     .blk-body { display: block; font-size: 14px; line-height: 1.65; color: #333; max-width: 520px; }
-    .blk-l { display: inline-block; margin-top: 14px; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; border-bottom: 1px solid currentColor; padding-bottom: 3px; transition: opacity 0.2s; }
+    .blk-lw { display: block; margin-top: 14px; }
+    .blocks + .svc-sec { border-top: 0; }
+    .svc-hero + .svc-intro { padding-top: 32px; }
+    .blk-l { display: inline; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; transition: opacity 0.2s; }
     a.blk:hover .blk-l { opacity: 0.5; }
     @media (max-width: 768px) {
       .svc-hero img, .blk-main .blk-img img { aspect-ratio: 4 / 3; }
@@ -350,7 +353,7 @@
     <h1>Weddings and private events.</h1>
   </div>
 
-  <div class="svc-hero rv-fade"><img fetchpriority="high" decoding="async" src="brand_assets/concepts/the-long-table-01.jpg" alt="Concept render, a long dinner table under a draped canopy at dusk"></div>
+  <div class="svc-hero rv-fade"><img fetchpriority="high" decoding="async" style="object-position: 50% 72%" src="brand_assets/concepts/the-long-table-01.jpg" alt="Concept render, a long dinner table under a draped canopy at dusk"></div>
 
   <section class="svc-intro rv">
     <p>For the people you love. Weddings, engagements, private dinners and parties. We design the place first: the way in, the tables, the light after dark. Then we plan the day, build it and run it on the day, so you can spend it with your guests.</p>
@@ -358,16 +361,16 @@
 
   <div class="blocks">
     <a class="blk blk-main rv" href="weddings.html">
-      <div class="blk-img"><img loading="lazy" decoding="async" src="brand_assets/concepts/private-01.jpg" alt="Concept render, a candlelit dinner under draped fabric in a stone hall"></div>
-      <div class="blk-txt"><span class="blk-t">Weddings</span><span class="blk-body">Weddings and receptions, designed, planned and produced.</span><span class="blk-l">See weddings →</span></div>
+      <div class="blk-img"><img loading="lazy" decoding="async" style="object-position: 50% 82%" src="brand_assets/concepts/private-01.jpg" alt="Concept render, a candlelit dinner under draped fabric in a stone hall"></div>
+      <div class="blk-txt"><h2 class="blk-t">Weddings</h2><span class="blk-body">Weddings and receptions, designed, planned and produced.</span><span class="blk-lw"><span class="blk-l">See weddings →</span></span></div>
     </a>
     <a class="blk blk-half rv" style="--d:90ms" href="dinner-in-red.html">
       <div class="blk-img"><img loading="lazy" decoding="async" src="brand_assets/concepts/dinner-in-red-01.jpg" alt="A private dinner in an art gallery under red light, one long table laid with candles and flowers"></div>
-      <div class="blk-txt"><span class="blk-t">Private events</span><span class="blk-body">Engagements. Private dinners. Birthdays. Parties. Zaffe entrances.</span><span class="blk-l">See a dinner we built →</span></div>
+      <div class="blk-txt"><h2 class="blk-t">Private events</h2><span class="blk-body">Engagements. Private dinners. Birthdays. Parties. Zaffe entrances.</span><span class="blk-lw"><span class="blk-l">See a dinner we built →</span></span></div>
     </a>
     <a class="blk blk-half rv" href="the-long-table.html" style="--d:180ms">
       <div class="blk-img"><img loading="lazy" decoding="async" src="brand_assets/concepts/the-long-table-02.jpg" alt="Concept render, a long dark table and a single line of light"></div>
-      <div class="blk-txt"><span class="blk-kicker">Concept · Private</span><span class="blk-t">The Long Table</span><span class="blk-body">A concept for a private dinner.</span><span class="blk-l">See the concept →</span></div>
+      <div class="blk-txt"><span class="blk-kicker">Concept · Private</span><h2 class="blk-t">The Long Table</h2><span class="blk-body">A concept for a private dinner.</span><span class="blk-lw"><span class="blk-l">See the concept →</span></span></div>
     </a>
   </div>
 

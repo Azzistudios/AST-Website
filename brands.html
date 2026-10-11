@@ -245,7 +245,10 @@
     .blk-kicker { display: block; font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #555; margin-bottom: 8px; }
     .blk-t { display: block; font-size: 15px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px; }
     .blk-body { display: block; font-size: 14px; line-height: 1.65; color: #333; max-width: 520px; }
-    .blk-l { display: inline-block; margin-top: 14px; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; border-bottom: 1px solid currentColor; padding-bottom: 3px; transition: opacity 0.2s; }
+    .blk-lw { display: block; margin-top: 14px; }
+    .blocks + .svc-sec { border-top: 0; }
+    .svc-hero + .svc-intro { padding-top: 32px; }
+    .blk-l { display: inline; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; transition: opacity 0.2s; }
     a.blk:hover .blk-l { opacity: 0.5; }
     @media (max-width: 768px) {
       .svc-hero img, .blk-main .blk-img img { aspect-ratio: 4 / 3; }
@@ -360,15 +363,15 @@
   <div class="blocks">
     <a class="blk  rv" href="fashion-shows.html">
       <div class="blk-img"><img loading="lazy" decoding="async" src="brand_assets/concepts/fashion-shows-02.jpg" alt="Concept render, a stage under a single beam of light"></div>
-      <div class="blk-txt"><span class="blk-t">Fashion shows</span><span class="blk-body">Runway, couture, presentations and showrooms.</span><span class="blk-l">See fashion shows →</span></div>
+      <div class="blk-txt"><h2 class="blk-t">Fashion shows</h2><span class="blk-body">Runway, couture, presentations and showrooms.</span><span class="blk-lw"><span class="blk-l">See fashion shows →</span></span></div>
     </a>
     <a class="blk  rv" href="brand-experiences.html" style="--d:90ms">
       <div class="blk-img"><img loading="lazy" decoding="async" src="brand_assets/concepts/brand-experiences-01.jpg" alt="Concept render, a lit tunnel structure in a dark warehouse"></div>
-      <div class="blk-txt"><span class="blk-t">Brand and corporate events</span><span class="blk-body">Launches, activations, pop-ups, press days, window displays.</span><span class="blk-l">See brand and corporate events →</span></div>
+      <div class="blk-txt"><h2 class="blk-t">Brand and corporate events</h2><span class="blk-body">Launches, activations, pop-ups, press days, window displays.</span><span class="blk-lw"><span class="blk-l">See brand and corporate events →</span></span></div>
     </a>
     <a class="blk  rv" href="brand-experiences.html#galas" style="--d:180ms">
       <div class="blk-img"><img loading="lazy" decoding="async" src="brand_assets/concepts/group-gala.jpg" alt="Concept render, a long candlelit table in a dark hall"></div>
-      <div class="blk-txt"><span class="blk-t">Galas and cultural evenings</span><span class="blk-body">Corporate dinners, galas, vernissages and openings.</span><span class="blk-l">See galas →</span></div>
+      <div class="blk-txt"><h2 class="blk-t">Galas and cultural evenings</h2><span class="blk-body">Corporate dinners, galas, vernissages and openings.</span><span class="blk-lw"><span class="blk-l">See galas →</span></span></div>
     </a>
   </div>
 

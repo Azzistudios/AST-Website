@@ -245,7 +245,10 @@
     .blk-kicker { display: block; font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #555; margin-bottom: 8px; }
     .blk-t { display: block; font-size: 15px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px; }
     .blk-body { display: block; font-size: 14px; line-height: 1.65; color: #333; max-width: 520px; }
-    .blk-l { display: inline-block; margin-top: 14px; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; border-bottom: 1px solid currentColor; padding-bottom: 3px; transition: opacity 0.2s; }
+    .blk-lw { display: block; margin-top: 14px; }
+    .blocks + .svc-sec { border-top: 0; }
+    .svc-hero + .svc-intro { padding-top: 32px; }
+    .blk-l { display: inline; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; transition: opacity 0.2s; }
     a.blk:hover .blk-l { opacity: 0.5; }
     @media (max-width: 768px) {
       .svc-hero img, .blk-main .blk-img img { aspect-ratio: 4 / 3; }
@@ -350,7 +353,7 @@
     <h1>Mariages et événements privés.</h1>
   </div>
 
-  <div class="svc-hero rv-fade"><img fetchpriority="high" decoding="async" src="../brand_assets/concepts/the-long-table-01.jpg" alt="Rendu de concept, une longue table de dîner sous un voile tendu, au crépuscule"></div>
+  <div class="svc-hero rv-fade"><img fetchpriority="high" decoding="async" style="object-position: 50% 72%" src="../brand_assets/concepts/the-long-table-01.jpg" alt="Rendu de concept, une longue table de dîner sous un voile tendu, au crépuscule"></div>
 
   <section class="svc-intro rv">
     <p>Pour ceux que vous aimez. Mariages, fiançailles, dîners privés et fêtes. Nous concevons d'abord le lieu : l'entrée, les tables, la lumière après la tombée de la nuit. Puis nous organisons la journée, la construisons et dirigeons l'événement, pour que vous la passiez avec vos invités.</p>
@@ -358,16 +361,16 @@
 
   <div class="blocks">
     <a class="blk blk-main rv" href="weddings.html">
-      <div class="blk-img"><img loading="lazy" decoding="async" src="../brand_assets/concepts/private-01.jpg" alt="Rendu de concept, un dîner aux chandelles sous un ciel de tissu"></div>
-      <div class="blk-txt"><span class="blk-t">Mariages</span><span class="blk-body">Mariages et réceptions, conçus, organisés et produits.</span><span class="blk-l">Voir les mariages →</span></div>
+      <div class="blk-img"><img loading="lazy" decoding="async" style="object-position: 50% 82%" src="../brand_assets/concepts/private-01.jpg" alt="Rendu de concept, un dîner aux chandelles sous un ciel de tissu"></div>
+      <div class="blk-txt"><h2 class="blk-t">Mariages</h2><span class="blk-body">Mariages et réceptions, conçus, organisés et produits.</span><span class="blk-lw"><span class="blk-l">Voir les mariages →</span></span></div>
     </a>
     <a class="blk blk-half rv" style="--d:90ms" href="dinner-in-red.html">
       <div class="blk-img"><img loading="lazy" decoding="async" src="../brand_assets/concepts/dinner-in-red-01.jpg" alt="Un dîner privé dans une galerie d'art sous lumière rouge, une longue table dressée avec bougies et fleurs"></div>
-      <div class="blk-txt"><span class="blk-t">Événements privés</span><span class="blk-body">Fiançailles. Dîners privés. Anniversaires. Fêtes. Zaffés.</span><span class="blk-l">Voir un dîner réalisé →</span></div>
+      <div class="blk-txt"><h2 class="blk-t">Événements privés</h2><span class="blk-body">Fiançailles. Dîners privés. Anniversaires. Fêtes. Zaffés.</span><span class="blk-lw"><span class="blk-l">Voir un dîner réalisé →</span></span></div>
     </a>
     <a class="blk blk-half rv" href="the-long-table.html" style="--d:180ms">
       <div class="blk-img"><img loading="lazy" decoding="async" src="../brand_assets/concepts/the-long-table-02.jpg" alt="Rendu de concept, une longue table sombre et une seule ligne de lumière"></div>
-      <div class="blk-txt"><span class="blk-kicker">Concept · Privé</span><span class="blk-t">The Long Table</span><span class="blk-body">Un concept de dîner privé.</span><span class="blk-l">Voir le concept →</span></div>
+      <div class="blk-txt"><span class="blk-kicker">Concept · Privé</span><h2 class="blk-t">The Long Table</h2><span class="blk-body">Un concept de dîner privé.</span><span class="blk-lw"><span class="blk-l">Voir le concept →</span></span></div>
     </a>
   </div>
 
