@@ -214,6 +214,10 @@
     }
 
     .d-img:hover img { transform: scale(1.035); }
+    /* no half-empty rows: one tile spans the row as a wide band, four tiles sit four across */
+    .discipline-imgs.cols-1 { grid-template-columns: 1fr; }
+    .discipline-imgs.cols-1 .d-img img { aspect-ratio: 21 / 9; }
+    .discipline-imgs.cols-4 { grid-template-columns: repeat(4, 1fr); }
 
     /* ── PLACEHOLDER OVERLAY ── */
     .ph { position: relative; }
@@ -441,7 +445,20 @@
   <!-- PAGE HERO -->
   <section class="page-hero">
     <h1 class="hero-text" data-i18n="work-h1"><strong>Concepts</strong></h1>
-    <p class="work-standfirst" data-i18n="work-standfirst">Études des lieux que nous concevons. Les projets réalisés suivent cette saison.</p>
+    <p class="work-standfirst" data-i18n="work-standfirst">Le premier dîner que nous avons réalisé, et des études des lieux que nous concevons.</p>
+  </section>
+
+  <section class="discipline">
+    <div class="discipline-intro">
+      <div class="rv">
+        <h2 class="discipline-label" data-i18n="disc-built-label">Réalisé</h2>
+      </div>
+    </div>
+    <div class="discipline-imgs cols-1">
+      <a class="d-img" href="dinner-in-red.html">
+        <img loading="lazy" decoding="async" src="../brand_assets/concepts/dinner-in-red-01.jpg" alt="Un dîner privé dans une galerie d'art sous lumière rouge, une longue table dressée avec bougies et fleurs"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-dr-t">Dinner in Red</span><span class="m-cap-d" data-i18n="proj-dr-d">Réalisé · Privé</span></span>
+      </a>
+    </div>
   </section>
 
   <section class="discipline">
@@ -450,7 +467,7 @@
         <h2 class="discipline-label" data-i18n="disc-private-label">Privé</h2>
       </div>
     </div>
-    <div class="discipline-imgs">
+    <div class="discipline-imgs cols-1">
       <a class="d-img" href="the-long-table.html">
         <img loading="lazy" decoding="async" src="../brand_assets/concepts/the-long-table-01.jpg" alt="Rendu de concept, une longue table de dîner sous un voile tendu, au crépuscule"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-e2-t">The Long Table</span><span class="m-cap-d" data-i18n="proj-e2-d">Concept · Privé</span></span>
       </a>
@@ -463,18 +480,12 @@
         <h2 class="discipline-label" data-i18n="disc-brands-label">Marques</h2>
       </div>
     </div>
-    <div class="discipline-imgs">
-      <a class="d-img" href="the-vernissage.html">
-        <img loading="lazy" decoding="async" src="../brand_assets/concepts/the-vernissage-01.jpg" alt="Rendu de concept, un vernissage aux murs couverts de tableaux encadrés"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-e1-t">The Vernissage</span><span class="m-cap-d" data-i18n="proj-e1-d">Concept · Marques</span></span>
-      </a>
+    <div class="discipline-imgs cols-4">
       <a class="d-img" href="after-dark.html">
         <img loading="lazy" decoding="async" src="../brand_assets/concepts/after-dark-01.jpg" alt="Rendu de concept, un mur de lumière rouge et des invités en silhouette"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-e3-t">After Dark</span><span class="m-cap-d" data-i18n="proj-e3-d">Concept · Marques</span></span>
       </a>
       <a class="d-img" href="the-couture-salon.html">
         <img loading="lazy" decoding="async" src="../brand_assets/concepts/the-couture-salon-01.jpg" alt="Rendu de concept, un salon sombre fendu d'une ligne verticale de lumière chaude"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-b1-t">The Couture Salon</span><span class="m-cap-d" data-i18n="proj-b1-d">Concept · Marques</span></span>
-      </a>
-      <a class="d-img" href="hall-of-images.html">
-        <img loading="lazy" decoding="async" src="../brand_assets/concepts/hall-of-images-01.jpg" alt="Rendu de concept, une galerie de tableaux encadrés et une longue table"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-b2-t">Hall of Images</span><span class="m-cap-d" data-i18n="proj-b2-d">Concept · Marques</span></span>
       </a>
       <a class="d-img" href="silhouettes.html">
         <img loading="lazy" decoding="async" src="../brand_assets/concepts/silhouettes-01.jpg" alt="Rendu de concept, un mur de verre cannelé rouge qui accroche la lumière"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-b3-t">Silhouettes</span><span class="m-cap-d" data-i18n="proj-b3-d">Concept · Marques</span></span>
@@ -483,7 +494,7 @@
         <img loading="lazy" decoding="async" src="../brand_assets/concepts/three-rooms-03.jpg" alt="Rendu de concept, un mur de métal courbe sur un sol bleu"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-f3-t">Three Rooms</span><span class="m-cap-d" data-i18n="proj-f3-d">Concept · Marques</span></span>
       </a>
     </div>
-    <div class="d-dots"><button class="d-dot active" aria-label="Image 1"></button><button class="d-dot" aria-label="Image 2"></button><button class="d-dot" aria-label="Image 3"></button><button class="d-dot" aria-label="Image 4"></button><button class="d-dot" aria-label="Image 5"></button><button class="d-dot" aria-label="Image 6"></button></div>
+    <div class="d-dots"><button class="d-dot active" aria-label="Image 1"></button><button class="d-dot" aria-label="Image 2"></button><button class="d-dot" aria-label="Image 3"></button><button class="d-dot" aria-label="Image 4"></button></div>
   </section>
 
   </main>
