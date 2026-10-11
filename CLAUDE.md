@@ -35,14 +35,14 @@ brands.html           Brands hub: fashion shows, brand and corporate events, gal
   fashion-shows.html       Fashion shows
   brand-experiences.html   Brand and corporate events (URL kept for search)
 work.html             Concepts: Built first, then concept studies
-  dinner-in-red.html  Built: a private dinner hosted by Marc Azzi (photographs, indexed)
+  red-room.html  Built: a private dinner hosted by Marc Azzi (photographs, indexed)
   the-long-table · after-dark · the-couture-salon · silhouettes · three-rooms   (Concept pages, indexed)
 about.html · faq.html · contact.html · privacy.html · terms.html · 404.html
 special-events.html → private.html
 disciplines.html    → index.html#sides
 project.html        → work.html
-the-vernissage.html → dinner-in-red.html
-hall-of-images.html → dinner-in-red.html                  (redirect stubs, noindex)
+the-vernissage.html → red-room.html
+hall-of-images.html → red-room.html                  (redirect stubs, noindex)
 ```
 
 Nav: Private · Brands · About · Contact. FR: Privé · Marques · À propos · Contact. Concepts and FAQ sit in the footer; Concepts is also reached from the home mosaic and the Private and Brands pages.
