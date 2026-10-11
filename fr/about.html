@@ -313,6 +313,7 @@
     .intro-body a:hover { opacity: 0.5; }
     .studio-sectors { color: #000; margin-top: 20px; }
     .about-link { display: inline-block; margin-top: 20px; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; border-bottom: 1px solid currentColor; padding-bottom: 3px; transition: opacity 0.2s; }
+    .cta-links { display: flex; flex-wrap: wrap; align-items: baseline; gap: 16px 40px; }
     .about-link:hover { opacity: 0.5; }
     .cta { padding: 72px var(--pad) 80px; border-top: 1px solid var(--border); }
     .cta-title { font-size: clamp(28px, 4.2vw, 52px); font-weight: 700; letter-spacing: -0.03em; text-transform: uppercase; line-height: 1.04; margin-bottom: 18px; }
@@ -497,7 +498,10 @@
   <section class="cta rv-fade">
     <p class="cta-title" data-i18n="cta-title">Parlez-nous de votre événement.</p>
     <p class="cta-body" data-i18n="cta-body">Une date, un lieu, le nombre d'invités. Nous répondrons par un espace.</p>
-    <a class="about-link" href="contact.html" data-i18n="cta-link">Écrivez-nous</a>
+    <div class="cta-links">
+      <a class="about-link" href="contact.html" data-i18n="cta-link">Écrivez-nous</a>
+      <a class="about-link" href="https://wa.me/96178902628" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
   </section>
 
   <!-- PART OF AZZI STUDIOS -->

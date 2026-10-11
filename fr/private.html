@@ -259,6 +259,7 @@
     .cta-title { font-size: clamp(28px, 4.2vw, 52px); font-weight: 700; letter-spacing: -0.03em; text-transform: uppercase; line-height: 1.04; margin-bottom: 18px; }
     .cta-body { font-size: 15px; line-height: 1.7; color: #333; max-width: 420px; margin-bottom: 24px; }
     .cta-link { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; border-bottom: 1px solid currentColor; padding-bottom: 3px; transition: opacity 0.2s; }
+    .cta-links { display: flex; flex-wrap: wrap; align-items: baseline; gap: 16px 40px; }
     .cta-link:hover { opacity: 0.5; }
     @media (max-width: 768px) { .svc-imgs { grid-template-columns: 1fr; } .svc-sec { grid-template-columns: 1fr; gap: 12px; padding: 32px var(--pad); } .cta { padding: 48px var(--pad) 56px; } }
     :focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
@@ -383,8 +384,10 @@
   <section class="cta rv-fade">
     <p class="cta-title">Parlez-nous de votre événement.</p>
     <p class="cta-body">Une date, un lieu, le nombre d'invités. Nous répondrons par un espace.</p>
-    <a class="cta-link" href="contact.html">Écrivez-nous</a>
-    <a class="cta-link" href="https://wa.me/96178902628" target="_blank" rel="noopener">WhatsApp</a>
+    <div class="cta-links">
+      <a class="cta-link" href="contact.html">Écrivez-nous</a>
+      <a class="cta-link" href="https://wa.me/96178902628" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
   </section>
 
   </main>
