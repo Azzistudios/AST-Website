@@ -228,6 +228,30 @@
     .svc-img { overflow: hidden; }
     .svc-img img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; filter: contrast(1.02); transition: transform 0.6s cubic-bezier(0.22,1,0.36,1); }
     .svc-img:hover img { transform: scale(1.03); }
+    /* ── HERO IMAGE UNDER THE H1 + SERVICE BLOCKS ── */
+    .svc-hero { overflow: hidden; background: #d8d8d8; }
+    .svc-hero img { width: 100%; aspect-ratio: 21 / 9; object-fit: cover; display: block; filter: contrast(1.02); }
+    .blocks { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0; border-top: 1px solid var(--border); }
+    .blk { grid-column: span 2; display: flex; flex-direction: column; color: #000; text-decoration: none; border-bottom: 1px solid var(--border); }
+    .blk-main { grid-column: 1 / -1; }
+    .blk-half { grid-column: span 3; }
+    .blk-img { overflow: hidden; background: #d8d8d8; }
+    .blk-img img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; filter: contrast(1.02); transition: transform 0.6s cubic-bezier(0.22,1,0.36,1); }
+    .blk-main .blk-img img { aspect-ratio: 21 / 9; }
+    a.blk:hover .blk-img img, a.blk:focus-visible .blk-img img { transform: scale(1.03); }
+    a.blk:focus-visible { outline: 2px solid #000; outline-offset: -2px; }
+    a.blk:active .blk-txt { opacity: 0.6; }
+    .blk-txt { padding: 20px var(--pad) 26px; }
+    .blk-kicker { display: block; font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #555; margin-bottom: 8px; }
+    .blk-t { display: block; font-size: 15px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px; }
+    .blk-body { display: block; font-size: 14px; line-height: 1.65; color: #333; max-width: 520px; }
+    .blk-l { display: inline-block; margin-top: 14px; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; border-bottom: 1px solid currentColor; padding-bottom: 3px; transition: opacity 0.2s; }
+    a.blk:hover .blk-l { opacity: 0.5; }
+    @media (max-width: 768px) {
+      .svc-hero img, .blk-main .blk-img img { aspect-ratio: 4 / 3; }
+      .blk, .blk-half { grid-column: 1 / -1; }
+      .blk-txt { padding: 18px var(--pad) 24px; }
+    }
     .svc-sec { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; padding: 40px var(--pad); border-top: 1px solid var(--border); align-items: start; }
     .svc-sec h2 { font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; }
     .svc-sec-body { font-size: 15px; line-height: 1.72; color: #333; max-width: 640px; }
@@ -319,31 +343,32 @@
 
   <main id="main" tabindex="-1">
 
-  <!-- SERVICE: Défilés -->
+  <!-- PRIVÉ -->
   <div class="page-heading">
     <p class="page-kicker">Privé</p>
     <h1>Mariages et événements privés.</h1>
   </div>
 
+  <div class="svc-hero rv-fade"><img fetchpriority="high" decoding="async" src="../brand_assets/concepts/the-long-table-01.jpg" alt="Rendu de concept, une longue table de dîner sous un voile tendu, au crépuscule"></div>
+
   <section class="svc-intro rv">
     <p>Pour ceux que vous aimez. Mariages, fiançailles, dîners privés et fêtes. Nous concevons d'abord le lieu : l'entrée, les tables, la lumière après la tombée de la nuit. Puis nous organisons la journée, la construisons et dirigeons l'événement, pour que vous la passiez avec vos invités.</p>
-    <a class="svc-link" href="weddings.html">Mariages</a>
   </section>
 
-  <div class="svc-imgs">
-    <div class="svc-img"><img loading="lazy" decoding="async" src="../brand_assets/concepts/private-01.jpg" alt="Rendu de concept, un dîner aux chandelles sous un ciel de tissu"></div>
-    <div class="svc-img"><img loading="lazy" decoding="async" src="../brand_assets/concepts/private-02.jpg" alt="Rendu de concept, des mains disposant des bouchées sur une table sombre"></div>
+  <div class="blocks">
+    <a class="blk blk-main rv" href="weddings.html">
+      <div class="blk-img"><img loading="lazy" decoding="async" src="../brand_assets/concepts/private-01.jpg" alt="Rendu de concept, un dîner aux chandelles sous un ciel de tissu"></div>
+      <div class="blk-txt"><span class="blk-t">Mariages</span><span class="blk-body">Mariages et réceptions, conçus, organisés et produits.</span><span class="blk-l">Voir les mariages →</span></div>
+    </a>
+    <div class="blk blk-half rv" style="--d:90ms">
+      <div class="blk-img"><img loading="lazy" decoding="async" src="../brand_assets/concepts/private-02.jpg" alt="Rendu de concept, des mains disposant des bouchées sur une table sombre"></div>
+      <div class="blk-txt"><span class="blk-t">Événements privés</span><span class="blk-body">Fiançailles. Dîners privés. Anniversaires. Fêtes. Zaffés.</span></div>
+    </div>
+    <a class="blk blk-half rv" href="the-long-table.html" style="--d:180ms">
+      <div class="blk-img"><img loading="lazy" decoding="async" src="../brand_assets/concepts/the-long-table-02.jpg" alt="Rendu de concept, une longue table sombre et une seule ligne de lumière"></div>
+      <div class="blk-txt"><span class="blk-kicker">Concept · Privé</span><span class="blk-t">The Long Table</span><span class="blk-body">Un concept de dîner privé.</span><span class="blk-l">Voir le concept →</span></div>
+    </a>
   </div>
-
-  <section class="svc-sec rv">
-    <h2>Mariages</h2>
-    <div class="svc-sec-body">Mariages et réceptions, conçus, organisés et produits. <a href="weddings.html">Mariages</a></div>
-  </section>
-
-  <section class="svc-sec rv">
-    <h2>Événements privés</h2>
-    <div class="svc-sec-body">Fiançailles. Dîners privés. Anniversaires. Fêtes. Zaffés.</div>
-  </section>
 
   <section class="svc-sec rv">
     <h2>Notre méthode</h2>
@@ -353,11 +378,6 @@
   <section class="svc-sec rv">
     <h2>Vous rentrez vous marier ?</h2>
     <div class="svc-sec-body">Vous vivez à l'étranger et rentrez vous marier ? Nous sommes là toute l'année. Nous visitons les lieux pour vous et vous envoyons les dessins.</div>
-  </section>
-
-  <section class="svc-sec rv">
-    <h2>Concepts</h2>
-    <div class="svc-sec-body"><a href="the-long-table.html">La Longue Table</a>, un concept de dîner privé.</div>
   </section>
 
   <section class="cta rv-fade">

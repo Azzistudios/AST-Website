@@ -228,6 +228,30 @@
     .svc-img { overflow: hidden; }
     .svc-img img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; filter: contrast(1.02); transition: transform 0.6s cubic-bezier(0.22,1,0.36,1); }
     .svc-img:hover img { transform: scale(1.03); }
+    /* ── HERO IMAGE UNDER THE H1 + SERVICE BLOCKS ── */
+    .svc-hero { overflow: hidden; background: #d8d8d8; }
+    .svc-hero img { width: 100%; aspect-ratio: 21 / 9; object-fit: cover; display: block; filter: contrast(1.02); }
+    .blocks { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0; border-top: 1px solid var(--border); }
+    .blk { grid-column: span 2; display: flex; flex-direction: column; color: #000; text-decoration: none; border-bottom: 1px solid var(--border); }
+    .blk-main { grid-column: 1 / -1; }
+    .blk-half { grid-column: span 3; }
+    .blk-img { overflow: hidden; background: #d8d8d8; }
+    .blk-img img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; filter: contrast(1.02); transition: transform 0.6s cubic-bezier(0.22,1,0.36,1); }
+    .blk-main .blk-img img { aspect-ratio: 21 / 9; }
+    a.blk:hover .blk-img img, a.blk:focus-visible .blk-img img { transform: scale(1.03); }
+    a.blk:focus-visible { outline: 2px solid #000; outline-offset: -2px; }
+    a.blk:active .blk-txt { opacity: 0.6; }
+    .blk-txt { padding: 20px var(--pad) 26px; }
+    .blk-kicker { display: block; font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #555; margin-bottom: 8px; }
+    .blk-t { display: block; font-size: 15px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px; }
+    .blk-body { display: block; font-size: 14px; line-height: 1.65; color: #333; max-width: 520px; }
+    .blk-l { display: inline-block; margin-top: 14px; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; border-bottom: 1px solid currentColor; padding-bottom: 3px; transition: opacity 0.2s; }
+    a.blk:hover .blk-l { opacity: 0.5; }
+    @media (max-width: 768px) {
+      .svc-hero img, .blk-main .blk-img img { aspect-ratio: 4 / 3; }
+      .blk, .blk-half { grid-column: 1 / -1; }
+      .blk-txt { padding: 18px var(--pad) 24px; }
+    }
     .svc-sec { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; padding: 40px var(--pad); border-top: 1px solid var(--border); align-items: start; }
     .svc-sec h2 { font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; }
     .svc-sec-body { font-size: 15px; line-height: 1.72; color: #333; max-width: 640px; }
@@ -319,36 +343,33 @@
 
   <main id="main" tabindex="-1">
 
-  <!-- SERVICE: Fashion shows -->
+  <!-- BRANDS -->
   <div class="page-heading">
     <p class="page-kicker">Brands</p>
     <h1>Brands, fashion and corporate events.</h1>
   </div>
 
+  <div class="svc-hero rv-fade"><img fetchpriority="high" decoding="async" src="brand_assets/concepts/three-rooms-01.jpg" alt="Concept render, an empty runway lit by a line of light"></div>
+
   <section class="svc-intro rv">
     <p>For the people you want to impress. Fashion shows, launches, activations, corporate dinners and galas. We design the place around what you show: how the audience comes in, where they look, where the light falls. Then we build it and run it. You work directly with the creative director.</p>
-    <a class="svc-link" href="work.html">See the concepts</a>
+    <a class="svc-link" href="work.html">See the concepts →</a>
   </section>
 
-  <div class="svc-imgs">
-    <div class="svc-img"><img loading="lazy" decoding="async" src="brand_assets/concepts/brands-01.jpg" alt="Concept render, a figure on a runway under a single spotlight"></div>
-    <div class="svc-img"><img loading="lazy" decoding="async" src="brand_assets/concepts/brands-02.jpg" alt="Concept render, a glowing fabric vault"></div>
+  <div class="blocks">
+    <a class="blk  rv" href="fashion-shows.html">
+      <div class="blk-img"><img loading="lazy" decoding="async" src="brand_assets/concepts/fashion-shows-02.jpg" alt="Concept render, a stage under a single beam of light"></div>
+      <div class="blk-txt"><span class="blk-t">Fashion shows</span><span class="blk-body">Runway, couture, presentations and showrooms.</span><span class="blk-l">See fashion shows →</span></div>
+    </a>
+    <a class="blk  rv" href="brand-experiences.html" style="--d:90ms">
+      <div class="blk-img"><img loading="lazy" decoding="async" src="brand_assets/concepts/brand-experiences-01.jpg" alt="Concept render, a lit tunnel structure in a dark warehouse"></div>
+      <div class="blk-txt"><span class="blk-t">Brand and corporate events</span><span class="blk-body">Launches, activations, pop-ups, press days, window displays.</span><span class="blk-l">See brand and corporate events →</span></div>
+    </a>
+    <a class="blk  rv" href="brand-experiences.html#galas" style="--d:180ms">
+      <div class="blk-img"><img loading="lazy" decoding="async" src="brand_assets/concepts/group-gala.jpg" alt="Concept render, a long candlelit table in a dark hall"></div>
+      <div class="blk-txt"><span class="blk-t">Galas and cultural evenings</span><span class="blk-body">Corporate dinners, galas, vernissages and openings.</span><span class="blk-l">See galas →</span></div>
+    </a>
   </div>
-
-  <section class="svc-sec rv">
-    <h2>Fashion shows</h2>
-    <div class="svc-sec-body">Runway, couture, presentations and showrooms. <a href="fashion-shows.html">Fashion shows</a></div>
-  </section>
-
-  <section class="svc-sec rv">
-    <h2>Brand and corporate events</h2>
-    <div class="svc-sec-body">Launches, activations, pop-ups, press days, window displays. <a href="brand-experiences.html">Brand and corporate events</a></div>
-  </section>
-
-  <section class="svc-sec rv">
-    <h2>Galas and cultural evenings</h2>
-    <div class="svc-sec-body">Corporate dinners, galas, vernissages and openings. <a href="brand-experiences.html#galas">Galas and cultural evenings</a></div>
-  </section>
 
   <section class="svc-sec rv">
     <h2>Sectors</h2>

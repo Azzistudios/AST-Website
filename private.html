@@ -228,6 +228,30 @@
     .svc-img { overflow: hidden; }
     .svc-img img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; filter: contrast(1.02); transition: transform 0.6s cubic-bezier(0.22,1,0.36,1); }
     .svc-img:hover img { transform: scale(1.03); }
+    /* ── HERO IMAGE UNDER THE H1 + SERVICE BLOCKS ── */
+    .svc-hero { overflow: hidden; background: #d8d8d8; }
+    .svc-hero img { width: 100%; aspect-ratio: 21 / 9; object-fit: cover; display: block; filter: contrast(1.02); }
+    .blocks { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0; border-top: 1px solid var(--border); }
+    .blk { grid-column: span 2; display: flex; flex-direction: column; color: #000; text-decoration: none; border-bottom: 1px solid var(--border); }
+    .blk-main { grid-column: 1 / -1; }
+    .blk-half { grid-column: span 3; }
+    .blk-img { overflow: hidden; background: #d8d8d8; }
+    .blk-img img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; filter: contrast(1.02); transition: transform 0.6s cubic-bezier(0.22,1,0.36,1); }
+    .blk-main .blk-img img { aspect-ratio: 21 / 9; }
+    a.blk:hover .blk-img img, a.blk:focus-visible .blk-img img { transform: scale(1.03); }
+    a.blk:focus-visible { outline: 2px solid #000; outline-offset: -2px; }
+    a.blk:active .blk-txt { opacity: 0.6; }
+    .blk-txt { padding: 20px var(--pad) 26px; }
+    .blk-kicker { display: block; font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #555; margin-bottom: 8px; }
+    .blk-t { display: block; font-size: 15px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px; }
+    .blk-body { display: block; font-size: 14px; line-height: 1.65; color: #333; max-width: 520px; }
+    .blk-l { display: inline-block; margin-top: 14px; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; border-bottom: 1px solid currentColor; padding-bottom: 3px; transition: opacity 0.2s; }
+    a.blk:hover .blk-l { opacity: 0.5; }
+    @media (max-width: 768px) {
+      .svc-hero img, .blk-main .blk-img img { aspect-ratio: 4 / 3; }
+      .blk, .blk-half { grid-column: 1 / -1; }
+      .blk-txt { padding: 18px var(--pad) 24px; }
+    }
     .svc-sec { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; padding: 40px var(--pad); border-top: 1px solid var(--border); align-items: start; }
     .svc-sec h2 { font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; }
     .svc-sec-body { font-size: 15px; line-height: 1.72; color: #333; max-width: 640px; }
@@ -319,31 +343,32 @@
 
   <main id="main" tabindex="-1">
 
-  <!-- SERVICE: Fashion shows -->
+  <!-- PRIVATE -->
   <div class="page-heading">
     <p class="page-kicker">Private</p>
     <h1>Weddings and private events.</h1>
   </div>
 
+  <div class="svc-hero rv-fade"><img fetchpriority="high" decoding="async" src="brand_assets/concepts/the-long-table-01.jpg" alt="Concept render, a long dinner table under a draped canopy at dusk"></div>
+
   <section class="svc-intro rv">
     <p>For the people you love. Weddings, engagements, private dinners and parties. We design the place first: the way in, the tables, the light after dark. Then we plan the day, build it and run it, so you can spend it with your guests.</p>
-    <a class="svc-link" href="weddings.html">Weddings</a>
   </section>
 
-  <div class="svc-imgs">
-    <div class="svc-img"><img loading="lazy" decoding="async" src="brand_assets/concepts/private-01.jpg" alt="Concept render, a candlelit dinner under draped fabric in a stone hall"></div>
-    <div class="svc-img"><img loading="lazy" decoding="async" src="brand_assets/concepts/private-02.jpg" alt="Concept render, hands setting canapés on a dark table"></div>
+  <div class="blocks">
+    <a class="blk blk-main rv" href="weddings.html">
+      <div class="blk-img"><img loading="lazy" decoding="async" src="brand_assets/concepts/private-01.jpg" alt="Concept render, a candlelit dinner under draped fabric in a stone hall"></div>
+      <div class="blk-txt"><span class="blk-t">Weddings</span><span class="blk-body">Weddings and receptions, designed, planned and produced.</span><span class="blk-l">See weddings →</span></div>
+    </a>
+    <div class="blk blk-half rv" style="--d:90ms">
+      <div class="blk-img"><img loading="lazy" decoding="async" src="brand_assets/concepts/private-02.jpg" alt="Concept render, hands setting canapés on a dark table"></div>
+      <div class="blk-txt"><span class="blk-t">Private events</span><span class="blk-body">Engagements. Private dinners. Birthdays. Parties. Zaffe entrances.</span></div>
+    </div>
+    <a class="blk blk-half rv" href="the-long-table.html" style="--d:180ms">
+      <div class="blk-img"><img loading="lazy" decoding="async" src="brand_assets/concepts/the-long-table-02.jpg" alt="Concept render, a long dark table and a single line of light"></div>
+      <div class="blk-txt"><span class="blk-kicker">Concept · Private</span><span class="blk-t">The Long Table</span><span class="blk-body">A concept for a private dinner.</span><span class="blk-l">See the concept →</span></div>
+    </a>
   </div>
-
-  <section class="svc-sec rv">
-    <h2>Weddings</h2>
-    <div class="svc-sec-body">Weddings and receptions, designed, planned and produced. <a href="weddings.html">Weddings</a></div>
-  </section>
-
-  <section class="svc-sec rv">
-    <h2>Private events</h2>
-    <div class="svc-sec-body">Engagements. Private dinners. Birthdays. Parties. Zaffe entrances.</div>
-  </section>
 
   <section class="svc-sec rv">
     <h2>How we work</h2>
@@ -353,11 +378,6 @@
   <section class="svc-sec rv">
     <h2>Coming home to marry?</h2>
     <div class="svc-sec-body">If you live abroad and are coming home to marry, we are here all year. We walk the places for you and send you the drawings.</div>
-  </section>
-
-  <section class="svc-sec rv">
-    <h2>Concepts</h2>
-    <div class="svc-sec-body"><a href="the-long-table.html">The Long Table</a>, a concept for a private dinner.</div>
   </section>
 
   <section class="cta rv-fade">

@@ -43,7 +43,7 @@ disciplines.html    → index.html#sides
 project.html        → work.html                           (redirect stubs, noindex)
 ```
 
-Nav: Private · Brands · Concepts · About · Contact. FR: Privé · Marques · Concepts · À propos · Contact. FAQ sits in the footer.
+Nav: Private · Brands · About · Contact. FR: Privé · Marques · À propos · Contact. Concepts and FAQ sit in the footer; Concepts is also reached from the home mosaic and the Private and Brands pages.
 
 ## Working locally
 
