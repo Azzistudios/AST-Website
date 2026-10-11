@@ -122,6 +122,7 @@ PROJ = {
  'proj-b2-t':'Hall of Images','proj-b2-d':'Concept · Marques',
  'proj-b3-t':'Silhouettes','proj-b3-d':'Concept · Marques',
     'proj-dr-t':'Red Room','proj-dr-d':'Réalisé 2026 · Privé',
+    'proj-s1-t':'The Vault','proj-s1-d':'Concept · Marques','proj-s2-t':'The Plinth','proj-s2-d':'Concept · Marques',
  'proj-f1-t':'Three Rooms','proj-f1-d':'Concept · Marques',
  'proj-f2-t':'Three Rooms','proj-f2-d':'Concept · Marques',
  'proj-f3-t':'Three Rooms','proj-f3-d':'Concept · Marques',

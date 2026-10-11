@@ -214,10 +214,6 @@
     }
 
     .d-img:hover img { transform: scale(1.035); }
-    /* no half-empty rows: one tile spans the row as a wide band, four tiles sit four across */
-    .discipline-imgs.cols-1 { grid-template-columns: 1fr; }
-    .discipline-imgs.cols-1 .d-img img { aspect-ratio: 21 / 9; }
-    .discipline-imgs.cols-4 { grid-template-columns: repeat(4, 1fr); }
 
     /* ── PLACEHOLDER OVERLAY ── */
     .ph { position: relative; }
@@ -449,38 +445,13 @@
   </section>
 
   <section class="discipline">
-    <div class="discipline-intro">
-      <div class="rv">
-        <h2 class="discipline-label" data-i18n="disc-built-label">Built</h2>
-      </div>
-    </div>
-    <div class="discipline-imgs cols-1">
+    <div class="discipline-imgs">
       <div class="d-img">
         <img loading="lazy" decoding="async" src="brand_assets/concepts/red-room-01.jpg" alt="A private dinner at Cheriff Tabet Gallery, Beirut, under red light: one long table laid with candles and flowers"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-dr-t">Red Room</span><span class="m-cap-d" data-i18n="proj-dr-d">Built 2026 · Private</span></span>
       </div>
-    </div>
-  </section>
-
-  <section class="discipline">
-    <div class="discipline-intro">
-      <div class="rv">
-        <h2 class="discipline-label" data-i18n="disc-private-label">Private</h2>
-      </div>
-    </div>
-    <div class="discipline-imgs cols-1">
       <div class="d-img">
         <img loading="lazy" decoding="async" style="object-position: 50% 72%" src="brand_assets/concepts/the-long-table-01.jpg" alt="Concept render, a long dinner table under a draped canopy at dusk"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-e2-t">The Long Table</span><span class="m-cap-d" data-i18n="proj-e2-d">Concept · Private</span></span>
       </div>
-    </div>
-  </section>
-
-  <section class="discipline">
-    <div class="discipline-intro">
-      <div class="rv">
-        <h2 class="discipline-label" data-i18n="disc-brands-label">Brands</h2>
-      </div>
-    </div>
-    <div class="discipline-imgs cols-4">
       <div class="d-img">
         <img loading="lazy" decoding="async" src="brand_assets/concepts/after-dark-01.jpg" alt="Concept render, a wall of red light with guests in silhouette"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-e3-t">After Dark</span><span class="m-cap-d" data-i18n="proj-e3-d">Concept · Brands</span></span>
       </div>
@@ -494,7 +465,7 @@
         <img loading="lazy" decoding="async" src="brand_assets/concepts/three-rooms-03.jpg" alt="Concept render, a curved metal wall on a blue floor"><span class="m-cap"><span class="m-cap-t" data-i18n="proj-f3-t">Three Rooms</span><span class="m-cap-d" data-i18n="proj-f3-d">Concept · Brands</span></span>
       </div>
     </div>
-    <div class="d-dots"><button class="d-dot active" aria-label="Image 1"></button><button class="d-dot" aria-label="Image 2"></button><button class="d-dot" aria-label="Image 3"></button><button class="d-dot" aria-label="Image 4"></button></div>
+    <div class="d-dots"><button class="d-dot active" aria-label="Image 1"></button><button class="d-dot" aria-label="Image 2"></button><button class="d-dot" aria-label="Image 3"></button><button class="d-dot" aria-label="Image 4"></button><button class="d-dot" aria-label="Image 5"></button><button class="d-dot" aria-label="Image 6"></button></div>
   </section>
 
   </main>
