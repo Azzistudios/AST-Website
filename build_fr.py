@@ -104,10 +104,10 @@ ALT = {
  "Concept render, a hand drawing a stage plan":"Rendu de concept, une main dessinant un plan de scène",
  "Concept render, a dark salon with a vertical slit of warm light":"Rendu de concept, un salon sombre fendu d'une ligne verticale de lumière chaude",
  "Concept render, a corridor washed in red light":"Rendu de concept, un couloir baigné de lumière rouge",
- "A private dinner in an art gallery under red light, one long table laid with candles and flowers":"Un dîner privé dans une galerie d'art sous lumière rouge, une longue table dressée avec bougies et fleurs",
- "The long table down the gallery, candles and flowers under red light":"La longue table le long de la galerie, bougies et fleurs sous lumière rouge",
- "Martini glasses lined up on the bar under red light, paintings behind":"Des verres à martini alignés sur le bar sous lumière rouge, des tableaux derrière",
- "A private dinner hosted by Marc Azzi in an art gallery, one long table under red light":"Un dîner privé organisé par Marc Azzi dans une galerie d'art, une longue table sous lumière rouge",
+ "A private dinner at Cheriff Tabet Gallery, Beirut, under red light: one long table laid with candles and flowers":"Un dîner privé à la Galerie Cheriff Tabet, Beyrouth, sous lumière rouge : une longue table dressée avec bougies et fleurs",
+ "The long table down Cheriff Tabet Gallery, Beirut, candles and flowers under red light":"La longue table le long de la Galerie Cheriff Tabet, Beyrouth, bougies et fleurs sous lumière rouge",
+ "Martini glasses lined up on the bar at Cheriff Tabet Gallery, Beirut, under red light, paintings behind":"Des verres à martini alignés sur le bar de la Galerie Cheriff Tabet, Beyrouth, sous lumière rouge, des tableaux derrière",
+ "A private dinner hosted by Marc Azzi at Cheriff Tabet Gallery, Beirut, one long table under red light":"Un dîner privé organisé par Marc Azzi à la Galerie Cheriff Tabet, Beyrouth, une longue table sous lumière rouge",
 }
 
 NAV = {'skip':'Aller au contenu','nav-private':'Privé','nav-brands':'Marques','nav-concepts':'Concepts','nav-about':'À propos','nav-faq':'FAQ','nav-contact':'Contact'}
