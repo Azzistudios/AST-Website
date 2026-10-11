@@ -795,9 +795,9 @@
     .side { display: flex; flex-direction: column; padding: 48px var(--pad) 44px; color: #111; text-decoration: none; }
     .side + .side { border-left: 1px solid var(--border); }
     .side-label { font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; padding-bottom: 16px; margin-bottom: 18px; border-bottom: 1px solid var(--border); }
-    .side-line { font-size: 14px; line-height: 1.65; max-width: 440px; margin-bottom: 28px; }
-    .side-link { margin-top: auto; align-self: flex-start; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; border-bottom: 1px solid currentColor; padding-bottom: 3px; transition: opacity 0.25s cubic-bezier(0.22,1,0.36,1); }
-    .side:hover .side-link { opacity: 0.55; }
+    .side-line { font-size: 14px; line-height: 1.65; max-width: 440px; }
+    .side-label { transition: opacity 0.25s cubic-bezier(0.22,1,0.36,1); }
+    .side:hover .side-label, .side:focus-visible .side-label { opacity: 0.55; }
     .side:focus-visible { outline: 2px solid currentColor; outline-offset: -6px; }
     @media (max-width: 768px) { .sides { grid-template-columns: 1fr; } .side { padding: 36px var(--pad) 32px; } .side + .side { border-left: 0; border-top: 1px solid var(--border); } }
   </style>
@@ -911,12 +911,10 @@
     <a class="side side-private rv-fade" href="private.html">
       <span class="side-label" data-i18n="side-private-label">Privé</span>
       <span class="side-line" data-i18n="side-private-line">Pour ceux que vous aimez. Mariages, fiançailles et dîners privés.</span>
-      <span class="side-link" data-i18n="side-private-link">Privé →</span>
     </a>
     <a class="side side-brands rv-fade" style="--d:90ms" href="brands.html">
       <span class="side-label" data-i18n="side-brands-label">Marques</span>
       <span class="side-line" data-i18n="side-brands-line">Pour ceux que vous voulez impressionner. Défilés, lancements et événements d'entreprise.</span>
-      <span class="side-link" data-i18n="side-brands-link">Marques →</span>
     </a>
   </section>
 
