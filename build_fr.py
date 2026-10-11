@@ -182,7 +182,6 @@ PAGES = {
     en_toggle_href="fr/about.html", fr_toggle_href="../about.html",
     fr_map={**NAV, **FOOT,
         'about-h1':'Un studio de <strong>scénographie événementielle</strong><span class="m-br"><br></span> à <strong>Beyrouth</strong>.',
-        "studio-credential":"Architecte de formation, Marc Azzi dirige lui-même chaque projet, du premier dessin à la dernière soirée.",
         "studio-sectors":"Pour les marques, le travail touche la mode, la joaillerie, la beauté, les spiritueux, l'automobile, l'art et la culture.",
         "howwework-label":"Notre méthode",
         "howwework-body":"<strong>Concept.</strong> Nous lisons le brief et parcourons le lieu à l'heure où vous l'utiliserez, et répondons par une idée d'espace.<br><strong>Conception.</strong> L'idée est dessinée, maquettée et chiffrée jusqu'à ce qu'elle tienne.<br><strong>Réalisation.</strong> Nous la produisons sur place : fabrication, lumière, technique, et la conduite finale.",
