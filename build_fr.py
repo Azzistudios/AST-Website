@@ -139,7 +139,7 @@ PAGES = {
     fr_map={**NAV, **TAGS, **FOOT, **PROJ,
         'tagline':'<strong>Nous concevons les lieux<span class="d-br"><br></span> qui rassemblent.</strong>',
         'tagline-sub':'Scénographie événementielle pour mariages, célébrations privées, marques et défilés. Depuis Beyrouth.',
-        'positioning':"Nous concevons d'abord le lieu : l'entrée, la place de chacun, la lumière à mesure que la nuit avance. Puis nous le construisons et dirigeons l'événement. Un studio de scénographie, chez lui à Beyrouth.",
+        'positioning':"Nous concevons d'abord le lieu : l'entrée, la place de chacun, la lumière à mesure que la nuit avance. Puis nous le construisons et dirigeons l'événement.",
         'side-private-label':'Privé','side-private-line':'Pour ceux que vous aimez. Mariages, fiançailles et dîners privés.',
         'side-brands-label':'Marques','side-brands-line':"Pour ceux que vous voulez impressionner. Défilés, lancements et événements d'entreprise.",
         'work-label':'Concepts',

@@ -181,8 +181,12 @@
 
     /* ── TAGLINE ── */
     .tagline {
-      padding: 76px var(--pad) 68px;
+      padding: 76px var(--pad) 72px;
     }
+
+    /* headline and lead on the left, the statement on the right, on the same axis as the Beirut block */
+    .tagline-grid { display: grid; grid-template-columns: 1.3fr 1fr; align-items: start; gap: 40px; }
+    .tagline-right { font-size: 14px; color: #555; line-height: 1.65; max-width: 380px; }
 
     .tagline-text {
       font-size: clamp(28px, 4.6vw, 62px);
@@ -190,7 +194,7 @@
       line-height: 1.07;
       letter-spacing: -0.03em;
       color: #8A8A8A;
-      margin-bottom: 40px;
+      margin-bottom: 28px;
       text-transform: uppercase;
     }
 
@@ -687,15 +691,13 @@
     ::selection { background: var(--text, #000); color: var(--bg, #fff); }
     ::-moz-selection { background: var(--text, #000); color: var(--bg, #fff); }
     .tagline-geo { font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #767676; margin-top: 34px; }
-    .positioning { padding: 0 var(--pad) 68px; }
-    .positioning p { font-size: clamp(13px, 1.05vw, 15px); line-height: 1.65; letter-spacing: 0.01em; max-width: 560px; color: #333; }
     .cta { padding: 76px var(--pad) 84px; border-top: 1px solid var(--border); }
     .cta-title { font-size: clamp(28px, 4.2vw, 52px); font-weight: 700; letter-spacing: -0.03em; text-transform: uppercase; line-height: 1.04; margin-bottom: 18px; }
     .cta-body { font-size: 15px; line-height: 1.7; color: #333; max-width: 420px; margin-bottom: 24px; }
     .cta-link { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; border-bottom: 1px solid currentColor; padding-bottom: 3px; transition: opacity 0.2s; }
     .cta-links { display: flex; flex-wrap: wrap; align-items: baseline; gap: 16px 40px; }
     .cta-link:hover { opacity: 0.5; }
-    @media (max-width: 768px) { .positioning { padding: 0 var(--pad) 44px; } .cta { padding: 48px var(--pad) 56px; } }
+    @media (max-width: 768px) { .tagline-grid { grid-template-columns: 1fr; gap: 28px; } .tagline-right { max-width: 100%; } .cta { padding: 48px var(--pad) 56px; } }
     :focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
 
     @media (prefers-reduced-motion: reduce) {
@@ -788,14 +790,15 @@
     main:focus { outline: none; }
 
     /* ── HERO SUBLINE ── */
-    .tagline-sub { font-size: 15px; line-height: 1.65; color: #555; max-width: 560px; margin-top: 22px; }
+    .tagline-sub { font-size: clamp(17px, 1.5vw, 21px); line-height: 1.45; letter-spacing: -0.01em; color: #000; max-width: 560px; }
+    .tagline-right { padding-top: 4px; }
 
     /* ── THE TWO DOORS (monochrome, same component as the discipline block) ── */
     .sides { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .side { display: flex; flex-direction: column; padding: 48px var(--pad) 44px; color: #111; text-decoration: none; }
+    .side { display: flex; flex-direction: column; padding: 44px var(--pad) 48px; color: #111; text-decoration: none; }
     .side + .side { border-left: 1px solid var(--border); }
-    .side-label { font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; padding-bottom: 16px; margin-bottom: 18px; border-bottom: 1px solid var(--border); }
-    .side-line { font-size: 14px; line-height: 1.65; max-width: 440px; }
+    .side-label { font-size: clamp(18px, 1.6vw, 22px); font-weight: 700; letter-spacing: -0.01em; text-transform: uppercase; padding-bottom: 18px; margin-bottom: 18px; border-bottom: 1px solid var(--border); }
+    .side-line { font-size: 15px; line-height: 1.65; color: #333; max-width: 440px; }
     .side-label { transition: opacity 0.25s cubic-bezier(0.22,1,0.36,1); }
     .side:hover .side-label, .side:focus-visible .side-label { opacity: 0.55; }
     .side:focus-visible { outline: 2px solid currentColor; outline-offset: -6px; }
@@ -898,12 +901,10 @@
   <!-- ── TAGLINE ── -->
   <section class="tagline">
     <h1 class="tagline-text rv" data-i18n="tagline"><strong>Nous concevons les lieux<span class="d-br"><br></span> qui rassemblent.</strong></h1>
-    <p class="tagline-sub rv" style="--d:120ms" data-i18n="tagline-sub">Scénographie événementielle pour mariages, célébrations privées, marques et défilés. Depuis Beyrouth.</p>
-  </section>
-
-  <!-- ── POSITIONING ── -->
-  <section class="positioning rv">
-    <p data-i18n="positioning">Nous concevons d'abord le lieu : l'entrée, la place de chacun, la lumière à mesure que la nuit avance. Puis nous le construisons et dirigeons l'événement. Un studio de scénographie, chez lui à Beyrouth.</p>
+    <div class="tagline-grid">
+      <p class="tagline-sub rv" style="--d:120ms" data-i18n="tagline-sub">Scénographie événementielle pour mariages, célébrations privées, marques et défilés. Depuis Beyrouth.</p>
+      <p class="tagline-right rv" style="--d:200ms" data-i18n="positioning">Nous concevons d'abord le lieu : l'entrée, la place de chacun, la lumière à mesure que la nuit avance. Puis nous le construisons et dirigeons l'événement.</p>
+    </div>
   </section>
 
   <!-- ── THE TWO DOORS ── -->
@@ -1129,13 +1130,15 @@
   <script>
     (function () {
       var d = document.querySelector('.nav-links a[href="about.html"]');
-      var r = document.querySelector('.location-right');
-      if (!d || !r) return;
+      var rs = document.querySelectorAll('.location-right, .tagline-right');
+      if (!d || !rs.length) return;
       function align() {
-        r.style.marginLeft = '';
-        if (window.innerWidth <= 768) return;
-        var shift = d.getBoundingClientRect().left - r.getBoundingClientRect().left;
-        r.style.marginLeft = shift + 'px';
+        rs.forEach(function (r) {
+          r.style.marginLeft = '';
+          if (window.innerWidth <= 768) return;
+          var shift = d.getBoundingClientRect().left - r.getBoundingClientRect().left;
+          r.style.marginLeft = shift + 'px';
+        });
       }
       align();
       window.addEventListener('resize', align);
