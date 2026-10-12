@@ -386,6 +386,9 @@
 
     /* ── CAROUSEL KEYBOARD ACCESS (mobile scroll rows) ── */
     .img-row:focus-visible { outline: 2px solid #000; outline-offset: -3px; }
+    /* hierarchy pass: one lead, then grey body */
+    .intro-body p[data-i18n="studio-p1"] { font-size: clamp(17px, 1.5vw, 21px); line-height: 1.45; letter-spacing: -0.01em; color: #000; max-width: 640px; }
+    .intro-body p[data-i18n="studio-p2"], .intro-body .studio-sectors { font-size: 14px; line-height: 1.7; color: #555; }
   </style>
 </head>
 <body>
