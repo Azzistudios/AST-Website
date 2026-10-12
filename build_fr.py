@@ -110,7 +110,7 @@ ALT = {
  "A private dinner hosted by Marc Azzi at Cheriff Tabet Gallery, Beirut, one long table under red light":"Un dîner privé organisé par Marc Azzi à la Galerie Cheriff Tabet, Beyrouth, une longue table sous lumière rouge",
 }
 
-NAV = {'skip':'Aller au contenu','nav-private':'Privé','nav-brands':'Marques','nav-concepts':'Concepts','nav-about':'À propos','nav-faq':'FAQ','nav-contact':'Contact'}
+NAV = {'skip':'Aller au contenu','nav-private':'Privé','nav-brands':'Marques','nav-concepts':'Projets','nav-about':'À propos','nav-faq':'FAQ','nav-contact':'Contact'}
 TAGS = {'tag-fashion':'Mode','tag-jewellery':'Joaillerie','tag-beauty':'Beauté','tag-spirits':'Spiritueux','tag-automotive':'Automobile','tag-culture':'Culture & Arts'}
 FOOT = {'footer-tagline':'Nous concevons les lieux qui rassemblent','footer-location':'Beyrouth, Liban','copyright':'© 2026 Atelier Sans Titre. Tous droits réservés.','ecosystem':"Fait partie de l'écosystème créatif Azzi Studios.",'legal-privacy':'Confidentialité','legal-notice':'Mentions légales'}
 
@@ -157,15 +157,16 @@ PAGES = {
 ),
 'work.html': dict(
     en_url=f"{BASE}/work.html", fr_url=f"{BASE}/fr/work.html", en_canon=f"{BASE}/work.html", fr_canon=f"{BASE}/fr/work.html",
-    en_title="Concepts · Atelier Sans Titre",
-    fr_title="Concepts · Atelier Sans Titre",
-    en_desc="Concept studies by Atelier Sans Titre for private events, brand events and fashion shows. Built projects follow this season.",
-    fr_desc="Études de concepts par Atelier Sans Titre pour des événements privés, des événements de marque et des défilés. Les projets réalisés suivent cette saison.",
+    en_title="Work · Atelier Sans Titre",
+    fr_title="Projets · Atelier Sans Titre",
+    en_desc="Red Room, a private dinner built in Beirut in 2026, and concept studies by Atelier Sans Titre for private events, brand events and fashion shows.",
+    fr_desc="Red Room, un dîner privé réalisé à Beyrouth en 2026, et des études de concepts par Atelier Sans Titre pour des événements privés, des événements de marque et des défilés.",
     en_toggle_href="fr/work.html", fr_toggle_href="../work.html",
     fr_map={**NAV, **TAGS, **FOOT, **PROJ,
-        'work-h1':'<strong>Concepts</strong>',
+        'work-h1':'<strong>Projets</strong>',
         'work-standfirst':'Le premier dîner que nous avons réalisé, et des études des lieux que nous concevons.',
         'disc-built-label':'Réalisé',
+          'disc-concepts-label':'Concepts',
           'disc-private-label':'Privé',
         'disc-brands-label':'Marques'},
     literals=[], group_desc=None,

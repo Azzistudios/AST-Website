@@ -34,7 +34,7 @@ private.html          Private hub: weddings and private events
 brands.html           Brands hub: fashion shows, brand and corporate events, galas
   fashion-shows.html       Fashion shows
   brand-experiences.html   Brand and corporate events (URL kept for search)
-work.html             Concepts: Built first, then concept studies
+work.html             Work: Built (Red Room band) then a Concepts grid; footer label 'Work'
   red-room.html  Built: a private dinner hosted by Marc Azzi (photographs, indexed)
   the-long-table · after-dark · the-couture-salon · silhouettes · three-rooms   (Concept pages, indexed)
 about.html · faq.html · contact.html · privacy.html · terms.html · 404.html
@@ -45,7 +45,7 @@ the-vernissage.html → red-room.html
 hall-of-images.html → red-room.html                  (redirect stubs, noindex)
 ```
 
-Nav: Private · Brands · About · Contact. FR: Privé · Marques · À propos · Contact. Concepts and FAQ sit in the footer; Concepts is also reached from the home mosaic and the Private and Brands pages.
+Nav: Private · Brands · About · Contact. FR: Privé · Marques · À propos · Contact. Work (built + concepts) and FAQ sit in the footer; the Concepts grid is also reached from the home mosaic and the Private and Brands pages.
 
 ## Working locally
 
