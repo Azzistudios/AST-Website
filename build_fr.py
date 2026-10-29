@@ -45,6 +45,8 @@ def fr_paths(s):
     s = s.replace('href="Fonts/', 'href="../Fonts/')
     s = s.replace("url('Fonts/", "url('../Fonts/")
     s = s.replace('src="brand_assets/', 'src="../brand_assets/')
+    s = s.replace('srcset="brand_assets/', 'srcset="../brand_assets/')
+    s = s.replace('href="brand_assets/', 'href="../brand_assets/')
     # French accessible names
     s = s.replace('aria-label="Open menu"', 'aria-label="Ouvrir le menu"')
     s = s.replace('aria-label="Main"', 'aria-label="Principale"')
@@ -132,7 +134,7 @@ PROJ = {
 PAGES = {
 'index.html': dict(
     en_url=f"{BASE}/", fr_url=f"{BASE}/fr/", en_canon=f"{BASE}/", fr_canon=f"{BASE}/fr/",
-    en_title="Atelier Sans Titre · Event Scenography, Beirut",
+    en_title="Event Scenography Studio, Beirut · Atelier Sans Titre",
     fr_title="Atelier Sans Titre · Scénographie événementielle, Beyrouth",
     en_desc="Event scenography studio in Beirut. Weddings and private events, brand and corporate events, fashion shows. We design where people gather.",
     fr_desc="Studio de scénographie événementielle à Beyrouth. Mariages, événements privés, événements de marque, défilés. Nous concevons les lieux qui rassemblent.",
@@ -157,10 +159,10 @@ PAGES = {
 ),
 'work.html': dict(
     en_url=f"{BASE}/work.html", fr_url=f"{BASE}/fr/work.html", en_canon=f"{BASE}/work.html", fr_canon=f"{BASE}/fr/work.html",
-    en_title="Work · Atelier Sans Titre",
-    fr_title="Projets · Atelier Sans Titre",
+    en_title="Work · Red Room and Concept Studies · Atelier Sans Titre",
+    fr_title="Projets · Red Room et études de concepts · Atelier Sans Titre",
     en_desc="Red Room, a private dinner built in Beirut in 2026, and concept studies by Atelier Sans Titre for private events, brand events and fashion shows.",
-    fr_desc="Red Room, un dîner privé réalisé à Beyrouth en 2026, et des études de concepts par Atelier Sans Titre pour des événements privés, des événements de marque et des défilés.",
+    fr_desc="Red Room, un dîner privé réalisé à Beyrouth en 2026, et des études de concepts pour des événements privés, des événements de marque et des défilés.",
     en_toggle_href="fr/work.html", fr_toggle_href="../work.html",
     fr_map={**NAV, **TAGS, **FOOT, **PROJ,
         'work-h1':'<strong>Projets</strong>',
@@ -178,7 +180,7 @@ PAGES = {
     en_title="Scenography Studio in Beirut · About · Atelier Sans Titre",
     fr_title="Studio de scénographie, Beyrouth · Atelier Sans Titre",
     en_desc="Atelier Sans Titre is an event scenography studio in Beirut, founded by Marc Azzi, architect. Weddings, private events, brand and corporate events, fashion shows.",
-    fr_desc="Atelier Sans Titre est un studio de scénographie événementielle à Beyrouth, fondé par Marc Azzi, architecte. Mariages, événements privés, événements de marque, défilés.",
+    fr_desc="Atelier Sans Titre, studio de scénographie événementielle à Beyrouth fondé par Marc Azzi, architecte. Mariages, événements privés, événements de marque, défilés.",
     en_desc2="Atelier Sans Titre is an event scenography studio in Beirut, founded by Marc Azzi, architect. Weddings, private events, brand and corporate events, fashion shows.",
     fr_desc2="Atelier Sans Titre est un studio de scénographie événementielle à Beyrouth, fondé par Marc Azzi, architecte. Mariages, événements privés, événements de marque, défilés.",
     en_toggle_href="fr/about.html", fr_toggle_href="../about.html",
@@ -210,8 +212,8 @@ PAGES = {
 ),
 'contact.html': dict(
     en_url=f"{BASE}/contact.html", fr_url=f"{BASE}/fr/contact.html", en_canon=f"{BASE}/contact.html", fr_canon=f"{BASE}/fr/contact.html",
-    en_title="Contact · Atelier Sans Titre, Beirut",
-    fr_title="Contact · Atelier Sans Titre, Beyrouth",
+    en_title="Contact an Event Scenographer in Beirut · Atelier Sans Titre",
+    fr_title="Contact · Scénographe événementiel, Beyrouth · Atelier Sans Titre",
     en_desc="Write to Atelier Sans Titre: weddings, private events, brand events and fashion shows. Email, WhatsApp or phone, from Beirut.",
     fr_desc="Écrivez à Atelier Sans Titre : mariages, événements privés, événements de marque et défilés. E-mail, WhatsApp ou téléphone, depuis Beyrouth.",
     en_toggle_href="fr/contact.html", fr_toggle_href="../contact.html",
