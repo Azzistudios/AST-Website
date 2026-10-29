@@ -12,6 +12,7 @@
   <link rel="alternate" hreflang="en" href="https://ateliersanstitre.com/brands.html">
   <link rel="alternate" hreflang="fr" href="https://ateliersanstitre.com/fr/brands.html">
   <link rel="alternate" hreflang="x-default" href="https://ateliersanstitre.com/brands.html">
+  <link rel="preload" as="image" type="image/webp" imagesrcset="brand_assets/concepts/three-rooms-01-hero-750.webp 750w, brand_assets/concepts/three-rooms-01-hero-1122.webp 1122w" imagesizes="100vw" media="(min-width: 769px)" fetchpriority="high">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Atelier Sans Titre">
   <meta property="og:title" content="Brand Events &amp; Fashion Shows, Beirut · Atelier Sans Titre">
@@ -355,7 +356,7 @@
     <h1><strong>Brands</strong>, <strong>fashion</strong> and <strong>corporate events</strong>.</h1>
   </div>
 
-  <div class="svc-hero rv-fade"><picture><source type="image/webp" srcset="brand_assets/concepts/three-rooms-01-480.webp 480w, brand_assets/concepts/three-rooms-01-960.webp 960w, brand_assets/concepts/three-rooms-01.webp 1122w" sizes="100vw"><img fetchpriority="high" decoding="async" src="brand_assets/concepts/three-rooms-01.jpg" alt="Concept render, an empty runway lit by a line of light"></picture></div>
+  <div class="svc-hero rv-fade"><picture><source media="(min-width: 769px)" type="image/webp" srcset="brand_assets/concepts/three-rooms-01-hero-750.webp 750w, brand_assets/concepts/three-rooms-01-hero-1122.webp 1122w" sizes="100vw"><source type="image/webp" srcset="brand_assets/concepts/three-rooms-01-480.webp 480w, brand_assets/concepts/three-rooms-01-960.webp 960w, brand_assets/concepts/three-rooms-01.webp 1122w" sizes="100vw"><img fetchpriority="high" decoding="async" src="brand_assets/concepts/three-rooms-01.jpg" alt="Concept render, an empty runway lit by a line of light"></picture></div>
 
   <section class="svc-intro rv">
     <p>Atelier Sans Titre designs fashion shows, brand and corporate events in Beirut. For the people you want to impress. Fashion shows, launches, activations, corporate dinners and galas. We design the place around what you show: how the audience comes in, where they look, where the light falls. Then we build it and run it on the day. You work directly with the creative director.</p>
@@ -538,7 +539,7 @@
       function loadAll() { loadGA(); loadPixel(); }
       var stored = null;
       try { stored = localStorage.getItem(KEY); } catch (e) {}
-      if (stored === 'granted') { loadAll(); return; }
+      if (stored === 'granted') { if (document.readyState === 'complete') setTimeout(loadAll, 1500); else window.addEventListener('load', function () { setTimeout(loadAll, 1500); }); return; }
       if (stored === 'denied') return;
       var fr = (document.documentElement.lang || 'en').indexOf('fr') === 0;
       var box = document.createElement('div');

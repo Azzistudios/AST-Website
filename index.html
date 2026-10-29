@@ -25,7 +25,7 @@
   <!-- GA4 (G-L6SDE8HBFK) loads consent-gated via the banner script at the end of body -->
   <link rel="preload" href="Fonts/Syne-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="Fonts/Syne-Bold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" as="image" href="brand_assets/concepts/red-room-01.webp" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image" type="image/webp" imagesrcset="brand_assets/concepts/red-room-01-hero-750.webp 750w, brand_assets/concepts/red-room-01-hero-1086.webp 1086w" imagesizes="100vw" fetchpriority="high">
   <noscript><style>#ast-loader{display:none!important}.rv,.rv-fade,.rv-m{opacity:1!important;transform:none!important}</style></noscript>
   <style>
     @font-face { font-family: 'Syne'; src: url('Fonts/Syne-Regular.woff2') format('woff2'), url('Fonts/Syne-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
@@ -893,9 +893,9 @@
 
   <!-- ── HERO ── -->
   <section class="hero" aria-label="Featured work">
-    <picture><source type="image/webp" srcset="brand_assets/concepts/red-room-01-480.webp 480w, brand_assets/concepts/red-room-01-960.webp 960w, brand_assets/concepts/red-room-01.webp 1086w" sizes="100vw"><img fetchpriority="high" src="brand_assets/concepts/red-room-01.jpg"
+    <picture><source type="image/webp" srcset="brand_assets/concepts/red-room-01-hero-750.webp 750w, brand_assets/concepts/red-room-01-hero-1086.webp 1086w" sizes="100vw"><img fetchpriority="high" src="brand_assets/concepts/red-room-01.jpg"
       alt="A private dinner at Cheriff Tabet Gallery, Beirut, under red light: one long table laid with candles and flowers"
-      style="object-position: 50% 45%;"
+      style="object-position: center center;"
     ></picture>
   </section>
 
@@ -947,7 +947,7 @@
 
   <!-- ── PART OF AZZI STUDIOS ── -->
   <section class="group-img rv-fade">
-    <picture><source type="image/webp" srcset="brand_assets/concepts/home-hero-480.webp 480w, brand_assets/concepts/home-hero-960.webp 960w, brand_assets/concepts/home-hero.webp 1122w" sizes="100vw"><img loading="lazy" src="brand_assets/concepts/home-hero.jpg" alt="Concept render, long tables under light shafts in a stone hall"></picture>
+    <picture><source media="(min-width: 769px)" type="image/webp" srcset="brand_assets/concepts/home-hero-wide-750.webp 750w, brand_assets/concepts/home-hero-wide-1122.webp 1122w" sizes="100vw"><source type="image/webp" srcset="brand_assets/concepts/home-hero-480.webp 480w, brand_assets/concepts/home-hero-960.webp 960w, brand_assets/concepts/home-hero.webp 1122w" sizes="100vw"><img loading="lazy" src="brand_assets/concepts/home-hero.jpg" alt="Concept render, long tables under light shafts in a stone hall"></picture>
     <div class="group-overlay">
       <a class="line" href="index.html">Sans Titre</a>
       <a class="line-azzi" href="https://azzistudios.com" target="_blank" rel="noopener">azzi studios</a>
@@ -1197,7 +1197,7 @@
       function loadAll() { loadGA(); loadPixel(); }
       var stored = null;
       try { stored = localStorage.getItem(KEY); } catch (e) {}
-      if (stored === 'granted') { loadAll(); return; }
+      if (stored === 'granted') { if (document.readyState === 'complete') setTimeout(loadAll, 1500); else window.addEventListener('load', function () { setTimeout(loadAll, 1500); }); return; }
       if (stored === 'denied') return;
       var fr = (document.documentElement.lang || 'en').indexOf('fr') === 0;
       var box = document.createElement('div');

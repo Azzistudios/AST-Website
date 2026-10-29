@@ -347,7 +347,7 @@
   </div>
 
   <div class="project-hero rv-fade">
-    <picture><source type="image/webp" srcset="../brand_assets/concepts/red-room-01-480.webp 480w, ../brand_assets/concepts/red-room-01-960.webp 960w, ../brand_assets/concepts/red-room-01.webp 1086w" sizes="100vw"><img fetchpriority="high" src="../brand_assets/concepts/red-room-01.jpg" alt="Un dîner privé à la Galerie Cheriff Tabet, Beyrouth, sous lumière rouge : une longue table dressée avec bougies et fleurs"></picture>
+    <picture><source media="(min-width: 769px)" type="image/webp" srcset="../brand_assets/concepts/red-room-01-hero-750.webp 750w, ../brand_assets/concepts/red-room-01-hero-1086.webp 1086w" sizes="100vw"><source type="image/webp" srcset="../brand_assets/concepts/red-room-01-480.webp 480w, ../brand_assets/concepts/red-room-01-960.webp 960w, ../brand_assets/concepts/red-room-01.webp 1086w" sizes="100vw"><img fetchpriority="high" src="../brand_assets/concepts/red-room-01.jpg" alt="Un dîner privé à la Galerie Cheriff Tabet, Beyrouth, sous lumière rouge : une longue table dressée avec bougies et fleurs"></picture>
   </div>
 
   <section class="project-body rv">
@@ -518,7 +518,7 @@
       function loadAll() { loadGA(); loadPixel(); }
       var stored = null;
       try { stored = localStorage.getItem(KEY); } catch (e) {}
-      if (stored === 'granted') { loadAll(); return; }
+      if (stored === 'granted') { if (document.readyState === 'complete') setTimeout(loadAll, 1500); else window.addEventListener('load', function () { setTimeout(loadAll, 1500); }); return; }
       if (stored === 'denied') return;
       var fr = (document.documentElement.lang || 'en').indexOf('fr') === 0;
       var box = document.createElement('div');

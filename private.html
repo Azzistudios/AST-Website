@@ -12,6 +12,7 @@
   <link rel="alternate" hreflang="en" href="https://ateliersanstitre.com/private.html">
   <link rel="alternate" hreflang="fr" href="https://ateliersanstitre.com/fr/private.html">
   <link rel="alternate" hreflang="x-default" href="https://ateliersanstitre.com/private.html">
+  <link rel="preload" as="image" type="image/webp" imagesrcset="brand_assets/concepts/the-long-table-01-hero-750.webp 750w, brand_assets/concepts/the-long-table-01-hero-1122.webp 1122w" imagesizes="100vw" media="(min-width: 769px)" fetchpriority="high">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Atelier Sans Titre">
   <meta property="og:title" content="Private Events &amp; Weddings, Beirut · Atelier Sans Titre">
@@ -355,7 +356,7 @@
     <h1><strong>Weddings</strong> and <strong>private events</strong>.</h1>
   </div>
 
-  <div class="svc-hero rv-fade"><picture><source type="image/webp" srcset="brand_assets/concepts/the-long-table-01-480.webp 480w, brand_assets/concepts/the-long-table-01-960.webp 960w, brand_assets/concepts/the-long-table-01.webp 1122w" sizes="100vw"><img fetchpriority="high" decoding="async" style="object-position: 50% 72%" src="brand_assets/concepts/the-long-table-01.jpg" alt="Concept render, a long dinner table under a draped canopy at dusk"></picture></div>
+  <div class="svc-hero rv-fade"><picture><source media="(min-width: 769px)" type="image/webp" srcset="brand_assets/concepts/the-long-table-01-hero-750.webp 750w, brand_assets/concepts/the-long-table-01-hero-1122.webp 1122w" sizes="100vw"><source type="image/webp" srcset="brand_assets/concepts/the-long-table-01-480.webp 480w, brand_assets/concepts/the-long-table-01-960.webp 960w, brand_assets/concepts/the-long-table-01.webp 1122w" sizes="100vw"><img fetchpriority="high" decoding="async" style="object-position: 50% 72%" src="brand_assets/concepts/the-long-table-01.jpg" alt="Concept render, a long dinner table under a draped canopy at dusk"></picture></div>
 
   <section class="svc-intro rv">
     <p>Atelier Sans Titre designs weddings and private events in Beirut and across Lebanon. For the people you love. Weddings, engagements, private dinners and parties. We design the place first: the way in, the tables, the light after dark. Then we plan the day, build it and run it on the day, so you can spend it with your guests.</p>
@@ -533,7 +534,7 @@
       function loadAll() { loadGA(); loadPixel(); }
       var stored = null;
       try { stored = localStorage.getItem(KEY); } catch (e) {}
-      if (stored === 'granted') { loadAll(); return; }
+      if (stored === 'granted') { if (document.readyState === 'complete') setTimeout(loadAll, 1500); else window.addEventListener('load', function () { setTimeout(loadAll, 1500); }); return; }
       if (stored === 'denied') return;
       var fr = (document.documentElement.lang || 'en').indexOf('fr') === 0;
       var box = document.createElement('div');

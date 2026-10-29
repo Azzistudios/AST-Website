@@ -565,7 +565,7 @@
       function loadAll() { loadGA(); loadPixel(); }
       var stored = null;
       try { stored = localStorage.getItem(KEY); } catch (e) {}
-      if (stored === 'granted') { loadAll(); return; }
+      if (stored === 'granted') { if (document.readyState === 'complete') setTimeout(loadAll, 1500); else window.addEventListener('load', function () { setTimeout(loadAll, 1500); }); return; }
       if (stored === 'denied') return;
       var fr = (document.documentElement.lang || 'en').indexOf('fr') === 0;
       var box = document.createElement('div');
