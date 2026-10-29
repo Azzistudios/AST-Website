@@ -134,10 +134,10 @@ PROJ = {
 PAGES = {
 'index.html': dict(
     en_url=f"{BASE}/", fr_url=f"{BASE}/fr/", en_canon=f"{BASE}/", fr_canon=f"{BASE}/fr/",
-    en_title="Event Design &amp; Scenography Studio, Beirut · Atelier Sans Titre",
-    fr_title="Design d'événements et scénographie, Beyrouth · Atelier Sans Titre",
-    en_desc="Event design and scenography studio in Beirut. Weddings and private events, brand and corporate events, fashion shows. We design where people gather.",
-    fr_desc="Studio de design d'événements et de scénographie à Beyrouth. Mariages, événements privés, événements de marque, défilés. Nous concevons les lieux qui rassemblent.",
+    en_title="Atelier Sans Titre · Event Scenography, Beirut",
+    fr_title="Atelier Sans Titre · Scénographie événementielle, Beyrouth",
+    en_desc="Event scenography studio in Beirut. Weddings and private events, brand and corporate events, fashion shows. We design where people gather.",
+    fr_desc="Studio de scénographie événementielle à Beyrouth. Mariages, événements privés, événements de marque, défilés. Nous concevons les lieux qui rassemblent.",
     en_toggle_href="fr/index.html", fr_toggle_href="../index.html", json_en=None, json_fr=None,
     fr_map={**NAV, **TAGS, **FOOT, **PROJ,
         'tagline':'<strong>Nous concevons les lieux<span class="d-br"><br></span> qui rassemblent.</strong>',
