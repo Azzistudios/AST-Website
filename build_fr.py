@@ -45,7 +45,7 @@ def fr_paths(s):
     s = s.replace('href="Fonts/', 'href="../Fonts/')
     s = s.replace("url('Fonts/", "url('../Fonts/")
     s = s.replace('src="brand_assets/', 'src="../brand_assets/')
-    s = s.replace('srcset="brand_assets/', 'srcset="../brand_assets/')
+    s = re.sub(r'srcset="([^"]*)"', lambda m: 'srcset="' + m.group(1).replace('brand_assets/', '../brand_assets/') + '"', s)  # every candidate
     s = s.replace('href="brand_assets/', 'href="../brand_assets/')
     # French accessible names
     s = s.replace('aria-label="Open menu"', 'aria-label="Ouvrir le menu"')

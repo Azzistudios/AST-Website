@@ -47,6 +47,11 @@ hall-of-images.html → red-room.html                  (redirect stubs, noindex)
 
 Nav: Private · Brands · About · Contact. FR: Privé · Marques · À propos · Contact. Work (built + concepts) and FAQ sit in the footer; the Concepts grid is also reached from the home mosaic and the Private and Brands pages.
 
+## Images and SEO conventions (Oct 2026)
+
+- Every photo in `brand_assets/` has a `.webp` beside its `.jpg` (Pillow, quality 80; 72 for the contact city photos). Markup is `<picture><source srcset="x.webp" type="image/webp"><img src="x.jpg" alt="…"></picture>`. Style and script selectors use descendant `img`, never `> img`. `build_fr.py` rewrites `src`, `srcset` and `href` asset paths to `../`.
+- Titles: 50 to 60 characters, keyword first, studio name last ("Event Scenography Studio, Beirut · Atelier Sans Titre"). Descriptions 140 to 160. French titles must differ from English. Concept pages read "… · Concept Study · Atelier Sans Titre, Beirut"; their JSON-LD is CreativeWork with creativeWorkStatus "Unbuilt concept". Red Room is CreativeWork + ImageGallery with place, year and creator. Every indexable page: self-canonical, en/fr/x-default hreflang, in `sitemap.xml`.
+
 ## Working locally
 
 - Serve with `python3 serve.py` at http://localhost:3000. Never open a `file://` URL.
