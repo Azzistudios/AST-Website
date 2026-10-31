@@ -336,8 +336,8 @@
       </ul>
       <ul class="fc-list">
         <li data-i18n="footer-tagline">We design where people gather</li>
-        <li><a href="mailto:hello@ateliersanstitre.com">hello@ateliersanstitre.com</a></li>
-        <li><a href="https://wa.me/96178902628" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><a href="mailto:hello@ateliersanstitre.com?subject=Event%20enquiry&amp;body=Hello%20Atelier%20Sans%20Titre.%20We%20are%20planning%20an%20event.%0ADate%3A%0APlace%3A%0AGuests%3A">hello@ateliersanstitre.com</a></li>
+        <li><a href="https://wa.me/96178902628?text=Hello%20Atelier%20Sans%20Titre.%20We%20are%20planning%20an%20event.%0ADate%3A%0APlace%3A%0AGuests%3A" target="_blank" rel="noopener">WhatsApp</a></li>
         <li><a href="https://instagram.com/ateliersanstitre" target="_blank" rel="noopener">@ateliersanstitre</a></li>
         <li data-i18n="footer-location">Beirut, Lebanon</li>
       </ul>
@@ -457,8 +457,10 @@
         fbq('track', 'PageView');
         document.addEventListener('click', function (ev) {
           var a = ev.target && ev.target.closest ? ev.target.closest('a[href^="mailto:"], a[href^="tel:"], a[href*="wa.me"]') : null;
-          if (!a || !window.fbq) return;
-          fbq('track', 'Contact', { content_name: a.getAttribute('href').indexOf('mailto:') === 0 ? 'email' : (a.getAttribute('href').indexOf('wa.me') > -1 ? 'whatsapp' : 'phone') });
+          if (!a) return;
+          var h = a.getAttribute('href'), m = h.indexOf('mailto:') === 0 ? 'email' : (h.indexOf('wa.me') > -1 ? 'whatsapp' : 'phone');
+          if (window.fbq) fbq('track', 'Contact', { content_name: m });
+          if (window.gtag) gtag('event', 'generate_lead', { method: m, link_location: a.closest('.enquiry') ? 'form' : (a.closest('.cta') ? 'cta' : (a.closest('footer') ? 'footer' : 'body')) });
         }, true);
       }
       function loadAll() { loadGA(); loadPixel(); }

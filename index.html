@@ -188,6 +188,7 @@
     /* headline and lead on the left, the statement on the right, on the same axis as the Beirut block */
     .tagline-grid { display: grid; grid-template-columns: 1.3fr 1fr; align-items: start; gap: 40px; }
     .tagline-right { font-size: 14px; color: #555; line-height: 1.65; max-width: 380px; }
+    .tagline-cta { margin-top: 14px; color: #000; }
 
     .tagline-text {
       font-size: clamp(28px, 4.6vw, 62px);
@@ -694,7 +695,7 @@
     .tagline-geo { font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #767676; margin-top: 34px; }
     .cta { padding: 76px var(--pad) 84px; border-top: 1px solid var(--border); }
     .cta-title { font-size: clamp(28px, 4.2vw, 52px); font-weight: 700; letter-spacing: -0.03em; text-transform: uppercase; line-height: 1.04; margin-bottom: 18px; }
-    .cta-body { font-size: 15px; line-height: 1.7; color: #333; max-width: 420px; margin-bottom: 24px; }
+    .cta-body { font-size: 15px; line-height: 1.7; color: #333; margin-bottom: 24px; }
     .cta-link { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; border-bottom: 1px solid currentColor; padding-bottom: 3px; transition: opacity 0.2s; }
     .cta-links { display: flex; flex-wrap: wrap; align-items: baseline; gap: 16px 40px; }
     .cta-link:hover { opacity: 0.5; }
@@ -909,7 +910,10 @@
     <h1 class="tagline-text rv" data-i18n="tagline"><strong>We design where<span class="d-br"><br></span> people gather.</strong></h1>
     <div class="tagline-grid">
       <p class="tagline-sub rv" style="--d:120ms" data-i18n="tagline-sub">Event scenography for weddings, private celebrations, brands and fashion shows. From Beirut.</p>
-      <p class="tagline-right rv" style="--d:200ms" data-i18n="positioning">We design the place first: the way in, where people sit, the light as the night turns. Then we build it and run it on the day.</p>
+      <div class="tagline-right rv" style="--d:200ms">
+        <p data-i18n="positioning">We design the place first: the way in, where people sit, the light as the night turns. Then we build it and run it on the day.</p>
+        <a class="cta-link tagline-cta" href="contact.html" data-i18n="tagline-cta">Tell us about your event →</a>
+      </div>
     </div>
   </section>
 
@@ -986,10 +990,10 @@
   <!-- ── CTA ── -->
   <section class="cta rv-fade">
     <p class="cta-title" data-i18n="cta-title">Tell us about your event.</p>
-    <p class="cta-body" data-i18n="cta-body">A date, a place, how many guests. We will answer with a space.</p>
+    <p class="cta-body" data-i18n="cta-body">Now booking 2027. A date, a place, how many guests. We will answer with a space.</p>
     <div class="cta-links">
       <a class="cta-link" href="contact.html" data-i18n="cta-link">Write to us</a>
-      <a class="cta-link" href="https://wa.me/96178902628" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="cta-link" href="https://wa.me/96178902628?text=Hello%20Atelier%20Sans%20Titre.%20We%20are%20planning%20an%20event.%0ADate%3A%0APlace%3A%0AGuests%3A" target="_blank" rel="noopener">WhatsApp</a>
     </div>
   </section>
 
@@ -1012,8 +1016,8 @@
       </ul>
       <ul class="fc-list">
         <li data-i18n="footer-tagline">We design where people gather</li>
-        <li><a href="mailto:hello@ateliersanstitre.com">hello@ateliersanstitre.com</a></li>
-        <li><a href="https://wa.me/96178902628" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><a href="mailto:hello@ateliersanstitre.com?subject=Event%20enquiry&amp;body=Hello%20Atelier%20Sans%20Titre.%20We%20are%20planning%20an%20event.%0ADate%3A%0APlace%3A%0AGuests%3A">hello@ateliersanstitre.com</a></li>
+        <li><a href="https://wa.me/96178902628?text=Hello%20Atelier%20Sans%20Titre.%20We%20are%20planning%20an%20event.%0ADate%3A%0APlace%3A%0AGuests%3A" target="_blank" rel="noopener">WhatsApp</a></li>
         <li><a href="https://instagram.com/ateliersanstitre" target="_blank" rel="noopener">@ateliersanstitre</a></li>
         <li data-i18n="footer-location">Beirut, Lebanon</li>
       </ul>
@@ -1194,8 +1198,10 @@
         fbq('track', 'PageView');
         document.addEventListener('click', function (ev) {
           var a = ev.target && ev.target.closest ? ev.target.closest('a[href^="mailto:"], a[href^="tel:"], a[href*="wa.me"]') : null;
-          if (!a || !window.fbq) return;
-          fbq('track', 'Contact', { content_name: a.getAttribute('href').indexOf('mailto:') === 0 ? 'email' : (a.getAttribute('href').indexOf('wa.me') > -1 ? 'whatsapp' : 'phone') });
+          if (!a) return;
+          var h = a.getAttribute('href'), m = h.indexOf('mailto:') === 0 ? 'email' : (h.indexOf('wa.me') > -1 ? 'whatsapp' : 'phone');
+          if (window.fbq) fbq('track', 'Contact', { content_name: m });
+          if (window.gtag) gtag('event', 'generate_lead', { method: m, link_location: a.closest('.enquiry') ? 'form' : (a.closest('.cta') ? 'cta' : (a.closest('footer') ? 'footer' : 'body')) });
         }, true);
       }
       function loadAll() { loadGA(); loadPixel(); }

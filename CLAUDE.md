@@ -53,6 +53,7 @@ Nav: Private · Brands · About · Contact. FR: Privé · Marques · À propos �
 - Every photo in `brand_assets/` has a `.webp` beside its `.jpg`, plus `-480` and `-960` variants; hero bands also have landscape `-hero-*` / `-wide-*` crops. Markup is `<picture><source type="image/webp" srcset="…" sizes="…"><img src="x.jpg" alt="…"></picture>`. Selectors use descendant `img`, never `> img`. `build_fr.py` rewrites `src`, `srcset`, `imagesrcset` and `href` asset paths to `../`.
 - Titles and metas prescribed by the brief or by Marc later are his decision. Do not rewrite them for length or keywords without asking. The FAQ's 15 questions are prescribed too.
 - Every indexable page: self-canonical, en/fr/x-default hreflang, in `sitemap.xml`. Concept pages' JSON-LD is CreativeWork with creativeWorkStatus "Unbuilt concept"; Red Room is CreativeWork + ImageGallery with place, year and creator.
+- Enquiries: every WhatsApp and email link except on the legal pages carries a pre-filled message by page (date, place, guests); `build_fr.py` swaps the general one in its `PREFILL` list. GA4 `generate_lead` and the Pixel `Contact` event fire on those clicks, consent-gated. Contact has an enquiry block that only fills those messages; nothing is sent or stored by the site. "Now booking 2027" sits in every CTA body: change it when 2028 opens.
 - Run `python3 build_fr.py` with its output visible. If the About, Contact or Work JSON-LD changes, update `json_en`/`json_fr` in the catalog, or the build stops halfway and `fr/about.html` and `fr/contact.html` go stale.
 
 ## Working locally

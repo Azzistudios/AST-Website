@@ -231,8 +231,9 @@
     .svc-sec-body { font-size: 15px; line-height: 1.72; color: #333; }
     .cta { padding: 64px var(--pad) 80px; border-top: 1px solid var(--border); }
     .cta-title { font-size: clamp(28px, 4.2vw, 52px); font-weight: 700; letter-spacing: -0.03em; text-transform: uppercase; line-height: 1.04; margin-bottom: 18px; }
-    .cta-body { font-size: 15px; line-height: 1.7; color: #333; max-width: 420px; margin-bottom: 24px; }
+    .cta-body { font-size: 15px; line-height: 1.7; color: #333; margin-bottom: 24px; }
     .cta-link { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; border-bottom: 1px solid currentColor; padding-bottom: 3px; transition: opacity 0.2s; }
+    .cta-links { display: flex; flex-wrap: wrap; align-items: baseline; gap: 16px 40px; }
     .cta-link:hover { opacity: 0.5; }
     @media (max-width: 768px) { .svc-imgs { grid-template-columns: 1fr; } .svc-sec { grid-template-columns: 1fr; gap: 12px; padding: 32px var(--pad); } .cta { padding: 48px var(--pad) 56px; } }
     .page-kicker { font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 18px; color: #767676; }
@@ -373,6 +374,15 @@
     <a href="work.html#concepts">Voir les concepts &#8594;</a>
   </section>
 
+  <section class="cta rv-fade">
+    <p class="cta-title">Parlez-nous de votre événement.</p>
+    <p class="cta-body">Réservations ouvertes pour 2027. Une date, un lieu, le nombre d'invités. Nous répondrons par un espace.</p>
+    <div class="cta-links">
+      <a class="cta-link" href="contact.html">Écrivez-nous</a>
+      <a class="cta-link" href="https://wa.me/96178902628?text=Bonjour%20Atelier%20Sans%20Titre.%20Nous%20pr%C3%A9parons%20un%20%C3%A9v%C3%A9nement%20priv%C3%A9.%0ADate%20%3A%0ALieu%20%3A%0AInvit%C3%A9s%20%3A" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </section>
+
   </main>
 
   <footer class="rv-fade">
@@ -392,8 +402,8 @@
       </ul>
       <ul class="fc-list">
         <li data-i18n="footer-tagline">Nous concevons les lieux qui rassemblent</li>
-        <li><a href="mailto:hello@ateliersanstitre.com">hello@ateliersanstitre.com</a></li>
-        <li><a href="https://wa.me/96178902628" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><a href="mailto:hello@ateliersanstitre.com?subject=Demande%20%3A%20%C3%A9v%C3%A9nement%20priv%C3%A9&amp;body=Bonjour%20Atelier%20Sans%20Titre.%20Nous%20pr%C3%A9parons%20un%20%C3%A9v%C3%A9nement%20priv%C3%A9.%0ADate%20%3A%0ALieu%20%3A%0AInvit%C3%A9s%20%3A">hello@ateliersanstitre.com</a></li>
+        <li><a href="https://wa.me/96178902628?text=Bonjour%20Atelier%20Sans%20Titre.%20Nous%20pr%C3%A9parons%20un%20%C3%A9v%C3%A9nement%20priv%C3%A9.%0ADate%20%3A%0ALieu%20%3A%0AInvit%C3%A9s%20%3A" target="_blank" rel="noopener">WhatsApp</a></li>
         <li><a href="https://instagram.com/ateliersanstitre" target="_blank" rel="noopener">@ateliersanstitre</a></li>
         <li data-i18n="footer-location">Beyrouth, Liban</li>
       </ul>
@@ -513,8 +523,10 @@
         fbq('track', 'PageView');
         document.addEventListener('click', function (ev) {
           var a = ev.target && ev.target.closest ? ev.target.closest('a[href^="mailto:"], a[href^="tel:"], a[href*="wa.me"]') : null;
-          if (!a || !window.fbq) return;
-          fbq('track', 'Contact', { content_name: a.getAttribute('href').indexOf('mailto:') === 0 ? 'email' : (a.getAttribute('href').indexOf('wa.me') > -1 ? 'whatsapp' : 'phone') });
+          if (!a) return;
+          var h = a.getAttribute('href'), m = h.indexOf('mailto:') === 0 ? 'email' : (h.indexOf('wa.me') > -1 ? 'whatsapp' : 'phone');
+          if (window.fbq) fbq('track', 'Contact', { content_name: m });
+          if (window.gtag) gtag('event', 'generate_lead', { method: m, link_location: a.closest('.enquiry') ? 'form' : (a.closest('.cta') ? 'cta' : (a.closest('footer') ? 'footer' : 'body')) });
         }, true);
       }
       function loadAll() { loadGA(); loadPixel(); }

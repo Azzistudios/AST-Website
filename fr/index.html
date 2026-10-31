@@ -188,6 +188,7 @@
     /* headline and lead on the left, the statement on the right, on the same axis as the Beirut block */
     .tagline-grid { display: grid; grid-template-columns: 1.3fr 1fr; align-items: start; gap: 40px; }
     .tagline-right { font-size: 14px; color: #555; line-height: 1.65; max-width: 380px; }
+    .tagline-cta { margin-top: 14px; color: #000; }
 
     .tagline-text {
       font-size: clamp(28px, 4.6vw, 62px);
@@ -694,7 +695,7 @@
     .tagline-geo { font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #767676; margin-top: 34px; }
     .cta { padding: 76px var(--pad) 84px; border-top: 1px solid var(--border); }
     .cta-title { font-size: clamp(28px, 4.2vw, 52px); font-weight: 700; letter-spacing: -0.03em; text-transform: uppercase; line-height: 1.04; margin-bottom: 18px; }
-    .cta-body { font-size: 15px; line-height: 1.7; color: #333; max-width: 420px; margin-bottom: 24px; }
+    .cta-body { font-size: 15px; line-height: 1.7; color: #333; margin-bottom: 24px; }
     .cta-link { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; border-bottom: 1px solid currentColor; padding-bottom: 3px; transition: opacity 0.2s; }
     .cta-links { display: flex; flex-wrap: wrap; align-items: baseline; gap: 16px 40px; }
     .cta-link:hover { opacity: 0.5; }
@@ -909,7 +910,10 @@
     <h1 class="tagline-text rv" data-i18n="tagline"><strong>Nous concevons les lieux<span class="d-br"><br></span> qui rassemblent.</strong></h1>
     <div class="tagline-grid">
       <p class="tagline-sub rv" style="--d:120ms" data-i18n="tagline-sub">Scénographie événementielle pour mariages, célébrations privées, marques et défilés. Depuis Beyrouth.</p>
-      <p class="tagline-right rv" style="--d:200ms" data-i18n="positioning">Nous concevons d'abord le lieu : l'entrée, la place de chacun, la lumière à mesure que la nuit avance. Puis nous le construisons et dirigeons l'événement.</p>
+      <div class="tagline-right rv" style="--d:200ms">
+        <p data-i18n="positioning">Nous concevons d'abord le lieu : l'entrée, la place de chacun, la lumière à mesure que la nuit avance. Puis nous le construisons et dirigeons l'événement.</p>
+        <a class="cta-link tagline-cta" href="contact.html" data-i18n="tagline-cta">Parlez-nous de votre événement →</a>
+      </div>
     </div>
   </section>
 
@@ -986,10 +990,10 @@
   <!-- ── CTA ── -->
   <section class="cta rv-fade">
     <p class="cta-title" data-i18n="cta-title">Parlez-nous de votre événement.</p>
-    <p class="cta-body" data-i18n="cta-body">Une date, un lieu, le nombre d'invités. Nous répondrons par un espace.</p>
+    <p class="cta-body" data-i18n="cta-body">Réservations ouvertes pour 2027. Une date, un lieu, le nombre d'invités. Nous répondrons par un espace.</p>
     <div class="cta-links">
       <a class="cta-link" href="contact.html" data-i18n="cta-link">Écrivez-nous</a>
-      <a class="cta-link" href="https://wa.me/96178902628" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="cta-link" href="https://wa.me/96178902628?text=Bonjour%20Atelier%20Sans%20Titre.%20Nous%20pr%C3%A9parons%20un%20%C3%A9v%C3%A9nement.%0ADate%20%3A%0ALieu%20%3A%0AInvit%C3%A9s%20%3A" target="_blank" rel="noopener">WhatsApp</a>
     </div>
   </section>
 
@@ -1012,8 +1016,8 @@
       </ul>
       <ul class="fc-list">
         <li data-i18n="footer-tagline">Nous concevons les lieux qui rassemblent</li>
-        <li><a href="mailto:hello@ateliersanstitre.com">hello@ateliersanstitre.com</a></li>
-        <li><a href="https://wa.me/96178902628" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><a href="mailto:hello@ateliersanstitre.com?subject=Demande%20%3A%20%C3%A9v%C3%A9nement&amp;body=Bonjour%20Atelier%20Sans%20Titre.%20Nous%20pr%C3%A9parons%20un%20%C3%A9v%C3%A9nement.%0ADate%20%3A%0ALieu%20%3A%0AInvit%C3%A9s%20%3A">hello@ateliersanstitre.com</a></li>
+        <li><a href="https://wa.me/96178902628?text=Bonjour%20Atelier%20Sans%20Titre.%20Nous%20pr%C3%A9parons%20un%20%C3%A9v%C3%A9nement.%0ADate%20%3A%0ALieu%20%3A%0AInvit%C3%A9s%20%3A" target="_blank" rel="noopener">WhatsApp</a></li>
         <li><a href="https://instagram.com/ateliersanstitre" target="_blank" rel="noopener">@ateliersanstitre</a></li>
         <li data-i18n="footer-location">Beyrouth, Liban</li>
       </ul>
@@ -1194,8 +1198,10 @@
         fbq('track', 'PageView');
         document.addEventListener('click', function (ev) {
           var a = ev.target && ev.target.closest ? ev.target.closest('a[href^="mailto:"], a[href^="tel:"], a[href*="wa.me"]') : null;
-          if (!a || !window.fbq) return;
-          fbq('track', 'Contact', { content_name: a.getAttribute('href').indexOf('mailto:') === 0 ? 'email' : (a.getAttribute('href').indexOf('wa.me') > -1 ? 'whatsapp' : 'phone') });
+          if (!a) return;
+          var h = a.getAttribute('href'), m = h.indexOf('mailto:') === 0 ? 'email' : (h.indexOf('wa.me') > -1 ? 'whatsapp' : 'phone');
+          if (window.fbq) fbq('track', 'Contact', { content_name: m });
+          if (window.gtag) gtag('event', 'generate_lead', { method: m, link_location: a.closest('.enquiry') ? 'form' : (a.closest('.cta') ? 'cta' : (a.closest('footer') ? 'footer' : 'body')) });
         }, true);
       }
       function loadAll() { loadGA(); loadPixel(); }

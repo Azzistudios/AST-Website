@@ -257,7 +257,7 @@
     .page-kicker { font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 18px; }
     .contact-head { padding: 48px var(--pad) 8px; }
     .contact-head h1 { font-size: clamp(23px, 3.4vw, 46px); font-weight: 500; letter-spacing: -0.03em; text-transform: uppercase; line-height: 1.05; margin-bottom: 20px; }
-    .contact-lead { font-size: clamp(17px, 1.5vw, 21px); line-height: 1.45; letter-spacing: -0.01em; color: #000; max-width: 640px; }
+    .contact-lead { font-size: clamp(17px, 1.5vw, 21px); line-height: 1.45; letter-spacing: -0.01em; color: #000; }
     @media (max-width: 768px) { .contact-head { padding: 36px var(--pad) 4px; } }
     :focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
     @media (prefers-reduced-motion:reduce) { html { scroll-behavior: auto; } .rv,.rv-fade,.site-nav,.location-names h1,.location-hero-slide { animation:none!important; transition:none!important; opacity:1!important; transform:none!important; } }
@@ -314,6 +314,23 @@
     .skip-link:focus { transform: translateY(0); outline: 2px solid #fff; outline-offset: 2px; }
     main:focus { outline: none; }
     .contact-lead-wrap { padding: 36px var(--pad) 0; }
+    /* enquiry: the answers fill the WhatsApp and email messages, nothing is sent or stored by the site */
+    .enquiry { padding: 36px var(--pad) 48px; border-bottom: 1px solid var(--border); }
+    .enq-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px 40px; margin-bottom: 32px; }
+    .enq-field { display: block; }
+    .enq-field .ci-label { display: block; margin-bottom: 8px; }
+    .enq-field input, .enq-field select { display: block; width: 100%; padding: 8px 0; font: inherit; font-size: 16px; color: #000; background-color: transparent; border: 0; border-bottom: 1px solid #8A8A8A; border-radius: 0; -webkit-appearance: none; appearance: none; transition: border-color 0.2s; }
+    .enq-field select { padding-right: 18px; cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6' fill='none' stroke='%23000'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 2px center; }
+    .enq-field input:hover, .enq-field select:hover { border-bottom-color: #000; }
+    .enq-field input:focus-visible, .enq-field select:focus-visible { outline: 2px solid #000; outline-offset: 2px; }
+    .cta-link { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; border-bottom: 1px solid currentColor; padding-bottom: 3px; transition: opacity 0.2s; }
+    .cta-links { display: flex; flex-wrap: wrap; align-items: baseline; gap: 16px 40px; }
+    .cta-link:hover { opacity: 0.5; }
+    @media (max-width: 768px) { .enquiry { padding: 28px var(--pad) 36px; } .enq-grid { grid-template-columns: 1fr 1fr; gap: 20px 24px; } }
+    @media (max-width: 768px) {
+      .cta-link { position: relative; }
+      .cta-link::after { content: ''; position: absolute; left: -8px; right: -8px; top: -12px; bottom: -12px; border: none; }
+    }
   </style>
 </head>
 <body>
@@ -356,6 +373,20 @@
     <p class="contact-lead" data-i18n="contact-lead">Tell us about your event. A date, a place, how many guests. We will answer with a space.</p>
   </section>
 
+
+  <section class="enquiry rv">
+    <div class="enq-grid">
+      <label class="enq-field"><span class="ci-label" data-i18n="enq-date">Date</span><input type="text" name="date" autocomplete="off"></label>
+      <label class="enq-field"><span class="ci-label" data-i18n="enq-place">Place</span><input type="text" name="place" autocomplete="off"></label>
+      <label class="enq-field"><span class="ci-label" data-i18n="enq-guests">Guests</span><input type="text" name="guests" autocomplete="off"></label>
+      <label class="enq-field"><span class="ci-label" data-i18n="enq-budget">All-in budget</span><select name="budget"><option value="" data-i18n="enq-b0">Choose</option><option value="1" data-i18n="enq-b1">Under $25k</option><option value="2" data-i18n="enq-b2">$25k to $75k</option><option value="3" data-i18n="enq-b3">$75k and above</option></select></label>
+    </div>
+    <div class="cta-links">
+      <a class="cta-link enq-wa" href="https://wa.me/96178902628?text=Hello%20Atelier%20Sans%20Titre.%20We%20are%20planning%20an%20event.%0ADate%3A%0APlace%3A%0AGuests%3A" target="_blank" rel="noopener" data-i18n="enq-wa">Send on WhatsApp</a>
+      <a class="cta-link enq-mail" href="mailto:hello@ateliersanstitre.com?subject=Event%20enquiry&amp;body=Hello%20Atelier%20Sans%20Titre.%20We%20are%20planning%20an%20event.%0ADate%3A%0APlace%3A%0AGuests%3A" data-i18n="enq-mail">Send by email</a>
+    </div>
+  </section>
+
   <!-- CONTACT INFO -->
   <div class="contact-info">
     <div class="rv" style="--d:0ms">
@@ -375,8 +406,8 @@
     <div class="rv" style="--d:180ms">
       <p class="ci-label">Contact</p>
       <p class="ci-body">
-        <a href="mailto:hello@ateliersanstitre.com">hello@ateliersanstitre.com</a><br>
-        <a href="https://wa.me/96178902628" target="_blank" rel="noopener">WhatsApp</a><br>
+        <a href="mailto:hello@ateliersanstitre.com?subject=Event%20enquiry&amp;body=Hello%20Atelier%20Sans%20Titre.%20We%20are%20planning%20an%20event.%0ADate%3A%0APlace%3A%0AGuests%3A">hello@ateliersanstitre.com</a><br>
+        <a href="https://wa.me/96178902628?text=Hello%20Atelier%20Sans%20Titre.%20We%20are%20planning%20an%20event.%0ADate%3A%0APlace%3A%0AGuests%3A" target="_blank" rel="noopener">WhatsApp</a><br>
         <a href="tel:+96178902628">+961 78 90 26 28</a><br>
         <a href="https://instagram.com/ateliersanstitre" target="_blank" rel="noopener">@ateliersanstitre</a>
       </p>
@@ -415,8 +446,8 @@
       </ul>
       <ul class="fc-list">
         <li data-i18n="footer-tagline">We design where people gather</li>
-        <li><a href="mailto:hello@ateliersanstitre.com">hello@ateliersanstitre.com</a></li>
-        <li><a href="https://wa.me/96178902628" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><a href="mailto:hello@ateliersanstitre.com?subject=Event%20enquiry&amp;body=Hello%20Atelier%20Sans%20Titre.%20We%20are%20planning%20an%20event.%0ADate%3A%0APlace%3A%0AGuests%3A">hello@ateliersanstitre.com</a></li>
+        <li><a href="https://wa.me/96178902628?text=Hello%20Atelier%20Sans%20Titre.%20We%20are%20planning%20an%20event.%0ADate%3A%0APlace%3A%0AGuests%3A" target="_blank" rel="noopener">WhatsApp</a></li>
         <li><a href="https://instagram.com/ateliersanstitre" target="_blank" rel="noopener">@ateliersanstitre</a></li>
         <li data-i18n="footer-location">Beirut, Lebanon</li>
       </ul>
@@ -558,8 +589,10 @@
         fbq('track', 'PageView');
         document.addEventListener('click', function (ev) {
           var a = ev.target && ev.target.closest ? ev.target.closest('a[href^="mailto:"], a[href^="tel:"], a[href*="wa.me"]') : null;
-          if (!a || !window.fbq) return;
-          fbq('track', 'Contact', { content_name: a.getAttribute('href').indexOf('mailto:') === 0 ? 'email' : (a.getAttribute('href').indexOf('wa.me') > -1 ? 'whatsapp' : 'phone') });
+          if (!a) return;
+          var h = a.getAttribute('href'), m = h.indexOf('mailto:') === 0 ? 'email' : (h.indexOf('wa.me') > -1 ? 'whatsapp' : 'phone');
+          if (window.fbq) fbq('track', 'Contact', { content_name: m });
+          if (window.gtag) gtag('event', 'generate_lead', { method: m, link_location: a.closest('.enquiry') ? 'form' : (a.closest('.cta') ? 'cta' : (a.closest('footer') ? 'footer' : 'body')) });
         }, true);
       }
       function loadAll() { loadGA(); loadPixel(); }
@@ -590,6 +623,32 @@
       }
       box.querySelector('.consent-accept').addEventListener('click', function () { close('granted'); });
       box.querySelector('.consent-decline').addEventListener('click', function () { close('denied'); });
+    })();
+  </script>
+  <script>
+    (function () {
+      var box = document.querySelector('.enquiry');
+      if (!box) return;
+      var fr = document.documentElement.lang === 'fr';
+      var sep = fr ? ' : ' : ': ';
+      var intro = fr ? 'Bonjour Atelier Sans Titre. Nous préparons un événement.' : 'Hello Atelier Sans Titre. We are planning an event.';
+      var subject = fr ? 'Demande : événement' : 'Event enquiry';
+      var wa = box.querySelector('.enq-wa'), mail = box.querySelector('.enq-mail');
+      function update() {
+        var lines = [intro];
+        box.querySelectorAll('.enq-field').forEach(function (f) {
+          var c = f.querySelector('input, select'), isSel = c.tagName === 'SELECT';
+          var v = isSel ? (c.value ? c.options[c.selectedIndex].text : '') : c.value.trim();
+          if (isSel && !v) return;
+          lines.push(f.querySelector('.ci-label').textContent.trim() + sep + v);
+        });
+        var text = lines.join('\n');
+        wa.href = 'https://wa.me/96178902628?text=' + encodeURIComponent(text);
+        mail.href = 'mailto:hello@ateliersanstitre.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(text);
+      }
+      box.addEventListener('input', update);
+      box.addEventListener('change', update);
+      update();
     })();
   </script>
 </body>

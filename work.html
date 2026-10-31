@@ -413,6 +413,18 @@
     .skip-link { position: fixed; left: 16px; top: 12px; z-index: 10000; background: #000; color: #fff; padding: 10px 16px; font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; transform: translateY(-180%); transition: transform 0.25s cubic-bezier(0.22,1,0.36,1); }
     .skip-link:focus { transform: translateY(0); outline: 2px solid #fff; outline-offset: 2px; }
     main:focus { outline: none; }
+    /* call to action */
+    .cta { padding: 64px var(--pad) 80px; border-top: 1px solid var(--border); }
+    .cta-title { font-size: clamp(28px, 4.2vw, 52px); font-weight: 700; letter-spacing: -0.03em; text-transform: uppercase; line-height: 1.04; margin-bottom: 18px; }
+    .cta-body { font-size: 15px; line-height: 1.7; color: #333; margin-bottom: 24px; }
+    .cta-link { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; border-bottom: 1px solid currentColor; padding-bottom: 3px; transition: opacity 0.2s; }
+    .cta-links { display: flex; flex-wrap: wrap; align-items: baseline; gap: 16px 40px; }
+    .cta-link:hover { opacity: 0.5; }
+    @media (max-width: 768px) { .cta { padding: 48px var(--pad) 56px; } }
+    @media (max-width: 768px) {
+      .cta-link { position: relative; }
+      .cta-link::after { content: ''; position: absolute; left: -8px; right: -8px; top: -12px; bottom: -12px; border: none; }
+    }
   </style>
 </head>
 <body>
@@ -489,6 +501,15 @@
     <div class="d-dots"><button class="d-dot active" aria-label="Image 1"></button><button class="d-dot" aria-label="Image 2"></button><button class="d-dot" aria-label="Image 3"></button><button class="d-dot" aria-label="Image 4"></button><button class="d-dot" aria-label="Image 5"></button><button class="d-dot" aria-label="Image 6"></button></div>
   </section>
 
+  <section class="cta rv-fade">
+    <p class="cta-title" data-i18n="cta-title">Tell us about your event.</p>
+    <p class="cta-body" data-i18n="cta-body">Now booking 2027. A date, a place, how many guests. We will answer with a space.</p>
+    <div class="cta-links">
+      <a class="cta-link" href="contact.html" data-i18n="cta-link">Write to us</a>
+      <a class="cta-link" href="https://wa.me/96178902628?text=Hello%20Atelier%20Sans%20Titre.%20We%20are%20planning%20an%20event.%0ADate%3A%0APlace%3A%0AGuests%3A" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </section>
+
   </main>
 
   <footer class="rv-fade">
@@ -508,8 +529,8 @@
       </ul>
       <ul class="fc-list">
         <li data-i18n="footer-tagline">We design where people gather</li>
-        <li><a href="mailto:hello@ateliersanstitre.com">hello@ateliersanstitre.com</a></li>
-        <li><a href="https://wa.me/96178902628" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><a href="mailto:hello@ateliersanstitre.com?subject=Event%20enquiry&amp;body=Hello%20Atelier%20Sans%20Titre.%20We%20are%20planning%20an%20event.%0ADate%3A%0APlace%3A%0AGuests%3A">hello@ateliersanstitre.com</a></li>
+        <li><a href="https://wa.me/96178902628?text=Hello%20Atelier%20Sans%20Titre.%20We%20are%20planning%20an%20event.%0ADate%3A%0APlace%3A%0AGuests%3A" target="_blank" rel="noopener">WhatsApp</a></li>
         <li><a href="https://instagram.com/ateliersanstitre" target="_blank" rel="noopener">@ateliersanstitre</a></li>
         <li data-i18n="footer-location">Beirut, Lebanon</li>
       </ul>
@@ -666,8 +687,10 @@
         fbq('track', 'PageView');
         document.addEventListener('click', function (ev) {
           var a = ev.target && ev.target.closest ? ev.target.closest('a[href^="mailto:"], a[href^="tel:"], a[href*="wa.me"]') : null;
-          if (!a || !window.fbq) return;
-          fbq('track', 'Contact', { content_name: a.getAttribute('href').indexOf('mailto:') === 0 ? 'email' : (a.getAttribute('href').indexOf('wa.me') > -1 ? 'whatsapp' : 'phone') });
+          if (!a) return;
+          var h = a.getAttribute('href'), m = h.indexOf('mailto:') === 0 ? 'email' : (h.indexOf('wa.me') > -1 ? 'whatsapp' : 'phone');
+          if (window.fbq) fbq('track', 'Contact', { content_name: m });
+          if (window.gtag) gtag('event', 'generate_lead', { method: m, link_location: a.closest('.enquiry') ? 'form' : (a.closest('.cta') ? 'cta' : (a.closest('footer') ? 'footer' : 'body')) });
         }, true);
       }
       function loadAll() { loadGA(); loadPixel(); }

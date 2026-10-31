@@ -19,6 +19,14 @@ WHEN YOU EDIT THE ENGLISH PAGES:
 """
 import re, os
 
+# pre-filled enquiry links: the English pages carry these, the French build swaps them
+PREFILL = [
+    ('href="https://wa.me/96178902628?text=Hello%20Atelier%20Sans%20Titre.%20We%20are%20planning%20an%20event.%0ADate%3A%0APlace%3A%0AGuests%3A"',
+     'href="https://wa.me/96178902628?text=Bonjour%20Atelier%20Sans%20Titre.%20Nous%20pr%C3%A9parons%20un%20%C3%A9v%C3%A9nement.%0ADate%20%3A%0ALieu%20%3A%0AInvit%C3%A9s%20%3A"'),
+    ('href="mailto:hello@ateliersanstitre.com?subject=Event%20enquiry&amp;body=Hello%20Atelier%20Sans%20Titre.%20We%20are%20planning%20an%20event.%0ADate%3A%0APlace%3A%0AGuests%3A"',
+     'href="mailto:hello@ateliersanstitre.com?subject=Demande%20%3A%20%C3%A9v%C3%A9nement&amp;body=Bonjour%20Atelier%20Sans%20Titre.%20Nous%20pr%C3%A9parons%20un%20%C3%A9v%C3%A9nement.%0ADate%20%3A%0ALieu%20%3A%0AInvit%C3%A9s%20%3A"'),
+]
+
 ROOT = os.path.dirname(os.path.abspath(__file__))
 FRDIR = os.path.join(ROOT, "fr")
 os.makedirs(FRDIR, exist_ok=True)
@@ -146,6 +154,7 @@ PAGES = {
     fr_map={**NAV, **TAGS, **FOOT, **PROJ,
         'tagline':'<strong>Nous concevons les lieux<span class="d-br"><br></span> qui rassemblent.</strong>',
         'tagline-sub':'Scénographie événementielle pour mariages, célébrations privées, marques et défilés. Depuis Beyrouth.',
+        'tagline-cta':'Parlez-nous de votre événement →',
         'positioning':"Nous concevons d'abord le lieu : l'entrée, la place de chacun, la lumière à mesure que la nuit avance. Puis nous le construisons et dirigeons l'événement.",
         'side-private-label':'Privé','side-private-line':'Pour ceux que vous aimez. Mariages, fiançailles et dîners privés.',
         'side-brands-label':'Marques','side-brands-line':"Pour ceux que vous voulez impressionner. Défilés, lancements et événements d'entreprise.",
@@ -156,7 +165,7 @@ PAGES = {
         'location-body':"Atelier Sans Titre est un studio de scénographie événementielle fondé à Beyrouth en 2026 par Marc Azzi, architecte. Nous concevons des <a href=\"weddings.html\">mariages</a>, des <a href=\"private.html\">événements privés</a>, des <a href=\"brand-experiences.html\">événements de marque et d'entreprise</a> et des <a href=\"fashion-shows.html\">défilés</a> partout au Liban, et dans la région quand un projet le demande.",
         'insta-label':'Suivez-nous sur Instagram',
         'cta-title':'Parlez-nous de votre événement.',
-        'cta-body':'Une date, un lieu, le nombre d\'invités. Nous répondrons par un espace.',
+        'cta-body':'Réservations ouvertes pour 2027. Une date, un lieu, le nombre d\'invités. Nous répondrons par un espace.',
         'cta-link':'Écrivez-nous'},
     literals=[],
     group_desc=None,
@@ -170,6 +179,9 @@ PAGES = {
     en_toggle_href="fr/work.html", fr_toggle_href="../work.html",
     fr_map={**NAV, **TAGS, **FOOT, **PROJ,
         'work-h1':'<strong>Projets</strong>',
+        'cta-title':'Parlez-nous de votre événement.',
+        'cta-body':'Réservations ouvertes pour 2027. Une date, un lieu, le nombre d\'invités. Nous répondrons par un espace.',
+        'cta-link':'Écrivez-nous',
         'work-standfirst':'Le premier dîner que nous avons réalisé, et des études des lieux que nous concevons.',
         'disc-built-label':'Réalisé',
           'disc-concepts-label':'Concepts',
@@ -195,7 +207,7 @@ PAGES = {
         "howwework-body":"<strong>Concept.</strong> Nous lisons le brief et parcourons le lieu à l'heure où vous l'utiliserez, et répondons par une idée d'espace.<br><strong>Conception.</strong> L'idée est dessinée, maquettée et chiffrée jusqu'à ce qu'elle tienne.<br><strong>Réalisation.</strong> Nous la produisons sur place : fabrication, lumière, technique, et la conduite finale.",
         "howwework-cta":"Voir les concepts",
         "cta-title":"Parlez-nous de votre événement.",
-        "cta-body":"Une date, un lieu, le nombre d'invités. Nous répondrons par un espace.",
+        "cta-body":"Réservations ouvertes pour 2027. Une date, un lieu, le nombre d'invités. Nous répondrons par un espace.",
         "cta-link":"Écrivez-nous",
         "credits":"Photographies © leurs auteurs respectifs.<br>Images de projets publiées avec l'accord des clients.",
         'page-title':'À propos',
@@ -222,6 +234,7 @@ PAGES = {
     fr_desc="Écrivez à Atelier Sans Titre : mariages, événements privés, événements de marque et défilés. E-mail, WhatsApp ou téléphone, depuis Beyrouth.",
     en_toggle_href="fr/contact.html", fr_toggle_href="../contact.html",
     fr_map={**NAV, **FOOT,
+        'enq-date':'Date','enq-place':'Lieu','enq-guests':'Invités','enq-budget':'Budget global','enq-b0':'Choisir','enq-b1':'Moins de 25 000 $','enq-b2':'De 25 000 à 75 000 $','enq-b3':'75 000 $ et plus','enq-wa':'Envoyer sur WhatsApp','enq-mail':'Envoyer par email',
         'contact-lead':"Parlez-nous de votre événement. Une date, un lieu, le nombre d'invités. Nous répondrons par un espace.",
         'location-h1':'Écrivez-nous.',
         "contact-kicker":"Contact",
@@ -258,6 +271,9 @@ for fname, cfg in PAGES.items():
     fr = translate(fr, cfg["fr_map"], cfg["literals"], cfg.get("group_desc"))
     for en_alt, fr_alt in ALT.items():
         fr = fr.replace(en_alt, fr_alt)
+    for en_link, fr_link in PREFILL:
+        fr = fr.replace(en_link, fr_link)
+        assert en_link not in fr
     fr = fr_paths(fr)
     open(os.path.join(FRDIR, fname), "w", encoding="utf-8").write(fr)
     print(f"✓ fr/{fname}")
