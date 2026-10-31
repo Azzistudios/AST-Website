@@ -279,4 +279,20 @@ for fname, cfg in PAGES.items():
     open(os.path.join(FRDIR, fname), "w", encoding="utf-8").write(fr)
     print(f"✓ fr/{fname}")
 
+# ── pages with no catalog entry: their French text stays, the analytics script follows the English page ──
+ANALYTICS = re.compile(r"<script>\s*\(function \(\) \{\s*var GA_ID = .*?</script>", re.S)
+for fname in sorted(os.listdir(FRDIR)):
+    src = os.path.join(ROOT, fname)
+    if fname in PAGES or not fname.endswith(".html") or not os.path.exists(src):
+        continue
+    block = ANALYTICS.search(open(src, encoding="utf-8").read())
+    if not block:
+        continue
+    path = os.path.join(FRDIR, fname)
+    fr = open(path, encoding="utf-8").read()
+    fr, n = ANALYTICS.subn(lambda m: block.group(0), fr)
+    assert n == 1, f"fr/{fname}: analytics script not found"
+    open(path, "w", encoding="utf-8").write(fr)
+    print(f"✓ fr/{fname} (analytics script)")
+
 print("French pages regenerated. Remember to keep sitemap.xml in sync if you add/remove pages.")
