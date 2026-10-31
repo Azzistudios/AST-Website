@@ -745,6 +745,11 @@
     .m:hover img, .m:focus-visible img { transform: scale(1.05); }
     .m-cap { position: absolute; left: 16px; right: 16px; bottom: 14px; z-index: 2; display: flex; flex-direction: column; gap: 5px; opacity: 0; transform: translateY(12px); transition: opacity 0.6s cubic-bezier(0.22,1,0.36,1) 0.08s, transform 0.6s cubic-bezier(0.22,1,0.36,1) 0.08s; pointer-events: none; }
     .m:hover .m-cap, .m:focus-visible .m-cap { opacity: 1; transform: translateY(0); }
+    .hero-link { display: block; width: 100%; height: 100%; }
+    .hero-link .m-cap { left: var(--pad); right: var(--pad); bottom: 24px; }
+    .hero-link:hover .m-cap, .hero-link:focus-visible .m-cap { opacity: 1; transform: translateY(0); }
+    .location-right a { border-bottom: 1px solid currentColor; padding-bottom: 1px; transition: opacity 0.2s; }
+    .location-right a:hover { opacity: 0.55; }
     .m-cap-t { font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; }
     .m-cap-d { font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.72); }
     .mosaic .m.hidden { display: none; }
@@ -805,7 +810,7 @@
     .side:focus-visible { outline: 2px solid currentColor; outline-offset: -6px; }
     @media (max-width: 768px) { .sides { grid-template-columns: 1fr; } .side { padding: 36px var(--pad) 32px; } .side + .side { border-left: 0; border-top: 1px solid var(--border); } }
   </style>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": ["Organization", "LocalBusiness"], "@id": "https://ateliersanstitre.com/#org", "name": "Atelier Sans Titre", "url": "https://ateliersanstitre.com", "logo": "https://ateliersanstitre.com/brand_assets/logo.png", "image": "https://ateliersanstitre.com/brand_assets/og-image.jpg", "email": "hello@ateliersanstitre.com", "telephone": "+96178902628", "contactPoint": {"@type": "ContactPoint", "contactType": "enquiries", "telephone": "+96178902628", "email": "hello@ateliersanstitre.com", "availableLanguage": ["en", "fr"]}, "address": {"@type": "PostalAddress", "addressLocality": "Beirut", "addressCountry": "LB"}, "geo": {"@type": "GeoCoordinates", "latitude": 33.8870653, "longitude": 35.5206735}, "areaServed": ["Beirut", "Mount Lebanon", "Lebanon", "United Arab Emirates", "Saudi Arabia", "Qatar", "Kuwait", "Jordan"], "foundingDate": "2026", "founder": {"@type": "Person", "@id": "https://ateliersanstitre.com/#marc", "name": "Marc Azzi", "jobTitle": "Architect and scenographer", "url": "https://ateliersanstitre.com/about.html"}, "parentOrganization": {"@type": "Organization", "name": "Azzi Studios", "url": "https://azzistudios.com"}, "knowsLanguage": ["en", "fr"], "sameAs": ["https://www.instagram.com/ateliersanstitre"], "description": "Event scenography studio in Beirut. Weddings and private events, brand and corporate events, fashion shows."}, {"@type": "Service", "serviceType": "Wedding and private event scenography", "provider": {"@id": "https://ateliersanstitre.com/#org"}, "areaServed": ["Beirut", "Mount Lebanon", "Lebanon", "United Arab Emirates", "Saudi Arabia", "Qatar", "Kuwait", "Jordan"], "name": "Weddings and private events"}, {"@type": "Service", "serviceType": "Brand and corporate event scenography", "provider": {"@id": "https://ateliersanstitre.com/#org"}, "areaServed": ["Beirut", "Mount Lebanon", "Lebanon", "United Arab Emirates", "Saudi Arabia", "Qatar", "Kuwait", "Jordan"], "name": "Brand and corporate events"}, {"@type": "Service", "serviceType": "Fashion show scenography", "provider": {"@id": "https://ateliersanstitre.com/#org"}, "areaServed": ["Beirut", "Mount Lebanon", "Lebanon", "United Arab Emirates", "Saudi Arabia", "Qatar", "Kuwait", "Jordan"], "name": "Fashion shows"}, {"@type": "WebSite", "@id": "https://ateliersanstitre.com/#website", "name": "Atelier Sans Titre", "url": "https://ateliersanstitre.com"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": ["Organization", "LocalBusiness"], "@id": "https://ateliersanstitre.com/#org", "name": "Atelier Sans Titre", "url": "https://ateliersanstitre.com", "logo": "https://ateliersanstitre.com/brand_assets/logo.png", "image": "https://ateliersanstitre.com/brand_assets/og-image.jpg", "email": "hello@ateliersanstitre.com", "telephone": "+96178902628", "contactPoint": {"@type": "ContactPoint", "contactType": "enquiries", "telephone": "+96178902628", "email": "hello@ateliersanstitre.com", "availableLanguage": ["en", "fr"]}, "address": {"@type": "PostalAddress", "addressLocality": "Beirut", "addressCountry": "LB"}, "geo": {"@type": "GeoCoordinates", "latitude": 33.8870653, "longitude": 35.5206735}, "areaServed": ["Beirut", "Mount Lebanon", "Lebanon", "United Arab Emirates", "Saudi Arabia", "Qatar", "Kuwait", "Jordan"], "foundingDate": "2026", "founder": {"@type": "Person", "@id": "https://ateliersanstitre.com/#marc", "name": "Marc Azzi", "jobTitle": "Founder, architect and scenographer", "url": "https://ateliersanstitre.com/about.html"}, "parentOrganization": {"@type": "Organization", "name": "Azzi Studios", "url": "https://azzistudios.com"}, "knowsLanguage": ["en", "fr"], "sameAs": ["https://www.instagram.com/ateliersanstitre"], "description": "Event scenography studio in Beirut. Weddings and private events, brand and corporate events, fashion shows."}, {"@type": "Service", "serviceType": "Wedding and private event scenography", "provider": {"@id": "https://ateliersanstitre.com/#org"}, "areaServed": ["Beirut", "Mount Lebanon", "Lebanon", "United Arab Emirates", "Saudi Arabia", "Qatar", "Kuwait", "Jordan"], "name": "Weddings and private events"}, {"@type": "Service", "serviceType": "Brand and corporate event scenography", "provider": {"@id": "https://ateliersanstitre.com/#org"}, "areaServed": ["Beirut", "Mount Lebanon", "Lebanon", "United Arab Emirates", "Saudi Arabia", "Qatar", "Kuwait", "Jordan"], "name": "Brand and corporate events"}, {"@type": "Service", "serviceType": "Fashion show scenography", "provider": {"@id": "https://ateliersanstitre.com/#org"}, "areaServed": ["Beirut", "Mount Lebanon", "Lebanon", "United Arab Emirates", "Saudi Arabia", "Qatar", "Kuwait", "Jordan"], "name": "Fashion shows"}, {"@type": "WebSite", "@id": "https://ateliersanstitre.com/#website", "name": "Atelier Sans Titre", "url": "https://ateliersanstitre.com"}]}</script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Aller au contenu</a>
@@ -893,10 +898,10 @@
 
   <!-- ── HERO ── -->
   <section class="hero" aria-label="Projet à la une">
-    <picture><source type="image/webp" srcset="../brand_assets/concepts/red-room-01-hero-750.webp 750w, ../brand_assets/concepts/red-room-01-hero-1086.webp 1086w" sizes="100vw"><img fetchpriority="high" src="../brand_assets/concepts/red-room-01.jpg"
+    <a class="hero-link" href="red-room.html"><picture><source type="image/webp" srcset="../brand_assets/concepts/red-room-01-hero-750.webp 750w, ../brand_assets/concepts/red-room-01-hero-1086.webp 1086w" sizes="100vw"><img fetchpriority="high" src="../brand_assets/concepts/red-room-01.jpg"
       alt="Un dîner privé à la Galerie Cheriff Tabet, Beyrouth, sous lumière rouge : une longue table dressée avec bougies et fleurs"
       style="object-position: center center;"
-    ></picture>
+    ></picture><span class="m-cap"><span class="m-cap-t" data-i18n="proj-dr-t">Red Room</span><span class="m-cap-d" data-i18n="proj-dr-d">Réalisé 2026 · Privé</span></span></a>
   </section>
 
   <!-- ── TAGLINE ── -->
@@ -941,7 +946,7 @@
       <h2 data-i18n="location-heading">Beyrouth<br><span class="arrow">→ Liban</span></h2>
       <p class="location-sub" data-i18n="location-sub">Notre base. Notre perspective.</p>
     </div>
-    <div class="location-right rv" style="--d:120ms" data-i18n="location-body">Atelier Sans Titre est un studio de scénographie événementielle fondé à Beyrouth en 2026 par Marc Azzi, architecte. basés à Beyrouth, nous concevons des mariages, des événements privés, des événements de marque et d'entreprise et des défilés partout au Liban, et dans la région quand un projet le demande.</div>
+    <div class="location-right rv" style="--d:120ms" data-i18n="location-body">Atelier Sans Titre est un studio de scénographie événementielle fondé à Beyrouth en 2026 par Marc Azzi, architecte. Nous concevons des <a href="weddings.html">mariages</a>, des <a href="private.html">événements privés</a>, des <a href="brand-experiences.html">événements de marque et d'entreprise</a> et des <a href="fashion-shows.html">défilés</a> partout au Liban, et dans la région quand un projet le demande.</div>
   </section>
 
   <!-- ── PART OF AZZI STUDIOS ── -->
@@ -960,13 +965,13 @@
     </div>
     <div class="insta-track">
       <a class="insta-item" href="https://www.instagram.com/p/DUarGRhCpM9/" target="_blank" rel="noopener">
-        <picture><source type="image/webp" srcset="../brand_assets/insta-1-480.webp 480w, ../brand_assets/insta-1-960.webp 960w, ../brand_assets/insta-1.webp 1170w" sizes="(max-width: 768px) 100vw, 33vw"><img loading="lazy" src="../brand_assets/insta-1.jpg" alt="Atelier Sans Titre on Instagram"></picture>
+        <picture><source type="image/webp" srcset="../brand_assets/insta-1-480.webp 480w, ../brand_assets/insta-1-960.webp 960w, ../brand_assets/insta-1.webp 1170w" sizes="(max-width: 768px) 100vw, 33vw"><img loading="lazy" src="../brand_assets/insta-1.jpg" alt="Atelier Sans Titre sur Instagram"></picture>
       </a>
       <a class="insta-item" href="https://www.instagram.com/p/DUarCQJipuI/" target="_blank" rel="noopener">
-        <picture><source type="image/webp" srcset="../brand_assets/insta-2-480.webp 480w, ../brand_assets/insta-2-960.webp 960w, ../brand_assets/insta-2.webp 1170w" sizes="(max-width: 768px) 100vw, 33vw"><img loading="lazy" src="../brand_assets/insta-2.jpg" alt="Atelier Sans Titre on Instagram"></picture>
+        <picture><source type="image/webp" srcset="../brand_assets/insta-2-480.webp 480w, ../brand_assets/insta-2-960.webp 960w, ../brand_assets/insta-2.webp 1170w" sizes="(max-width: 768px) 100vw, 33vw"><img loading="lazy" src="../brand_assets/insta-2.jpg" alt="Atelier Sans Titre sur Instagram"></picture>
       </a>
       <a class="insta-item" href="https://www.instagram.com/p/DUaq-yLCqnC/" target="_blank" rel="noopener">
-        <picture><source type="image/webp" srcset="../brand_assets/insta-3-480.webp 480w, ../brand_assets/insta-3-960.webp 960w, ../brand_assets/insta-3.webp 1170w" sizes="(max-width: 768px) 100vw, 33vw"><img loading="lazy" src="../brand_assets/insta-3.jpg" alt="Atelier Sans Titre on Instagram"></picture>
+        <picture><source type="image/webp" srcset="../brand_assets/insta-3-480.webp 480w, ../brand_assets/insta-3-960.webp 960w, ../brand_assets/insta-3.webp 1170w" sizes="(max-width: 768px) 100vw, 33vw"><img loading="lazy" src="../brand_assets/insta-3.jpg" alt="Atelier Sans Titre sur Instagram"></picture>
       </a>
     </div>
     <div class="insta-dots">
@@ -1196,7 +1201,7 @@
       function loadAll() { loadGA(); loadPixel(); }
       var stored = null;
       try { stored = localStorage.getItem(KEY); } catch (e) {}
-      if (stored === 'granted') { if (document.readyState === 'complete') setTimeout(loadAll, 1500); else window.addEventListener('load', function () { setTimeout(loadAll, 1500); }); return; }
+      if (stored === 'granted') { loadAll(); return; }
       if (stored === 'denied') return;
       var fr = (document.documentElement.lang || 'en').indexOf('fr') === 0;
       var box = document.createElement('div');

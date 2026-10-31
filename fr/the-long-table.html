@@ -5,7 +5,7 @@
   <link rel="icon" type="image/png" href="../favicon.png">
   <link rel="apple-touch-icon" href="../favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Long Table · Étude de concept · Atelier Sans Titre, Beyrouth</title>
+  <title>The Long Table · Concept · Atelier Sans Titre</title>
   <meta name="description" content="Étude de concept pour un dîner privé construit autour d'une seule table sous un ciel de tissu drapé. Étude non réalisée, Atelier Sans Titre.">
   <link rel="canonical" href="https://ateliersanstitre.com/fr/the-long-table.html">
   <link rel="alternate" hreflang="en" href="https://ateliersanstitre.com/the-long-table.html">
@@ -13,12 +13,12 @@
   <link rel="alternate" hreflang="x-default" href="https://ateliersanstitre.com/the-long-table.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Atelier Sans Titre">
-  <meta property="og:title" content="The Long Table · Étude de concept · Atelier Sans Titre, Beyrouth">
+  <meta property="og:title" content="The Long Table · Concept · Atelier Sans Titre">
   <meta property="og:description" content="Étude de concept pour un dîner privé construit autour d'une seule table sous un ciel de tissu drapé. Étude non réalisée, Atelier Sans Titre.">
   <meta property="og:image" content="https://ateliersanstitre.com/brand_assets/og-image.jpg">
   <meta property="og:url" content="https://ateliersanstitre.com/fr/the-long-table.html">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="The Long Table · Étude de concept · Atelier Sans Titre, Beyrouth">
+  <meta name="twitter:title" content="The Long Table · Concept · Atelier Sans Titre">
   <meta name="twitter:description" content="Étude de concept pour un dîner privé construit autour d'une seule table sous un ciel de tissu drapé. Étude non réalisée, Atelier Sans Titre.">
   <meta name="twitter:image" content="https://ateliersanstitre.com/brand_assets/og-image.jpg">
   <!-- GA4 (G-L6SDE8HBFK) loads consent-gated via the banner script at the end of body -->
@@ -518,7 +518,7 @@
       function loadAll() { loadGA(); loadPixel(); }
       var stored = null;
       try { stored = localStorage.getItem(KEY); } catch (e) {}
-      if (stored === 'granted') { if (document.readyState === 'complete') setTimeout(loadAll, 1500); else window.addEventListener('load', function () { setTimeout(loadAll, 1500); }); return; }
+      if (stored === 'granted') { loadAll(); return; }
       if (stored === 'denied') return;
       var fr = (document.documentElement.lang || 'en').indexOf('fr') === 0;
       var box = document.createElement('div');

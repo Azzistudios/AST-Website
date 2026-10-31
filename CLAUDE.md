@@ -41,6 +41,7 @@ about.html · faq.html · contact.html · privacy.html · terms.html · 404.html
 special-events.html → private.html
 disciplines.html    → index.html#sides
 project.html        → work.html
+dinner-in-red.html  → red-room.html
 the-vernissage.html → red-room.html
 hall-of-images.html → red-room.html                  (redirect stubs, noindex)
 ```
@@ -49,8 +50,10 @@ Nav: Private · Brands · About · Contact. FR: Privé · Marques · À propos �
 
 ## Images and SEO conventions (Oct 2026)
 
-- Every photo in `brand_assets/` has a `.webp` beside its `.jpg` (Pillow, quality 80; 72 for the contact city photos). Markup is `<picture><source srcset="x.webp" type="image/webp"><img src="x.jpg" alt="…"></picture>`. Style and script selectors use descendant `img`, never `> img`. `build_fr.py` rewrites `src`, `srcset` and `href` asset paths to `../`.
-- Titles: 50 to 60 characters, keyword first, studio name last ("Event Scenography Studio, Beirut · Atelier Sans Titre"). Descriptions 140 to 160. French titles must differ from English. Concept pages read "… · Concept Study · Atelier Sans Titre, Beirut"; their JSON-LD is CreativeWork with creativeWorkStatus "Unbuilt concept". Red Room is CreativeWork + ImageGallery with place, year and creator. Every indexable page: self-canonical, en/fr/x-default hreflang, in `sitemap.xml`.
+- Every photo in `brand_assets/` has a `.webp` beside its `.jpg`, plus `-480` and `-960` variants; hero bands also have landscape `-hero-*` / `-wide-*` crops. Markup is `<picture><source type="image/webp" srcset="…" sizes="…"><img src="x.jpg" alt="…"></picture>`. Selectors use descendant `img`, never `> img`. `build_fr.py` rewrites `src`, `srcset`, `imagesrcset` and `href` asset paths to `../`.
+- Titles and metas prescribed by the brief or by Marc later are his decision. Do not rewrite them for length or keywords without asking. The FAQ's 15 questions are prescribed too.
+- Every indexable page: self-canonical, en/fr/x-default hreflang, in `sitemap.xml`. Concept pages' JSON-LD is CreativeWork with creativeWorkStatus "Unbuilt concept"; Red Room is CreativeWork + ImageGallery with place, year and creator.
+- Run `python3 build_fr.py` with its output visible. If the About, Contact or Work JSON-LD changes, update `json_en`/`json_fr` in the catalog, or the build stops halfway and `fr/about.html` and `fr/contact.html` go stale.
 
 ## Working locally
 
