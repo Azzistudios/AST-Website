@@ -676,6 +676,16 @@
         window.gtag = gtag;
         gtag('js', new Date());
         gtag('config', GA_ID, { anonymize_ip: true });
+        /* which projects and services people open, from the page body only (not nav or footer) */
+        var PROJECTS = ['red-room', 'the-long-table', 'after-dark', 'the-couture-salon', 'silhouettes', 'three-rooms'];
+        var SERVICES = ['private', 'weddings', 'brands', 'fashion-shows', 'brand-experiences'];
+        document.addEventListener('click', function (ev) {
+          var a = ev.target && ev.target.closest ? ev.target.closest('a[href]') : null;
+          if (!a || a.closest('nav, footer')) return;
+          var p = a.getAttribute('href').split(/[?#]/)[0].replace(/^.*\//, '').replace(/\.html$/, '');
+          if (PROJECTS.indexOf(p) > -1) gtag('event', 'project_click', { project: p });
+          else if (SERVICES.indexOf(p) > -1) gtag('event', 'service_click', { service: p });
+        }, true);
       }
       function loadPixel() {
         if (window.fbq) return;
@@ -687,7 +697,12 @@
           if (!a) return;
           var h = a.getAttribute('href'), m = h.indexOf('mailto:') === 0 ? 'email' : (h.indexOf('wa.me') > -1 ? 'whatsapp' : 'phone');
           if (window.fbq) fbq('track', 'Contact', { content_name: m });
-          if (window.gtag) gtag('event', 'generate_lead', { method: m, link_location: a.closest('.enquiry') ? 'form' : (a.closest('.cta') ? 'cta' : (a.closest('footer') ? 'footer' : 'body')) });
+          if (window.gtag) {
+            var lead = { method: m, link_location: a.closest('.enquiry') ? 'form' : (a.closest('.cta') ? 'cta' : (a.closest('footer') ? 'footer' : 'body')) };
+            var band = a.closest('.enquiry') ? a.closest('.enquiry').querySelector('select[name="budget"]') : null;
+            if (band && band.value) lead.budget_band = { 1: 'under_25k', 2: '25k_to_75k', 3: '75k_plus' }[band.value];
+            gtag('event', 'generate_lead', lead);
+          }
         }, true);
       }
       function loadAll() { loadGA(); loadPixel(); }
