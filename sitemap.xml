@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ateliersanstitre.com/about.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://ateliersanstitre.com/about.html"/>
@@ -8,6 +8,15 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+      <image:image><image:loc>https://ateliersanstitre.com/brand_assets/about-hero.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/studio-drawing.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/red-room-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/the-long-table-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/after-dark-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/three-rooms-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/three-rooms-02.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/three-rooms-03.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/group-gala.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://ateliersanstitre.com/fr/about.html</loc>
@@ -17,6 +26,15 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+      <image:image><image:loc>https://ateliersanstitre.com/brand_assets/about-hero.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/studio-drawing.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/red-room-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/the-long-table-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/after-dark-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/three-rooms-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/three-rooms-02.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/three-rooms-03.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/group-gala.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://ateliersanstitre.com/brand-experiences.html</loc>
@@ -26,6 +44,8 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+      <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/brand-experiences-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/brand-experiences-02.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://ateliersanstitre.com/fr/brand-experiences.html</loc>
@@ -35,6 +55,8 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+      <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/brand-experiences-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/brand-experiences-02.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://ateliersanstitre.com/brands.html</loc>
@@ -44,6 +66,10 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+      <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/three-rooms-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/fashion-shows-02.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/brand-experiences-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/group-gala.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://ateliersanstitre.com/fr/brands.html</loc>
@@ -53,6 +79,10 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+      <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/three-rooms-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/fashion-shows-02.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/brand-experiences-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/group-gala.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://ateliersanstitre.com/contact.html</loc>
@@ -62,6 +92,9 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+      <image:image><image:loc>https://ateliersanstitre.com/brand_assets/contact/bey-1.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/contact/bey-2.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/contact/bey-3.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://ateliersanstitre.com/fr/contact.html</loc>
@@ -71,6 +104,9 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+      <image:image><image:loc>https://ateliersanstitre.com/brand_assets/contact/bey-1.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/contact/bey-2.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/contact/bey-3.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://ateliersanstitre.com/faq.html</loc>
@@ -80,7 +116,7 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
+    </url>
   <url>
     <loc>https://ateliersanstitre.com/fr/faq.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://ateliersanstitre.com/faq.html"/>
@@ -89,7 +125,7 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
+    </url>
   <url>
     <loc>https://ateliersanstitre.com/fashion-shows.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://ateliersanstitre.com/fashion-shows.html"/>
@@ -98,6 +134,8 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+      <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/fashion-shows-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/fashion-shows-02.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://ateliersanstitre.com/fr/fashion-shows.html</loc>
@@ -107,6 +145,8 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+      <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/fashion-shows-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/fashion-shows-02.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://ateliersanstitre.com/</loc>
@@ -116,6 +156,16 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+      <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/red-room-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/the-long-table-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/the-couture-salon-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/after-dark-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/study-linen-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/silhouettes-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/study-stone-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/home-hero.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/red-room-02.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/red-room-03.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://ateliersanstitre.com/fr/</loc>
@@ -125,6 +175,16 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+      <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/red-room-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/the-long-table-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/the-couture-salon-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/after-dark-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/study-linen-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/silhouettes-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/study-stone-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/home-hero.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/red-room-02.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/red-room-03.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://ateliersanstitre.com/privacy.html</loc>
@@ -134,7 +194,7 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
+    </url>
   <url>
     <loc>https://ateliersanstitre.com/fr/privacy.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://ateliersanstitre.com/privacy.html"/>
@@ -143,7 +203,7 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
+    </url>
   <url>
     <loc>https://ateliersanstitre.com/private.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://ateliersanstitre.com/private.html"/>
@@ -152,6 +212,10 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+      <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/the-long-table-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/private-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/red-room-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/the-long-table-02.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://ateliersanstitre.com/fr/private.html</loc>
@@ -161,6 +225,10 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+      <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/the-long-table-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/private-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/red-room-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/the-long-table-02.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://ateliersanstitre.com/terms.html</loc>
@@ -170,7 +238,7 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
+    </url>
   <url>
     <loc>https://ateliersanstitre.com/fr/terms.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://ateliersanstitre.com/terms.html"/>
@@ -179,7 +247,7 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
+    </url>
   <url>
     <loc>https://ateliersanstitre.com/weddings.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://ateliersanstitre.com/weddings.html"/>
@@ -188,6 +256,8 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+      <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/weddings-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/weddings-02.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://ateliersanstitre.com/fr/weddings.html</loc>
@@ -197,6 +267,8 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+      <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/weddings-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/weddings-02.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://ateliersanstitre.com/work.html</loc>
@@ -206,6 +278,13 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+      <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/red-room-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/the-long-table-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/after-dark-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/the-couture-salon-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/silhouettes-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/three-rooms-03.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/study-linen-01.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://ateliersanstitre.com/fr/work.html</loc>
@@ -215,6 +294,13 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+      <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/red-room-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/the-long-table-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/after-dark-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/the-couture-salon-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/silhouettes-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/three-rooms-03.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/study-linen-01.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://ateliersanstitre.com/red-room.html</loc>
@@ -224,6 +310,9 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+      <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/red-room-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/red-room-02.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/red-room-03.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://ateliersanstitre.com/fr/red-room.html</loc>
@@ -233,6 +322,9 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+      <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/red-room-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/red-room-02.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/red-room-03.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://ateliersanstitre.com/the-long-table.html</loc>
@@ -242,6 +334,8 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+      <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/the-long-table-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/the-long-table-02.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://ateliersanstitre.com/fr/the-long-table.html</loc>
@@ -251,6 +345,8 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+      <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/the-long-table-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/the-long-table-02.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://ateliersanstitre.com/after-dark.html</loc>
@@ -260,6 +356,7 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+      <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/after-dark-01.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://ateliersanstitre.com/fr/after-dark.html</loc>
@@ -269,6 +366,7 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+      <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/after-dark-01.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://ateliersanstitre.com/the-couture-salon.html</loc>
@@ -278,6 +376,7 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+      <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/the-couture-salon-01.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://ateliersanstitre.com/fr/the-couture-salon.html</loc>
@@ -287,6 +386,7 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+      <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/the-couture-salon-01.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://ateliersanstitre.com/silhouettes.html</loc>
@@ -296,6 +396,7 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+      <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/silhouettes-01.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://ateliersanstitre.com/fr/silhouettes.html</loc>
@@ -305,6 +406,7 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+      <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/silhouettes-01.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://ateliersanstitre.com/three-rooms.html</loc>
@@ -314,6 +416,9 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+      <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/three-rooms-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/three-rooms-02.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/three-rooms-03.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://ateliersanstitre.com/fr/three-rooms.html</loc>
@@ -323,5 +428,8 @@
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+      <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/three-rooms-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/three-rooms-02.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ateliersanstitre.com/brand_assets/concepts/three-rooms-03.jpg</image:loc></image:image>
   </url>
 </urlset>

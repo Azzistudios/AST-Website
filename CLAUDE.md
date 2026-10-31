@@ -54,6 +54,7 @@ Nav: Private · Brands · About · Contact. FR: Privé · Marques · À propos �
 - Titles and metas prescribed by the brief or by Marc later are his decision. Do not rewrite them for length or keywords without asking. The FAQ's 15 questions are prescribed too.
 - Every indexable page: self-canonical, en/fr/x-default hreflang, in `sitemap.xml`. Concept pages' JSON-LD is CreativeWork with creativeWorkStatus "Unbuilt concept"; Red Room is CreativeWork + ImageGallery with place, year and creator.
 - Enquiries: every WhatsApp and email link except on the legal pages carries a pre-filled message by page (date, place, guests); `build_fr.py` swaps the general one in its `PREFILL` list. GA4 `generate_lead` and the Pixel `Contact` event fire on those clicks, consent-gated. Contact has an enquiry block that only fills those messages; nothing is sent or stored by the site. "Now booking 2027" sits in every CTA body: change it when 2028 opens.
+- Share images live in `brand_assets/og/` (1200x630 JPEG, one per page with its own picture; generic `og-image.jpg` on FAQ, legal, 404). `sitemap.xml` lists each page's images; regenerate those entries when images change. Instagram strip on Home links the three Red Room posts. `b120b4ea28d29f2956dbd5f99ddeaf2b.txt` is the IndexNow key: keep it at the root.
 - Run `python3 build_fr.py` with its output visible. If the About, Contact or Work JSON-LD changes, update `json_en`/`json_fr` in the catalog, or the build stops halfway and `fr/about.html` and `fr/contact.html` go stale.
 
 ## Working locally

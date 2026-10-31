@@ -271,6 +271,7 @@ for fname, cfg in PAGES.items():
     fr = translate(fr, cfg["fr_map"], cfg["literals"], cfg.get("group_desc"))
     for en_alt, fr_alt in ALT.items():
         fr = fr.replace(en_alt, fr_alt)
+    fr = fr.replace('<meta property="og:locale" content="en_US">\n  <meta property="og:locale:alternate" content="fr_FR">', '<meta property="og:locale" content="fr_FR">\n  <meta property="og:locale:alternate" content="en_US">')
     for en_link, fr_link in PREFILL:
         fr = fr.replace(en_link, fr_link)
         assert en_link not in fr
